@@ -1,0 +1,25 @@
+id,name,displayName,abbreviation
+0,Unknown,Unknown,-
+32,Defensive Tackle,Defensive Tackle,DT
+9,Running Back,Running Back,RB
+7,Tight End,Tight End,TE
+31,Defensive End,Defensive End,DE
+1,Wide Receiver,Wide Receiver,WR
+4,Center,Center,C
+46,Offensive Tackle,Offensive Tackle,OT
+36,Safety,Safety,S
+73,Guard,Guard,G
+29,Cornerback,Cornerback,CB
+30,Linebacker,Linebacker,LB
+8,Quarterback,Quarterback,QB
+23,Punter,Punter,P
+22,Place kicker,Place Kicker,PK
+78,Long Snapper,Long Snapper,LS
+10,Fullback,Fullback,FB
+12,Nose Tackle,Nose Tackle,NT
+35,Defensive Back,Defensive Back,DB
+45,Offensive Lineman,Offensive Lineman,OL
+37,Defensive Lineman,Defensive Lineman,DL
+50,Athlete,Athlete,ATH
+77,Kick Returner,Kick Returner,KR
+76,Punt Returner,Punt Returner,PR

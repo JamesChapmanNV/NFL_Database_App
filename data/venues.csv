@@ -1,0 +1,49 @@
+venue_id,fullName,capacity,grass,indoor,city,state,zipCode
+3891,NRG Stadium,0,False,True,Houston,TX,77054
+3798,Lambeau Field,0,True,False,Green Bay,WI,54304
+3814,M&T Bank Stadium,0,True,False,Baltimore,MD,21230
+3719,FedExField,0,True,False,Landover,MD,20785
+3937,Empower Field at Mile High,0,True,False,Denver,CO,80204
+3669,Candlestick Park,0,True,False,San Francisco,CA,
+3495,Georgia Dome,0,False,True,Atlanta,GA,
+3738,Gillette Stadium,0,False,False,Foxborough,MA,02035
+3610,Aloha Stadium,0,False,False,Honolulu,HI,96818
+3493,Caesars Superdome,0,False,True,New Orleans,LA,70112
+3883,Highmark Stadium,0,False,False,Orchard Park,NY,14127
+3933,Soldier Field,0,True,False,Chicago,IL,60605
+3679,Cleveland Browns Stadium,0,True,False,Cleveland,OH,44114
+3727,Ford Field,0,False,True,Detroit,MI,48226
+3812,Lucas Oil Stadium,0,False,True,Indianapolis,IN,46225
+3839,MetLife Stadium,0,False,False,East Rutherford,NJ,07073
+3752,Acrisure Stadium,0,True,False,Pittsburgh,PA,15212
+3628,Bank of America Stadium,0,False,False,Charlotte,NC,28202
+3712,EverBank Stadium,0,True,False,Jacksonville,FL,32202
+3494,The Dome at America's Center,0,False,True,St. Louis,MO,63101
+3687,AT&T Stadium,0,False,True,Arlington,TX,76011
+3932,SDCCU Stadium,0,True,False,San Diego,CA,
+3622,GEHA Field at Arrowhead Stadium,0,True,False,Kansas City,MO,64129
+3806,Lincoln Financial Field,0,True,False,Philadelphia,PA,19148
+3970,State Farm Stadium,0,True,True,Glendale,AZ,85305
+3886,Raymond James Stadium,0,True,False,Tampa,FL,33607
+3867,Oakland Coliseum,0,True,False,Oakland,CA,94621
+3673,Lumen Field,0,False,False,Seattle,WA,98134
+3874,Paycor Stadium,0,False,False,Cincinnati,OH,45202
+3810,Nissan Stadium,0,False,False,Nashville,TN,37213
+16,Mall of America Field,64121,False,True,Minneapolis,MN,55415
+3948,Hard Rock Stadium,0,True,False,Miami Gardens,FL,33056
+2455,Wembley Stadium,0,True,False,London,,
+1822,Rogers Centre,0,False,True,Toronto,ON,
+3953,Huntington Bank Stadium,0,False,False,Minneapolis,MN,55455
+4738,Levi's Stadium,0,True,False,Santa Clara,CA,95054
+477,Los Angeles Memorial Coliseum,0,True,False,Los Angeles,CA,90037
+5239,U.S. Bank Stadium,0,False,True,Minneapolis,MN,55415
+5128,Twickenham Stadium,0,True,False,London,,
+1850,Estadio Azteca,0,True,False,Mexico City,,
+4013,Camping World Stadium,0,False,False,Orlando,FL,32805
+538,Dignity Health Sports Park,0,True,False,Carson,CA,90746
+5348,Mercedes-Benz Stadium,0,False,True,Atlanta,GA,30313
+5534,Tottenham Hotspur Stadium,0,True,False,London,,
+7065,SoFi Stadium,0,False,True,Inglewood,CA,90301
+6501,Allegiant Stadium,0,True,True,Las Vegas,NV,89118
+1775,Allianz Arena,0,True,False,Munich,,
+1875,Frankfurt Stadium,0,True,False,Frankfurt,,

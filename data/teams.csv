@@ -1,0 +1,37 @@
+team_id,slug,location,name,nickname,abbreviation,displayName,shortDisplayName,color,alternateColor,franchise_id
+34,houston-texans,Houston,Texans,Texans,HOU,Houston Texans,Texans,00143f,c41230,34
+9,green-bay-packers,Green Bay,Packers,Packers,GB,Green Bay Packers,Packers,204e32,ffb612,9
+33,baltimore-ravens,Baltimore,Ravens,Ravens,BAL,Baltimore Ravens,Ravens,29126f,000000,33
+28,washington-commanders,Washington,Commanders,Commanders,WSH,Washington Commanders,Commanders,5a1414,ffb612,28
+7,denver-broncos,Denver,Broncos,Broncos,DEN,Denver Broncos,Broncos,0a2343,fc4c02,7
+25,san-francisco-49ers,San Francisco,49ers,49ers,SF,San Francisco 49ers,49ers,aa0000,b3995d,25
+1,atlanta-falcons,Atlanta,Falcons,Falcons,ATL,Atlanta Falcons,Falcons,a71930,000000,1
+17,new-england-patriots,New England,Patriots,Patriots,NE,New England Patriots,Patriots,002a5c,c60c30,17
+32,nfc,NFC,,NFC,NFC,Nfc,NFC,,,32
+2,buffalo-bills,Buffalo,Bills,Bills,BUF,Buffalo Bills,Bills,00338d,d50a0a,2
+3,chicago-bears,Chicago,Bears,Bears,CHI,Chicago Bears,Bears,0b1c3a,e64100,3
+5,cleveland-browns,Cleveland,Browns,Browns,CLE,Cleveland Browns,Browns,472a08,ff3c00,5
+8,detroit-lions,Detroit,Lions,Lions,DET,Detroit Lions,Lions,0076b6,bbbbbb,8
+11,indianapolis-colts,Indianapolis,Colts,Colts,IND,Indianapolis Colts,Colts,003b75,ffffff,11
+18,new-orleans-saints,New Orleans,Saints,Saints,NO,New Orleans Saints,Saints,d3bc8d,000000,18
+20,new-york-jets,New York,Jets,Jets,NYJ,New York Jets,Jets,115740,ffffff,20
+23,pittsburgh-steelers,Pittsburgh,Steelers,Steelers,PIT,Pittsburgh Steelers,Steelers,000000,ffb612,23
+29,carolina-panthers,Carolina,Panthers,Panthers,CAR,Carolina Panthers,Panthers,0085ca,000000,29
+30,jacksonville-jaguars,Jacksonville,Jaguars,Jaguars,JAX,Jacksonville Jaguars,Jaguars,007487,d7a22a,30
+14,los-angeles-rams,Los Angeles,Rams,Rams,LAR,Los Angeles Rams,Rams,003594,ffd100,14
+6,dallas-cowboys,Dallas,Cowboys,Cowboys,DAL,Dallas Cowboys,Cowboys,002a5c,b0b7bc,6
+24,los-angeles-chargers,Los Angeles,Chargers,Chargers,LAC,Los Angeles Chargers,Chargers,0080c6,ffc20e,24
+12,kansas-city-chiefs,Kansas City,Chiefs,Chiefs,KC,Kansas City Chiefs,Chiefs,e31837,ffb612,12
+21,philadelphia-eagles,Philadelphia,Eagles,Eagles,PHI,Philadelphia Eagles,Eagles,06424d,000000,21
+22,arizona-cardinals,Arizona,Cardinals,Cardinals,ARI,Arizona Cardinals,Cardinals,a4113e,ffffff,22
+27,tampa-bay-buccaneers,Tampa Bay,Buccaneers,Buccaneers,TB,Tampa Bay Buccaneers,Buccaneers,bd1c36,3e3a35,27
+13,las-vegas-raiders,Las Vegas,Raiders,Raiders,LV,Las Vegas Raiders,Raiders,000000,a5acaf,13
+19,new-york-giants,New York,Giants,Giants,NYG,New York Giants,Giants,003c7f,c9243f,19
+26,seattle-seahawks,Seattle,Seahawks,Seahawks,SEA,Seattle Seahawks,Seahawks,002a5c,69be28,26
+4,cincinnati-bengals,Cincinnati,Bengals,Bengals,CIN,Cincinnati Bengals,Bengals,fb4f14,000000,4
+10,tennessee-titans,Tennessee,Titans,Titans,TEN,Tennessee Titans,Titans,4b92db,002a5c,10
+16,minnesota-vikings,Minnesota,Vikings,Vikings,MIN,Minnesota Vikings,Vikings,4f2683,ffc62f,16
+15,miami-dolphins,Miami,Dolphins,Dolphins,MIA,Miami Dolphins,Dolphins,008e97,fc4c02,15
+35,rice-team-rice,Rice,Team Rice,Team Rice,RICE,Rice Team Rice,Team Rice,555555,,35
+36,irvin-team-irvin,Irvin,Team Irvin,Team Irvin,IRVIN,Irvin Team Irvin,Team Irvin,555555,,36
+31,afc,AFC,,AFC,AFC,Afc,AFC,,,31
