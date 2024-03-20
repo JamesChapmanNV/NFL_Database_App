@@ -15,25 +15,36 @@ Current tables are as follows:
 | <ins>position_id</ins> | abbreviation | name |
 | ---------------------- | ------------ | ---- |
 
-**Players**
+**Athletes**
 
-| <ins>player_id </ins> | firstName | lastName | dateOfBirth | jersey | height | weight |
-| --------------------- | --------- | -------- | ----------- | ------ | ------ | ------ |
+| <ins>athlete_id </ins> | firstName | lastName | dateOfBirth | jersey | height | weight | birth_place | drafted_bool |
+| ---------------------- | --------- | -------- | ----------- | ------ | ------ | ------ | ----------- | ------------ |
+
+**Rosters**
+
+| <ins>game_id</ins> | <ins>athlete_id</ins> | <ins>team_id</ins> | position_id | active | didNotPlay |
+| ------------------ | --------------------- | ------------------ | ----------- | ------ | ---------- |
 
 **Venues**
 
-| <ins>venue_id</ins> | fullName | capacity | city | state | zipCode | grass | indoor |
-| ------------------- | -------- | -------- | ---- | ----- | ------- | ----- | ------ |
+| <ins>venue_id</ins> | fullName | capacity | city | state | zipCode | grass | indoor | venue_id |
+| ------------------- | -------- | -------- | ---- | ----- | ------- | ----- | ------ | -------- |
 
 **Games**
 
-| <ins>game_id</ins> | name | shortName | attendance | date | seasonType | year | week | home_win |
-| ------------------ | ---- | --------- | ---------- | ---- | ---------- | ---- | ---- | -------- |
+| <ins>game_id</ins> | name | shortName | attendance | date | seasonType | year | week | home_win | home_team_id | away_team_id |
+| ------------------ | ---- | --------- | ---------- | ---- | ---------- | ---- | ---- | -------- | ------------ | ------------ |
+
 
 **Plays**
 
-| <ins>play_id</ins> | text | quarter | playType | yards | scoreValue | secondsRemaining |
-| ------------------ | ---- | ------- | -------- | ----- | ---------- | ---------------- |
+| <ins>play_id</ins> | game_id | text | quarter | playType | yards | scoreValue | secondsRemaining |
+| ------------------ | ------- | ---- | ------- | -------- | ----- | ---------- | ---------------- |
+
+**Player_Plays**
+
+| <ins>game_id</ins> | <ins>play_id</ins> | <ins>player_id</ins> | type |
+| ------------------ | ------------------ | -------------------- | ---- |
 
 **Linescores**
 
