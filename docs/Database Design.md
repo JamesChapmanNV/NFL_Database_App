@@ -2,7 +2,7 @@
 
 ## Relations
 
-Teams(<ins>team_id</ins>, name, abbreviation, location, primary_color, secondary_color, home_team_id, away_team_id)
+Teams(<ins>team_id</ins>, name, abbreviation, location, primary_color, secondary_color)
 
 Venues(<ins>venue_id</ins>, full_name, capacity, city, state, zip_code, grass, indoor)
 
