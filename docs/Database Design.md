@@ -34,3 +34,35 @@ Plays(<ins>play_id</ins>, player_id, game_id, quarter, yards, score_value, play_
 * game_id is a foreign key referencing games.game_id
 
 ## Functional Dependencies
+
+**Teams**:
+
+$team_id \to name, abbreviation, location, primary_color, secondary_color$
+
+**Venues**
+
+$venue_id \to full_name, capacity, city, state, zip_code, grass, indoor$
+
+**Games**
+
+$game_id \to name, shortName, date, week, year, attendance, season_type, home_win_bool, home_team_id, away_team_id, venue_id$
+
+**Athletes**
+
+$athlete_id \to first_name, last_name, dob, jersey, height, weight, birth_place, drafted_bool$
+
+**Positions**
+
+$position_id \to abbreviation, name$
+
+**Rosters**
+
+$game_id, team_id, athlete_id \to position_id, active, did_not_play$
+
+**Linescores**
+
+$team_id, game_id, quarter \to score$
+
+**Plays**
+
+$play_id \to player_id, game_id, quarter, yards, score_value, play_type, text, seconds_remaining$
