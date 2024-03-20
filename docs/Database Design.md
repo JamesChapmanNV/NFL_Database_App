@@ -28,7 +28,7 @@ Linescores(<ins>team_id</ins>, <ins>game_id</ins>, <ins>quarter</ins>, score)
 * team_id is a foreign key referencing teams.team_id
 * game_id is a foreign key referencing games.game_id
 
-Plays(<ins>play_id</ins>, player_id, game_id, quarter, yards, score_value, play_type, text, seconds_remaining)
+Plays(<ins>play_id</ins>, game_id, quarter, yards, score_value, play_type, text, seconds_remaining)
 
 * player_id is a foreign key referencing players.player_id
 * game_id is a foreign key referencing games.game_id
@@ -65,4 +65,8 @@ $`team\_id, game\_id, quarter \to score`$
 
 **Plays**
 
-$`play\_id \to player\_id, game\_id, quarter, yards, score\_value, play\_type, text, seconds\_remaining`$
+$`play\_id \to game\_id, quarter, yards, score\_value, play\_type, text, seconds\_remaining`$
+
+**Player_plays**
+
+$`game\_id, play\_id, player\_id \to type`$
