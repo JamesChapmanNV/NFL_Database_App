@@ -2,38 +2,38 @@
 
 ## Relations
 
-Teams(<ins>team_id</ins>, location, name, abbreviation, venue_id, primary_color, secondary_color)
+Teams(<ins>team_name</ins>, location, abbreviation, venue_name, primary_color, secondary_color)
 
-* venue_id is a foreign key referencing Venues.venue_id
+* venue_name is a foreign key referencing Venues.venue_name
 
-Venues(<ins>venue_id</ins>, full_name, capacity, city_state, grass, indoor)
+Venues(<ins>venue_name</ins>, capacity, city_state, grass, indoor)
 
-Games(<ins>game_id</ins>, date, attendance, home_team_id, away_team_id, venue_id, utc_time)
+Games(<ins>game_id</ins>, date, attendance, home_team_name, away_team_name, venue_name, utc_time)
 
 * date is a foreign key referencing Season_dates.date
-* home_team_id is a foreign key referencing Teams.team_id
-* away_team_id is a foreign key referencing Teams.team_id
-* venue_id is a foreign key referencing Venues.venue_id
+* home_team_name is a foreign key referencing Teams.team_name
+* away_team_name is a foreign key referencing Teams.team_name
+* venue_name is a foreign key referencing Venues.venue_name
 
 Season_dates(<ins>date</ins>, season_year, season_type, week)
 	
 Athletes(<ins>athlete_id</ins>, first_name, last_name, dob, jersey, height, weight, birth_place)
 
-Positions(<ins>position_id</ins>, abbreviation, name)
+Positions(<ins>position_name</ins>, abbreviation)
 
-Rosters(<ins>game_id</ins>, <ins>team_id</ins>, <ins>athlete_id</ins>. position_id, active, did_not_play)
+Rosters(<ins>game_id</ins>, <ins>team_name</ins>, <ins>athlete_id</ins>. position_name, played)
 
 * game_id is a foreign key referencing games.game_id
-* team_id is a foreign key referencing teams.team_id
+* team_name is a foreign key referencing teams.team_name
 * athlete_id is a foreign key referencing players.player_id
-* position_id is a foreign key referencing positions.position_id
+* position_name is a foreign key referencing positions.position_name
 	
-Linescores(<ins>team_id</ins>, <ins>game_id</ins>, <ins>quarter</ins>, score)
+Linescores(<ins>team_name</ins>, <ins>game_id</ins>, <ins>quarter</ins>, score)
 
-* team_id is a foreign key referencing teams.team_id
+* team_name is a foreign key referencing teams.team_name
 * game_id is a foreign key referencing games.game_id
 
-Plays(<ins>play_id</ins>, game_id, quarter, yards, score_value, play_type, text, seconds_remaining)
+Plays(<ins>play_id</ins>, game_id, quarter, yards, score_value, play_type, text, seconds_remaining, start_down, end_down)
 
 * player_id is a foreign key referencing players.player_id
 * game_id is a foreign key referencing games.game_id
