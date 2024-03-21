@@ -2,15 +2,20 @@
 
 ## Relations
 
-Teams(<ins>team_id</ins>, name, abbreviation, location, primary_color, secondary_color)
+Teams(<ins>team_id</ins>, location, name, abbreviation, venue_id, primary_color, secondary_color)
 
-Venues(<ins>venue_id</ins>, full_name, capacity, city, state, zip_code, grass, indoor)
+* venue_id is a foreign key referencing Venues.venue_id
 
-Games(<ins>game_id</ins>, name, shortName, date, week, year, attendance, season_type, home_win_bool, home_team_id, away_team_id, venue_id)
+Venues(<ins>venue_id</ins>, full_name, city, state, zip_code, grass, indoor)
 
+Games(<ins>game_id</ins>, name, shortName, date, attendance, home_team_id, away_team_id, venue_id, utc_time)
+
+* date is a foreign key referencing Season_dates.date
 * home_team_id is a foreign key referencing Teams.team_id
 * away_team_id is a foreign key referencing Teams.team_id
 * venue_id is a foreign key referencing Venues.venue_id
+
+Season_dates(<ins>date</ins>, season_year, season_type, week)
 	
 Athletes(<ins>athlete_id</ins>, first_name, last_name, dob, jersey, height, weight, birth_place, drafted_bool)
 
@@ -37,15 +42,15 @@ Plays(<ins>play_id</ins>, game_id, quarter, yards, score_value, play_type, text,
 
 **Teams**:
 
-$`team\_id \to name, abbreviation, location, primary\_color, secondary\_color`$
+$`team\_id \to location, name, abbreviation, venue\_id`, primary\_color, secondary\_color`$
 
 **Venues**
 
-$`venue\_id \to full\_name, capacity, city, state, zip\_code, grass, indoor`$
+$`venue\_id \to full\_name, city, state, zipCode, grass, indoor`$
 
 **Games**
 
-$`game\_id \to name, shortName, date, week, year, attendance, season\_type, home\_win\_bool, home\_team\_id, away\_team\_id, venue\_id`$
+$`game\_id \to name, shortName, attendance, home\_team\_id, away\_team\_id, venue\_id`$
 
 **Athletes**
 
