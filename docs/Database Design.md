@@ -6,9 +6,9 @@ Teams(<ins>team_id</ins>, location, name, abbreviation, venue_id, primary_color,
 
 * venue_id is a foreign key referencing Venues.venue_id
 
-Venues(<ins>venue_id</ins>, full_name, city, state, zip_code, grass, indoor)
+Venues(<ins>venue_id</ins>, full_name, capacity, city_state, grass, indoor)
 
-Games(<ins>game_id</ins>, name, shortName, date, attendance, home_team_id, away_team_id, venue_id, utc_time)
+Games(<ins>game_id</ins>, date, attendance, home_team_id, away_team_id, venue_id, utc_time)
 
 * date is a foreign key referencing Season_dates.date
 * home_team_id is a foreign key referencing Teams.team_id
@@ -17,7 +17,7 @@ Games(<ins>game_id</ins>, name, shortName, date, attendance, home_team_id, away_
 
 Season_dates(<ins>date</ins>, season_year, season_type, week)
 	
-Athletes(<ins>athlete_id</ins>, first_name, last_name, dob, jersey, height, weight, birth_place, drafted_bool)
+Athletes(<ins>athlete_id</ins>, first_name, last_name, dob, jersey, height, weight, birth_place)
 
 Positions(<ins>position_id</ins>, abbreviation, name)
 
