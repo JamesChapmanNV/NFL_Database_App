@@ -42,7 +42,7 @@ Plays(<ins>play_id</ins>, game_id, quarter, yards, score_value, play_type, text,
 
 **Teams**:
 
-$`team\_id \to location, name, abbreviation, venue\_id`, primary\_color, secondary\_color`$
+$`team\_id \to location, name, abbreviation, venue\_id, primary\_color, secondary\_color`$
 
 **Venues**
 
