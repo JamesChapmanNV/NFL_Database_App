@@ -52,6 +52,18 @@ FROM
 		FROM athletes
 		GROUP BY firstname, lastname, displaybirthplace
 		HAVING count(DISTINCT athlete_id) > 1) x;
+
+-- The above FD is problematic due to the below. But it looks fake, so we should be able to eliminate it through cleaning.
+SELECT a1.firstname,
+	a1.lastname,
+	a1.athlete_id,
+	a2.athlete_id
+FROM athletes a1,
+	athletes a2
+WHERE a1.firstname = a2.firstname
+	AND a1.lastname = a2.lastname
+	AND a1.displaybirthplace = a2.displaybirthplace
+	AND a1.athlete_id != a2.athlete_id;
 		
 -- firstname, lastname, displaybirthplace -> displaydob holds
 SELECT CASE
