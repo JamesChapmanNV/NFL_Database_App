@@ -6,7 +6,9 @@ Teams(<ins>team_name</ins>, location, abbreviation, venue_name, primary_color, s
 
 * venue_name is a foreign key referencing Venues.venue_name
 
-Venues(<ins>venue_name</ins>, capacity, city_state, grass, indoor)
+Venues(<ins>venue_name</ins>, capacity, zip_code, grass, indoor)
+
+Venue_locations(<ins>zip_code</ins>, city, state)
 
 Games(<ins>game_id</ins>, date, attendance, home_team_name, away_team_name, venue_name, utc_time)
 
@@ -42,31 +44,36 @@ Plays(<ins>play_id</ins>, game_id, quarter, yards, score_value, play_type, text,
 
 **Teams**:
 
-$`team\_id \to location, name, abbreviation, venue\_id, primary\_color, secondary\_color`$
+$`team\_name \to location, abbreviation, venue\_name, primary\_color, secondary\_color`$
+$`abbreviation \to location, team\_name, venue\_name, primary\_color, secondary\_color`$
 
 **Venues**
 
-$`venue\_id \to full\_name, city, state, zipCode, grass, indoor`$
+$`venue\_name \to capacity, zip\_code, grass, indoor`$
+
+**Venue_Locations**
+
+$`zip\_code \to city, state`$
 
 **Games**
 
-$`game\_id \to name, shortName, attendance, home\_team\_id, away\_team\_id, venue\_id`$
+$`game\_id \to attendance, date, utc\_time, home\_team\_id, away\_team\_id, venue\_name`$
 
 **Athletes**
 
-$`athlete\_id \to first\_name, last\_name, dob, jersey, height, weight, birth\_place, drafted\_bool`$
+$`athlete\_id \to first\_name, last\_name, dob, jersey, height, weight, birth\_place`$
 
 **Positions**
 
-$`position\_id \to abbreviation, name`$
+$`position\_name \to abbreviation`$
 
 **Rosters**
 
-$`game\_id, team\_id, athlete\_id \to position\_id, active, did\_not\_play`$
+$`game\_id, team\_name, athlete\_id \to position\_id, played`$
 
 **Linescores**
 
-$`team\_id, game\_id, quarter \to score`$
+$`team\_name, game\_id, quarter \to score`$
 
 **Plays**
 
