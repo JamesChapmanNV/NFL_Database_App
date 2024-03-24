@@ -1,25 +1,25 @@
-position_id,name,abbreviation
-0,Unknown,-
-32,Defensive Tackle,DT
-9,Running Back,RB
-7,Tight End,TE
-31,Defensive End,DE
-1,Wide Receiver,WR
-4,Center,C
-46,Offensive Tackle,OT
-36,Safety,S
-73,Guard,G
-29,Cornerback,CB
-30,Linebacker,LB
-8,Quarterback,QB
-23,Punter,P
-22,Place kicker,PK
-78,Long Snapper,LS
-10,Fullback,FB
-12,Nose Tackle,NT
-35,Defensive Back,DB
-45,Offensive Lineman,OL
-37,Defensive Lineman,DL
-50,Athlete,ATH
-77,Kick Returner,KR
-76,Punt Returner,PR
+position_name,abbreviation
+Unknown,-
+Defensive Tackle,DT
+Running Back,RB
+Tight End,TE
+Defensive End,DE
+Wide Receiver,WR
+Center,C
+Offensive Tackle,OT
+Safety,S
+Guard,G
+Cornerback,CB
+Linebacker,LB
+Quarterback,QB
+Punter,P
+Place kicker,PK
+Long Snapper,LS
+Fullback,FB
+Nose Tackle,NT
+Defensive Back,DB
+Offensive Lineman,OL
+Defensive Lineman,DL
+Athlete,ATH
+Kick Returner,KR
+Punt Returner,PR
