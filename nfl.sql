@@ -4,100 +4,123 @@
 -- Note that this script, as written, assumes that the files
 -- is in the data directory.  
 
-DROP TABLE games;
-CREATE TABLE games (
-	game_id INT,
-	name varchar(50),
-	shortName varchar(10),
-	date varchar(20),
-	attendance INT,
-	venue_id INT,
-	home_team_id INT,
-	away_team_id INT,
-	utc_time varchar(20)
-);
--- home_score INT,
--- away_score INT,
--- home_win_bool BOOLEAN
-\copy games from 'data/games.csv' DELIMITER ',' CSV HEADER;
-
 DROP TABLE season_dates;
 CREATE TABLE season_dates (
-	date varchar(30),
-	season_year INT,
-	season_type varchar(30),
-	week INT
+	date DATE NOT NULL PRIMARY KEY,
+	season_year INT NOT NULL,
+	season_type varchar(30) NOT NULL,
+	week INT NOT NULL
 );
 \copy season_dates from 'data/season_dates.csv' DELIMITER ',' CSV HEADER;
 
-DROP TABLE linescores;
-CREATE TABLE linescores (
-	game_id INT,
-	team_id INT,
-	quarter INT,
-	score INT
-);
-\copy linescores from 'data/linescores.csv' DELIMITER ',' CSV HEADER;
-
-DROP TABLE rosters;
-CREATE TABLE rosters (
-	game_id INT,
-	team_id INT,
-	player_id INT,
-	position_id INT,
-	active BOOLEAN,
-	didNotPlay BOOLEAN
-);
-\copy rosters from 'data/rosters.csv' DELIMITER ',' CSV HEADER;
-
-DROP TABLE athletes;
-CREATE TABLE athletes (
-	athlete_id INT,
-	firstName varchar(30),
-	lastName varchar(30),
-	birth_place varchar(30),
-	drafted_bool varchar(30),
-	jersey INT,
-	heightInches INT,
-	weight INT,
-	dob varchar(30)
-);
--- drafted_bool BOOLEAN
-\copy athletes from 'data/athletes.csv' DELIMITER ',' CSV HEADER;
-
 DROP TABLE venues;
 CREATE TABLE venues (
-	venue_id INT,
-	fullName varchar(40),
+	venue_name varchar(50) NOT NULL PRIMARY KEY,
+	capacity INT,
 	grass BOOLEAN,
 	indoor BOOLEAN,
-	city varchar(20),
-	state varchar(10),
+	city varchar(30),
+	state varchar(30),
 	zipCode INT
 );
--- capacity INT,
 \copy venues from 'data/venues.csv' DELIMITER ',' CSV HEADER;
 
 DROP TABLE teams;
 CREATE TABLE teams (
-	team_id INT,
-	location varchar(20),
-	name varchar(20),
-	abbreviation varchar(20),
-	venue_id INT,
-	primary_color varchar(20),
-	secondary_color varchar(20)
+	location varchar(30),
+	team_name varchar(30) NOT NULL PRIMARY KEY,
+	abbreviation varchar(10),
+	primary_color varchar(30),
+	secondary_color varchar(30),
+	venue_name varchar(50),
+	CONSTRAINT fk_venue_name FOREIGN KEY(venue_name) 
+		REFERENCES venues(venue_name)
 );
 \copy teams from 'data/teams.csv' DELIMITER ',' CSV HEADER;
 
 DROP TABLE positions;
 CREATE TABLE positions (
-	position_id INT,
-	name varchar(20),
+	position_name varchar(30) NOT NULL PRIMARY KEY,
 	abbreviation varchar(10)
 );
 \copy positions from 'data/positions.csv' DELIMITER ',' CSV HEADER;
 
+DROP TABLE athletes;
+CREATE TABLE athletes (
+	athlete_id INT NOT NULL PRIMARY KEY,
+	firstName varchar(50),
+	lastName varchar(50),
+	birth_place varchar(50),
+	jersey INT,
+	height INT,
+	weight INT,
+	dob DATE
+);
+\copy athletes from 'data/athletes.csv' DELIMITER ',' CSV HEADER;
+
+DROP TABLE games;
+CREATE TABLE games (
+	game_id INT NOT NULL PRIMARY KEY,
+	date DATE NOT NULL,
+	attendance INT,
+	utc_time TIME NOT NULL,
+	venue_name varchar(50),
+	home_team_name varchar(30) NOT NULL,
+	away_team_name varchar(30) NOT NULL,
+	CONSTRAINT fk_date FOREIGN KEY(date) 
+		REFERENCES season_dates(date),
+	CONSTRAINT fk_venue_name FOREIGN KEY(venue_name) 
+		REFERENCES venues(venue_name),
+	CONSTRAINT fk_home_team_name FOREIGN KEY(home_team_name) 
+		REFERENCES teams(team_name),
+	CONSTRAINT fk_away_team_name FOREIGN KEY(away_team_name) 
+		REFERENCES teams(team_name)
+);
+\copy games from 'data/games.csv' DELIMITER ',' CSV HEADER;
+
+DROP TABLE linescores;
+CREATE TABLE linescores (
+	game_id INT NOT NULL,
+	quarter INT NOT NULL,
+	score INT,
+	team_name varchar(30) NOT NULL,
+	PRIMARY KEY(game_id,quarter,team_name),
+	CONSTRAINT fk_game_id FOREIGN KEY(game_id) 
+		REFERENCES games(game_id),
+    CONSTRAINT fk_team_name FOREIGN KEY(team_name) 
+		REFERENCES teams(team_name)
+);
+\copy linescores from 'data/linescores.csv' DELIMITER ',' CSV HEADER;
+
+DROP TABLE rosters;
+CREATE TABLE rosters (
+	game_id INT NOT NULL,
+	athlete_id INT NOT NULL,
+	played BOOLEAN,
+	team_name varchar(30) NOT NULL,
+	position_name varchar(30),
+	PRIMARY KEY(game_id,athlete_id,team_name),
+	CONSTRAINT fk_game_id FOREIGN KEY(game_id) 
+		REFERENCES games(game_id),
+	CONSTRAINT fk_athlete_id FOREIGN KEY(athlete_id) 
+		REFERENCES athletes(athlete_id),
+	CONSTRAINT fk_team_name FOREIGN KEY(team_name) 
+		REFERENCES teams(team_name),
+    CONSTRAINT fk_position_name FOREIGN KEY(position_name) 
+		REFERENCES positions(position_name)
+
+);
+\copy rosters from 'data/rosters.csv' DELIMITER ',' CSV HEADER;
 
 -- get rid of header row
 -- DELETE FROM sales WHERE name='name';
+/*
+DROP TABLE games;
+DROP TABLE positions;
+DROP TABLE season_dates;
+DROP TABLE rosters;
+DROP TABLE venues;
+DROP TABLE athletes;
+DROP TABLE teams;
+DROP TABLE linescores;
+*/
