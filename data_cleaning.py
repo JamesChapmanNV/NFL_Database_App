@@ -1,6 +1,5 @@
 import pandas as pd
 import re
-
 #%%
 """
 We need to remove some of the un-needed columns from games
@@ -58,7 +57,7 @@ def clean_date(date_string: str) -> str:
                 year = '20' + year
         return f'{month}-{day}-{year}'
     except:
-        return ''
+        return pd.NA
 
 
 FINAL_ATHLETES_COLUMNS = ['athlete_id', 'firstName', 'lastName', 'displayHeight', 'displayWeight',
