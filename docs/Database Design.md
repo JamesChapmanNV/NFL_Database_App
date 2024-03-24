@@ -42,6 +42,12 @@ Plays(<ins>play_id</ins>, game_id, quarter, yards, score_value, play_type, text,
 * player_id is a foreign key referencing players.player_id
 * game_id is a foreign key referencing games.game_id
 
+Player_Plays(<ins>play_id</ins>, <ins>player_id</ins>, <ins>game_id</ins>, type)
+
+* play_id is a foreign key referencing plays.play_id
+* player_id is a foreign key referencing Athletes.athlete_id
+* game_id is a foreign key referencing Games.game_id
+
 ## Functional Dependencies
 
 **Teams**:
