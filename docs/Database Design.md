@@ -37,7 +37,7 @@ Plays(<ins>play_id</ins>, quarter, yards, score_value, play_type, text, seconds_
 
 * player_id is a foreign key referencing players.player_id
 
-Player_Plays(<ins>play_id</ins>, <ins>player_id</ins>, <ins>game_id</ins>, type)
+Player_Plays(<ins>play_id</ins>, <ins>player_id</ins>, game_id, type)
 
 * play_id is a foreign key referencing plays.play_id
 * player_id is a foreign key referencing Athletes.athlete_id
@@ -48,6 +48,7 @@ Player_Plays(<ins>play_id</ins>, <ins>player_id</ins>, <ins>game_id</ins>, type)
 **Teams**:
 
 $`team\_name \to location, abbreviation, venue\_name, primary\_color, secondary\_color`$
+
 $`abbreviation \to location, team\_name, venue\_name, primary\_color, secondary\_color`$
 
 **Venues**
@@ -66,7 +67,8 @@ $`date \to season\_year, season\_type, week`$
 **Athletes**
 
 $`athlete\_id \to first\_name, last\_name, dob, jersey, height, weight, birth\_city, birth\_state`$
-$`first\_name, last\_name`, dob, birth\_city, birth\_state \to athlete\_id, jersey, height, weight$
+
+$`first\_name, last\_name, dob, birth\_city, birth\_state \to athlete\_id, jersey, height, weight`$
 
 **Positions**
 
