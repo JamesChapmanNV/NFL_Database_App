@@ -67,9 +67,14 @@ $`zip\_code \to city, state`$
 
 $`game\_id \to attendance, date, utc\_time, home\_team\_id, away\_team\_id, venue\_name`$
 
+**Season_Dates**
+
+$`date \to season\_year, season\_type, week`$
+
 **Athletes**
 
 $`athlete\_id \to first\_name, last\_name, dob, jersey, height, weight, birth\_place`$
+$`first\_name, last\_name`, dob, birth\_place \to athlete\_id, jersey, height, weight$
 
 **Positions**
 
@@ -90,3 +95,9 @@ $`play\_id \to game\_id, quarter, yards, score\_value, play\_type, text, seconds
 **Player_plays**
 
 $`game\_id, play\_id, player\_id \to type`$
+
+## BCNF
+Yes, all of the relations in the schema are in BCNF. Each of the functional dependencies listed is a superkey.
+
+## Part E- Is there anything we don't like about the schema?
+
