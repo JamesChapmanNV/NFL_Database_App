@@ -17,7 +17,7 @@ Games(<ins>game_id</ins>, date, attendance, home_team_name, away_team_name, venu
 
 Season_dates(<ins>date</ins>, season_year, season_type, week)
 	
-Athletes(<ins>athlete_id</ins>, first_name, last_name, dob, jersey, height, weight, birth_place)
+Athletes(<ins>athlete_id</ins>, first_name, last_name, dob, jersey, height, weight, birth_city, birth_state)
 
 Positions(<ins>position_name</ins>, abbreviation, platoon)
 
@@ -65,8 +65,8 @@ $`date \to season\_year, season\_type, week`$
 
 **Athletes**
 
-$`athlete\_id \to first\_name, last\_name, dob, jersey, height, weight, birth\_place`$
-$`first\_name, last\_name`, dob, birth\_place \to athlete\_id, jersey, height, weight$
+$`athlete\_id \to first\_name, last\_name, dob, jersey, height, weight, birth\_city, birth\_state`$
+$`first\_name, last\_name`, dob, birth\_city, birth\_state \to athlete\_id, jersey, height, weight$
 
 **Positions**
 
