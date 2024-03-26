@@ -23,7 +23,7 @@ Season_dates(<ins>date</ins>, season_year, season_type, week)
 	
 Athletes(<ins>athlete_id</ins>, first_name, last_name, dob, jersey, height, weight, birth_place)
 
-Positions(<ins>position_name</ins>, abbreviation)
+Positions(<ins>position_name</ins>, abbreviation, platoon)
 
 Rosters(<ins>game_id</ins>, <ins>team_name</ins>, <ins>athlete_id</ins>. position_name, played)
 
@@ -37,10 +37,9 @@ Linescores(<ins>team_name</ins>, <ins>game_id</ins>, <ins>quarter</ins>, score)
 * team_name is a foreign key referencing teams.team_name
 * game_id is a foreign key referencing games.game_id
 
-Plays(<ins>play_id</ins>, ~~game_id~~, quarter, yards, score_value, play_type, text, seconds_remaining, start_down, end_down)
+Plays(<ins>play_id</ins>, quarter, yards, score_value, play_type, text, seconds_remaining, start_down, end_down)
 
 * player_id is a foreign key referencing players.player_id
-* game_id is a foreign key referencing games.game_id
 
 Player_Plays(<ins>play_id</ins>, <ins>player_id</ins>, <ins>game_id</ins>, type)
 
@@ -78,7 +77,7 @@ $`first\_name, last\_name`, dob, birth\_place \to athlete\_id, jersey, height, w
 
 **Positions**
 
-$`position\_name \to abbreviation`$
+$`position\_name \to abbreviation, platoon`$
 
 **Rosters**
 
@@ -90,7 +89,7 @@ $`team\_name, game\_id, quarter \to score`$
 
 **Plays**
 
-$`play\_id \to game\_id, quarter, yards, score\_value, play\_type, text, seconds\_remaining`$
+$`play\_id \to quarter, yards, score\_value, play\_type, text, seconds\_remaining`$
 
 **Player_plays**
 
