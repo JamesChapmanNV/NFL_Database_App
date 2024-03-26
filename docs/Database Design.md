@@ -1,5 +1,8 @@
 # CIS 761- Project Database Design
 
+## E/R Diagram
+Please see the attached E/R diagram png file. Weak entity sets and their relationships are denoted as dashed lines. Additionally, exactly one relationships are denoted as a line with two dashes through them.
+
 ## Relations
 
 Teams(<ins>team_name</ins>, location, abbreviation, venue_name, primary_color, secondary_color)
@@ -94,4 +97,4 @@ $`play\_id, player_id \to game\_id, type`$
 Yes, all of the relations in the schema are in BCNF. Each of the functional dependencies listed is a superkey.
 
 ## Part E- Is there anything we don't like about the schema?
-As it stands, we are happy with the schema as it stands. Originally the data contained numerical IDs for teams, venues, and position, which had the potential to result in duplicate entries. However, since position, team and venue names are unique, we decided to remove the numeric ID and use team/venue name as the key. The original data also had birth place as a string of the form <CITY>, <STATE>, which is not an optimal way to store this data. Therefore, we split the string and created an attribute for city and state separately. This will avoid string manipulation when working with this data. 
+As it stands, we are happy with the schema as it stands. Originally the data contained numerical IDs for teams, venues, and position, which had the potential to result in duplicate entries. However, since position, team and venue names are unique, we decided to remove the numeric ID and use team/venue name as the key. The original data also had birth place as a string of the form CITY, STATE, which is not an optimal way to store this data. Therefore, we split the string and created an attribute for city and state separately. This will avoid string manipulation when working with this data. 
