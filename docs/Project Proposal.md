@@ -18,6 +18,8 @@ This project will model NFL data for a sports network using a PostgreSQL databas
 * A stadium can have many home teams (ex. MetLife Stadium), but a team must have exactly one stadium.
 * Games will be identified by a game ID and have attributes attendance, date, and utc_time.
 * Many games can be played at a given venue, but each game must be played at exactly one venue.
+* The NFL schedule will be identified by the date and have attributes season_year, season_type, and week.
+* Many games may be played on a given date, but each game must occur on exactly one date.
 * Each game must have exactly one home team and one away team. Each team can play in many games.
 * Scores in each quarter (linescores) will be identified by the game its played in, the team it corresponds to, and quarter and have attributes score.
 * Games and teams can have many linescores.
