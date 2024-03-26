@@ -76,7 +76,7 @@ $`position\_name \to abbreviation, platoon`$
 
 **Rosters**
 
-$`game\_id, team\_name, athlete\_id \to position\_id, played`$
+$`game\_id, team\_name, athlete\_id \to position\_name, played`$
 
 **Linescores**
 
