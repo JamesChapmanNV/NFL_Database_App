@@ -6,11 +6,7 @@ Teams(<ins>team_name</ins>, location, abbreviation, venue_name, primary_color, s
 
 * venue_name is a foreign key referencing Venues.venue_name
 
-Venues(<ins>venue_name</ins>, capacity, zip_code, grass, indoor)
-
-* zip_code is a foreign key referencing Locations.zip_code
-
-Locations(<ins>zip_code</ins>, city, state)
+Venues(<ins>venue_name</ins>, capacity, city, state, grass, indoor)
 
 Games(<ins>game_id</ins>, date, attendance, home_team_name, away_team_name, venue_name, utc_time)
 
@@ -56,11 +52,8 @@ $`abbreviation \to location, team\_name, venue\_name, primary\_color, secondary\
 
 **Venues**
 
-$`venue\_name \to capacity, zip\_code, grass, indoor`$
+$`venue\_name \to capacity, city, state, grass, indoor`$
 
-**Locations**
-
-$`zip\_code \to city, state`$
 
 **Games**
 
