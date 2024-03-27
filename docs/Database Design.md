@@ -85,7 +85,7 @@ $team\_name, game\_id, quarter \to score$
 
 **Plays**
 
-$play\_id \to quarter, yards, score\_value, play\_type, text, seconds\_remaining$
+$play\_id \to quarter, yards, score\_value, play\_type, text, seconds\_remaining, start\_down, end\_down$
 
 **Player_plays**
 
