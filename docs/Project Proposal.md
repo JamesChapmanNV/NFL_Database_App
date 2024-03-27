@@ -25,4 +25,3 @@ This project will model NFL data for a sports network using a PostgreSQL databas
 * Games and teams can have many linescores.
 * Each play will be identified by a play ID and have attributes play type, play text, quarter, seconds remaining in quarter, score value, start down, and end down.
 * A game can have many plays, and each player can be associated with many plays in each game. Additionally, a play can involve many players. 
-
