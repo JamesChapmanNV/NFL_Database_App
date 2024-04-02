@@ -1,47 +1,47 @@
 venue_name,capacity,grass,indoor,city,state,zip_code
-NRG Stadium,0,False,True,Houston,TX,77054
-Lambeau Field,0,True,False,Green Bay,WI,54304
-M&T Bank Stadium,0,True,False,Baltimore,MD,21230
-FedExField,0,True,False,Landover,MD,20785
-Empower Field at Mile High,0,True,False,Denver,CO,80204
-Candlestick Park,0,True,False,San Francisco,CA,
-Georgia Dome,0,False,True,Atlanta,GA,
-Gillette Stadium,0,False,False,Foxborough,MA,02035
-Caesars Superdome,0,False,True,New Orleans,LA,70112
-Highmark Stadium,0,False,False,Orchard Park,NY,14127
-Soldier Field,0,True,False,Chicago,IL,60605
-Cleveland Browns Stadium,0,True,False,Cleveland,OH,44114
-Ford Field,0,False,True,Detroit,MI,48226
-Lucas Oil Stadium,0,False,True,Indianapolis,IN,46225
-MetLife Stadium,0,False,False,East Rutherford,NJ,07073
-Acrisure Stadium,0,True,False,Pittsburgh,PA,15212
-Bank of America Stadium,0,False,False,Charlotte,NC,28202
-EverBank Stadium,0,True,False,Jacksonville,FL,32202
-The Dome at America's Center,0,False,True,St. Louis,MO,63101
-AT&T Stadium,0,False,True,Arlington,TX,76011
-SDCCU Stadium,0,True,False,San Diego,CA,
-GEHA Field at Arrowhead Stadium,0,True,False,Kansas City,MO,64129
-Lincoln Financial Field,0,True,False,Philadelphia,PA,19148
-State Farm Stadium,0,True,True,Glendale,AZ,85305
-Raymond James Stadium,0,True,False,Tampa,FL,33607
-Oakland Coliseum,0,True,False,Oakland,CA,94621
-Lumen Field,0,False,False,Seattle,WA,98134
-Paycor Stadium,0,False,False,Cincinnati,OH,45202
-Nissan Stadium,0,False,False,Nashville,TN,37213
-Mall of America Field,64121,False,True,Minneapolis,MN,55415
-Hard Rock Stadium,0,True,False,Miami Gardens,FL,33056
-Wembley Stadium,0,True,False,London,,
-Rogers Centre,0,False,True,Toronto,ON,
-Huntington Bank Stadium,0,False,False,Minneapolis,MN,55455
-Levi's Stadium,0,True,False,Santa Clara,CA,95054
-Los Angeles Memorial Coliseum,0,True,False,Los Angeles,CA,90037
-U.S. Bank Stadium,0,False,True,Minneapolis,MN,55415
-Twickenham Stadium,0,True,False,London,,
-Estadio Azteca,0,True,False,Mexico City,,
-Dignity Health Sports Park,0,True,False,Carson,CA,90746
-Mercedes-Benz Stadium,0,False,True,Atlanta,GA,30313
-Tottenham Hotspur Stadium,0,True,False,London,,
-SoFi Stadium,0,False,True,Inglewood,CA,90301
-Allegiant Stadium,0,True,True,Las Vegas,NV,89118
-Allianz Arena,0,True,False,Munich,,
-Frankfurt Stadium,0,True,False,Frankfurt,,
+NRG Stadium,72220,FALSE,TRUE,Houston,TX,77054
+Lambeau Field,81441,TRUE,FALSE,Green Bay,WI,54304
+M&T Bank Stadium,71008,TRUE,FALSE,Baltimore,MD,21230
+FedExField,67617,TRUE,FALSE,Landover,MD,20785
+Empower Field at Mile High,76125,TRUE,FALSE,Denver,CO,80204
+Candlestick Park,69732,TRUE,FALSE,San Francisco,CA,
+Georgia Dome,71228,FALSE,TRUE,Atlanta,GA,
+Gillette Stadium,65878,FALSE,FALSE,Foxborough,MA,02035
+Caesars Superdome,83000,FALSE,TRUE,New Orleans,LA,70112
+Highmark Stadium,71608,FALSE,FALSE,Orchard Park,NY,14127
+Soldier Field,61500,TRUE,FALSE,Chicago,IL,60605
+Cleveland Browns Stadium,67431,TRUE,FALSE,Cleveland,OH,44114
+Ford Field,65000,FALSE,TRUE,Detroit,MI,48226
+Lucas Oil Stadium,70000,FALSE,TRUE,Indianapolis,IN,46225
+MetLife Stadium,82500,FALSE,FALSE,East Rutherford,NJ,07073
+Acrisure Stadium,68400,TRUE,FALSE,Pittsburgh,PA,15212
+Bank of America Stadium,74867,FALSE,FALSE,Charlotte,NC,28202
+EverBank Stadium,67838,TRUE,FALSE,Jacksonville,FL,32202
+The Dome at America's Center,67000,FALSE,TRUE,St. Louis,MO,63101
+AT&T Stadium,80000,FALSE,TRUE,Arlington,TX,76011
+SDCCU Stadium,70561,TRUE,FALSE,San Diego,CA,
+GEHA Field at Arrowhead Stadium,76416,TRUE,FALSE,Kansas City,MO,64129
+Lincoln Financial Field,67594,TRUE,FALSE,Philadelphia,PA,19148
+State Farm Stadium,63400,TRUE,TRUE,Glendale,AZ,85305
+Raymond James Stadium,75000,TRUE,FALSE,Tampa,FL,33607
+Oakland Coliseum,63000,TRUE,FALSE,Oakland,CA,94621
+Lumen Field,68740,FALSE,FALSE,Seattle,WA,98134
+Paycor Stadium,65515,FALSE,FALSE,Cincinnati,OH,45202
+Nissan Stadium,69143,FALSE,FALSE,Nashville,TN,37213
+Mall of America Field,64121,FALSE,TRUE,Minneapolis,MN,55415
+Hard Rock Stadium,65326,TRUE,FALSE,Miami Gardens,FL,33056
+Wembley Stadium,90000,TRUE,FALSE,London,,
+Rogers Centre,49286,FALSE,TRUE,Toronto,ON,
+Huntington Bank Stadium,50805,FALSE,FALSE,Minneapolis,MN,55455
+Levi's Stadium,68500,TRUE,FALSE,Santa Clara,CA,95054
+Los Angeles Memorial Coliseum,77500,TRUE,FALSE,Los Angeles,CA,90037
+U.S. Bank Stadium,73000,FALSE,TRUE,Minneapolis,MN,55415
+Twickenham Stadium,82000,TRUE,FALSE,London,,
+Estadio Azteca,83264,TRUE,FALSE,Mexico City,,
+Dignity Health Sports Park,27000,TRUE,FALSE,Carson,CA,90746
+Mercedes-Benz Stadium,71000,FALSE,TRUE,Atlanta,GA,30313
+Tottenham Hotspur Stadium,62850,TRUE,FALSE,London,,
+SoFi Stadium,70000,FALSE,TRUE,Inglewood,CA,90301
+Allegiant Stadium,65000,TRUE,TRUE,Las Vegas,NV,89118
+Allianz Arena,75024,TRUE,FALSE,Munich,,
+Frankfurt Stadium,51500,TRUE,FALSE,Frankfurt,,
