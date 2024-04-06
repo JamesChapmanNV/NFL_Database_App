@@ -1,25 +1,25 @@
-position_name,abbreviation
-Unknown,-
-Defensive Tackle,DT
-Running Back,RB
-Tight End,TE
-Defensive End,DE
-Wide Receiver,WR
-Center,C
-Offensive Tackle,OT
-Safety,S
-Guard,G
-Cornerback,CB
-Linebacker,LB
-Quarterback,QB
-Punter,P
-Place kicker,PK
-Long Snapper,LS
-Fullback,FB
-Nose Tackle,NT
-Defensive Back,DB
-Offensive Lineman,OL
-Defensive Lineman,DL
-Athlete,ATH
-Kick Returner,KR
-Punt Returner,PR
+position_name,abbreviation,platoon
+Unknown,-,
+Defensive Tackle,DT,Defense
+Running Back,RB,Offense
+Tight End,TE,Offense
+Defensive End,DE,Defense
+Wide Receiver,WR,Offense
+Center,C,Offense
+Offensive Tackle,OT,Offense
+Safety,S,Defense
+Guard,G,Offense
+Cornerback,CB,Defense
+Linebacker,LB,Defense
+Quarterback,QB,Offense
+Punter,P,Special Teams
+Place kicker,PK,Special Teams
+Long Snapper,LS,Special Teams
+Fullback,FB,Offense
+Nose Tackle,NT,Defense
+Defensive Back,DB,Defense
+Offensive Lineman,OL,Offense
+Defensive Lineman,DL,Defense
+Athlete,ATH,
+Kick Returner,KR,Special Teams
+Punt Returner,PR,Special Teams
