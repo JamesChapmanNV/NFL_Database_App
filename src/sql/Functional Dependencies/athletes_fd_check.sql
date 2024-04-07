@@ -119,3 +119,8 @@ FROM
 		FROM athletes
 		GROUP BY firstname, lastname, displaydob
 		HAVING count(DISTINCT athlete_id) > 1) x;a
+		
+select firstname, lastname, min(jersey), max(jersey)
+from athletes
+group by firstname, lastname, dob
+having count(*) > 1;
