@@ -9,6 +9,13 @@ Connect to the postgreSQL database and provide your password when prompted:
 Connect to your database:
 `\c <database_name>`
 
+## Rebuild the database
+The rebuild.sql sequentially executes the scripts needed to rebuild the database. Any previously created tables are dropped, re-created, and populated with data.
+`\i rebuild.sql`
+
+## Executing scripts individually
+`rebuild.sql` is a wrapper around the following commands:
+
 Drop any previously created tables:
 `\i drop_tables.sql`
 
