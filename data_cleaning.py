@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+pd.set_option('display.max_columns', 500)
 #%%
 """
 We need to remove some of the un-needed columns from games
@@ -84,7 +85,7 @@ for year in YEARS:
     df = df[PLAYS_COLUMNS]
     df['start_down'] = df['start_down'].apply(lambda x: x if x >= 0 else 0)
     df['end_down'] = df['end_down'].apply(lambda x: x if x >= 0 else 0)
-full_df = pd.concat([full_df, df], ignore_index=True)
+    full_df = pd.concat([full_df, df], ignore_index=True)
 full_df[INT_COLS] = full_df[INT_COLS].astype('int64')
 full_df.to_csv('data/full_plays.csv', index=False)
 #%%
