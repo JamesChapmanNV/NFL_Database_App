@@ -81,7 +81,7 @@ INT_COLS = ['start_down', 'end_down', 'quarter', 'seconds_remaining', 'score_val
 YEARS = range(2014, 2025)
 full_df = pd.DataFrame()
 for year in YEARS:
-    df = pd.read_csv(f'data/plays_{year}.csv')
+    df = pd.read_csv(f'data/Plays by Year/plays_{year}.csv')
     df = df[PLAYS_COLUMNS]
     df['start_down'] = df['start_down'].apply(lambda x: x if x >= 0 else 0)
     df['end_down'] = df['end_down'].apply(lambda x: x if x >= 0 else 0)
@@ -97,7 +97,7 @@ PLAYER_PLAYS_COLUMNS = ['play_id', 'player_id', 'type']
 YEARS = range(2014, 2025) # Same as above, but allows us to run this cell without the above
 full_pp_df = pd.DataFrame()
 for year in YEARS:
-    df = pd.read_csv(f'data/player_plays_{year}.csv')
+    df = pd.read_csv(f'data/Player Plays By Year/player_plays_{year}.csv')
     df = df[PLAYER_PLAYS_COLUMNS]
     full_pp_df = pd.concat([full_pp_df, df], ignore_index=True)
 full_pp_df = full_pp_df.drop_duplicates()
@@ -116,3 +116,10 @@ df_athletes['birth_state'] = df_athletes['birth_place'].apply(lambda x: split_bi
 df_athletes = df_athletes.drop(['birth_place'], axis=1)
 df_athletes.to_csv('data/athletes_split.csv', index=False)
 #%%
+df_athletes = pd.read_csv('data/athletes_split.csv')
+df_pp = pd.read_csv('data/Player Plays By Year/full_player_plays.csv')
+df_joined = df_pp.merge(df_athletes, left_on='player_id', right_on='athlete_id', how='left')
+missing_athletes = df_joined[df_joined['athlete_id'].isnull()]['player_id']
+df_pp = df_pp[~df_pp['player_id'].isin(missing_athletes)]
+df_pp.to_csv('data/full_player_plays.csv', index=False)
+missing_athletes.to_csv('data/missing_athletes.csv', index=False)
