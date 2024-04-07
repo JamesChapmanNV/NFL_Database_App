@@ -11,7 +11,7 @@ Connect to your database:
 
 ## Rebuild the database
 The rebuild.sql sequentially executes the scripts needed to rebuild the database. Any previously created tables are dropped, re-created, and populated with data.
-`\i rebuild.sql`
+`\i build.sql`
 
 ## Executing scripts individually
 `rebuild.sql` is a wrapper around the following commands:
