@@ -71,4 +71,47 @@ df_athletes_decomposed['dob'] = df_athletes_decomposed['displayDOB'].apply(clean
 df_athletes_decomposed.drop(columns=['displayHeight', 'displayWeight', 'displayDOB'], inplace=True)
 df_athletes_decomposed.to_csv('data/decomposed_data/athletes.csv')
 #%%
+"""
+Subset the plays data to pull the columns we need, then concatenate it
+with the others.
+"""
+PLAYS_COLUMNS = ['play_id', 'start_down', 'end_down', 'quarter', 'play_type', 'seconds_remaining', 'text', 'score_value', 'yards']
+INT_COLS = ['start_down', 'end_down', 'quarter', 'seconds_remaining', 'score_value', 'yards']
+YEARS = range(2014, 2025)
+full_df = pd.DataFrame()
+for year in YEARS:
+    df = pd.read_csv(f'data/plays_{year}.csv')
+    df = df[PLAYS_COLUMNS]
+    df['start_down'] = df['start_down'].apply(lambda x: x if x >= 0 else 0)
+    df['end_down'] = df['end_down'].apply(lambda x: x if x >= 0 else 0)
+full_df = pd.concat([full_df, df], ignore_index=True)
+full_df[INT_COLS] = full_df[INT_COLS].astype('int64')
+full_df.to_csv('data/full_plays.csv', index=False)
+#%%
+"""
+Subset the player plays data to pull the columns we need, then
+concatenate it with the other years
+"""
+PLAYER_PLAYS_COLUMNS = ['play_id', 'player_id', 'type']
+YEARS = range(2014, 2025) # Same as above, but allows us to run this cell without the above
+full_pp_df = pd.DataFrame()
+for year in YEARS:
+    df = pd.read_csv(f'data/player_plays_{year}.csv')
+    df = df[PLAYER_PLAYS_COLUMNS]
+    full_pp_df = pd.concat([full_pp_df, df], ignore_index=True)
+full_pp_df = full_pp_df.drop_duplicates()
+full_pp_df.to_csv('data/full_player_plays.csv', index=False)
+#%%
+
+def split_birthplace(s: str, index: int):
+    try:
+        val = s.split(', ')[index]
+        return val
+    except:
+        return ''
+df_athletes = pd.read_csv('data/athletes.csv')
+df_athletes['birth_city'] = df_athletes['birth_place'].apply(lambda x: split_birthplace(x, 0))
+df_athletes['birth_state'] = df_athletes['birth_place'].apply(lambda x: split_birthplace(x, 1))
+df_athletes = df_athletes.drop(['birth_place'], axis=1)
+df_athletes.to_csv('data/athletes_split.csv', index=False)
 #%%

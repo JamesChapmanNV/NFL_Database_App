@@ -94,8 +94,8 @@ Current tables are as follows:
 | quarter | INT | NOT NULL |
 | yards | INT | NOT NULL |
 | score_value | INT | NOT NULL |
-| play_type | VARCHAR(10) | NOT NULL |
-| text | VARCHAR(255) | |
+| play_type | VARCHAR(45) | NOT NULL |
+| text | TEXT | |
 | seconds_remaining | INT | |
 | start_down | INT | NOT NULL |
 | end_down | INT | NOT NULL |

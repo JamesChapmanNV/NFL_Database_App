@@ -19,7 +19,7 @@ CREATE TABLE teams(
 
 CREATE TABLE positions(
     position_name VARCHAR(20) PRIMARY KEY,
-    abbreviation VARCHAR(2) UNIQUE,
+    abbreviation VARCHAR(3) UNIQUE,
     platoon VARCHAR(13)
 );
 
@@ -30,8 +30,8 @@ CREATE TABLE athletes(
     dob DATE,
     height NUMERIC,
     weight NUMERIC,
-    birth_city VARCHAR(20),
-    birth_state VARCHAR(20)
+    birth_city VARCHAR(45),
+    birth_state VARCHAR(45)
 );
 
 CREATE TABLE season_dates(
@@ -65,8 +65,8 @@ CREATE TABLE plays(
     quarter INT NOT NULL,
     yards INT NOT NULL,
     score_value INT NOT NULL,
-    play_type VARCHAR(10) NOT NULL,
-    text VARCHAR(255),
+    play_type VARCHAR(45) NOT NULL,
+    text TEXT,
     seconds_remaining INT,
     start_down INT NOT NULL,
     end_down INT NOT NULL
