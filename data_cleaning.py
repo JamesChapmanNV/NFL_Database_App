@@ -116,10 +116,14 @@ df_athletes['birth_state'] = df_athletes['birth_place'].apply(lambda x: split_bi
 df_athletes = df_athletes.drop(['birth_place'], axis=1)
 df_athletes.to_csv('data/athletes_split.csv', index=False)
 #%%
-df_athletes = pd.read_csv('data/athletes_split.csv')
-df_pp = pd.read_csv('data/Player Plays By Year/full_player_plays.csv')
+df_athletes = pd.read_csv('data/athletes.csv')
+df_pp = pd.read_csv('data/full_player_plays.csv')
 df_joined = df_pp.merge(df_athletes, left_on='player_id', right_on='athlete_id', how='left')
 missing_athletes = df_joined[df_joined['athlete_id'].isnull()]['player_id']
+missing_athletes.to_csv('data/missing_athletes.csv', index=False)
+#%%
+df_athletes = pd.read_csv('data/athletes_split.csv')
+df_pp = pd.read_csv('data/full_player_plays.csv')
+df_joined = df_pp.merge(df_athletes, left_on='player_id', right_on='athlete_id', how='left')
 df_pp = df_pp[~df_pp['player_id'].isin(missing_athletes)]
 df_pp.to_csv('data/full_player_plays.csv', index=False)
-missing_athletes.to_csv('data/missing_athletes.csv', index=False)
