@@ -82,7 +82,7 @@ Current tables are as follows:
 | column | data_type | constraints |
 | ------ | --------- | ----------- |
 | date | DATE | PRIMARY KEY |
-| season_year | NOT NULL |
+| season_year | NOT NULL | NOT NULL |
 | season_type | VARCHAR(20) | NOT NULL |
 | week | INT | NOT NULL |
 
@@ -109,7 +109,7 @@ Current tables are as follows:
 | player_id | BIGINT | FOREIGN KEY(Athletes.athlete_id) |
 | game_id | BIGINT | NOT NULL |
 | type | VARCHAR(20) | NOT NULL |
-| play_id, player_id | | PRIMARY KEY |
+| play_id, player_id, type | | PRIMARY KEY |
 
 
 **Linescores**
