@@ -93,7 +93,7 @@ full_df.to_csv('data/full_plays.csv', index=False)
 Subset the player plays data to pull the columns we need, then
 concatenate it with the other years
 """
-PLAYER_PLAYS_COLUMNS = ['play_id', 'player_id', 'type']
+PLAYER_PLAYS_COLUMNS = ['play_id', 'game_id', 'player_id', 'type']
 YEARS = range(2014, 2025) # Same as above, but allows us to run this cell without the above
 full_pp_df = pd.DataFrame()
 for year in YEARS:
@@ -101,6 +101,7 @@ for year in YEARS:
     df = df[PLAYER_PLAYS_COLUMNS]
     full_pp_df = pd.concat([full_pp_df, df], ignore_index=True)
 full_pp_df = full_pp_df.drop_duplicates()
+full_pp_df['game_id'] = full_pp_df['game_id'].astype('int64')
 full_pp_df.to_csv('data/full_player_plays.csv', index=False)
 #%%
 
@@ -122,6 +123,20 @@ df_joined = df_pp.merge(df_athletes, left_on='player_id', right_on='athlete_id',
 missing_athletes = df_joined[df_joined['athlete_id'].isnull()]['player_id']
 missing_athletes.to_csv('data/missing_athletes.csv', index=False)
 #%%
+df_games = pd.read_csv('data/games.csv')
 df_pp = pd.read_csv('data/full_player_plays.csv')
-df_pp = df_pp[~df_pp['player_id'].isin(missing_athletes)]
+df_games = df_games.rename(columns={'game_id': 'game_id_games'})
+df_joined = df_pp.merge(df_games, left_on='game_id', right_on='game_id_games', how='left')
+missing_games = df_joined[df_joined['game_id_games'].isnull()]['game_id'].drop_duplicates()
+missing_games.to_csv('data/missing_games.csv', index=False)
+#%%
+df_pp = pd.read_csv('data/full_player_plays.csv')
+missing_athletes = pd.read_csv('data/missing_athletes.csv')
+player_mask = ~df_pp['player_id'].isin(missing_athletes['player_id'])
+df_pp = df_pp[player_mask]
+
+missing_games = pd.read_csv('data/missing_games.csv')
+games_mask = ~df_pp['game_id'].isin(missing_games['game_id'])
+df_pp = df_pp[games_mask]
 df_pp.to_csv('data/full_player_plays.csv', index=False)
+
