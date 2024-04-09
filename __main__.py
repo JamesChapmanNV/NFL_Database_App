@@ -67,7 +67,7 @@ if __name__ == "__main__":
         username = sys.argv[1]
         password = sys.argv[2]
         print(username,password)
-        app = NFLapp(username, password)
+        app = NFLapp(username, u"\u25CF"*12) # Prints 12 password black circles instead of password
         app.query.open_connections()
         app.menu()  # Enter the main menu loop
     except Exception as e:
