@@ -11,7 +11,7 @@ class Query:
 
     def load_configuration(self):
         parser = ConfigParser()
-        parser.read('NFL_database/config.ini') # Required file for connection
+        parser.read('config.ini') # Required file for connection
         params = parser.items('Database') # Required database section
         return {param[0]: param[1] for param in params}
 
