@@ -45,8 +45,8 @@ CREATE TABLE games(
     game_id BIGINT PRIMARY KEY,
     date DATE NOT NULL REFERENCES season_dates(date),
     attendance INT,
-    home_team VARCHAR(45) NOT NULL REFERENCES teams(team_name),
-    away_team VARCHAR(45) NOT NULL REFERENCES teams(team_name),
+    home_team_name VARCHAR(45) NOT NULL REFERENCES teams(team_name),
+    away_team_name VARCHAR(45) NOT NULL REFERENCES teams(team_name),
     venue_name VARCHAR(45) REFERENCES venues(venue_name),
     utc_time TIME
 );
