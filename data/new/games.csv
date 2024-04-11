@@ -1,0 +1,2977 @@
+game_id,date,attendance,utc_time,venue_name,home_team_name,away_team_name
+330105034,2013-01-05,0,21:30,NRG Stadium,Texans,Bengals
+330105009,2013-01-06,0,01:00,Lambeau Field,Packers,Vikings
+330106033,2013-01-06,0,18:00,M&T Bank Stadium,Ravens,Colts
+330106028,2013-01-06,0,21:30,FedExField,Commanders,Seahawks
+330112007,2013-01-12,0,21:30,Empower Field at Mile High,Broncos,Ravens
+330112025,2013-01-13,0,01:00,Candlestick Park,49ers,Packers
+330113001,2013-01-13,0,18:00,Georgia Dome,Falcons,Seahawks
+330113017,2013-01-13,0,21:30,Gillette Stadium,Patriots,Texans
+330120001,2013-01-20,0,20:00,Georgia Dome,Falcons,49ers
+330120017,2013-01-20,0,23:30,Gillette Stadium,Patriots,Ravens
+330203025,2013-02-03,0,23:30,Caesars Superdome,49ers,Ravens
+330905007,2013-09-06,76977,00:30,Empower Field at Mile High,Broncos,Ravens
+330908002,2013-09-08,69519,17:00,Highmark Stadium,Bills,Patriots
+330908003,2013-09-08,62213,17:00,Soldier Field,Bears,Bengals
+330908005,2013-09-08,71513,17:00,Cleveland Browns Stadium,Browns,Dolphins
+330908008,2013-09-08,62461,17:00,Ford Field,Lions,Vikings
+330908011,2013-09-08,65412,17:00,Lucas Oil Stadium,Colts,Raiders
+330908018,2013-09-08,72348,17:00,Caesars Superdome,Saints,Falcons
+330908020,2013-09-08,76957,17:00,MetLife Stadium,Jets,Buccaneers
+330908023,2013-09-08,61585,17:00,Acrisure Stadium,Steelers,Titans
+330908029,2013-09-08,73294,17:00,Bank of America Stadium,Panthers,Seahawks
+330908030,2013-09-08,59416,17:00,EverBank Stadium,Jaguars,Chiefs
+330908014,2013-09-08,55279,20:25,The Dome at America's Center,Rams,Cardinals
+330908025,2013-09-08,69732,20:25,Candlestick Park,49ers,Packers
+330908006,2013-09-09,85348,00:30,AT&T Stadium,Cowboys,Giants
+330909028,2013-09-09,82743,22:55,FedExField,Commanders,Eagles
+330909024,2013-09-10,59522,02:25,SDCCU Stadium,Chargers,Texans
+330912017,2013-09-13,68756,00:25,Gillette Stadium,Patriots,Jets
+330915001,2013-09-15,70056,17:00,Georgia Dome,Falcons,Rams
+330915002,2013-09-15,67819,17:00,Highmark Stadium,Bills,Panthers
+330915003,2013-09-15,62181,17:00,Soldier Field,Bears,Vikings
+330915009,2013-09-15,78020,17:00,Lambeau Field,Packers,Commanders
+330915011,2013-09-15,65406,17:00,Lucas Oil Stadium,Colts,Dolphins
+330915012,2013-09-15,76952,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Cowboys
+330915021,2013-09-15,69144,17:00,Lincoln Financial Field,Eagles,Chargers
+330915033,2013-09-15,71098,17:00,M&T Bank Stadium,Ravens,Browns
+330915034,2013-09-15,71718,17:00,NRG Stadium,Texans,Titans
+330915022,2013-09-15,60034,20:05,State Farm Stadium,Cardinals,Lions
+330915027,2013-09-15,60870,20:05,Raymond James Stadium,Buccaneers,Saints
+330915013,2013-09-15,49400,20:25,Oakland Coliseum,Raiders,Jaguars
+330915019,2013-09-15,81285,20:25,MetLife Stadium,Giants,Broncos
+330915026,2013-09-16,68338,00:30,Lumen Field,Seahawks,49ers
+330916004,2013-09-17,64585,00:30,Paycor Stadium,Bengals,Steelers
+330919021,2013-09-20,69144,00:25,Lincoln Financial Field,Eagles,Chiefs
+330922004,2013-09-22,64633,17:00,Paycor Stadium,Bengals,Packers
+330922006,2013-09-22,80848,17:00,AT&T Stadium,Cowboys,Rams
+330922010,2013-09-22,69143,17:00,Nissan Stadium,Titans,Chargers
+330922016,2013-09-22,63672,17:00,Mall of America Field,Vikings,Browns
+330922017,2013-09-22,68756,17:00,Gillette Stadium,Patriots,Buccaneers
+330922018,2013-09-22,73057,17:00,Caesars Superdome,Saints,Cardinals
+330922028,2013-09-22,80111,17:00,FedExField,Commanders,Lions
+330922029,2013-09-22,73748,17:00,Bank of America Stadium,Panthers,Giants
+330922033,2013-09-22,71168,17:00,M&T Bank Stadium,Ravens,Texans
+330922015,2013-09-22,70660,20:05,Hard Rock Stadium,Dolphins,Falcons
+330922020,2013-09-22,76957,20:25,MetLife Stadium,Jets,Bills
+330922025,2013-09-22,69732,20:25,Candlestick Park,49ers,Colts
+330922026,2013-09-22,68087,20:25,Lumen Field,Seahawks,Jaguars
+330922023,2013-09-23,61575,00:30,Acrisure Stadium,Steelers,Bears
+330923007,2013-09-24,76978,00:30,Empower Field at Mile High,Broncos,Raiders
+330926014,2013-09-27,56640,00:25,The Dome at America's Center,Rams,49ers
+330929002,2013-09-29,68296,17:00,Highmark Stadium,Bills,Ravens
+330929005,2013-09-29,71481,17:00,Cleveland Browns Stadium,Browns,Bengals
+330929008,2013-09-29,64552,17:00,Ford Field,Lions,Bears
+330929012,2013-09-29,73386,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Giants
+330929016,2013-09-29,83518,17:00,Wembley Stadium,Vikings,Steelers
+330929027,2013-09-29,44956,17:00,Raymond James Stadium,Buccaneers,Cardinals
+330929030,2013-09-29,59695,17:00,EverBank Stadium,Jaguars,Colts
+330929034,2013-09-29,71756,17:00,NRG Stadium,Texans,Seahawks
+330929010,2013-09-29,69143,20:05,Nissan Stadium,Titans,Jets
+330929007,2013-09-29,77002,20:25,Empower Field at Mile High,Broncos,Eagles
+330929013,2013-09-29,53549,20:25,Oakland Coliseum,Raiders,Commanders
+330929024,2013-09-29,68601,20:25,SDCCU Stadium,Chargers,Cowboys
+330929001,2013-09-30,70744,00:30,Georgia Dome,Falcons,Patriots
+330930018,2013-10-01,73118,00:30,Caesars Superdome,Saints,Dolphins
+331003005,2013-10-04,71239,00:25,Cleveland Browns Stadium,Browns,Bills
+331006003,2013-10-06,62361,17:00,Soldier Field,Bears,Saints
+331006004,2013-10-06,64259,17:00,Paycor Stadium,Bengals,Patriots
+331006009,2013-10-06,78200,17:00,Lambeau Field,Packers,Lions
+331006010,2013-10-06,69143,17:00,Nissan Stadium,Titans,Chiefs
+331006011,2013-10-06,66608,17:00,Lucas Oil Stadium,Colts,Seahawks
+331006014,2013-10-06,54266,17:00,The Dome at America's Center,Rams,Jaguars
+331006015,2013-10-06,68342,17:00,Hard Rock Stadium,Dolphins,Ravens
+331006019,2013-10-06,80738,17:00,MetLife Stadium,Giants,Eagles
+331006022,2013-10-06,60426,20:05,State Farm Stadium,Cardinals,Panthers
+331006006,2013-10-06,92758,20:25,AT&T Stadium,Cowboys,Broncos
+331006025,2013-10-07,69732,00:30,Candlestick Park,49ers,Texans
+331006013,2013-10-07,48834,03:35,Oakland Coliseum,Raiders,Chargers
+331007001,2013-10-08,70246,00:30,Georgia Dome,Falcons,Jets
+331010003,2013-10-11,62374,00:25,Soldier Field,Bears,Giants
+331013002,2013-10-13,67739,17:00,Highmark Stadium,Bills,Bengals
+331013005,2013-10-13,71513,17:00,Cleveland Browns Stadium,Browns,Lions
+331013012,2013-10-13,76394,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+331013016,2013-10-13,63963,17:00,Mall of America Field,Vikings,Panthers
+331013020,2013-10-13,76957,17:00,MetLife Stadium,Jets,Steelers
+331013027,2013-10-13,62505,17:00,Raymond James Stadium,Buccaneers,Eagles
+331013033,2013-10-13,71319,17:00,M&T Bank Stadium,Ravens,Packers
+331013034,2013-10-13,71104,17:00,NRG Stadium,Texans,Rams
+331013007,2013-10-13,76862,20:05,Empower Field at Mile High,Broncos,Jaguars
+331013026,2013-10-13,68127,20:05,Lumen Field,Seahawks,Titans
+331013017,2013-10-13,68756,20:25,Gillette Stadium,Patriots,Saints
+331013025,2013-10-13,69732,20:25,Candlestick Park,49ers,Cardinals
+331013006,2013-10-14,90239,00:30,AT&T Stadium,Cowboys,Commanders
+331014024,2013-10-15,57954,00:30,SDCCU Stadium,Chargers,Colts
+331017022,2013-10-18,61200,00:25,State Farm Stadium,Cardinals,Seahawks
+331020001,2013-10-20,69522,17:00,Georgia Dome,Falcons,Buccaneers
+331020008,2013-10-20,63207,17:00,Ford Field,Lions,Bengals
+331020015,2013-10-20,60592,17:00,Hard Rock Stadium,Dolphins,Bills
+331020020,2013-10-20,76957,17:00,MetLife Stadium,Jets,Patriots
+331020021,2013-10-20,69144,17:00,Lincoln Financial Field,Eagles,Cowboys
+331020028,2013-10-20,83147,17:00,FedExField,Commanders,Bears
+331020029,2013-10-20,72686,17:00,Bank of America Stadium,Panthers,Rams
+331020030,2013-10-20,59550,17:00,EverBank Stadium,Jaguars,Chargers
+331020010,2013-10-20,69143,20:05,Nissan Stadium,Titans,49ers
+331020009,2013-10-20,77804,20:25,Lambeau Field,Packers,Browns
+331020012,2013-10-20,74118,20:25,GEHA Field at Arrowhead Stadium,Chiefs,Texans
+331020023,2013-10-20,62295,20:25,Acrisure Stadium,Steelers,Ravens
+331020011,2013-10-21,67196,00:30,Lucas Oil Stadium,Colts,Broncos
+331021019,2013-10-22,79314,00:30,MetLife Stadium,Giants,Vikings
+331024027,2013-10-25,59073,00:25,Raymond James Stadium,Buccaneers,Panthers
+331027008,2013-10-27,64379,17:00,Ford Field,Lions,Cowboys
+331027012,2013-10-27,74307,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Browns
+331027017,2013-10-27,68756,17:00,Gillette Stadium,Patriots,Dolphins
+331027018,2013-10-27,72405,17:00,Caesars Superdome,Saints,Bills
+331027021,2013-10-27,69144,17:00,Lincoln Financial Field,Eagles,Giants
+331027030,2013-10-27,83559,17:00,Wembley Stadium,Jaguars,49ers
+331027004,2013-10-27,62576,20:05,Paycor Stadium,Bengals,Jets
+331027013,2013-10-27,52950,20:05,Oakland Coliseum,Raiders,Steelers
+331027007,2013-10-27,77031,20:25,Empower Field at Mile High,Broncos,Commanders
+331027022,2013-10-27,60671,20:25,State Farm Stadium,Cardinals,Falcons
+331027016,2013-10-28,64134,00:30,Mall of America Field,Vikings,Packers
+331028014,2013-10-29,55966,00:30,The Dome at America's Center,Rams,Seahawks
+331031015,2013-11-01,52388,00:25,Hard Rock Stadium,Dolphins,Bengals
+331103002,2013-11-03,68159,18:00,Highmark Stadium,Bills,Chiefs
+331103006,2013-11-03,85360,18:00,AT&T Stadium,Cowboys,Vikings
+331103014,2013-11-03,54617,18:00,The Dome at America's Center,Rams,Titans
+331103020,2013-11-03,76957,18:00,MetLife Stadium,Jets,Saints
+331103028,2013-11-03,80115,18:00,FedExField,Commanders,Chargers
+331103029,2013-11-03,73720,18:00,Bank of America Stadium,Panthers,Falcons
+331103013,2013-11-03,51751,21:05,Oakland Coliseum,Raiders,Eagles
+331103026,2013-11-03,67873,21:05,Lumen Field,Seahawks,Buccaneers
+331103005,2013-11-03,71513,21:25,Cleveland Browns Stadium,Browns,Ravens
+331103017,2013-11-03,68756,21:25,Gillette Stadium,Patriots,Steelers
+331103034,2013-11-04,71778,01:30,NRG Stadium,Texans,Colts
+331104009,2013-11-05,0,01:30,Lambeau Field,Packers,Bears
+331107016,2013-11-08,64011,01:25,Mall of America Field,Vikings,Commanders
+331110001,2013-11-10,70309,18:00,Georgia Dome,Falcons,Seahawks
+331110003,2013-11-10,62431,18:00,Soldier Field,Bears,Lions
+331110009,2013-11-10,78011,18:00,Lambeau Field,Packers,Eagles
+331110010,2013-11-10,69143,18:00,Nissan Stadium,Titans,Jaguars
+331110011,2013-11-10,66004,18:00,Lucas Oil Stadium,Colts,Rams
+331110019,2013-11-10,80366,18:00,MetLife Stadium,Giants,Raiders
+331110023,2013-11-10,60406,18:00,Acrisure Stadium,Steelers,Bills
+331110033,2013-11-10,70992,18:00,M&T Bank Stadium,Ravens,Bengals
+331110025,2013-11-10,69732,21:05,Candlestick Park,49ers,Panthers
+331110022,2013-11-10,60845,21:25,State Farm Stadium,Cardinals,Texans
+331110024,2013-11-10,68847,21:25,SDCCU Stadium,Chargers,Broncos
+331110018,2013-11-11,73018,01:30,Caesars Superdome,Saints,Cowboys
+331111027,2013-11-12,0,01:30,Raymond James Stadium,Buccaneers,Dolphins
+331114010,2013-11-15,69143,01:25,Nissan Stadium,Titans,Colts
+331117002,2013-11-17,68036,18:00,Highmark Stadium,Bills,Jets
+331117003,2013-11-17,62367,18:00,Soldier Field,Bears,Ravens
+331117004,2013-11-17,63856,18:00,Paycor Stadium,Bengals,Browns
+331117021,2013-11-17,69144,18:00,Lincoln Financial Field,Eagles,Commanders
+331117023,2013-11-17,57905,18:00,Acrisure Stadium,Steelers,Lions
+331117027,2013-11-17,55360,18:00,Raymond James Stadium,Buccaneers,Falcons
+331117030,2013-11-17,59862,18:00,EverBank Stadium,Jaguars,Cardinals
+331117034,2013-11-17,71726,18:00,NRG Stadium,Texans,Raiders
+331117015,2013-11-17,60256,21:05,Hard Rock Stadium,Dolphins,Chargers
+331117018,2013-11-17,73025,21:25,Caesars Superdome,Saints,49ers
+331117019,2013-11-17,79114,21:25,MetLife Stadium,Giants,Packers
+331117026,2013-11-17,68235,21:25,Lumen Field,Seahawks,Vikings
+331117007,2013-11-18,77076,01:30,Empower Field at Mile High,Broncos,Chiefs
+331118029,2013-11-19,74225,01:30,Bank of America Stadium,Panthers,Patriots
+331121001,2013-11-22,70422,01:25,Georgia Dome,Falcons,Saints
+331124005,2013-11-24,71513,18:00,Cleveland Browns Stadium,Browns,Steelers
+331124008,2013-11-24,62098,18:00,Ford Field,Lions,Buccaneers
+331124009,2013-11-24,77871,18:00,Lambeau Field,Packers,Vikings
+331124012,2013-11-24,75259,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+331124014,2013-11-24,66024,18:00,The Dome at America's Center,Rams,Bears
+331124015,2013-11-24,60156,18:00,Hard Rock Stadium,Dolphins,Panthers
+331124033,2013-11-24,71148,18:00,M&T Bank Stadium,Ravens,Jets
+331124034,2013-11-24,71659,18:00,NRG Stadium,Texans,Jaguars
+331124013,2013-11-24,46001,21:05,Oakland Coliseum,Raiders,Titans
+331124022,2013-11-24,60882,21:05,State Farm Stadium,Cardinals,Colts
+331124019,2013-11-24,80499,21:25,MetLife Stadium,Giants,Cowboys
+331124017,2013-11-25,68756,01:30,Gillette Stadium,Patriots,Broncos
+331125028,2013-11-26,79773,01:30,FedExField,Commanders,49ers
+331128008,2013-11-28,64934,17:30,Ford Field,Lions,Packers
+331128006,2013-11-28,87572,21:30,AT&T Stadium,Cowboys,Raiders
+331128033,2013-11-29,71005,01:30,M&T Bank Stadium,Ravens,Steelers
+331201005,2013-12-01,69654,18:00,Cleveland Browns Stadium,Browns,Jaguars
+331201011,2013-12-01,65502,18:00,Lucas Oil Stadium,Colts,Titans
+331201016,2013-12-01,64134,18:00,Mall of America Field,Vikings,Bears
+331201020,2013-12-01,76957,18:00,MetLife Stadium,Jets,Dolphins
+331201021,2013-12-01,69144,18:00,Lincoln Financial Field,Eagles,Cardinals
+331201029,2013-12-01,72795,18:00,Bank of America Stadium,Panthers,Buccaneers
+331201034,2013-12-01,71769,18:00,NRG Stadium,Texans,Patriots
+331201002,2013-12-01,38969,21:05,Rogers Centre,Bills,Falcons
+331201025,2013-12-01,69732,21:05,Candlestick Park,49ers,Rams
+331201012,2013-12-01,77065,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+331201024,2013-12-01,61536,21:25,SDCCU Stadium,Chargers,Bengals
+331201028,2013-12-02,75220,01:30,FedExField,Commanders,Giants
+331202026,2013-12-03,68387,01:30,Lumen Field,Seahawks,Saints
+331205030,2013-12-06,60414,01:25,EverBank Stadium,Jaguars,Texans
+331208004,2013-12-08,62507,18:00,Paycor Stadium,Bengals,Colts
+331208009,2013-12-08,77550,18:00,Lambeau Field,Packers,Falcons
+331208017,2013-12-08,68756,18:00,Gillette Stadium,Patriots,Browns
+331208020,2013-12-08,76957,18:00,MetLife Stadium,Jets,Raiders
+331208021,2013-12-08,69144,18:00,Lincoln Financial Field,Eagles,Lions
+331208023,2013-12-08,52489,18:00,Acrisure Stadium,Steelers,Dolphins
+331208027,2013-12-08,59194,18:00,Raymond James Stadium,Buccaneers,Bills
+331208028,2013-12-08,56247,18:00,FedExField,Commanders,Chiefs
+331208033,2013-12-08,70921,18:00,M&T Bank Stadium,Ravens,Vikings
+331208007,2013-12-08,76554,21:05,Empower Field at Mile High,Broncos,Titans
+331208022,2013-12-08,60643,21:25,State Farm Stadium,Cardinals,Rams
+331208024,2013-12-08,65132,21:25,SDCCU Stadium,Chargers,Giants
+331208025,2013-12-08,69732,21:25,Candlestick Park,49ers,Seahawks
+331208018,2013-12-09,73089,01:30,Caesars Superdome,Saints,Panthers
+331209003,2013-12-10,62229,01:30,Soldier Field,Bears,Cowboys
+331212007,2013-12-13,76497,01:25,Empower Field at Mile High,Broncos,Chargers
+331215001,2013-12-15,70069,18:00,Georgia Dome,Falcons,Commanders
+331215005,2013-12-15,71513,18:00,Cleveland Browns Stadium,Browns,Bears
+331215011,2013-12-15,65470,18:00,Lucas Oil Stadium,Colts,Texans
+331215015,2013-12-15,71863,18:00,Hard Rock Stadium,Dolphins,Patriots
+331215016,2013-12-15,64087,18:00,Mall of America Field,Vikings,Eagles
+331215019,2013-12-15,79691,18:00,MetLife Stadium,Giants,Seahawks
+331215027,2013-12-15,64142,18:00,Raymond James Stadium,Buccaneers,49ers
+331215030,2013-12-15,60085,18:00,EverBank Stadium,Jaguars,Bills
+331215013,2013-12-15,49571,21:05,Oakland Coliseum,Raiders,Chiefs
+331215029,2013-12-15,73251,21:05,Bank of America Stadium,Panthers,Jets
+331215006,2013-12-15,91054,21:25,AT&T Stadium,Cowboys,Packers
+331215010,2013-12-15,69143,21:25,Nissan Stadium,Titans,Cardinals
+331215014,2013-12-15,58442,21:25,The Dome at America's Center,Rams,Saints
+331215023,2013-12-16,45873,01:30,Acrisure Stadium,Steelers,Bengals
+331216008,2013-12-17,64742,01:30,Ford Field,Lions,Ravens
+331222002,2013-12-22,54305,18:00,Highmark Stadium,Bills,Dolphins
+331222004,2013-12-22,61555,18:00,Paycor Stadium,Bengals,Vikings
+331222012,2013-12-22,75396,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Colts
+331222014,2013-12-22,54423,18:00,The Dome at America's Center,Rams,Buccaneers
+331222020,2013-12-22,76957,18:00,MetLife Stadium,Jets,Browns
+331222028,2013-12-22,80411,18:00,FedExField,Commanders,Cowboys
+331222029,2013-12-22,73825,18:00,Bank of America Stadium,Panthers,Saints
+331222030,2013-12-22,60559,18:00,EverBank Stadium,Jaguars,Titans
+331222034,2013-12-22,71761,18:00,NRG Stadium,Texans,Broncos
+331222008,2013-12-22,63996,21:05,Ford Field,Lions,Giants
+331222026,2013-12-22,68266,21:05,Lumen Field,Seahawks,Cardinals
+331222009,2013-12-22,77999,21:25,Lambeau Field,Packers,Steelers
+331222024,2013-12-22,65675,21:25,SDCCU Stadium,Chargers,Raiders
+331222033,2013-12-22,71433,21:25,M&T Bank Stadium,Ravens,Patriots
+331222021,2013-12-23,69144,01:30,Lincoln Financial Field,Eagles,Bears
+331223025,2013-12-24,0,01:30,Candlestick Park,49ers,Falcons
+331229001,2013-12-29,70427,18:00,Georgia Dome,Falcons,Panthers
+331229004,2013-12-29,62406,18:00,Paycor Stadium,Bengals,Ravens
+331229010,2013-12-29,69143,18:00,Nissan Stadium,Titans,Texans
+331229011,2013-12-29,66008,18:00,Lucas Oil Stadium,Colts,Jaguars
+331229015,2013-12-29,70296,18:00,Hard Rock Stadium,Dolphins,Jets
+331229016,2013-12-29,64134,18:00,Mall of America Field,Vikings,Lions
+331229019,2013-12-29,80177,18:00,MetLife Stadium,Giants,Commanders
+331229023,2013-12-29,56361,18:00,Acrisure Stadium,Steelers,Browns
+331229003,2013-12-29,62708,21:25,Soldier Field,Bears,Packers
+331229013,2013-12-29,51500,21:25,Oakland Coliseum,Raiders,Broncos
+331229017,2013-12-29,68756,21:25,Gillette Stadium,Patriots,Bills
+331229018,2013-12-29,73150,21:25,Caesars Superdome,Saints,Buccaneers
+331229022,2013-12-29,63570,21:25,State Farm Stadium,Cardinals,49ers
+331229024,2013-12-29,66374,21:25,SDCCU Stadium,Chargers,Chiefs
+331229026,2013-12-29,68264,21:25,Lumen Field,Seahawks,Rams
+331229006,2013-12-30,91166,01:30,AT&T Stadium,Cowboys,Eagles
+340104011,2014-01-04,63551,21:35,Lucas Oil Stadium,Colts,Chiefs
+340104021,2014-01-05,69144,01:10,Lincoln Financial Field,Eagles,Saints
+340105004,2014-01-05,62277,18:05,Paycor Stadium,Bengals,Chargers
+340105009,2014-01-05,77525,21:40,Lambeau Field,Packers,49ers
+340111026,2014-01-11,68388,21:35,Lumen Field,Seahawks,Saints
+340111017,2014-01-12,68756,01:15,Gillette Stadium,Patriots,Colts
+340112029,2014-01-12,73784,18:05,Bank of America Stadium,Panthers,49ers
+340112007,2014-01-12,76969,21:40,Empower Field at Mile High,Broncos,Chargers
+340119007,2014-01-19,77110,20:00,Empower Field at Mile High,Broncos,Patriots
+340119026,2014-01-19,68454,23:30,Lumen Field,Seahawks,49ers
+340202007,2014-02-02,82529,23:25,MetLife Stadium,Broncos,Seahawks
+400554214,2014-09-05,68424,00:30,Lumen Field,Seahawks,Packers
+400554215,2014-09-07,70706,17:00,Georgia Dome,Falcons,Saints
+400554232,2014-09-07,62425,17:00,Soldier Field,Bears,Bills
+400554260,2014-09-07,73569,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Titans
+400554217,2014-09-07,55919,17:00,The Dome at America's Center,Rams,Vikings
+400554262,2014-09-07,70630,17:00,Hard Rock Stadium,Dolphins,Patriots
+400554226,2014-09-07,78160,17:00,MetLife Stadium,Jets,Raiders
+400554223,2014-09-07,69596,17:00,Lincoln Financial Field,Eagles,Jaguars
+400554221,2014-09-07,64598,17:00,Acrisure Stadium,Steelers,Browns
+400554229,2014-09-07,70925,17:00,M&T Bank Stadium,Ravens,Bengals
+400554256,2014-09-07,71770,17:00,NRG Stadium,Texans,Commanders
+400554269,2014-09-07,91174,20:25,AT&T Stadium,Cowboys,49ers
+400554266,2014-09-07,62442,20:25,Raymond James Stadium,Buccaneers,Panthers
+400554273,2014-09-08,76939,00:30,Empower Field at Mile High,Broncos,Colts
+400554296,2014-09-08,64401,23:10,Ford Field,Lions,Giants
+400554301,2014-09-09,61292,02:20,State Farm Stadium,Cardinals,Chargers
+400554196,2014-09-12,71181,00:25,M&T Bank Stadium,Ravens,Steelers
+400554198,2014-09-14,69954,17:00,Highmark Stadium,Bills,Dolphins
+400554245,2014-09-14,58574,17:00,Paycor Stadium,Bengals,Falcons
+400554241,2014-09-14,67407,17:00,Cleveland Browns Stadium,Browns,Saints
+400554206,2014-09-14,69143,17:00,Nissan Stadium,Titans,Cowboys
+400554235,2014-09-14,52350,17:00,Huntington Bank Stadium,Vikings,Patriots
+400554211,2014-09-14,78344,17:00,MetLife Stadium,Giants,Cardinals
+400554202,2014-09-14,80037,17:00,FedExField,Commanders,Jaguars
+400554249,2014-09-14,73586,17:00,Bank of America Stadium,Panthers,Lions
+400554278,2014-09-14,67916,20:05,SDCCU Stadium,Chargers,Seahawks
+400554274,2014-09-14,59923,20:05,Raymond James Stadium,Buccaneers,Rams
+400554291,2014-09-14,76900,20:25,Empower Field at Mile High,Broncos,Chiefs
+400554287,2014-09-14,78041,20:25,Lambeau Field,Packers,Jets
+400554284,2014-09-14,54063,20:25,Oakland Coliseum,Raiders,Texans
+400554314,2014-09-15,70799,00:30,Levi's Stadium,49ers,Bears
+400554318,2014-09-16,64871,00:30,Lucas Oil Stadium,Colts,Eagles
+400554194,2014-09-19,70318,00:25,Georgia Dome,Falcons,Buccaneers
+400554195,2014-09-21,68611,17:00,Highmark Stadium,Bills,Chargers
+400554237,2014-09-21,56743,17:00,Paycor Stadium,Bengals,Titans
+400554240,2014-09-21,67407,17:00,Cleveland Browns Stadium,Browns,Ravens
+400554244,2014-09-21,62418,17:00,Ford Field,Lions,Packers
+400554199,2014-09-21,58739,17:00,The Dome at America's Center,Rams,Cowboys
+400554250,2014-09-21,68756,17:00,Gillette Stadium,Patriots,Raiders
+400554213,2014-09-21,73005,17:00,Caesars Superdome,Saints,Vikings
+400554208,2014-09-21,77462,17:00,MetLife Stadium,Giants,Texans
+400554203,2014-09-21,69596,17:00,Lincoln Financial Field,Eagles,Commanders
+400554247,2014-09-21,60601,17:00,EverBank Stadium,Jaguars,Colts
+400554253,2014-09-21,61572,20:05,State Farm Stadium,Cardinals,49ers
+400554280,2014-09-21,70313,20:25,Hard Rock Stadium,Dolphins,Chiefs
+400554276,2014-09-21,68447,20:25,Lumen Field,Seahawks,Broncos
+400554283,2014-09-22,73945,00:30,Bank of America Stadium,Panthers,Steelers
+400554288,2014-09-23,78160,00:30,MetLife Stadium,Jets,Bears
+400554201,2014-09-26,80573,00:25,FedExField,Commanders,Giants
+400554207,2014-09-28,61736,17:00,Soldier Field,Bears,Packers
+400554238,2014-09-28,64757,17:00,Lucas Oil Stadium,Colts,Titans
+400554286,2014-09-28,83436,17:00,Wembley Stadium,Raiders,Dolphins
+400554252,2014-09-28,78160,17:00,MetLife Stadium,Jets,Lions
+400554279,2014-09-28,62910,17:00,Acrisure Stadium,Steelers,Buccaneers
+400554248,2014-09-28,71218,17:00,M&T Bank Stadium,Ravens,Panthers
+400554212,2014-09-28,71756,17:00,NRG Stadium,Texans,Bills
+400554290,2014-09-28,56553,20:05,SDCCU Stadium,Chargers,Jaguars
+400554242,2014-09-28,52173,20:25,Huntington Bank Stadium,Vikings,Falcons
+400554315,2014-09-28,70799,20:25,Levi's Stadium,49ers,Eagles
+400554319,2014-09-29,91176,00:30,AT&T Stadium,Cowboys,Saints
+400554325,2014-09-30,76613,00:30,GEHA Field at Arrowhead Stadium,Chiefs,Patriots
+400554197,2014-10-03,78054,00:25,Lambeau Field,Packers,Vikings
+400554234,2014-10-05,91159,17:00,AT&T Stadium,Cowboys,Texans
+400554236,2014-10-05,62775,17:00,Ford Field,Lions,Bills
+400554204,2014-10-05,69143,17:00,Nissan Stadium,Titans,Browns
+400554239,2014-10-05,65258,17:00,Lucas Oil Stadium,Colts,Ravens
+400554210,2014-10-05,73004,17:00,Caesars Superdome,Saints,Buccaneers
+400554209,2014-10-05,80307,17:00,MetLife Stadium,Giants,Falcons
+400554205,2014-10-05,69596,17:00,Lincoln Financial Field,Eagles,Rams
+400554200,2014-10-05,73659,17:00,Bank of America Stadium,Panthers,Bears
+400554243,2014-10-05,66198,17:00,EverBank Stadium,Jaguars,Steelers
+400554246,2014-10-05,76895,20:05,Empower Field at Mile High,Broncos,Cardinals
+400554275,2014-10-05,63471,20:25,SDCCU Stadium,Chargers,Jets
+400554251,2014-10-05,70799,20:25,Levi's Stadium,49ers,Chiefs
+400554277,2014-10-06,68756,00:30,Gillette Stadium,Patriots,Bengals
+400554282,2014-10-07,79522,00:30,FedExField,Commanders,Seahawks
+400554216,2014-10-10,71787,00:25,NRG Stadium,Texans,Colts
+400554259,2014-10-12,70185,17:00,Highmark Stadium,Bills,Patriots
+400554263,2014-10-12,57053,17:00,Paycor Stadium,Bengals,Panthers
+400554295,2014-10-12,67431,17:00,Cleveland Browns Stadium,Browns,Steelers
+400554222,2014-10-12,69143,17:00,Nissan Stadium,Titans,Jaguars
+400554299,2014-10-12,70875,17:00,Hard Rock Stadium,Dolphins,Packers
+400554255,2014-10-12,52213,17:00,Huntington Bank Stadium,Vikings,Lions
+400554231,2014-10-12,78160,17:00,MetLife Stadium,Jets,Broncos
+400554225,2014-10-12,60041,17:00,Raymond James Stadium,Buccaneers,Ravens
+400554302,2014-10-12,53329,20:05,Oakland Coliseum,Raiders,Chargers
+400554220,2014-10-12,70712,20:25,Georgia Dome,Falcons,Bears
+400554308,2014-10-12,61139,20:25,State Farm Stadium,Cardinals,Commanders
+400554305,2014-10-12,68432,20:25,Lumen Field,Seahawks,Cowboys
+400554312,2014-10-13,69596,00:30,Lincoln Financial Field,Eagles,Giants
+400554335,2014-10-14,56851,00:30,The Dome at America's Center,Rams,49ers
+400554219,2014-10-17,68756,00:25,Gillette Stadium,Patriots,Jets
+400554268,2014-10-19,68477,17:00,Highmark Stadium,Bills,Vikings
+400554270,2014-10-19,62413,17:00,Soldier Field,Bears,Dolphins
+400554271,2014-10-19,63271,17:00,Ford Field,Lions,Saints
+400554294,2014-10-19,78106,17:00,Lambeau Field,Packers,Panthers
+400554265,2014-10-19,66539,17:00,Lucas Oil Stadium,Colts,Bengals
+400554257,2014-10-19,57855,17:00,The Dome at America's Center,Rams,Seahawks
+400554233,2014-10-19,75227,17:00,FedExField,Commanders,Titans
+400554261,2014-10-19,61341,17:00,EverBank Stadium,Jaguars,Browns
+400554228,2014-10-19,71184,17:00,M&T Bank Stadium,Ravens,Falcons
+400554297,2014-10-19,65260,20:05,SDCCU Stadium,Chargers,Chiefs
+400554304,2014-10-19,91028,20:25,AT&T Stadium,Cowboys,Giants
+400554300,2014-10-19,52101,20:25,Oakland Coliseum,Raiders,Cardinals
+400554307,2014-10-20,77047,00:30,Empower Field at Mile High,Broncos,49ers
+400554311,2014-10-21,56375,00:30,Acrisure Stadium,Steelers,Texans
+400554218,2014-10-24,76907,00:25,Empower Field at Mile High,Broncos,Chargers
+400554224,2014-10-26,83532,13:30,Wembley Stadium,Falcons,Lions
+400554264,2014-10-26,55711,17:00,Paycor Stadium,Bengals,Ravens
+400554230,2014-10-26,69143,17:00,Nissan Stadium,Titans,Texans
+400554227,2014-10-26,75972,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Rams
+400554272,2014-10-26,68756,17:00,Gillette Stadium,Patriots,Bears
+400554298,2014-10-26,78160,17:00,MetLife Stadium,Jets,Bills
+400554254,2014-10-26,56577,17:00,Raymond James Stadium,Buccaneers,Vikings
+400554258,2014-10-26,74042,17:00,Bank of America Stadium,Panthers,Seahawks
+400554267,2014-10-26,65633,17:00,EverBank Stadium,Jaguars,Dolphins
+400554303,2014-10-26,61789,20:05,State Farm Stadium,Cardinals,Eagles
+400554306,2014-10-26,67431,20:25,Cleveland Browns Stadium,Browns,Raiders
+400554310,2014-10-26,62479,20:25,Acrisure Stadium,Steelers,Colts
+400554313,2014-10-27,73146,00:30,Caesars Superdome,Saints,Packers
+400554336,2014-10-28,87055,00:30,AT&T Stadium,Cowboys,Commanders
+400554309,2014-10-31,73663,00:25,Bank of America Stadium,Panthers,Saints
+400554344,2014-11-02,60057,18:00,Paycor Stadium,Bengals,Jaguars
+400554334,2014-11-02,67431,18:00,Cleveland Browns Stadium,Browns,Buccaneers
+400554337,2014-11-02,85688,18:00,AT&T Stadium,Cowboys,Cardinals
+400554341,2014-11-02,74127,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Jets
+400554347,2014-11-02,70222,18:00,Hard Rock Stadium,Dolphins,Chargers
+400554351,2014-11-02,52252,18:00,Huntington Bank Stadium,Vikings,Commanders
+400554339,2014-11-02,71780,18:00,NRG Stadium,Texans,Eagles
+400554377,2014-11-02,70799,21:05,Levi's Stadium,49ers,Rams
+400554381,2014-11-02,68756,21:25,Gillette Stadium,Patriots,Broncos
+400554385,2014-11-02,68337,21:25,Lumen Field,Seahawks,Raiders
+400554389,2014-11-03,63971,01:30,Acrisure Stadium,Steelers,Ravens
+400554393,2014-11-04,77975,01:30,MetLife Stadium,Giants,Colts
+400554328,2014-11-07,65871,01:25,Paycor Stadium,Bengals,Browns
+400554332,2014-11-09,68119,18:00,Highmark Stadium,Bills,Chiefs
+400554355,2014-11-09,63179,18:00,Ford Field,Lions,Dolphins
+400554362,2014-11-09,73129,18:00,Caesars Superdome,Saints,49ers
+400554370,2014-11-09,78160,18:00,MetLife Stadium,Jets,Steelers
+400554372,2014-11-09,57751,18:00,Raymond James Stadium,Buccaneers,Falcons
+400554358,2014-11-09,83603,18:00,Wembley Stadium,Jaguars,Cowboys
+400554367,2014-11-09,70914,18:00,M&T Bank Stadium,Ravens,Titans
+400554396,2014-11-09,54803,21:05,Oakland Coliseum,Raiders,Broncos
+400554397,2014-11-09,61363,21:25,State Farm Stadium,Cardinals,Rams
+400554400,2014-11-09,68352,21:25,Lumen Field,Seahawks,Giants
+400554403,2014-11-10,78292,01:30,Lambeau Field,Packers,Bears
+400554408,2014-11-11,69596,01:30,Lincoln Financial Field,Eagles,Panthers
+400554338,2014-11-14,71573,01:25,Hard Rock Stadium,Dolphins,Bills
+400554340,2014-11-16,61792,18:00,Soldier Field,Bears,Vikings
+400554343,2014-11-16,67431,18:00,Cleveland Browns Stadium,Browns,Texans
+400554348,2014-11-16,76463,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Seahawks
+400554383,2014-11-16,59401,18:00,The Dome at America's Center,Rams,Broncos
+400554375,2014-11-16,73073,18:00,Caesars Superdome,Saints,Bengals
+400554387,2014-11-16,80352,18:00,MetLife Stadium,Giants,49ers
+400554378,2014-11-16,77442,18:00,FedExField,Commanders,Buccaneers
+400554352,2014-11-16,73314,18:00,Bank of America Stadium,Panthers,Falcons
+400554391,2014-11-16,66720,21:05,SDCCU Stadium,Chargers,Raiders
+400554345,2014-11-16,78270,21:25,Lambeau Field,Packers,Eagles
+400554414,2014-11-16,62487,21:25,State Farm Stadium,Cardinals,Lions
+400554417,2014-11-17,66751,01:30,Lucas Oil Stadium,Colts,Patriots
+400554421,2014-11-18,69143,01:30,Nissan Stadium,Titans,Steelers
+400554293,2014-11-21,52865,01:25,Oakland Coliseum,Raiders,Chiefs
+400554317,2014-11-23,70046,18:00,Georgia Dome,Falcons,Browns
+400554333,2014-11-23,61109,18:00,Soldier Field,Bears,Buccaneers
+400554326,2014-11-23,64328,18:00,Lucas Oil Stadium,Colts,Jaguars
+400554324,2014-11-23,52386,18:00,Huntington Bank Stadium,Vikings,Packers
+400554322,2014-11-23,68756,18:00,Gillette Stadium,Patriots,Lions
+400554320,2014-11-23,69596,18:00,Lincoln Financial Field,Eagles,Titans
+400554329,2014-11-23,71777,18:00,NRG Stadium,Texans,Bengals
+400554360,2014-11-23,66040,21:05,SDCCU Stadium,Chargers,Rams
+400554357,2014-11-23,68327,21:05,Lumen Field,Seahawks,Cardinals
+400554364,2014-11-23,76987,21:25,Empower Field at Mile High,Broncos,Dolphins
+400554365,2014-11-23,70799,21:25,Levi's Stadium,49ers,Commanders
+400554369,2014-11-24,80520,01:30,MetLife Stadium,Giants,Cowboys
+400554331,2014-11-23,0,18:00,Highmark Stadium,Bills,Jets
+400607990,2014-11-25,56044,00:00,Ford Field,Bills,Jets
+400554394,2014-11-25,73373,01:30,Caesars Superdome,Saints,Ravens
+400554281,2014-11-27,64175,17:30,Ford Field,Lions,Bears
+400554285,2014-11-27,91379,21:30,AT&T Stadium,Cowboys,Eagles
+400554289,2014-11-28,70799,01:30,Levi's Stadium,49ers,Seahawks
+400554321,2014-11-30,68576,18:00,Highmark Stadium,Bills,Browns
+400554292,2014-11-30,65352,18:00,Lucas Oil Stadium,Colts,Commanders
+400554354,2014-11-30,55650,18:00,The Dome at America's Center,Rams,Raiders
+400554363,2014-11-30,52016,18:00,Huntington Bank Stadium,Vikings,Panthers
+400554359,2014-11-30,61916,18:00,Acrisure Stadium,Steelers,Saints
+400554330,2014-11-30,56340,18:00,Raymond James Stadium,Buccaneers,Bengals
+400554327,2014-11-30,64687,18:00,EverBank Stadium,Jaguars,Giants
+400554323,2014-11-30,71060,18:00,M&T Bank Stadium,Ravens,Chargers
+400554316,2014-11-30,71714,18:00,NRG Stadium,Texans,Titans
+400554368,2014-11-30,69557,21:05,Georgia Dome,Falcons,Cardinals
+400554371,2014-11-30,78431,21:25,Lambeau Field,Packers,Patriots
+400554395,2014-12-01,76894,01:30,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+400554399,2014-12-02,78160,01:30,MetLife Stadium,Jets,Dolphins
+400554349,2014-12-05,61558,01:25,Soldier Field,Bears,Cowboys
+400554374,2014-12-07,65512,18:00,Paycor Stadium,Bengals,Steelers
+400554422,2014-12-07,67431,18:00,Cleveland Browns Stadium,Browns,Colts
+400554424,2014-12-07,61489,18:00,Ford Field,Lions,Buccaneers
+400554384,2014-12-07,69143,18:00,Nissan Stadium,Titans,Giants
+400554419,2014-12-07,70244,18:00,Hard Rock Stadium,Dolphins,Ravens
+400554416,2014-12-07,52152,18:00,Huntington Bank Stadium,Vikings,Jets
+400554388,2014-12-07,73006,18:00,Caesars Superdome,Saints,Panthers
+400554379,2014-12-07,71120,18:00,FedExField,Commanders,Rams
+400554426,2014-12-07,61070,18:00,EverBank Stadium,Jaguars,Texans
+400554428,2014-12-07,76913,21:05,Empower Field at Mile High,Broncos,Bills
+400554429,2014-12-07,62387,21:05,State Farm Stadium,Cardinals,Chiefs
+400554431,2014-12-07,55300,21:25,Oakland Coliseum,Raiders,49ers
+400554430,2014-12-07,69596,21:25,Lincoln Financial Field,Eagles,Seahawks
+400554432,2014-12-08,68815,01:30,SDCCU Stadium,Chargers,Patriots
+400554433,2014-12-09,77512,01:30,Lambeau Field,Packers,Falcons
+400554342,2014-12-12,55880,01:25,The Dome at America's Center,Rams,Cardinals
+400554346,2014-12-14,71161,18:00,Georgia Dome,Falcons,Steelers
+400554386,2014-12-14,70214,18:00,Highmark Stadium,Bills,Packers
+400554392,2014-12-14,67431,18:00,Cleveland Browns Stadium,Browns,Bengals
+400554380,2014-12-14,65148,18:00,Lucas Oil Stadium,Colts,Texans
+400554376,2014-12-14,72153,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+400554353,2014-12-14,68756,18:00,Gillette Stadium,Patriots,Dolphins
+400554350,2014-12-14,77628,18:00,MetLife Stadium,Giants,Commanders
+400554390,2014-12-14,72842,18:00,Bank of America Stadium,Panthers,Buccaneers
+400554382,2014-12-14,70801,18:00,M&T Bank Stadium,Ravens,Jaguars
+400554418,2014-12-14,69143,21:05,Nissan Stadium,Titans,Jets
+400554420,2014-12-14,68682,21:05,SDCCU Stadium,Chargers,Broncos
+400554415,2014-12-14,62490,21:25,Ford Field,Lions,Vikings
+400554423,2014-12-14,68526,21:25,Lumen Field,Seahawks,49ers
+400554425,2014-12-15,69596,01:30,Lincoln Financial Field,Eagles,Cowboys
+400554427,2014-12-16,60996,01:30,Soldier Field,Bears,Saints
+400554356,2014-12-19,61202,01:25,EverBank Stadium,Jaguars,Titans
+400554366,2014-12-20,78897,21:30,FedExField,Commanders,Eagles
+400554361,2014-12-21,70699,01:25,Levi's Stadium,49ers,Chargers
+400554401,2014-12-21,61420,18:00,Soldier Field,Bears,Lions
+400554373,2014-12-21,66203,18:00,Hard Rock Stadium,Dolphins,Vikings
+400554406,2014-12-21,73164,18:00,Caesars Superdome,Saints,Falcons
+400554436,2014-12-21,78160,18:00,MetLife Stadium,Jets,Patriots
+400554434,2014-12-21,60865,18:00,Acrisure Stadium,Steelers,Chiefs
+400554410,2014-12-21,64247,18:00,Raymond James Stadium,Buccaneers,Packers
+400554402,2014-12-21,73810,18:00,Bank of America Stadium,Panthers,Browns
+400554398,2014-12-21,71771,18:00,NRG Stadium,Texans,Ravens
+400554439,2014-12-21,55851,21:05,The Dome at America's Center,Rams,Giants
+400554444,2014-12-21,91899,21:25,AT&T Stadium,Cowboys,Colts
+400554442,2014-12-21,53436,21:25,Oakland Coliseum,Raiders,Bills
+400554447,2014-12-22,63806,01:30,State Farm Stadium,Cardinals,Seahawks
+400554449,2014-12-23,66107,01:30,Paycor Stadium,Bengals,Broncos
+400554409,2014-12-28,69143,18:00,Nissan Stadium,Titans,Colts
+400554413,2014-12-28,73952,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+400554435,2014-12-28,70220,18:00,Hard Rock Stadium,Dolphins,Jets
+400554437,2014-12-28,52364,18:00,Huntington Bank Stadium,Vikings,Bears
+400554438,2014-12-28,68756,18:00,Gillette Stadium,Patriots,Bills
+400554440,2014-12-28,79150,18:00,MetLife Stadium,Giants,Eagles
+400554443,2014-12-28,59952,18:00,Raymond James Stadium,Buccaneers,Saints
+400554407,2014-12-28,80897,18:00,FedExField,Commanders,Cowboys
+400554405,2014-12-28,71070,18:00,M&T Bank Stadium,Ravens,Browns
+400554412,2014-12-28,71777,18:00,NRG Stadium,Texans,Jaguars
+400554404,2014-12-28,71015,21:25,Georgia Dome,Falcons,Panthers
+400554445,2014-12-28,76929,21:25,Empower Field at Mile High,Broncos,Raiders
+400554411,2014-12-28,78408,21:25,Lambeau Field,Packers,Lions
+400554446,2014-12-28,70699,21:25,Levi's Stadium,49ers,Cardinals
+400554448,2014-12-28,68453,21:25,Lumen Field,Seahawks,Rams
+400554441,2014-12-29,64697,01:30,Acrisure Stadium,Steelers,Bengals
+400749512,2015-01-03,71849,21:20,Bank of America Stadium,Panthers,Cardinals
+400749511,2015-01-04,62780,01:15,Acrisure Stadium,Steelers,Ravens
+400749513,2015-01-04,63385,18:05,Lucas Oil Stadium,Colts,Bengals
+400749514,2015-01-04,91410,21:40,AT&T Stadium,Cowboys,Lions
+400749515,2015-01-10,68756,21:35,Gillette Stadium,Patriots,Ravens
+400749516,2015-01-11,68524,01:15,Lumen Field,Seahawks,Panthers
+400749518,2015-01-11,79704,18:05,Lambeau Field,Packers,Cowboys
+400749517,2015-01-11,76867,21:40,Empower Field at Mile High,Broncos,Colts
+400749519,2015-01-18,68538,20:05,Lumen Field,Seahawks,Packers
+400749520,2015-01-18,68756,23:50,Gillette Stadium,Patriots,Colts
+400749027,2015-02-01,70288,23:30,State Farm Stadium,Seahawks,Patriots
+400791485,2015-09-11,66829,00:30,Gillette Stadium,Patriots,Steelers
+400791541,2015-09-13,70319,17:00,Highmark Stadium,Bills,Colts
+400791489,2015-09-13,62442,17:00,Soldier Field,Bears,Packers
+400791550,2015-09-13,51792,17:00,The Dome at America's Center,Rams,Seahawks
+400791497,2015-09-13,78160,17:00,MetLife Stadium,Jets,Browns
+400791544,2015-09-13,76512,17:00,FedExField,Commanders,Dolphins
+400791547,2015-09-13,60733,17:00,EverBank Stadium,Jaguars,Panthers
+400791493,2015-09-13,71776,17:00,NRG Stadium,Texans,Chiefs
+400791555,2015-09-13,62903,20:05,State Farm Stadium,Cardinals,Saints
+400791558,2015-09-13,66093,20:05,SDCCU Stadium,Chargers,Lions
+400791587,2015-09-13,76798,20:25,Empower Field at Mile High,Broncos,Ravens
+400791585,2015-09-13,54500,20:25,Oakland Coliseum,Raiders,Bengals
+400791582,2015-09-13,63945,20:25,Raymond James Stadium,Buccaneers,Titans
+400791590,2015-09-14,93579,00:30,AT&T Stadium,Cowboys,Giants
+400791596,2015-09-14,70516,22:55,Georgia Dome,Falcons,Eagles
+400791600,2015-09-15,70799,02:15,Levi's Stadium,49ers,Vikings
+400791624,2015-09-18,76404,00:25,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+400791664,2015-09-20,70858,17:00,Highmark Stadium,Bills,Patriots
+400791661,2015-09-20,62351,17:00,Soldier Field,Bears,Cardinals
+400791666,2015-09-20,57579,17:00,Paycor Stadium,Bengals,Chargers
+400791669,2015-09-20,67431,17:00,Cleveland Browns Stadium,Browns,Titans
+400791638,2015-09-20,52319,17:00,Huntington Bank Stadium,Vikings,Lions
+400791634,2015-09-20,73006,17:00,Caesars Superdome,Saints,Buccaneers
+400791672,2015-09-20,77678,17:00,MetLife Stadium,Giants,Falcons
+400791630,2015-09-20,66472,17:00,Acrisure Stadium,Steelers,49ers
+400791675,2015-09-20,72460,17:00,FedExField,Commanders,Rams
+400791628,2015-09-20,73254,17:00,Bank of America Stadium,Panthers,Texans
+400791702,2015-09-20,53500,20:05,Oakland Coliseum,Raiders,Ravens
+400791680,2015-09-20,65443,20:05,EverBank Stadium,Jaguars,Dolphins
+400791705,2015-09-20,69296,20:25,Lincoln Financial Field,Eagles,Cowboys
+400791708,2015-09-21,78433,00:30,Lambeau Field,Packers,Seahawks
+400791711,2015-09-22,65220,00:30,Lucas Oil Stadium,Colts,Jets
+400791484,2015-09-25,76081,00:25,MetLife Stadium,Giants,Commanders
+400791500,2015-09-27,67431,17:00,Cleveland Browns Stadium,Browns,Raiders
+400791491,2015-09-27,90345,17:00,AT&T Stadium,Cowboys,Falcons
+400791496,2015-09-27,65920,17:00,Nissan Stadium,Titans,Colts
+400791594,2015-09-27,52433,17:00,The Dome at America's Center,Rams,Steelers
+400791592,2015-09-27,52400,17:00,Huntington Bank Stadium,Vikings,Chargers
+400791553,2015-09-27,66829,17:00,Gillette Stadium,Patriots,Jaguars
+400791583,2015-09-27,78160,17:00,MetLife Stadium,Jets,Eagles
+400791557,2015-09-27,73402,17:00,Bank of America Stadium,Panthers,Saints
+400791546,2015-09-27,70970,17:00,M&T Bank Stadium,Ravens,Bengals
+400791589,2015-09-27,71718,17:00,NRG Stadium,Texans,Buccaneers
+400791597,2015-09-27,63663,20:05,State Farm Stadium,Cardinals,49ers
+400791623,2015-09-27,64869,20:25,Hard Rock Stadium,Dolphins,Bills
+400791626,2015-09-27,69002,20:25,Lumen Field,Seahawks,Bears
+400791631,2015-09-28,62920,00:30,Ford Field,Lions,Broncos
+400791635,2015-09-29,78214,00:30,Lambeau Field,Packers,Chiefs
+400791662,2015-10-02,63929,00:25,Acrisure Stadium,Steelers,Ravens
+400761514,2015-10-04,83986,13:30,Wembley Stadium,Dolphins,Jets
+400791709,2015-10-04,69904,17:00,Georgia Dome,Falcons,Texans
+400791678,2015-10-04,70677,17:00,Highmark Stadium,Bills,Giants
+400791706,2015-10-04,62409,17:00,Soldier Field,Bears,Raiders
+400791712,2015-10-04,57498,17:00,Paycor Stadium,Bengals,Chiefs
+400791671,2015-10-04,65609,17:00,Lucas Oil Stadium,Colts,Jaguars
+400791701,2015-10-04,57468,17:00,Raymond James Stadium,Buccaneers,Panthers
+400791704,2015-10-04,74767,17:00,FedExField,Commanders,Eagles
+400791714,2015-10-04,63710,20:05,SDCCU Stadium,Chargers,Browns
+400791719,2015-10-04,77029,20:25,Empower Field at Mile High,Broncos,Vikings
+400791718,2015-10-04,63146,20:25,State Farm Stadium,Cardinals,Rams
+400791716,2015-10-04,70799,20:25,Levi's Stadium,49ers,Packers
+400791720,2015-10-05,73009,00:30,Caesars Superdome,Saints,Cowboys
+400791741,2015-10-06,69005,00:30,Lumen Field,Seahawks,Lions
+400791487,2015-10-09,71732,00:25,NRG Stadium,Texans,Colts
+400791495,2015-10-11,70178,17:00,Georgia Dome,Falcons,Commanders
+400791492,2015-10-11,65004,17:00,Paycor Stadium,Bengals,Seahawks
+400791548,2015-10-11,78432,17:00,Lambeau Field,Packers,Rams
+400791551,2015-10-11,65670,17:00,Nissan Stadium,Titans,Bills
+400791488,2015-10-11,75799,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Bears
+400791542,2015-10-11,69296,17:00,Lincoln Financial Field,Eagles,Saints
+400791498,2015-10-11,58490,17:00,Raymond James Stadium,Buccaneers,Jaguars
+400791545,2015-10-11,71046,17:00,M&T Bank Stadium,Ravens,Browns
+400791554,2015-10-11,60816,20:05,Ford Field,Lions,Cardinals
+400791559,2015-10-11,93054,20:25,AT&T Stadium,Cowboys,Patriots
+400791560,2015-10-11,55013,20:25,Oakland Coliseum,Raiders,Broncos
+400791584,2015-10-12,78515,00:30,MetLife Stadium,Giants,49ers
+400791588,2015-10-13,67658,00:30,SDCCU Stadium,Chargers,Steelers
+400791593,2015-10-16,73018,00:25,Caesars Superdome,Saints,Falcons
+400791627,2015-10-18,69593,17:00,Highmark Stadium,Bills,Bengals
+400791633,2015-10-18,67431,17:00,Cleveland Browns Stadium,Browns,Broncos
+400791629,2015-10-18,57648,17:00,Ford Field,Lions,Bears
+400791639,2015-10-18,62342,17:00,Nissan Stadium,Titans,Dolphins
+400791625,2015-10-18,52480,17:00,Huntington Bank Stadium,Vikings,Chiefs
+400791598,2015-10-18,78160,17:00,MetLife Stadium,Jets,Commanders
+400791621,2015-10-18,63846,17:00,Acrisure Stadium,Steelers,Cardinals
+400791637,2015-10-18,58085,17:00,EverBank Stadium,Jaguars,Texans
+400791663,2015-10-18,69020,20:05,Lumen Field,Seahawks,Panthers
+400791667,2015-10-18,78434,20:25,Lambeau Field,Packers,Chargers
+400791670,2015-10-18,70799,20:25,Levi's Stadium,49ers,Ravens
+400791674,2015-10-19,66726,00:30,Lucas Oil Stadium,Colts,Patriots
+400791676,2015-10-20,69296,00:30,Lincoln Financial Field,Eagles,Giants
+400791503,2015-10-23,70799,00:25,Levi's Stadium,49ers,Seahawks
+400761515,2015-10-25,84021,13:30,Wembley Stadium,Jaguars,Bills
+400791523,2015-10-25,60231,17:00,Ford Field,Lions,Vikings
+400791517,2015-10-25,63329,17:00,Nissan Stadium,Titans,Falcons
+400791520,2015-10-25,66420,17:00,Lucas Oil Stadium,Colts,Saints
+400791527,2015-10-25,76365,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Steelers
+400791529,2015-10-25,51523,17:00,The Dome at America's Center,Rams,Browns
+400791533,2015-10-25,65251,17:00,Hard Rock Stadium,Dolphins,Texans
+400791536,2015-10-25,66829,17:00,Gillette Stadium,Patriots,Jets
+400791511,2015-10-25,72912,17:00,FedExField,Commanders,Buccaneers
+400791540,2015-10-25,67542,20:05,SDCCU Stadium,Chargers,Raiders
+400791564,2015-10-25,80319,20:25,MetLife Stadium,Giants,Cowboys
+400791567,2015-10-26,74194,00:30,Bank of America Stadium,Panthers,Eagles
+400791574,2015-10-27,64722,00:30,State Farm Stadium,Cardinals,Ravens
+400791601,2015-10-30,66829,00:25,Gillette Stadium,Patriots,Dolphins
+400761516,2015-11-01,83624,14:30,Wembley Stadium,Chiefs,Lions
+400791605,2015-11-01,70524,18:00,Georgia Dome,Falcons,Buccaneers
+400791642,2015-11-01,62311,18:00,Soldier Field,Bears,Vikings
+400791609,2015-11-01,67431,18:00,Cleveland Browns Stadium,Browns,Cardinals
+400791613,2015-11-01,51207,18:00,The Dome at America's Center,Rams,49ers
+400791618,2015-11-01,73019,18:00,Caesars Superdome,Saints,Giants
+400791649,2015-11-01,64750,18:00,Acrisure Stadium,Steelers,Bengals
+400791646,2015-11-01,70829,18:00,M&T Bank Stadium,Ravens,Chargers
+400791653,2015-11-01,71630,18:00,NRG Stadium,Texans,Titans
+400791657,2015-11-01,54700,21:05,Oakland Coliseum,Raiders,Jets
+400791681,2015-11-01,91486,21:25,AT&T Stadium,Cowboys,Seahawks
+400791684,2015-11-02,77075,01:30,Empower Field at Mile High,Broncos,Packers
+400791690,2015-11-03,74136,01:30,Bank of America Stadium,Panthers,Colts
+400791698,2015-11-06,65816,01:25,Paycor Stadium,Bengals,Browns
+400791725,2015-11-08,70214,18:00,Highmark Stadium,Bills,Dolphins
+400791727,2015-11-08,52406,18:00,Huntington Bank Stadium,Vikings,Rams
+400791721,2015-11-08,66829,18:00,Gillette Stadium,Patriots,Commanders
+400791722,2015-11-08,73075,18:00,Caesars Superdome,Saints,Titans
+400791728,2015-11-08,78160,18:00,MetLife Stadium,Jets,Jaguars
+400791730,2015-11-08,65520,18:00,Acrisure Stadium,Steelers,Raiders
+400791700,2015-11-08,74461,18:00,Bank of America Stadium,Panthers,Packers
+400791732,2015-11-08,70799,21:05,Levi's Stadium,49ers,Falcons
+400791731,2015-11-08,64351,21:05,Raymond James Stadium,Buccaneers,Giants
+400791733,2015-11-08,66894,21:25,Lucas Oil Stadium,Colts,Broncos
+400791734,2015-11-09,91827,01:30,AT&T Stadium,Cowboys,Eagles
+400791735,2015-11-10,68033,01:30,SDCCU Stadium,Chargers,Bears
+400791486,2015-11-13,78160,01:25,MetLife Stadium,Jets,Bills
+400791490,2015-11-15,78526,18:00,Lambeau Field,Packers,Lions
+400791499,2015-11-15,63591,18:00,Nissan Stadium,Titans,Panthers
+400791543,2015-11-15,58653,18:00,The Dome at America's Center,Rams,Bears
+400791552,2015-11-15,69596,18:00,Lincoln Financial Field,Eagles,Dolphins
+400791556,2015-11-15,64402,18:00,Acrisure Stadium,Steelers,Browns
+400791494,2015-11-15,64133,18:00,Raymond James Stadium,Buccaneers,Cowboys
+400791549,2015-11-15,75086,18:00,FedExField,Commanders,Saints
+400791581,2015-11-15,70837,18:00,M&T Bank Stadium,Ravens,Jaguars
+400791586,2015-11-15,54700,21:05,Oakland Coliseum,Raiders,Vikings
+400791595,2015-11-15,76973,21:25,Empower Field at Mile High,Broncos,Chiefs
+400791591,2015-11-15,81061,21:25,MetLife Stadium,Giants,Patriots
+400791599,2015-11-16,69005,01:30,Lumen Field,Seahawks,Cardinals
+400791622,2015-11-17,61381,01:30,Paycor Stadium,Bengals,Texans
+400791632,2015-11-20,60121,01:25,EverBank Stadium,Jaguars,Titans
+400791640,2015-11-22,70433,18:00,Georgia Dome,Falcons,Colts
+400791673,2015-11-22,62483,18:00,Soldier Field,Bears,Broncos
+400791636,2015-11-22,60202,18:00,Ford Field,Lions,Raiders
+400791703,2015-11-22,65115,18:00,Hard Rock Stadium,Dolphins,Cowboys
+400791668,2015-11-22,69596,18:00,Lincoln Financial Field,Eagles,Buccaneers
+400791707,2015-11-22,74418,18:00,Bank of America Stadium,Panthers,Commanders
+400791679,2015-11-22,71105,18:00,M&T Bank Stadium,Ravens,Rams
+400791665,2015-11-22,71718,18:00,NRG Stadium,Texans,Jets
+400791715,2015-11-22,65837,21:05,SDCCU Stadium,Chargers,Chiefs
+400791677,2015-11-22,52529,21:25,Huntington Bank Stadium,Vikings,Packers
+400791713,2015-11-22,68993,21:25,Lumen Field,Seahawks,49ers
+400791710,2015-11-23,64745,01:30,State Farm Stadium,Cardinals,Bengals
+400791717,2015-11-24,66829,01:30,Gillette Stadium,Patriots,Bills
+400791507,2015-11-26,64445,17:30,Ford Field,Lions,Eagles
+400791509,2015-11-26,90909,21:30,AT&T Stadium,Cowboys,Panthers
+400791510,2015-11-27,78488,01:30,Lambeau Field,Packers,Bears
+400791514,2015-11-29,70610,18:00,Georgia Dome,Falcons,Vikings
+400791516,2015-11-29,61022,18:00,Paycor Stadium,Bengals,Rams
+400791502,2015-11-29,58075,18:00,Nissan Stadium,Titans,Raiders
+400791505,2015-11-29,65696,18:00,Lucas Oil Stadium,Colts,Buccaneers
+400791504,2015-11-29,72493,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Bills
+400791522,2015-11-29,78160,18:00,MetLife Stadium,Jets,Dolphins
+400791506,2015-11-29,77367,18:00,FedExField,Commanders,Giants
+400791519,2015-11-29,59477,18:00,EverBank Stadium,Jaguars,Chargers
+400791512,2015-11-29,71778,18:00,NRG Stadium,Texans,Saints
+400791526,2015-11-29,70799,21:05,Levi's Stadium,49ers,Cardinals
+400791532,2015-11-29,69055,21:25,Lumen Field,Seahawks,Steelers
+400791537,2015-11-30,76970,01:30,Empower Field at Mile High,Broncos,Patriots
+400791561,2015-12-01,64380,01:30,Cleveland Browns Stadium,Browns,Ravens
+400791568,2015-12-04,63207,01:25,Ford Field,Lions,Packers
+400791611,2015-12-06,68544,18:00,Highmark Stadium,Bills,Texans
+400791647,2015-12-06,62088,18:00,Soldier Field,Bears,49ers
+400791619,2015-12-06,64775,18:00,Cleveland Browns Stadium,Browns,Bengals
+400791643,2015-12-06,57355,18:00,Nissan Stadium,Titans,Jaguars
+400791576,2015-12-06,51115,18:00,The Dome at America's Center,Rams,Cardinals
+400791615,2015-12-06,64519,18:00,Hard Rock Stadium,Dolphins,Ravens
+400791606,2015-12-06,52430,18:00,Huntington Bank Stadium,Vikings,Seahawks
+400791572,2015-12-06,80898,18:00,MetLife Stadium,Giants,Jets
+400791579,2015-12-06,58221,18:00,Raymond James Stadium,Buccaneers,Falcons
+400791655,2015-12-06,55010,21:05,Oakland Coliseum,Raiders,Chiefs
+400791652,2015-12-06,68631,21:05,SDCCU Stadium,Chargers,Broncos
+400791658,2015-12-06,66829,21:25,Gillette Stadium,Patriots,Eagles
+400791602,2015-12-06,73097,21:25,Caesars Superdome,Saints,Panthers
+400791682,2015-12-07,58701,01:30,Acrisure Stadium,Steelers,Colts
+400791686,2015-12-08,80444,01:30,FedExField,Commanders,Cowboys
+400791513,2015-12-11,64784,01:25,State Farm Stadium,Cardinals,Vikings
+400791580,2015-12-13,61026,18:00,Soldier Field,Bears,Commanders
+400791566,2015-12-13,65564,18:00,Paycor Stadium,Bengals,Steelers
+400791530,2015-12-13,63916,18:00,Cleveland Browns Stadium,Browns,49ers
+400791577,2015-12-13,72314,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+400791534,2015-12-13,51202,18:00,The Dome at America's Center,Rams,Lions
+400791562,2015-12-13,78160,18:00,MetLife Stadium,Jets,Titans
+400791524,2015-12-13,69596,18:00,Lincoln Financial Field,Eagles,Bills
+400791539,2015-12-13,62138,18:00,Raymond James Stadium,Buccaneers,Saints
+400791604,2015-12-13,74420,18:00,Bank of America Stadium,Panthers,Falcons
+400791573,2015-12-13,62372,18:00,EverBank Stadium,Jaguars,Colts
+400791616,2015-12-13,71179,18:00,M&T Bank Stadium,Ravens,Seahawks
+400791608,2015-12-13,76824,21:05,Empower Field at Mile High,Broncos,Raiders
+400791612,2015-12-13,78369,21:25,Lambeau Field,Packers,Cowboys
+400791570,2015-12-14,71908,01:30,NRG Stadium,Texans,Patriots
+400791641,2015-12-15,65408,01:30,Hard Rock Stadium,Dolphins,Giants
+400791650,2015-12-18,51295,01:25,The Dome at America's Center,Rams,Buccaneers
+400791656,2015-12-20,90345,01:25,AT&T Stadium,Cowboys,Jets
+400791688,2015-12-20,66083,18:00,Lucas Oil Stadium,Colts,Texans
+400791660,2015-12-20,52421,18:00,Huntington Bank Stadium,Vikings,Bears
+400791694,2015-12-20,66829,18:00,Gillette Stadium,Patriots,Titans
+400791693,2015-12-20,79436,18:00,MetLife Stadium,Giants,Panthers
+400791695,2015-12-20,80124,18:00,FedExField,Commanders,Bills
+400791685,2015-12-20,64016,18:00,EverBank Stadium,Jaguars,Falcons
+400791696,2015-12-20,70791,18:00,M&T Bank Stadium,Ravens,Chiefs
+400791699,2015-12-20,55087,21:05,Oakland Coliseum,Raiders,Packers
+400791697,2015-12-20,69002,21:05,Lumen Field,Seahawks,Browns
+400791723,2015-12-20,67234,21:25,Acrisure Stadium,Steelers,Broncos
+400791724,2015-12-20,66676,21:25,SDCCU Stadium,Chargers,Dolphins
+400791726,2015-12-20,70799,21:25,Levi's Stadium,49ers,Bengals
+400791692,2015-12-21,69596,01:30,Lincoln Financial Field,Eagles,Cardinals
+400791729,2015-12-22,73017,01:30,Caesars Superdome,Saints,Lions
+400791501,2015-12-25,54400,01:25,Oakland Coliseum,Raiders,Chargers
+400791508,2015-12-27,69596,01:25,Lincoln Financial Field,Eagles,Commanders
+400791563,2015-12-27,70981,18:00,Georgia Dome,Falcons,Panthers
+400791535,2015-12-27,70172,18:00,Highmark Stadium,Bills,Cowboys
+400791531,2015-12-27,61313,18:00,Ford Field,Lions,49ers
+400791518,2015-12-27,62153,18:00,Nissan Stadium,Titans,Texans
+400791521,2015-12-27,69115,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Browns
+400791525,2015-12-27,65482,18:00,Hard Rock Stadium,Dolphins,Colts
+400791515,2015-12-27,78160,18:00,MetLife Stadium,Jets,Patriots
+400791538,2015-12-27,63734,18:00,Raymond James Stadium,Buccaneers,Bears
+400791575,2015-12-27,71261,18:00,M&T Bank Stadium,Ravens,Steelers
+400791528,2015-12-27,73064,21:05,Caesars Superdome,Saints,Jaguars
+400791571,2015-12-27,64878,21:25,State Farm Stadium,Cardinals,Packers
+400791569,2015-12-27,69080,21:25,Lumen Field,Seahawks,Rams
+400791565,2015-12-28,52455,01:30,Huntington Bank Stadium,Vikings,Giants
+400791578,2015-12-29,76868,01:30,Empower Field at Mile High,Broncos,Bengals
+400791614,2016-01-03,69699,18:00,Georgia Dome,Falcons,Saints
+400791603,2016-01-03,68670,18:00,Highmark Stadium,Bills,Jets
+400791659,2016-01-03,61177,18:00,Soldier Field,Bears,Lions
+400791617,2016-01-03,57254,18:00,Paycor Stadium,Bengals,Ravens
+400791620,2016-01-03,66693,18:00,Cleveland Browns Stadium,Browns,Steelers
+400791651,2016-01-03,90127,18:00,AT&T Stadium,Cowboys,Commanders
+400791645,2016-01-03,65733,18:00,Lucas Oil Stadium,Colts,Titans
+400791607,2016-01-03,62918,18:00,Hard Rock Stadium,Dolphins,Patriots
+400791654,2016-01-03,78023,18:00,MetLife Stadium,Giants,Eagles
+400791644,2016-01-03,71899,18:00,NRG Stadium,Texans,Jaguars
+400791687,2016-01-03,76844,21:25,Empower Field at Mile High,Broncos,Chargers
+400791648,2016-01-03,76114,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+400791689,2016-01-03,64646,21:25,State Farm Stadium,Cardinals,Seahawks
+400791691,2016-01-03,70799,21:25,Levi's Stadium,49ers,Rams
+400791610,2016-01-03,74169,21:25,Bank of America Stadium,Panthers,Buccaneers
+400791683,2016-01-04,78412,01:30,Lambeau Field,Packers,Vikings
+400820429,2016-01-09,71800,21:20,NRG Stadium,Texans,Chiefs
+400820428,2016-01-10,63257,01:15,Paycor Stadium,Bengals,Steelers
+400820431,2016-01-10,52090,18:05,Huntington Bank Stadium,Vikings,Seahawks
+400820430,2016-01-10,81367,21:40,FedExField,Commanders,Packers
+400820432,2016-01-16,66829,21:35,Gillette Stadium,Patriots,Chiefs
+400820433,2016-01-17,65089,01:15,State Farm Stadium,Cardinals,Packers
+400820435,2016-01-17,74287,18:05,Bank of America Stadium,Panthers,Seahawks
+400820434,2016-01-17,76956,21:40,Empower Field at Mile High,Broncos,Steelers
+400820436,2016-01-24,77112,20:05,Empower Field at Mile High,Broncos,Patriots
+400820437,2016-01-24,74294,23:40,Bank of America Stadium,Panthers,Cardinals
+400820438,2016-02-07,71088,23:30,Levi's Stadium,Broncos,Panthers
+400874484,2016-09-09,76843,00:30,Empower Field at Mile High,Broncos,Panthers
+400874522,2016-09-11,69382,17:00,Georgia Dome,Falcons,Buccaneers
+400874524,2016-09-11,63816,17:00,Nissan Stadium,Titans,Vikings
+400874570,2016-09-11,73238,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+400874543,2016-09-11,73028,17:00,Caesars Superdome,Saints,Raiders
+400874527,2016-09-11,78160,17:00,MetLife Stadium,Jets,Bengals
+400874520,2016-09-11,69596,17:00,Lincoln Financial Field,Eagles,Browns
+400874486,2016-09-11,63179,17:00,EverBank Stadium,Jaguars,Packers
+400874510,2016-09-11,71104,17:00,M&T Bank Stadium,Ravens,Bills
+400874511,2016-09-11,71933,17:00,NRG Stadium,Texans,Bears
+400874577,2016-09-11,69012,20:05,Lumen Field,Seahawks,Dolphins
+400874574,2016-09-11,92867,20:25,AT&T Stadium,Cowboys,Giants
+400874573,2016-09-11,65566,20:25,Lucas Oil Stadium,Colts,Lions
+400874539,2016-09-12,64864,00:30,State Farm Stadium,Cardinals,Patriots
+400874537,2016-09-12,79124,23:10,FedExField,Commanders,Steelers
+400874532,2016-09-13,70178,02:20,Levi's Stadium,49ers,Rams
+400874530,2016-09-16,70256,00:25,Highmark Stadium,Bills,Jets
+400874512,2016-09-18,67431,17:00,Cleveland Browns Stadium,Browns,Ravens
+400874488,2016-09-18,58466,17:00,Ford Field,Lions,Titans
+400874541,2016-09-18,66829,17:00,Gillette Stadium,Patriots,Dolphins
+400874529,2016-09-18,77727,17:00,MetLife Stadium,Giants,Saints
+400874487,2016-09-18,65072,17:00,Acrisure Stadium,Steelers,Bengals
+400874518,2016-09-18,80612,17:00,FedExField,Commanders,Cowboys
+400874535,2016-09-18,74143,17:00,Bank of America Stadium,Panthers,49ers
+400874549,2016-09-18,71890,17:00,NRG Stadium,Texans,Chiefs
+400874514,2016-09-18,91046,20:05,Los Angeles Memorial Coliseum,Rams,Seahawks
+400874515,2016-09-18,64230,20:05,State Farm Stadium,Cardinals,Buccaneers
+400874526,2016-09-18,76379,20:25,Empower Field at Mile High,Broncos,Colts
+400874525,2016-09-18,54081,20:25,Oakland Coliseum,Raiders,Falcons
+400874517,2016-09-18,52165,20:25,SDCCU Stadium,Chargers,Jaguars
+400874545,2016-09-19,66813,00:30,U.S. Bank Stadium,Vikings,Packers
+400874547,2016-09-20,62268,00:30,Soldier Field,Bears,Eagles
+400874551,2016-09-23,66829,00:25,Gillette Stadium,Patriots,Texans
+400874558,2016-09-25,68647,17:00,Highmark Stadium,Bills,Cardinals
+400874613,2016-09-25,63850,17:00,Paycor Stadium,Bengals,Broncos
+400874610,2016-09-25,78411,17:00,Lambeau Field,Packers,Lions
+400874562,2016-09-25,62370,17:00,Nissan Stadium,Titans,Raiders
+400874565,2016-09-25,65176,17:00,Hard Rock Stadium,Dolphins,Browns
+400874682,2016-09-25,78368,17:00,MetLife Stadium,Giants,Commanders
+400874615,2016-09-25,73813,17:00,Bank of America Stadium,Panthers,Vikings
+400874567,2016-09-25,60127,17:00,EverBank Stadium,Jaguars,Ravens
+400874620,2016-09-25,69010,20:05,Lumen Field,Seahawks,49ers
+400874618,2016-09-25,55009,20:05,Raymond James Stadium,Buccaneers,Rams
+400874624,2016-09-25,64747,20:25,Lucas Oil Stadium,Colts,Chargers
+400874623,2016-09-25,71587,20:25,GEHA Field at Arrowhead Stadium,Chiefs,Jets
+400874628,2016-09-25,69596,20:25,Lincoln Financial Field,Eagles,Steelers
+400874650,2016-09-26,90554,00:30,AT&T Stadium,Cowboys,Bears
+400874653,2016-09-27,73003,00:30,Caesars Superdome,Saints,Falcons
+400874655,2016-09-30,60834,00:25,Paycor Stadium,Bengals,Dolphins
+400874657,2016-10-02,83764,13:30,Wembley Stadium,Jaguars,Colts
+400874664,2016-10-02,70508,17:00,Georgia Dome,Falcons,Panthers
+400874668,2016-10-02,60841,17:00,Soldier Field,Bears,Lions
+400874663,2016-10-02,66829,17:00,Gillette Stadium,Patriots,Bills
+400874662,2016-10-02,78160,17:00,MetLife Stadium,Jets,Seahawks
+400874660,2016-10-02,76249,17:00,FedExField,Commanders,Browns
+400874666,2016-10-02,71152,17:00,M&T Bank Stadium,Ravens,Raiders
+400874658,2016-10-02,71815,17:00,NRG Stadium,Texans,Titans
+400874669,2016-10-02,60375,20:05,Raymond James Stadium,Buccaneers,Broncos
+400874671,2016-10-02,64622,20:25,State Farm Stadium,Cardinals,Rams
+400874672,2016-10-02,60641,20:25,SDCCU Stadium,Chargers,Saints
+400874674,2016-10-02,70178,20:25,Levi's Stadium,49ers,Cowboys
+400874675,2016-10-03,61278,00:30,Acrisure Stadium,Steelers,Chiefs
+400874677,2016-10-04,66690,00:30,U.S. Bank Stadium,Vikings,Giants
+400874483,2016-10-07,70178,00:25,Levi's Stadium,49ers,Cardinals
+400874519,2016-10-09,67431,17:00,Cleveland Browns Stadium,Browns,Patriots
+400874533,2016-10-09,58047,17:00,Ford Field,Lions,Eagles
+400874548,2016-10-09,66622,17:00,Lucas Oil Stadium,Colts,Bears
+400874581,2016-10-09,64425,17:00,Hard Rock Stadium,Dolphins,Titans
+400874595,2016-10-09,66683,17:00,U.S. Bank Stadium,Vikings,Texans
+400874602,2016-10-09,66385,17:00,Acrisure Stadium,Steelers,Jets
+400874590,2016-10-09,71318,17:00,M&T Bank Stadium,Ravens,Commanders
+400874607,2016-10-09,76802,20:05,Empower Field at Mile High,Broncos,Falcons
+400874630,2016-10-09,91653,20:25,AT&T Stadium,Cowboys,Bengals
+400874636,2016-10-09,54275,20:25,Oakland Coliseum,Raiders,Chargers
+400874633,2016-10-09,83679,20:25,Los Angeles Memorial Coliseum,Rams,Bills
+400874640,2016-10-10,78401,00:30,Lambeau Field,Packers,Giants
+400874648,2016-10-11,73425,00:30,Bank of America Stadium,Panthers,Buccaneers
+400874693,2016-10-14,58904,00:25,SDCCU Stadium,Chargers,Broncos
+400874698,2016-10-16,70003,17:00,Highmark Stadium,Bills,49ers
+400874708,2016-10-16,61054,17:00,Soldier Field,Bears,Jaguars
+400874709,2016-10-16,56018,17:00,Ford Field,Lions,Rams
+400874703,2016-10-16,60897,17:00,Nissan Stadium,Titans,Browns
+400874730,2016-10-16,65351,17:00,Hard Rock Stadium,Dolphins,Steelers
+400874736,2016-10-16,66829,17:00,Gillette Stadium,Patriots,Bengals
+400874707,2016-10-16,73138,17:00,Caesars Superdome,Saints,Panthers
+400874705,2016-10-16,78487,17:00,MetLife Stadium,Giants,Ravens
+400874701,2016-10-16,78934,17:00,FedExField,Commanders,Eagles
+400874731,2016-10-16,54211,20:05,Oakland Coliseum,Raiders,Chiefs
+400874733,2016-10-16,78481,20:25,Lambeau Field,Packers,Cowboys
+400874732,2016-10-16,69071,20:25,Lumen Field,Seahawks,Falcons
+400874734,2016-10-17,71891,00:30,NRG Stadium,Texans,Colts
+400874735,2016-10-18,64709,00:30,State Farm Stadium,Cardinals,Jets
+400874429,2016-10-21,78217,00:25,Lambeau Field,Packers,Bears
+400874490,2016-10-23,74121,13:30,Twickenham Stadium,Rams,Giants
+400874494,2016-10-23,65047,17:00,Paycor Stadium,Bengals,Browns
+400874496,2016-10-23,60461,17:00,Ford Field,Lions,Commanders
+400874492,2016-10-23,65470,17:00,Nissan Stadium,Titans,Colts
+400874491,2016-10-23,76282,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Saints
+400874500,2016-10-23,65658,17:00,Hard Rock Stadium,Dolphins,Bills
+400874501,2016-10-23,78160,17:00,MetLife Stadium,Jets,Ravens
+400874493,2016-10-23,69596,17:00,Lincoln Financial Field,Eagles,Vikings
+400874498,2016-10-23,62614,17:00,EverBank Stadium,Jaguars,Raiders
+400874505,2016-10-23,69832,20:05,Georgia Dome,Falcons,Chargers
+400874503,2016-10-23,70178,20:05,Levi's Stadium,49ers,Buccaneers
+400874506,2016-10-23,66009,20:25,Acrisure Stadium,Steelers,Patriots
+400874508,2016-10-24,65089,00:30,State Farm Stadium,Cardinals,Seahawks
+400874509,2016-10-25,76865,00:30,Empower Field at Mile High,Broncos,Texans
+400874553,2016-10-28,61619,00:25,Nissan Stadium,Titans,Jaguars
+400874555,2016-10-30,84488,13:30,Wembley Stadium,Bengals,Commanders
+400874619,2016-10-30,70442,17:00,Highmark Stadium,Bills,Patriots
+400874612,2016-10-30,67431,17:00,Cleveland Browns Stadium,Browns,Jets
+400874557,2016-10-30,65417,17:00,Lucas Oil Stadium,Colts,Chiefs
+400874564,2016-10-30,73188,17:00,Caesars Superdome,Saints,Seahawks
+400874561,2016-10-30,61068,17:00,Raymond James Stadium,Buccaneers,Raiders
+400874625,2016-10-30,74088,17:00,Bank of America Stadium,Panthers,Cardinals
+400874569,2016-10-30,71882,17:00,NRG Stadium,Texans,Lions
+400874622,2016-10-30,76756,20:05,Empower Field at Mile High,Broncos,Chargers
+400874616,2016-10-30,70165,20:25,Georgia Dome,Falcons,Packers
+400874629,2016-10-31,93103,00:30,AT&T Stadium,Cowboys,Eagles
+400874652,2016-11-01,60422,00:30,Soldier Field,Bears,Vikings
+400874605,2016-11-04,57797,00:25,Raymond James Stadium,Buccaneers,Falcons
+400874599,2016-11-06,67431,18:00,Cleveland Browns Stadium,Browns,Cowboys
+400874600,2016-11-06,73294,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Jaguars
+400874601,2016-11-06,65722,18:00,Hard Rock Stadium,Dolphins,Jets
+400874604,2016-11-06,66807,18:00,U.S. Bank Stadium,Vikings,Lions
+400874603,2016-11-06,80309,18:00,MetLife Stadium,Giants,Eagles
+400874598,2016-11-06,71286,18:00,M&T Bank Stadium,Ravens,Steelers
+400874596,2016-11-06,86109,21:05,Los Angeles Memorial Coliseum,Rams,Panthers
+400874597,2016-11-06,70178,21:05,Levi's Stadium,49ers,Saints
+400874594,2016-11-06,78437,21:25,Lambeau Field,Packers,Colts
+400874593,2016-11-06,52281,21:25,SDCCU Stadium,Chargers,Titans
+400874592,2016-11-07,54957,01:30,Oakland Coliseum,Raiders,Broncos
+400874591,2016-11-08,69084,01:30,Lumen Field,Seahawks,Bills
+400874589,2016-11-11,70921,01:25,M&T Bank Stadium,Ravens,Browns
+400874572,2016-11-13,69116,18:00,Nissan Stadium,Titans,Packers
+400874586,2016-11-13,73138,18:00,Caesars Superdome,Saints,Broncos
+400874584,2016-11-13,78160,18:00,MetLife Stadium,Jets,Rams
+400874582,2016-11-13,69596,18:00,Lincoln Financial Field,Eagles,Falcons
+400874578,2016-11-13,62898,18:00,Raymond James Stadium,Buccaneers,Bears
+400874576,2016-11-13,78216,18:00,FedExField,Commanders,Vikings
+400874580,2016-11-13,74181,18:00,Bank of America Stadium,Panthers,Chiefs
+400874587,2016-11-13,62091,18:00,EverBank Stadium,Jaguars,Texans
+400874544,2016-11-13,55107,21:05,SDCCU Stadium,Chargers,Dolphins
+400874542,2016-11-13,65127,21:25,State Farm Stadium,Cardinals,49ers
+400874538,2016-11-13,67737,21:25,Acrisure Stadium,Steelers,Cowboys
+400874536,2016-11-14,66829,01:30,Gillette Stadium,Patriots,Seahawks
+400874531,2016-11-15,76218,01:30,MetLife Stadium,Giants,Bengals
+400874609,2016-11-18,73288,01:25,Bank of America Stadium,Panthers,Saints
+400874646,2016-11-20,61356,18:00,Paycor Stadium,Bengals,Bills
+400874634,2016-11-20,67431,18:00,Cleveland Browns Stadium,Browns,Steelers
+400874638,2016-11-20,93056,18:00,AT&T Stadium,Cowboys,Ravens
+400874641,2016-11-20,61486,18:00,Ford Field,Lions,Jaguars
+400874644,2016-11-20,65048,18:00,Lucas Oil Stadium,Colts,Titans
+400874649,2016-11-20,72277,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Buccaneers
+400874695,2016-11-20,66808,18:00,U.S. Bank Stadium,Vikings,Cardinals
+400874691,2016-11-20,78898,18:00,MetLife Stadium,Giants,Bears
+400874697,2016-11-20,83483,21:05,Los Angeles Memorial Coliseum,Rams,Dolphins
+400874700,2016-11-20,70178,21:25,Levi's Stadium,49ers,Patriots
+400874702,2016-11-20,69190,21:25,Lumen Field,Seahawks,Eagles
+400874704,2016-11-21,77137,01:30,FedExField,Commanders,Packers
+400874706,2016-11-22,76473,01:30,Estadio Azteca,Raiders,Texans
+400874495,2016-11-24,63793,17:30,Ford Field,Lions,Vikings
+400874499,2016-11-24,93099,21:30,AT&T Stadium,Cowboys,Commanders
+400874502,2016-11-25,66583,01:30,Lucas Oil Stadium,Colts,Steelers
+400874566,2016-11-27,69233,18:00,Georgia Dome,Falcons,Cardinals
+400874554,2016-11-27,67849,18:00,Highmark Stadium,Bills,Jaguars
+400874507,2016-11-27,59494,18:00,Soldier Field,Bears,Titans
+400874614,2016-11-27,60034,18:00,Cleveland Browns Stadium,Browns,Giants
+400874654,2016-11-27,65856,18:00,Hard Rock Stadium,Dolphins,49ers
+400874626,2016-11-27,73067,18:00,Caesars Superdome,Saints,Rams
+400874560,2016-11-27,70903,18:00,M&T Bank Stadium,Ravens,Bengals
+400874659,2016-11-27,71897,18:00,NRG Stadium,Texans,Chargers
+400874665,2016-11-27,63674,21:05,Raymond James Stadium,Buccaneers,Seahawks
+400874670,2016-11-27,54909,21:25,Oakland Coliseum,Raiders,Panthers
+400874680,2016-11-27,78160,21:25,MetLife Stadium,Jets,Patriots
+400874676,2016-11-28,76819,01:30,Empower Field at Mile High,Broncos,Chiefs
+400874684,2016-11-29,69596,01:30,Lincoln Financial Field,Eagles,Packers
+400874713,2016-12-02,66860,01:25,U.S. Bank Stadium,Vikings,Cowboys
+400874715,2016-12-04,69879,18:00,Georgia Dome,Falcons,Chiefs
+400874723,2016-12-04,59782,18:00,Soldier Field,Bears,49ers
+400874721,2016-12-04,55456,18:00,Paycor Stadium,Bengals,Eagles
+400874720,2016-12-04,77867,18:00,Lambeau Field,Packers,Texans
+400874718,2016-12-04,66829,18:00,Gillette Stadium,Patriots,Rams
+400874717,2016-12-04,73137,18:00,Caesars Superdome,Saints,Lions
+400874719,2016-12-04,63075,18:00,EverBank Stadium,Jaguars,Broncos
+400874722,2016-12-04,70916,18:00,M&T Bank Stadium,Ravens,Dolphins
+400874724,2016-12-04,54759,21:05,Oakland Coliseum,Raiders,Bills
+400874726,2016-12-04,64939,21:25,State Farm Stadium,Cardinals,Commanders
+400874725,2016-12-04,65825,21:25,Acrisure Stadium,Steelers,Giants
+400874727,2016-12-04,53832,21:25,SDCCU Stadium,Chargers,Buccaneers
+400874728,2016-12-05,69104,01:30,Lumen Field,Seahawks,Panthers
+400874729,2016-12-06,78160,01:30,MetLife Stadium,Jets,Colts
+400874428,2016-12-09,75191,01:25,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+400874497,2016-12-11,69657,18:00,Highmark Stadium,Bills,Steelers
+400874563,2016-12-11,60028,18:00,Cleveland Browns Stadium,Browns,Bengals
+400874568,2016-12-11,61726,18:00,Ford Field,Lions,Bears
+400874504,2016-12-11,68780,18:00,Nissan Stadium,Titans,Broncos
+400874611,2016-12-11,65250,18:00,Lucas Oil Stadium,Colts,Texans
+400874556,2016-12-11,65750,18:00,Hard Rock Stadium,Dolphins,Cardinals
+400874552,2016-12-11,69596,18:00,Lincoln Financial Field,Eagles,Commanders
+400874559,2016-12-11,73856,18:00,Bank of America Stadium,Panthers,Chargers
+400874617,2016-12-11,62701,18:00,EverBank Stadium,Jaguars,Vikings
+400874621,2016-12-11,70178,21:05,Levi's Stadium,49ers,Jets
+400874651,2016-12-11,78057,21:25,Lambeau Field,Packers,Seahawks
+400874627,2016-12-11,82495,21:25,Los Angeles Memorial Coliseum,Rams,Falcons
+400874550,2016-12-11,62140,21:25,Raymond James Stadium,Buccaneers,Saints
+400874656,2016-12-12,80874,01:30,MetLife Stadium,Giants,Cowboys
+400874661,2016-12-13,66829,01:30,Gillette Stadium,Patriots,Ravens
+400874667,2016-12-16,69067,01:25,Lumen Field,Seahawks,Rams
+400874673,2016-12-18,78160,01:25,MetLife Stadium,Jets,Dolphins
+400874683,2016-12-18,66529,18:00,Highmark Stadium,Bills,Browns
+400874678,2016-12-18,61137,18:00,Soldier Field,Bears,Packers
+400874714,2016-12-18,62096,18:00,Paycor Stadium,Bengals,Steelers
+400874686,2016-12-18,68084,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Titans
+400874688,2016-12-18,66820,18:00,U.S. Bank Stadium,Vikings,Colts
+400874687,2016-12-18,79434,18:00,MetLife Stadium,Giants,Lions
+400874685,2016-12-18,71223,18:00,M&T Bank Stadium,Ravens,Eagles
+400874681,2016-12-18,71803,18:00,NRG Stadium,Texans,Jaguars
+400874710,2016-12-18,70164,21:05,Georgia Dome,Falcons,49ers
+400874689,2016-12-18,65072,21:05,State Farm Stadium,Cardinals,Saints
+400874711,2016-12-18,76893,21:25,Empower Field at Mile High,Broncos,Patriots
+400874712,2016-12-18,68352,21:25,SDCCU Stadium,Chargers,Raiders
+400874679,2016-12-19,93101,01:30,AT&T Stadium,Cowboys,Buccaneers
+400874716,2016-12-20,76689,01:30,FedExField,Commanders,Panthers
+400874485,2016-12-23,69596,01:25,Lincoln Financial Field,Eagles,Giants
+400874489,2016-12-24,64690,18:00,Highmark Stadium,Bills,Dolphins
+400874534,2016-12-24,57953,18:00,Soldier Field,Bears,Commanders
+400874528,2016-12-24,57272,18:00,Cleveland Browns Stadium,Browns,Chargers
+400874523,2016-12-24,77856,18:00,Lambeau Field,Packers,Vikings
+400874516,2016-12-24,66829,18:00,Gillette Stadium,Patriots,Jets
+400874540,2016-12-24,73549,18:00,Bank of America Stadium,Panthers,Falcons
+400874521,2016-12-24,59621,18:00,EverBank Stadium,Jaguars,Titans
+400874546,2016-12-24,54896,21:05,Oakland Coliseum,Raiders,Colts
+400874575,2016-12-24,83656,21:25,Los Angeles Memorial Coliseum,Rams,49ers
+400874513,2016-12-24,73177,21:25,Caesars Superdome,Saints,Buccaneers
+400874571,2016-12-24,69050,21:25,Lumen Field,Seahawks,Cardinals
+400874579,2016-12-25,71836,01:25,NRG Stadium,Texans,Bengals
+400874583,2016-12-25,66276,21:30,Acrisure Stadium,Steelers,Ravens
+400874585,2016-12-26,76671,01:30,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+400874588,2016-12-27,92885,01:30,AT&T Stadium,Cowboys,Lions
+400874608,2017-01-01,54944,18:00,Paycor Stadium,Bengals,Ravens
+400874632,2017-01-01,65205,18:00,Nissan Stadium,Titans,Texans
+400874639,2017-01-01,65160,18:00,Lucas Oil Stadium,Colts,Jaguars
+400874642,2017-01-01,66163,18:00,Hard Rock Stadium,Dolphins,Patriots
+400874643,2017-01-01,66808,18:00,U.S. Bank Stadium,Vikings,Bears
+400874645,2017-01-01,78160,18:00,MetLife Stadium,Jets,Bills
+400874647,2017-01-01,69596,18:00,Lincoln Financial Field,Eagles,Cowboys
+400874690,2017-01-01,55921,18:00,Acrisure Stadium,Steelers,Browns
+400874635,2017-01-01,62037,18:00,Raymond James Stadium,Buccaneers,Panthers
+400874606,2017-01-01,70835,21:25,Georgia Dome,Falcons,Saints
+400874694,2017-01-01,76836,21:25,Empower Field at Mile High,Broncos,Raiders
+400874692,2017-01-01,80729,21:25,Los Angeles Memorial Coliseum,Rams,Cardinals
+400874696,2017-01-01,54915,21:25,SDCCU Stadium,Chargers,Chiefs
+400874699,2017-01-01,70178,21:25,Levi's Stadium,49ers,Seahawks
+400874631,2017-01-01,79471,21:25,FedExField,Commanders,Giants
+400874637,2017-01-02,66345,01:30,Ford Field,Lions,Packers
+400932688,2017-01-07,71790,21:35,NRG Stadium,Texans,Raiders
+400932689,2017-01-08,68788,01:15,Lumen Field,Seahawks,Lions
+400932687,2017-01-08,62726,18:05,Acrisure Stadium,Steelers,Dolphins
+400932690,2017-01-08,77549,21:40,Lambeau Field,Packers,Giants
+400927747,2017-01-14,71155,21:35,Georgia Dome,Falcons,Seahawks
+400927746,2017-01-15,66829,01:15,Gillette Stadium,Patriots,Texans
+400927749,2017-01-15,93396,21:40,AT&T Stadium,Cowboys,Packers
+400927748,2017-01-16,75678,01:20,GEHA Field at Arrowhead Stadium,Chiefs,Steelers
+400927751,2017-01-22,71127,20:05,Georgia Dome,Falcons,Packers
+400927750,2017-01-22,66829,23:40,Gillette Stadium,Patriots,Steelers
+400927752,2017-02-05,70807,23:30,NRG Stadium,Falcons,Patriots
+400951566,2017-09-08,65878,00:30,Gillette Stadium,Patriots,Chiefs
+400951567,2017-09-10,68751,17:00,Highmark Stadium,Bills,Jets
+400951570,2017-09-10,61857,17:00,Soldier Field,Bears,Falcons
+400951572,2017-09-10,55254,17:00,Paycor Stadium,Bengals,Ravens
+400951574,2017-09-10,67431,17:00,Cleveland Browns Stadium,Browns,Steelers
+400951576,2017-09-10,60957,17:00,Ford Field,Lions,Cardinals
+400951584,2017-09-10,69089,17:00,Nissan Stadium,Titans,Raiders
+400951592,2017-09-10,78685,17:00,FedExField,Commanders,Eagles
+400951580,2017-09-10,71710,17:00,NRG Stadium,Texans,Jaguars
+400951597,2017-09-10,60128,20:05,Los Angeles Memorial Coliseum,Rams,Colts
+400951601,2017-09-10,78381,20:25,Lambeau Field,Packers,Seahawks
+400951605,2017-09-10,70178,20:25,Levi's Stadium,49ers,Panthers
+400951608,2017-09-11,93183,00:30,AT&T Stadium,Cowboys,Giants
+400951581,2017-09-10,0,17:00,Hard Rock Stadium,Dolphins,Buccaneers
+400951612,2017-09-11,66606,23:10,U.S. Bank Stadium,Vikings,Saints
+400951615,2017-09-12,76324,02:20,Empower Field at Mile High,Broncos,Chargers
+400951620,2017-09-15,52942,00:25,Paycor Stadium,Bengals,Texans
+400951632,2017-09-17,63137,17:00,Lucas Oil Stadium,Colts,Cardinals
+400951636,2017-09-17,74971,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Eagles
+400951639,2017-09-17,73168,17:00,Caesars Superdome,Saints,Patriots
+400951643,2017-09-17,65971,17:00,Acrisure Stadium,Steelers,Vikings
+400951645,2017-09-17,56640,17:00,Raymond James Stadium,Buccaneers,Bears
+400951630,2017-09-17,74122,17:00,Bank of America Stadium,Panthers,Bills
+400951635,2017-09-17,61709,17:00,EverBank Stadium,Jaguars,Titans
+400951626,2017-09-17,70605,17:00,M&T Bank Stadium,Ravens,Browns
+400951669,2017-09-17,54729,20:05,Oakland Coliseum,Raiders,Jets
+400951666,2017-09-17,25381,20:05,Dignity Health Sports Park,Chargers,Dolphins
+400951673,2017-09-17,76919,20:25,Empower Field at Mile High,Broncos,Cowboys
+400951674,2017-09-17,56612,20:25,Los Angeles Memorial Coliseum,Rams,Commanders
+400951676,2017-09-17,68729,20:25,Lumen Field,Seahawks,49ers
+400951679,2017-09-18,70826,00:30,Mercedes-Benz Stadium,Falcons,Packers
+400951681,2017-09-19,77004,00:30,MetLife Stadium,Giants,Lions
+400951568,2017-09-22,70178,00:25,Levi's Stadium,49ers,Rams
+400951579,2017-09-24,84592,13:30,Wembley Stadium,Jaguars,Ravens
+400951583,2017-09-24,68865,17:00,Highmark Stadium,Bills,Broncos
+400951590,2017-09-24,62172,17:00,Soldier Field,Bears,Steelers
+400951594,2017-09-24,63240,17:00,Ford Field,Lions,Falcons
+400951599,2017-09-24,63351,17:00,Lucas Oil Stadium,Colts,Browns
+400951604,2017-09-24,66390,17:00,U.S. Bank Stadium,Vikings,Buccaneers
+400951607,2017-09-24,65878,17:00,Gillette Stadium,Patriots,Texans
+400951611,2017-09-24,77562,17:00,MetLife Stadium,Jets,Dolphins
+400951616,2017-09-24,69596,17:00,Lincoln Financial Field,Eagles,Giants
+400951587,2017-09-24,73775,17:00,Bank of America Stadium,Panthers,Saints
+400951623,2017-09-24,69127,20:05,Nissan Stadium,Titans,Seahawks
+400951627,2017-09-24,78323,20:25,Lambeau Field,Packers,Bengals
+400951634,2017-09-24,25386,20:25,Dignity Health Sports Park,Chargers,Chiefs
+400951644,2017-09-25,77123,00:30,FedExField,Commanders,Raiders
+400951668,2017-09-26,65102,00:30,State Farm Stadium,Cardinals,Cowboys
+400951678,2017-09-29,78362,00:25,Lambeau Field,Packers,Bears
+400950241,2017-10-01,84423,13:30,Wembley Stadium,Dolphins,Saints
+400951685,2017-10-01,71273,17:00,Mercedes-Benz Stadium,Falcons,Bills
+400951712,2017-10-01,67431,17:00,Cleveland Browns Stadium,Browns,Bengals
+400951716,2017-10-01,91869,17:00,AT&T Stadium,Cowboys,Rams
+400951724,2017-10-01,66730,17:00,U.S. Bank Stadium,Vikings,Lions
+400951727,2017-10-01,65878,17:00,Gillette Stadium,Patriots,Panthers
+400951730,2017-10-01,77562,17:00,MetLife Stadium,Jets,Jaguars
+400951708,2017-10-01,71126,17:00,M&T Bank Stadium,Ravens,Steelers
+400951720,2017-10-01,71804,17:00,NRG Stadium,Texans,Titans
+400951735,2017-10-01,64121,20:05,State Farm Stadium,Cardinals,49ers
+400951738,2017-10-01,25374,20:05,Dignity Health Sports Park,Chargers,Eagles
+400951742,2017-10-01,63916,20:05,Raymond James Stadium,Buccaneers,Giants
+400951744,2017-10-01,76909,20:25,Empower Field at Mile High,Broncos,Raiders
+400951747,2017-10-02,68872,00:30,Lumen Field,Seahawks,Colts
+400951752,2017-10-03,74587,00:30,GEHA Field at Arrowhead Stadium,Chiefs,Commanders
+400951552,2017-10-06,64476,00:25,Raymond James Stadium,Buccaneers,Patriots
+400951554,2017-10-08,52367,17:00,Paycor Stadium,Bengals,Bills
+400951556,2017-10-08,62032,17:00,Cleveland Browns Stadium,Browns,Jets
+400951558,2017-10-08,64288,17:00,Ford Field,Lions,Panthers
+400951562,2017-10-08,65612,17:00,Lucas Oil Stadium,Colts,49ers
+400951646,2017-10-08,65135,17:00,Hard Rock Stadium,Dolphins,Titans
+400951650,2017-10-08,77373,17:00,MetLife Stadium,Giants,Chargers
+400951651,2017-10-08,69596,17:00,Lincoln Financial Field,Eagles,Cardinals
+400951655,2017-10-08,66237,17:00,Acrisure Stadium,Steelers,Jaguars
+400951659,2017-10-08,54980,20:05,Oakland Coliseum,Raiders,Ravens
+400951657,2017-10-08,60745,20:05,Los Angeles Memorial Coliseum,Rams,Seahawks
+400951661,2017-10-08,93329,20:25,AT&T Stadium,Cowboys,Packers
+400951664,2017-10-09,71835,00:30,NRG Stadium,Texans,Chiefs
+400951691,2017-10-10,61834,00:30,Soldier Field,Bears,Vikings
+400951695,2017-10-13,74373,00:25,Bank of America Stadium,Panthers,Eagles
+400951697,2017-10-15,70593,17:00,Mercedes-Benz Stadium,Falcons,Dolphins
+400951702,2017-10-15,66848,17:00,U.S. Bank Stadium,Vikings,Packers
+400951704,2017-10-15,73117,17:00,Caesars Superdome,Saints,Lions
+400951766,2017-10-15,77562,17:00,MetLife Stadium,Jets,Patriots
+400951767,2017-10-15,75568,17:00,FedExField,Commanders,49ers
+400951699,2017-10-15,70616,17:00,M&T Bank Stadium,Ravens,Bears
+400951700,2017-10-15,71815,17:00,NRG Stadium,Texans,Browns
+400951770,2017-10-15,63999,20:05,State Farm Stadium,Cardinals,Buccaneers
+400951773,2017-10-15,56232,20:05,EverBank Stadium,Jaguars,Rams
+400951776,2017-10-15,76994,20:25,GEHA Field at Arrowhead Stadium,Chiefs,Steelers
+400951779,2017-10-15,54685,20:25,Oakland Coliseum,Raiders,Chargers
+400951782,2017-10-16,76721,00:30,Empower Field at Mile High,Broncos,Giants
+400951785,2017-10-17,63888,00:30,Nissan Stadium,Titans,Colts
+400951571,2017-10-20,55090,00:25,Oakland Coliseum,Raiders,Chiefs
+400951575,2017-10-22,68561,17:00,Highmark Stadium,Bills,Buccaneers
+400951578,2017-10-22,61256,17:00,Soldier Field,Bears,Panthers
+400951582,2017-10-22,59061,17:00,Cleveland Browns Stadium,Browns,Titans
+400951585,2017-10-22,78380,17:00,Lambeau Field,Packers,Saints
+400951589,2017-10-22,63104,17:00,Lucas Oil Stadium,Colts,Jaguars
+400951593,2017-10-22,73736,17:00,Twickenham Stadium,Rams,Cardinals
+400951598,2017-10-22,65025,17:00,Hard Rock Stadium,Dolphins,Jets
+400951603,2017-10-22,66751,17:00,U.S. Bank Stadium,Vikings,Ravens
+400951619,2017-10-22,70133,20:05,Levi's Stadium,49ers,Cowboys
+400951628,2017-10-22,78527,20:25,MetLife Stadium,Giants,Seahawks
+400951609,2017-10-22,65363,20:25,Acrisure Stadium,Steelers,Bengals
+400951624,2017-10-22,25388,20:25,Dignity Health Sports Park,Chargers,Broncos
+400951638,2017-10-23,65878,00:30,Gillette Stadium,Patriots,Falcons
+400951641,2017-10-24,69596,00:30,Lincoln Financial Field,Eagles,Commanders
+400951670,2017-10-27,70408,00:25,M&T Bank Stadium,Ravens,Dolphins
+400951683,2017-10-29,74237,13:30,Twickenham Stadium,Browns,Vikings
+400951706,2017-10-29,69599,17:00,Highmark Stadium,Bills,Raiders
+400951711,2017-10-29,57901,17:00,Paycor Stadium,Bengals,Colts
+400951715,2017-10-29,65878,17:00,Gillette Stadium,Patriots,Chargers
+400951717,2017-10-29,73192,17:00,Caesars Superdome,Saints,Bears
+400951721,2017-10-29,77562,17:00,MetLife Stadium,Jets,Falcons
+400951723,2017-10-29,69596,17:00,Lincoln Financial Field,Eagles,49ers
+400951725,2017-10-29,58545,17:00,Raymond James Stadium,Buccaneers,Panthers
+400951729,2017-10-29,69025,20:05,Lumen Field,Seahawks,Texans
+400951732,2017-10-29,78428,20:25,FedExField,Commanders,Cowboys
+400951736,2017-10-30,64983,00:30,Ford Field,Lions,Steelers
+400951737,2017-10-31,76573,00:30,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+400951743,2017-11-03,77562,00:25,MetLife Stadium,Jets,Bills
+400951761,2017-11-05,67322,18:00,Nissan Stadium,Titans,Ravens
+400951755,2017-11-05,73121,18:00,Caesars Superdome,Saints,Buccaneers
+400951758,2017-11-05,76877,18:00,MetLife Stadium,Giants,Rams
+400951760,2017-11-05,69596,18:00,Lincoln Financial Field,Eagles,Broncos
+400951749,2017-11-05,74244,18:00,Bank of America Stadium,Panthers,Falcons
+400951753,2017-11-05,60720,18:00,EverBank Stadium,Jaguars,Bengals
+400951751,2017-11-05,71709,18:00,NRG Stadium,Texans,Colts
+400951763,2017-11-05,70133,21:05,Levi's Stadium,49ers,Cardinals
+400951765,2017-11-05,68927,21:05,Lumen Field,Seahawks,Commanders
+400951786,2017-11-05,93273,21:25,AT&T Stadium,Cowboys,Chiefs
+400951787,2017-11-06,65139,01:30,Hard Rock Stadium,Dolphins,Raiders
+400951790,2017-11-07,77575,01:30,Lambeau Field,Packers,Lions
+400951553,2017-11-10,64639,01:25,State Farm Stadium,Cardinals,Seahawks
+400951555,2017-11-12,67501,18:00,Highmark Stadium,Bills,Saints
+400951559,2017-11-12,61285,18:00,Soldier Field,Bears,Packers
+400951563,2017-11-12,64646,18:00,Ford Field,Lions,Browns
+400951656,2017-11-12,67432,18:00,Nissan Stadium,Titans,Bengals
+400951565,2017-11-12,66146,18:00,Lucas Oil Stadium,Colts,Steelers
+400951653,2017-11-12,57911,18:00,Raymond James Stadium,Buccaneers,Jets
+400951658,2017-11-12,74476,18:00,FedExField,Commanders,Vikings
+400951648,2017-11-12,60835,18:00,EverBank Stadium,Jaguars,Chargers
+400951663,2017-11-12,60032,21:05,Los Angeles Memorial Coliseum,Rams,Texans
+400951686,2017-11-12,73761,21:25,Mercedes-Benz Stadium,Falcons,Cowboys
+400951688,2017-11-12,70133,21:25,Levi's Stadium,49ers,Giants
+400951690,2017-11-13,76820,01:30,Empower Field at Mile High,Broncos,Patriots
+400951693,2017-11-14,72790,01:30,Bank of America Stadium,Panthers,Dolphins
+400951698,2017-11-17,60703,01:25,Acrisure Stadium,Steelers,Titans
+400951701,2017-11-19,60635,18:00,Soldier Field,Bears,Lions
+400951769,2017-11-19,57003,18:00,Cleveland Browns Stadium,Browns,Jaguars
+400951703,2017-11-19,77945,18:00,Lambeau Field,Packers,Ravens
+400981391,2017-11-19,65089,18:00,Hard Rock Stadium,Dolphins,Buccaneers
+400951775,2017-11-19,66809,18:00,U.S. Bank Stadium,Vikings,Rams
+400951780,2017-11-19,73138,18:00,Caesars Superdome,Saints,Commanders
+400951783,2017-11-19,76363,18:00,MetLife Stadium,Giants,Chiefs
+400951771,2017-11-19,71680,18:00,NRG Stadium,Texans,Cardinals
+400951807,2017-11-19,25015,21:05,Dignity Health Sports Park,Chargers,Bills
+400951810,2017-11-19,75707,21:25,Empower Field at Mile High,Broncos,Bengals
+400951815,2017-11-19,77357,21:25,Estadio Azteca,Raiders,Patriots
+400951817,2017-11-20,93247,01:30,AT&T Stadium,Cowboys,Eagles
+400951818,2017-11-21,69026,01:30,Lumen Field,Seahawks,Falcons
+400951569,2017-11-23,66613,17:30,Ford Field,Lions,Vikings
+400951573,2017-11-23,93012,21:30,AT&T Stadium,Cowboys,Chargers
+400951577,2017-11-24,73210,01:30,FedExField,Commanders,Giants
+400951586,2017-11-26,71036,18:00,Mercedes-Benz Stadium,Falcons,Buccaneers
+400951588,2017-11-26,51710,18:00,Paycor Stadium,Bengals,Browns
+400951591,2017-11-26,62207,18:00,Lucas Oil Stadium,Colts,Titans
+400951595,2017-11-26,74929,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Bills
+400951600,2017-11-26,65878,18:00,Gillette Stadium,Patriots,Dolphins
+400951606,2017-11-26,77562,18:00,MetLife Stadium,Jets,Panthers
+400951610,2017-11-26,69596,18:00,Lincoln Financial Field,Eagles,Bears
+400951618,2017-11-26,70134,21:05,Levi's Stadium,49ers,Seahawks
+400951629,2017-11-26,54994,21:25,Oakland Coliseum,Raiders,Broncos
+400951614,2017-11-26,62006,21:25,Los Angeles Memorial Coliseum,Rams,Saints
+400951622,2017-11-26,63891,21:25,State Farm Stadium,Cardinals,Jaguars
+400951633,2017-11-27,62147,01:30,Acrisure Stadium,Steelers,Packers
+400951640,2017-11-28,70357,01:30,M&T Bank Stadium,Ravens,Texans
+400951672,2017-12-01,91712,01:25,AT&T Stadium,Cowboys,Commanders
+400951677,2017-12-03,71185,18:00,Mercedes-Benz Stadium,Falcons,Vikings
+400951684,2017-12-03,68499,18:00,Highmark Stadium,Bills,Patriots
+400951707,2017-12-03,61302,18:00,Soldier Field,Bears,49ers
+400951710,2017-12-03,77684,18:00,Lambeau Field,Packers,Buccaneers
+400951728,2017-12-03,62758,18:00,Nissan Stadium,Titans,Texans
+400951718,2017-12-03,65092,18:00,Hard Rock Stadium,Dolphins,Broncos
+400951726,2017-12-03,77562,18:00,MetLife Stadium,Jets,Chiefs
+400951713,2017-12-03,61207,18:00,EverBank Stadium,Jaguars,Colts
+400951680,2017-12-03,70500,18:00,M&T Bank Stadium,Ravens,Lions
+400951731,2017-12-03,25320,21:05,Dignity Health Sports Park,Chargers,Browns
+400951740,2017-12-03,54994,21:25,Oakland Coliseum,Raiders,Giants
+400951722,2017-12-03,73171,21:25,Caesars Superdome,Saints,Panthers
+400951733,2017-12-03,63986,21:25,State Farm Stadium,Cardinals,Rams
+400951746,2017-12-04,69075,01:30,Lumen Field,Seahawks,Eagles
+400951754,2017-12-05,56029,01:30,Paycor Stadium,Bengals,Steelers
+400951557,2017-12-08,72866,01:25,Mercedes-Benz Stadium,Falcons,Saints
+400951560,2017-12-10,60222,18:00,Highmark Stadium,Bills,Colts
+400951564,2017-12-10,52002,18:00,Paycor Stadium,Bengals,Bears
+400951647,2017-12-10,67431,18:00,Cleveland Browns Stadium,Browns,Packers
+400951654,2017-12-10,74461,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+400951692,2017-12-10,78125,18:00,MetLife Stadium,Giants,Cowboys
+400951660,2017-12-10,60372,18:00,Raymond James Stadium,Buccaneers,Lions
+400951561,2017-12-10,73728,18:00,Bank of America Stadium,Panthers,Vikings
+400951649,2017-12-10,71802,18:00,NRG Stadium,Texans,49ers
+400951665,2017-12-10,75518,21:05,Empower Field at Mile High,Broncos,Jets
+400951662,2017-12-10,64153,21:05,State Farm Stadium,Cardinals,Titans
+400951687,2017-12-10,25393,21:05,Dignity Health Sports Park,Chargers,Commanders
+400951689,2017-12-10,67752,21:25,Los Angeles Memorial Coliseum,Rams,Eagles
+400951652,2017-12-10,64431,21:25,EverBank Stadium,Jaguars,Seahawks
+400951694,2017-12-11,60069,01:30,Acrisure Stadium,Steelers,Ravens
+400951696,2017-12-12,65548,01:30,Hard Rock Stadium,Dolphins,Patriots
+400951705,2017-12-15,63411,01:25,Lucas Oil Stadium,Colts,Broncos
+400951768,2017-12-16,65872,21:30,Ford Field,Lions,Bears
+400951772,2017-12-17,75011,01:25,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+400951774,2017-12-17,62202,18:00,Highmark Stadium,Bills,Dolphins
+400951778,2017-12-17,56434,18:00,Cleveland Browns Stadium,Browns,Ravens
+400951784,2017-12-17,66833,18:00,U.S. Bank Stadium,Vikings,Bengals
+400951806,2017-12-17,73018,18:00,Caesars Superdome,Saints,Jets
+400951808,2017-12-17,76896,18:00,MetLife Stadium,Giants,Eagles
+400951809,2017-12-17,71026,18:00,FedExField,Commanders,Cardinals
+400951777,2017-12-17,74447,18:00,Bank of America Stadium,Panthers,Packers
+400951781,2017-12-17,64701,18:00,EverBank Stadium,Jaguars,Texans
+400951811,2017-12-17,69077,21:05,Lumen Field,Seahawks,Rams
+400951812,2017-12-17,68574,21:25,Acrisure Stadium,Steelers,Patriots
+400951813,2017-12-17,70133,21:25,Levi's Stadium,49ers,Titans
+400951814,2017-12-18,55372,01:30,Oakland Coliseum,Raiders,Cowboys
+400951816,2017-12-19,62382,01:30,Raymond James Stadium,Buccaneers,Falcons
+400951596,2017-12-23,70590,21:30,M&T Bank Stadium,Ravens,Colts
+400951602,2017-12-24,78092,01:30,Lambeau Field,Packers,Vikings
+400951617,2017-12-24,58796,18:00,Soldier Field,Bears,Browns
+400951621,2017-12-24,47732,18:00,Paycor Stadium,Bengals,Lions
+400951667,2017-12-24,60097,18:00,Nissan Stadium,Titans,Rams
+400951625,2017-12-24,65325,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Dolphins
+400951631,2017-12-24,65878,18:00,Gillette Stadium,Patriots,Bills
+400951637,2017-12-24,73188,18:00,Caesars Superdome,Saints,Falcons
+400951642,2017-12-24,77562,18:00,MetLife Stadium,Jets,Chargers
+400951671,2017-12-24,72889,18:00,FedExField,Commanders,Broncos
+400951613,2017-12-24,71463,18:00,Bank of America Stadium,Panthers,Buccaneers
+400951675,2017-12-24,70133,21:05,Levi's Stadium,49ers,Jaguars
+400951709,2017-12-24,92150,21:25,AT&T Stadium,Cowboys,Seahawks
+400951682,2017-12-24,63850,21:25,State Farm Stadium,Cardinals,Giants
+400951714,2017-12-25,71842,21:30,NRG Stadium,Texans,Steelers
+400951719,2017-12-26,69596,01:30,Lincoln Financial Field,Eagles,Raiders
+400951741,2017-12-31,62501,18:00,Ford Field,Lions,Packers
+400951745,2017-12-31,60557,18:00,Lucas Oil Stadium,Colts,Texans
+400951750,2017-12-31,66802,18:00,U.S. Bank Stadium,Vikings,Bears
+400951756,2017-12-31,65878,18:00,Gillette Stadium,Patriots,Jets
+400951757,2017-12-31,76269,18:00,MetLife Stadium,Giants,Commanders
+400951759,2017-12-31,69596,18:00,Lincoln Financial Field,Eagles,Cowboys
+400951762,2017-12-31,50704,18:00,Acrisure Stadium,Steelers,Browns
+400951734,2017-12-31,74141,21:25,Mercedes-Benz Stadium,Falcons,Panthers
+400951789,2017-12-31,75928,21:25,Empower Field at Mile High,Broncos,Chiefs
+400951788,2017-12-31,65501,21:25,Nissan Stadium,Titans,Jaguars
+400951792,2017-12-31,66125,21:25,Los Angeles Memorial Coliseum,Rams,49ers
+400951748,2017-12-31,65571,21:25,Hard Rock Stadium,Dolphins,Bills
+400951791,2017-12-31,25430,21:25,Dignity Health Sports Park,Chargers,Raiders
+400951793,2017-12-31,69078,21:25,Lumen Field,Seahawks,Cardinals
+400951764,2017-12-31,55376,21:25,Raymond James Stadium,Buccaneers,Saints
+400951739,2017-12-31,70507,21:25,M&T Bank Stadium,Ravens,Bengals
+400999175,2018-01-06,73319,21:20,GEHA Field at Arrowhead Stadium,Chiefs,Titans
+400999171,2018-01-07,74300,01:15,Los Angeles Memorial Coliseum,Rams,Falcons
+400999176,2018-01-07,69442,18:05,EverBank Stadium,Jaguars,Bills
+400999177,2018-01-07,73186,21:40,Caesars Superdome,Saints,Panthers
+400999179,2018-01-13,69596,21:35,Lincoln Financial Field,Eagles,Falcons
+400999178,2018-01-14,65878,01:15,Gillette Stadium,Patriots,Titans
+400999181,2018-01-14,64524,18:05,Acrisure Stadium,Steelers,Jaguars
+400999180,2018-01-14,66612,21:40,U.S. Bank Stadium,Vikings,Saints
+400999172,2018-01-21,65878,20:05,Gillette Stadium,Patriots,Jaguars
+400999174,2018-01-21,69596,23:40,Lincoln Financial Field,Eagles,Vikings
+400999173,2018-02-04,67612,23:30,U.S. Bank Stadium,Patriots,Eagles
+401030710,2018-09-07,69696,00:55,Lincoln Financial Field,Eagles,Falcons
+401030718,2018-09-09,67431,17:00,Cleveland Browns Stadium,Browns,Steelers
+401030717,2018-09-09,58699,17:00,Lucas Oil Stadium,Colts,Bengals
+401030716,2018-09-09,65184,17:00,Hard Rock Stadium,Dolphins,Titans
+401030715,2018-09-09,66673,17:00,U.S. Bank Stadium,Vikings,49ers
+401030714,2018-09-09,65878,17:00,Gillette Stadium,Patriots,Texans
+401030713,2018-09-09,73038,17:00,Caesars Superdome,Saints,Buccaneers
+401030712,2018-09-09,77992,17:00,MetLife Stadium,Giants,Jaguars
+401030711,2018-09-09,70591,17:00,M&T Bank Stadium,Ravens,Bills
+401030720,2018-09-09,25351,20:05,Dignity Health Sports Park,Chargers,Chiefs
+401030721,2018-09-09,76761,20:25,Empower Field at Mile High,Broncos,Seahawks
+401030725,2018-09-09,61613,20:25,State Farm Stadium,Cardinals,Commanders
+401030723,2018-09-09,74532,20:25,Bank of America Stadium,Panthers,Cowboys
+401030726,2018-09-10,78282,00:20,Lambeau Field,Packers,Bears
+401030728,2018-09-10,61352,23:10,Ford Field,Lions,Jets
+401030751,2018-09-11,53857,02:20,Oakland Coliseum,Raiders,Rams
+401030690,2018-09-14,50018,00:20,Paycor Stadium,Bengals,Ravens
+401030691,2018-09-16,72528,17:00,Mercedes-Benz Stadium,Falcons,Panthers
+401030704,2018-09-16,69187,17:00,Highmark Stadium,Bills,Chargers
+401030705,2018-09-16,78461,17:00,Lambeau Field,Packers,Vikings
+401030694,2018-09-16,62372,17:00,Nissan Stadium,Titans,Texans
+401030708,2018-09-16,73086,17:00,Caesars Superdome,Saints,Browns
+401030700,2018-09-16,77982,17:00,MetLife Stadium,Jets,Dolphins
+401030698,2018-09-16,63956,17:00,Acrisure Stadium,Steelers,Chiefs
+401030696,2018-09-16,56552,17:00,Raymond James Stadium,Buccaneers,Eagles
+401030693,2018-09-16,57013,17:00,FedExField,Commanders,Colts
+401030732,2018-09-16,66515,20:05,Los Angeles Memorial Coliseum,Rams,Cardinals
+401030730,2018-09-16,70164,20:05,Levi's Stadium,49ers,Lions
+401030736,2018-09-16,76696,20:25,Empower Field at Mile High,Broncos,Raiders
+401030733,2018-09-16,68527,20:25,EverBank Stadium,Jaguars,Patriots
+401030738,2018-09-17,90512,00:20,AT&T Stadium,Cowboys,Giants
+401030739,2018-09-18,61735,00:15,Soldier Field,Bears,Seahawks
+401030775,2018-09-21,67431,00:20,Cleveland Browns Stadium,Browns,Jets
+401030777,2018-09-23,74457,17:00,Mercedes-Benz Stadium,Falcons,Saints
+401030795,2018-09-23,76023,17:00,GEHA Field at Arrowhead Stadium,Chiefs,49ers
+401030787,2018-09-23,65667,17:00,Hard Rock Stadium,Dolphins,Raiders
+401030784,2018-09-23,66800,17:00,U.S. Bank Stadium,Vikings,Bills
+401030782,2018-09-23,69696,17:00,Lincoln Financial Field,Eagles,Colts
+401030781,2018-09-23,59827,17:00,FedExField,Commanders,Packers
+401030790,2018-09-23,72161,17:00,Bank of America Stadium,Panthers,Bengals
+401030794,2018-09-23,64015,17:00,EverBank Stadium,Jaguars,Titans
+401030788,2018-09-23,70156,17:00,M&T Bank Stadium,Ravens,Broncos
+401030791,2018-09-23,71838,17:00,NRG Stadium,Texans,Giants
+401030798,2018-09-23,68947,20:05,Los Angeles Memorial Coliseum,Rams,Chargers
+401030801,2018-09-23,62163,20:25,State Farm Stadium,Cardinals,Bears
+401030799,2018-09-23,69047,20:25,Lumen Field,Seahawks,Cowboys
+401030802,2018-09-24,61769,00:20,Ford Field,Lions,Patriots
+401030805,2018-09-25,62571,00:15,Raymond James Stadium,Buccaneers,Steelers
+401030839,2018-09-28,72027,00:20,Los Angeles Memorial Coliseum,Rams,Vikings
+401030847,2018-09-30,71985,17:00,Mercedes-Benz Stadium,Falcons,Bengals
+401030846,2018-09-30,61893,17:00,Soldier Field,Bears,Buccaneers
+401030845,2018-09-30,90155,17:00,AT&T Stadium,Cowboys,Lions
+401030844,2018-09-30,78312,17:00,Lambeau Field,Packers,Bills
+401030842,2018-09-30,69013,17:00,Nissan Stadium,Titans,Eagles
+401030843,2018-09-30,57716,17:00,Lucas Oil Stadium,Colts,Texans
+401030841,2018-09-30,65878,17:00,Gillette Stadium,Patriots,Dolphins
+401030840,2018-09-30,65353,17:00,EverBank Stadium,Jaguars,Jets
+401030930,2018-09-30,53387,20:05,Oakland Coliseum,Raiders,Browns
+401030848,2018-09-30,61845,20:05,State Farm Stadium,Cardinals,Seahawks
+401030931,2018-09-30,78213,20:25,MetLife Stadium,Giants,Saints
+401030932,2018-09-30,25397,20:25,Dignity Health Sports Park,Chargers,49ers
+401030933,2018-10-01,62030,00:20,Acrisure Stadium,Steelers,Ravens
+401030934,2018-10-02,76656,00:15,Empower Field at Mile High,Broncos,Chiefs
+401030697,2018-10-05,65878,00:20,Gillette Stadium,Patriots,Colts
+401030702,2018-10-07,68202,17:00,Highmark Stadium,Bills,Titans
+401030785,2018-10-07,52708,17:00,Paycor Stadium,Bengals,Dolphins
+401030770,2018-10-07,67431,17:00,Cleveland Browns Stadium,Browns,Ravens
+401030745,2018-10-07,63405,17:00,Ford Field,Lions,Packers
+401030741,2018-10-07,75289,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Jaguars
+401030734,2018-10-07,77982,17:00,MetLife Stadium,Jets,Broncos
+401030709,2018-10-07,64781,17:00,Acrisure Stadium,Steelers,Falcons
+401030778,2018-10-07,74221,17:00,Bank of America Stadium,Panthers,Giants
+401030793,2018-10-07,25362,20:05,Dignity Health Sports Park,Chargers,Raiders
+401030803,2018-10-07,69696,20:25,Lincoln Financial Field,Eagles,Vikings
+401030797,2018-10-07,68337,20:25,Levi's Stadium,49ers,Cardinals
+401030808,2018-10-07,68893,20:25,Lumen Field,Seahawks,Rams
+401030831,2018-10-08,72008,00:20,NRG Stadium,Texans,Cowboys
+401030834,2018-10-09,73028,00:15,Caesars Superdome,Saints,Commanders
+401030692,2018-10-12,77167,00:20,MetLife Stadium,Giants,Eagles
+401030695,2018-10-14,72665,17:00,Mercedes-Benz Stadium,Falcons,Buccaneers
+401030743,2018-10-14,60594,17:00,Paycor Stadium,Bengals,Steelers
+401030746,2018-10-14,67431,17:00,Cleveland Browns Stadium,Browns,Chargers
+401030706,2018-10-14,84922,17:00,Wembley Stadium,Raiders,Seahawks
+401030771,2018-10-14,65791,17:00,Hard Rock Stadium,Dolphins,Bears
+401030742,2018-10-14,66801,17:00,U.S. Bank Stadium,Vikings,Cardinals
+401030737,2018-10-14,77982,17:00,MetLife Stadium,Jets,Colts
+401030701,2018-10-14,60482,17:00,FedExField,Commanders,Panthers
+401030748,2018-10-14,71638,17:00,NRG Stadium,Texans,Bills
+401030773,2018-10-14,76109,20:05,Empower Field at Mile High,Broncos,Rams
+401030776,2018-10-14,90767,20:25,AT&T Stadium,Cowboys,Jaguars
+401030774,2018-10-14,64441,20:25,Nissan Stadium,Titans,Ravens
+401030779,2018-10-15,65878,00:20,Gillette Stadium,Patriots,Chiefs
+401030783,2018-10-16,77642,00:15,Lambeau Field,Packers,49ers
+401030800,2018-10-19,62359,00:20,State Farm Stadium,Cardinals,Broncos
+401030792,2018-10-21,84301,13:30,Wembley Stadium,Chargers,Titans
+401030832,2018-10-21,62389,17:00,Soldier Field,Bears,Patriots
+401030833,2018-10-21,56848,17:00,Lucas Oil Stadium,Colts,Bills
+401030830,2018-10-21,65265,17:00,Hard Rock Stadium,Dolphins,Lions
+401030809,2018-10-21,77982,17:00,MetLife Stadium,Jets,Vikings
+401030807,2018-10-21,69696,17:00,Lincoln Financial Field,Eagles,Panthers
+401030806,2018-10-21,53682,17:00,Raymond James Stadium,Buccaneers,Browns
+401030835,2018-10-21,66534,17:00,EverBank Stadium,Jaguars,Texans
+401030836,2018-10-21,70639,20:05,M&T Bank Stadium,Ravens,Saints
+401030838,2018-10-21,66597,20:25,Levi's Stadium,49ers,Rams
+401030837,2018-10-21,66301,20:25,FedExField,Commanders,Cowboys
+401030804,2018-10-22,75676,00:20,GEHA Field at Arrowhead Stadium,Chiefs,Bengals
+401030796,2018-10-23,72756,00:15,Mercedes-Benz Stadium,Falcons,Giants
+401030703,2018-10-26,71726,00:20,NRG Stadium,Texans,Dolphins
+401030699,2018-10-28,85870,13:30,Wembley Stadium,Jaguars,Eagles
+401030747,2018-10-28,61397,17:00,Soldier Field,Bears,Jets
+401030744,2018-10-28,45134,17:00,Paycor Stadium,Bengals,Buccaneers
+401030740,2018-10-28,65237,17:00,Ford Field,Lions,Seahawks
+401030707,2018-10-28,77103,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+401030735,2018-10-28,77537,17:00,MetLife Stadium,Giants,Commanders
+401030731,2018-10-28,63780,17:00,Acrisure Stadium,Steelers,Browns
+401030849,2018-10-28,73843,17:00,Bank of America Stadium,Panthers,Ravens
+401030749,2018-10-28,54372,20:05,Oakland Coliseum,Raiders,Colts
+401030780,2018-10-28,75822,20:25,Los Angeles Memorial Coliseum,Rams,Packers
+401030772,2018-10-28,61923,20:25,State Farm Stadium,Cardinals,49ers
+401030786,2018-10-29,66801,00:20,U.S. Bank Stadium,Vikings,Saints
+401030789,2018-10-30,70109,00:15,Highmark Stadium,Bills,Patriots
+401030767,2018-11-02,69592,00:20,Levi's Stadium,49ers,Raiders
+401030769,2018-11-04,68749,18:00,Highmark Stadium,Bills,Bears
+401030814,2018-11-04,67431,18:00,Cleveland Browns Stadium,Browns,Chiefs
+401030816,2018-11-04,65533,18:00,Hard Rock Stadium,Dolphins,Jets
+401030822,2018-11-04,66825,18:00,U.S. Bank Stadium,Vikings,Lions
+401030826,2018-11-04,62386,18:00,FedExField,Commanders,Falcons
+401030811,2018-11-04,73513,18:00,Bank of America Stadium,Panthers,Buccaneers
+401030819,2018-11-04,70997,18:00,M&T Bank Stadium,Ravens,Steelers
+401030829,2018-11-04,76270,21:05,Empower Field at Mile High,Broncos,Texans
+401030852,2018-11-04,68989,21:05,Lumen Field,Seahawks,Chargers
+401030855,2018-11-04,73086,21:25,Caesars Superdome,Saints,Rams
+401030858,2018-11-05,65878,01:20,Gillette Stadium,Patriots,Packers
+401030862,2018-11-06,90466,01:15,AT&T Stadium,Cowboys,Titans
+401030729,2018-11-09,62881,01:20,Acrisure Stadium,Steelers,Panthers
+401030810,2018-11-11,61393,18:00,Soldier Field,Bears,Lions
+401030752,2018-11-11,52492,18:00,Paycor Stadium,Bengals,Saints
+401030754,2018-11-11,62144,18:00,Cleveland Browns Stadium,Browns,Falcons
+401030821,2018-11-11,69363,18:00,Nissan Stadium,Titans,Patriots
+401030766,2018-11-11,57473,18:00,Lucas Oil Stadium,Colts,Jaguars
+401030815,2018-11-11,76712,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Cardinals
+401030853,2018-11-11,77982,18:00,MetLife Stadium,Jets,Bills
+401030828,2018-11-11,52667,18:00,Raymond James Stadium,Buccaneers,Commanders
+401030859,2018-11-11,54750,21:05,Oakland Coliseum,Raiders,Chargers
+401030756,2018-11-11,78076,21:25,Lambeau Field,Packers,Dolphins
+401030865,2018-11-11,72755,21:25,Los Angeles Memorial Coliseum,Rams,Seahawks
+401030869,2018-11-12,69696,01:20,Lincoln Financial Field,Eagles,Cowboys
+401030873,2018-11-13,69409,01:15,Levi's Stadium,49ers,Giants
+401030878,2018-11-16,69007,01:20,Lumen Field,Seahawks,Packers
+401030929,2018-11-18,74447,18:00,Mercedes-Benz Stadium,Falcons,Cowboys
+401030910,2018-11-18,61999,18:00,Ford Field,Lions,Panthers
+401030922,2018-11-18,57401,18:00,Lucas Oil Stadium,Colts,Titans
+401030952,2018-11-18,75863,18:00,MetLife Stadium,Giants,Buccaneers
+401030966,2018-11-18,61593,18:00,FedExField,Commanders,Texans
+401030971,2018-11-18,67683,18:00,EverBank Stadium,Jaguars,Steelers
+401030894,2018-11-18,70077,18:00,M&T Bank Stadium,Ravens,Bengals
+401030970,2018-11-18,62435,21:05,State Farm Stadium,Cardinals,Raiders
+401030969,2018-11-18,25462,21:05,Dignity Health Sports Park,Chargers,Broncos
+401030963,2018-11-18,73042,21:25,Caesars Superdome,Saints,Eagles
+401030903,2018-11-19,61651,01:20,Soldier Field,Bears,Vikings
+401030972,2018-11-20,77002,01:15,Los Angeles Memorial Coliseum,Rams,Chiefs
+401030905,2018-11-22,65684,17:30,Ford Field,Lions,Bears
+401030925,2018-11-22,92076,21:30,AT&T Stadium,Cowboys,Commanders
+401030923,2018-11-23,73017,01:20,Caesars Superdome,Saints,Falcons
+401030919,2018-11-25,57799,18:00,Highmark Stadium,Bills,Jaguars
+401030921,2018-11-25,56122,18:00,Paycor Stadium,Bengals,Browns
+401030904,2018-11-25,77982,18:00,MetLife Stadium,Jets,Patriots
+401030914,2018-11-25,69696,18:00,Lincoln Financial Field,Eagles,Giants
+401030902,2018-11-25,50436,18:00,Raymond James Stadium,Buccaneers,49ers
+401030920,2018-11-25,74002,18:00,Bank of America Stadium,Panthers,Seahawks
+401030916,2018-11-25,70035,18:00,M&T Bank Stadium,Ravens,Raiders
+401030912,2018-11-25,25343,21:05,Dignity Health Sports Park,Chargers,Cardinals
+401030911,2018-11-25,76536,21:25,Empower Field at Mile High,Broncos,Steelers
+401030906,2018-11-25,57069,21:25,Lucas Oil Stadium,Colts,Dolphins
+401030908,2018-11-26,66872,01:20,U.S. Bank Stadium,Vikings,Packers
+401030762,2018-11-27,71826,01:15,NRG Stadium,Texans,Titans
+401030899,2018-11-30,93004,01:20,AT&T Stadium,Cowboys,Saints
+401030928,2018-12-02,72262,18:00,Mercedes-Benz Stadium,Falcons,Ravens
+401030955,2018-12-02,44392,18:00,Paycor Stadium,Bengals,Broncos
+401030957,2018-12-02,60974,18:00,Ford Field,Lions,Rams
+401030965,2018-12-02,77234,18:00,Lambeau Field,Packers,Cardinals
+401030954,2018-12-02,65155,18:00,Hard Rock Stadium,Dolphins,Bills
+401030953,2018-12-02,76465,18:00,MetLife Stadium,Giants,Bears
+401030968,2018-12-02,52568,18:00,Raymond James Stadium,Buccaneers,Panthers
+401030962,2018-12-02,67030,18:00,EverBank Stadium,Jaguars,Colts
+401030964,2018-12-02,71741,18:00,NRG Stadium,Texans,Browns
+401030960,2018-12-02,60904,21:05,Nissan Stadium,Titans,Jets
+401030935,2018-12-02,54255,21:05,Oakland Coliseum,Raiders,Chiefs
+401030959,2018-12-02,65878,21:25,Gillette Stadium,Patriots,Vikings
+401030958,2018-12-02,69009,21:25,Lumen Field,Seahawks,49ers
+401030951,2018-12-03,61069,01:20,Acrisure Stadium,Steelers,Chargers
+401030871,2018-12-04,69696,01:15,Lincoln Financial Field,Eagles,Commanders
+401030724,2018-12-07,60344,01:20,Nissan Stadium,Titans,Jaguars
+401030750,2018-12-09,59119,18:00,Highmark Stadium,Bills,Jets
+401030823,2018-12-09,59392,18:00,Cleveland Browns Stadium,Browns,Panthers
+401030825,2018-12-09,77329,18:00,Lambeau Field,Packers,Falcons
+401030764,2018-12-09,74336,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Ravens
+401030761,2018-12-09,66087,18:00,Hard Rock Stadium,Dolphins,Patriots
+401030758,2018-12-09,53495,18:00,Raymond James Stadium,Buccaneers,Saints
+401030753,2018-12-09,57437,18:00,FedExField,Commanders,Giants
+401030813,2018-12-09,71814,18:00,NRG Stadium,Texans,Colts
+401030851,2018-12-09,25358,21:05,Dignity Health Sports Park,Chargers,Bengals
+401030827,2018-12-09,69449,21:05,Levi's Stadium,49ers,Broncos
+401030854,2018-12-09,93127,21:25,AT&T Stadium,Cowboys,Eagles
+401030863,2018-12-09,53960,21:25,Oakland Coliseum,Raiders,Steelers
+401030860,2018-12-09,62014,21:25,State Farm Stadium,Cardinals,Lions
+401030817,2018-12-10,61695,01:20,Soldier Field,Bears,Rams
+401030867,2018-12-11,69007,01:15,Lumen Field,Seahawks,Vikings
+401030874,2018-12-14,75091,01:20,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+401030891,2018-12-15,77982,21:30,MetLife Stadium,Jets,Texans
+401030876,2018-12-16,76596,01:20,Empower Field at Mile High,Broncos,Browns
+401030900,2018-12-16,72084,18:00,Mercedes-Benz Stadium,Falcons,Cardinals
+401030896,2018-12-16,59110,18:00,Highmark Stadium,Bills,Lions
+401030893,2018-12-16,62372,18:00,Soldier Field,Bears,Packers
+401030909,2018-12-16,44568,18:00,Paycor Stadium,Bengals,Raiders
+401030927,2018-12-16,66654,18:00,Lucas Oil Stadium,Colts,Cowboys
+401030918,2018-12-16,66841,18:00,U.S. Bank Stadium,Vikings,Dolphins
+401030915,2018-12-16,74538,18:00,MetLife Stadium,Giants,Titans
+401030924,2018-12-16,67577,18:00,EverBank Stadium,Jaguars,Commanders
+401030898,2018-12-16,70031,18:00,M&T Bank Stadium,Ravens,Buccaneers
+401030950,2018-12-16,68836,21:05,Levi's Stadium,49ers,Seahawks
+401030956,2018-12-16,65280,21:25,Acrisure Stadium,Steelers,Patriots
+401030961,2018-12-17,74210,01:20,Los Angeles Memorial Coliseum,Rams,Eagles
+401030967,2018-12-18,74188,01:15,Bank of America Stadium,Panthers,Saints
+401030868,2018-12-22,60746,21:30,Nissan Stadium,Titans,Commanders
+401030897,2018-12-23,25571,01:20,Dignity Health Sports Park,Chargers,Ravens
+401030872,2018-12-23,67431,18:00,Cleveland Browns Stadium,Browns,Bengals
+401030875,2018-12-23,92851,18:00,AT&T Stadium,Cowboys,Buccaneers
+401030877,2018-12-23,61641,18:00,Ford Field,Lions,Vikings
+401030861,2018-12-23,61738,18:00,Lucas Oil Stadium,Colts,Giants
+401030866,2018-12-23,65798,18:00,Hard Rock Stadium,Dolphins,Jaguars
+401030892,2018-12-23,65878,18:00,Gillette Stadium,Patriots,Bills
+401030870,2018-12-23,77982,18:00,MetLife Stadium,Jets,Packers
+401030864,2018-12-23,69696,18:00,Lincoln Financial Field,Eagles,Texans
+401030895,2018-12-23,73722,18:00,Bank of America Stadium,Panthers,Falcons
+401030907,2018-12-23,61759,21:05,State Farm Stadium,Cardinals,Rams
+401030901,2018-12-23,70806,21:05,Levi's Stadium,49ers,Bears
+401030913,2018-12-23,73086,21:25,Caesars Superdome,Saints,Steelers
+401030917,2018-12-24,69067,01:20,Lumen Field,Seahawks,Chiefs
+401030926,2018-12-25,53850,01:15,Oakland Coliseum,Raiders,Broncos
+401030722,2018-12-30,67420,18:00,Highmark Stadium,Bills,Dolphins
+401030757,2018-12-30,77341,18:00,Lambeau Field,Packers,Lions
+401030765,2018-12-30,65878,18:00,Gillette Stadium,Patriots,Jets
+401030768,2018-12-30,73028,18:00,Caesars Superdome,Saints,Panthers
+401030812,2018-12-30,77750,18:00,MetLife Stadium,Giants,Cowboys
+401030820,2018-12-30,52884,18:00,Raymond James Stadium,Buccaneers,Falcons
+401030759,2018-12-30,71848,18:00,NRG Stadium,Texans,Jaguars
+401030824,2018-12-30,75947,21:25,Empower Field at Mile High,Broncos,Chargers
+401030760,2018-12-30,77550,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+401030850,2018-12-30,72161,21:25,Los Angeles Memorial Coliseum,Rams,49ers
+401030763,2018-12-30,66878,21:25,U.S. Bank Stadium,Vikings,Bears
+401030818,2018-12-30,63874,21:25,Acrisure Stadium,Steelers,Bengals
+401030856,2018-12-30,68990,21:25,Lumen Field,Seahawks,Cardinals
+401030727,2018-12-30,63188,21:25,FedExField,Commanders,Eagles
+401030719,2018-12-30,70925,21:25,M&T Bank Stadium,Ravens,Browns
+401030755,2018-12-31,68978,01:20,Nissan Stadium,Titans,Colts
+401038952,2019-01-05,71798,21:35,NRG Stadium,Texans,Colts
+401038953,2019-01-06,94327,01:15,AT&T Stadium,Cowboys,Seahawks
+401038955,2019-01-06,70432,18:05,M&T Bank Stadium,Ravens,Chargers
+401038954,2019-01-06,62462,21:40,Soldier Field,Bears,Eagles
+401038957,2019-01-12,76765,21:35,GEHA Field at Arrowhead Stadium,Chiefs,Colts
+401038956,2019-01-13,77187,01:15,Los Angeles Memorial Coliseum,Rams,Cowboys
+401038959,2019-01-13,65878,18:05,Gillette Stadium,Patriots,Chargers
+401038958,2019-01-13,73027,21:40,Caesars Superdome,Saints,Eagles
+401038118,2019-01-20,73028,20:05,Caesars Superdome,Saints,Rams
+401038850,2019-01-20,77034,23:40,GEHA Field at Arrowhead Stadium,Chiefs,Patriots
+401038115,2019-02-03,70081,23:30,Mercedes-Benz Stadium,Rams,Patriots
+401127913,2019-09-06,62435,00:20,Soldier Field,Bears,Packers
+401127928,2019-09-08,67431,17:00,Cleveland Browns Stadium,Browns,Titans
+401127954,2019-09-08,65012,17:00,Hard Rock Stadium,Dolphins,Ravens
+401127961,2019-09-08,66714,17:00,U.S. Bank Stadium,Vikings,Falcons
+401127963,2019-09-08,78523,17:00,MetLife Stadium,Jets,Bills
+401127968,2019-09-08,69796,17:00,Lincoln Financial Field,Eagles,Commanders
+401127923,2019-09-08,72005,17:00,Bank of America Stadium,Panthers,Rams
+401127931,2019-09-08,60157,17:00,EverBank Stadium,Jaguars,Chiefs
+401127972,2019-09-08,25363,20:05,Dignity Health Sports Park,Chargers,Colts
+401127995,2019-09-08,68710,20:05,Lumen Field,Seahawks,Bengals
+401128007,2019-09-08,90353,20:25,AT&T Stadium,Cowboys,Giants
+401127999,2019-09-08,60687,20:25,State Farm Stadium,Cardinals,Lions
+401128010,2019-09-08,55976,20:25,Raymond James Stadium,Buccaneers,49ers
+401127860,2019-09-09,65878,00:20,Gillette Stadium,Patriots,Steelers
+401128021,2019-09-09,73039,23:10,Caesars Superdome,Saints,Texans
+401128025,2019-09-10,52359,02:20,Oakland Coliseum,Raiders,Broncos
+401128054,2019-09-13,71101,00:20,Bank of America Stadium,Panthers,Buccaneers
+401128066,2019-09-15,50666,17:00,Paycor Stadium,Bengals,49ers
+401128072,2019-09-15,60158,17:00,Ford Field,Lions,Chargers
+401128098,2019-09-15,78416,17:00,Lambeau Field,Packers,Vikings
+401128114,2019-09-15,62849,17:00,Nissan Stadium,Titans,Colts
+401127862,2019-09-15,65513,17:00,Hard Rock Stadium,Dolphins,Patriots
+401128106,2019-09-15,74569,17:00,MetLife Stadium,Giants,Bills
+401128110,2019-09-15,65063,17:00,Acrisure Stadium,Steelers,Seahawks
+401128115,2019-09-15,75128,17:00,FedExField,Commanders,Cowboys
+401128061,2019-09-15,70126,17:00,M&T Bank Stadium,Ravens,Cardinals
+401128101,2019-09-15,71651,17:00,NRG Stadium,Texans,Jaguars
+401128118,2019-09-15,52748,20:05,Oakland Coliseum,Raiders,Chiefs
+401128120,2019-09-15,76885,20:25,Empower Field at Mile High,Broncos,Bears
+401128122,2019-09-15,71460,20:25,Los Angeles Memorial Coliseum,Rams,Saints
+401128124,2019-09-16,72443,00:20,Mercedes-Benz Stadium,Falcons,Eagles
+401128127,2019-09-17,78523,00:15,MetLife Stadium,Jets,Browns
+401127859,2019-09-20,58613,00:20,EverBank Stadium,Jaguars,Titans
+401127915,2019-09-22,69448,17:00,Highmark Stadium,Bills,Bengals
+401127921,2019-09-22,90127,17:00,AT&T Stadium,Cowboys,Dolphins
+401127925,2019-09-22,78078,17:00,Lambeau Field,Packers,Broncos
+401127929,2019-09-22,60295,17:00,Lucas Oil Stadium,Colts,Falcons
+401127953,2019-09-22,73390,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Ravens
+401127956,2019-09-22,66738,17:00,U.S. Bank Stadium,Vikings,Raiders
+401127861,2019-09-22,65878,17:00,Gillette Stadium,Patriots,Jets
+401127959,2019-09-22,69796,17:00,Lincoln Financial Field,Eagles,Lions
+401127962,2019-09-22,60104,20:05,State Farm Stadium,Cardinals,Panthers
+401127966,2019-09-22,55070,20:05,Raymond James Stadium,Buccaneers,Giants
+401127970,2019-09-22,25349,20:25,Dignity Health Sports Park,Chargers,Texans
+401127998,2019-09-22,69439,20:25,Levi's Stadium,49ers,Steelers
+401127993,2019-09-22,69005,20:25,Lumen Field,Seahawks,Saints
+401128125,2019-09-23,67431,00:20,Cleveland Browns Stadium,Browns,Rams
+401128003,2019-09-24,67327,00:15,FedExField,Commanders,Bears
+401127863,2019-09-27,77509,00:20,Lambeau Field,Packers,Eagles
+401128016,2019-09-29,72108,17:00,Mercedes-Benz Stadium,Falcons,Titans
+401127866,2019-09-29,70317,17:00,Highmark Stadium,Bills,Patriots
+401128023,2019-09-29,65188,17:00,Ford Field,Lions,Chiefs
+401128030,2019-09-29,62259,17:00,Lucas Oil Stadium,Colts,Raiders
+401128055,2019-09-29,64278,17:00,Hard Rock Stadium,Dolphins,Chargers
+401128059,2019-09-29,74149,17:00,MetLife Stadium,Giants,Commanders
+401128018,2019-09-29,70686,17:00,M&T Bank Stadium,Ravens,Browns
+401128026,2019-09-29,71699,17:00,NRG Stadium,Texans,Panthers
+401128069,2019-09-29,68117,20:05,Los Angeles Memorial Coliseum,Rams,Buccaneers
+401128064,2019-09-29,60500,20:05,State Farm Stadium,Cardinals,Seahawks
+401128093,2019-09-29,62131,20:25,Soldier Field,Bears,Vikings
+401128097,2019-09-29,76219,20:25,Empower Field at Mile High,Broncos,Jaguars
+401128102,2019-09-30,73086,00:20,Caesars Superdome,Saints,Cowboys
+401128109,2019-10-01,57959,00:15,Acrisure Stadium,Steelers,Bengals
+401127927,2019-10-04,68988,00:20,Lumen Field,Seahawks,Rams
+401127958,2019-10-06,46012,17:00,Paycor Stadium,Bengals,Cardinals
+401128014,2019-10-06,66910,17:00,Nissan Stadium,Titans,Bills
+401128001,2019-10-06,60463,17:00,Tottenham Hotspur Stadium,Raiders,Bears
+401127965,2019-10-06,73029,17:00,Caesars Superdome,Saints,Buccaneers
+401127971,2019-10-06,75041,17:00,MetLife Stadium,Giants,Vikings
+401128006,2019-10-06,69796,17:00,Lincoln Financial Field,Eagles,Jets
+401128011,2019-10-06,64037,17:00,Acrisure Stadium,Steelers,Ravens
+401127864,2019-10-06,76483,17:00,FedExField,Commanders,Patriots
+401127932,2019-10-06,72762,17:00,Bank of America Stadium,Panthers,Jaguars
+401127960,2019-10-06,71787,17:00,NRG Stadium,Texans,Falcons
+401128019,2019-10-06,25357,20:05,Dignity Health Sports Park,Chargers,Broncos
+401128029,2019-10-06,93024,20:25,AT&T Stadium,Cowboys,Packers
+401128053,2019-10-07,73352,00:20,GEHA Field at Arrowhead Stadium,Chiefs,Colts
+401128062,2019-10-08,70585,00:15,Levi's Stadium,49ers,Browns
+401127917,2019-10-11,65878,00:20,Gillette Stadium,Patriots,Giants
+401128096,2019-10-13,60087,13:30,Tottenham Hotspur Stadium,Buccaneers,Panthers
+401128111,2019-10-13,67431,17:00,Cleveland Browns Stadium,Browns,Seahawks
+401128119,2019-10-13,73323,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Texans
+401128121,2019-10-13,59808,17:00,Hard Rock Stadium,Dolphins,Commanders
+401128123,2019-10-13,66837,17:00,U.S. Bank Stadium,Vikings,Eagles
+401128116,2019-10-13,64341,17:00,EverBank Stadium,Jaguars,Saints
+401128105,2019-10-13,70051,17:00,M&T Bank Stadium,Ravens,Bengals
+401128128,2019-10-13,75695,20:05,Los Angeles Memorial Coliseum,Rams,49ers
+401128126,2019-10-13,60140,20:05,State Farm Stadium,Cardinals,Falcons
+401128129,2019-10-13,75815,20:25,Empower Field at Mile High,Broncos,Titans
+401128130,2019-10-13,78523,20:25,MetLife Stadium,Jets,Cowboys
+401128131,2019-10-14,25425,00:20,Dignity Health Sports Park,Chargers,Steelers
+401128132,2019-10-15,76947,00:15,Lambeau Field,Packers,Lions
+401127902,2019-10-18,76748,00:20,Empower Field at Mile High,Broncos,Chiefs
+401127940,2019-10-20,71856,17:00,Mercedes-Benz Stadium,Falcons,Rams
+401127942,2019-10-20,68340,17:00,Highmark Stadium,Bills,Dolphins
+401127945,2019-10-20,42784,17:00,Paycor Stadium,Bengals,Jaguars
+401127947,2019-10-20,60314,17:00,Ford Field,Lions,Vikings
+401127949,2019-10-20,78160,17:00,Lambeau Field,Packers,Raiders
+401127951,2019-10-20,59977,17:00,Lucas Oil Stadium,Colts,Texans
+401127974,2019-10-20,73577,17:00,MetLife Stadium,Giants,Cardinals
+401127977,2019-10-20,61459,17:00,FedExField,Commanders,49ers
+401127979,2019-10-20,62431,20:05,Nissan Stadium,Titans,Chargers
+401127982,2019-10-20,62306,20:25,Soldier Field,Bears,Saints
+401127985,2019-10-20,69012,20:25,Lumen Field,Seahawks,Ravens
+401127987,2019-10-21,91213,00:20,AT&T Stadium,Cowboys,Eagles
+401127894,2019-10-22,78523,00:15,MetLife Stadium,Jets,Patriots
+401127905,2019-10-25,66776,00:20,U.S. Bank Stadium,Vikings,Commanders
+401128035,2019-10-27,71483,17:00,Mercedes-Benz Stadium,Falcons,Seahawks
+401128037,2019-10-27,69435,17:00,Highmark Stadium,Bills,Eagles
+401128039,2019-10-27,61632,17:00,Soldier Field,Bears,Chargers
+401128042,2019-10-27,58509,17:00,Ford Field,Lions,Giants
+401128048,2019-10-27,62073,17:00,Nissan Stadium,Titans,Buccaneers
+401128051,2019-10-27,61653,17:00,Lucas Oil Stadium,Colts,Broncos
+401127912,2019-10-27,83720,17:00,Wembley Stadium,Rams,Bengals
+401128046,2019-10-27,73064,17:00,Caesars Superdome,Saints,Cardinals
+401128045,2019-10-27,57833,17:00,EverBank Stadium,Jaguars,Jets
+401128050,2019-10-27,69083,20:05,Levi's Stadium,49ers,Panthers
+401127895,2019-10-27,65878,20:25,Gillette Stadium,Patriots,Browns
+401128043,2019-10-27,71893,20:25,NRG Stadium,Texans,Raiders
+401128073,2019-10-28,73558,00:20,GEHA Field at Arrowhead Stadium,Chiefs,Packers
+401128074,2019-10-29,59244,00:15,Acrisure Stadium,Steelers,Dolphins
+401127908,2019-11-01,60986,00:20,State Farm Stadium,Cardinals,49ers
+401127936,2019-11-03,84771,14:30,Wembley Stadium,Jaguars,Texans
+401128076,2019-11-03,67685,18:00,Highmark Stadium,Bills,Commanders
+401128079,2019-11-03,73615,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Vikings
+401128080,2019-11-03,59229,18:00,Hard Rock Stadium,Dolphins,Jets
+401128082,2019-11-03,69796,18:00,Lincoln Financial Field,Eagles,Bears
+401128083,2019-11-03,61115,18:00,Acrisure Stadium,Steelers,Colts
+401128078,2019-11-03,72540,18:00,Bank of America Stadium,Panthers,Titans
+401128085,2019-11-03,53318,21:05,Oakland Coliseum,Raiders,Lions
+401128087,2019-11-03,68948,21:05,Lumen Field,Seahawks,Buccaneers
+401128088,2019-11-03,76743,21:25,Empower Field at Mile High,Broncos,Browns
+401128090,2019-11-03,25435,21:25,Dignity Health Sports Park,Chargers,Packers
+401127899,2019-11-04,71157,01:20,M&T Bank Stadium,Ravens,Patriots
+401128091,2019-11-05,76107,01:15,MetLife Stadium,Giants,Cowboys
+401127907,2019-11-08,51954,01:20,Oakland Coliseum,Raiders,Chargers
+401127911,2019-11-10,61758,18:00,Soldier Field,Bears,Lions
+401127934,2019-11-10,45918,18:00,Paycor Stadium,Bengals,Ravens
+401127939,2019-11-10,67431,18:00,Cleveland Browns Stadium,Browns,Bills
+401127981,2019-11-10,68864,18:00,Nissan Stadium,Titans,Chiefs
+401127948,2019-11-10,73283,18:00,Caesars Superdome,Saints,Falcons
+401127952,2019-11-10,78523,18:00,MetLife Stadium,Jets,Giants
+401127976,2019-11-10,40038,18:00,Raymond James Stadium,Buccaneers,Cardinals
+401127986,2019-11-10,60510,21:05,Lucas Oil Stadium,Colts,Dolphins
+401127944,2019-11-10,78090,21:25,Lambeau Field,Packers,Panthers
+401127989,2019-11-10,63627,21:25,Acrisure Stadium,Steelers,Rams
+401128041,2019-11-11,91188,01:20,AT&T Stadium,Cowboys,Vikings
+401127992,2019-11-12,71404,01:15,Levi's Stadium,49ers,Seahawks
+401128044,2019-11-15,67431,01:20,Cleveland Browns Stadium,Browns,Steelers
+401128052,2019-11-17,61801,18:00,Ford Field,Lions,Cowboys
+401128075,2019-11-17,61986,18:00,Lucas Oil Stadium,Colts,Jaguars
+401128077,2019-11-17,64187,18:00,Hard Rock Stadium,Dolphins,Bills
+401128081,2019-11-17,66883,18:00,U.S. Bank Stadium,Vikings,Broncos
+401128084,2019-11-17,54333,18:00,Raymond James Stadium,Buccaneers,Saints
+401128086,2019-11-17,56426,18:00,FedExField,Commanders,Jets
+401128049,2019-11-17,73106,18:00,Bank of America Stadium,Panthers,Falcons
+401128047,2019-11-17,70731,18:00,M&T Bank Stadium,Ravens,Texans
+401128089,2019-11-17,69419,21:05,Levi's Stadium,49ers,Cardinals
+401128092,2019-11-17,51921,21:25,Oakland Coliseum,Raiders,Bengals
+401127897,2019-11-17,69796,21:25,Lincoln Financial Field,Eagles,Patriots
+401128133,2019-11-18,70758,01:20,Los Angeles Memorial Coliseum,Rams,Bears
+401128134,2019-11-19,76252,01:15,Estadio Azteca,Chargers,Chiefs
+401127865,2019-11-22,71727,01:20,NRG Stadium,Texans,Colts
+401127870,2019-11-24,71463,18:00,Mercedes-Benz Stadium,Falcons,Buccaneers
+401127872,2019-11-24,67338,18:00,Highmark Stadium,Bills,Broncos
+401127914,2019-11-24,61581,18:00,Soldier Field,Bears,Giants
+401127918,2019-11-24,47423,18:00,Paycor Stadium,Bengals,Steelers
+401127919,2019-11-24,67431,18:00,Cleveland Browns Stadium,Browns,Dolphins
+401127922,2019-11-24,73068,18:00,Caesars Superdome,Saints,Panthers
+401127924,2019-11-24,78523,18:00,MetLife Stadium,Jets,Raiders
+401128008,2019-11-24,69796,18:00,Lincoln Financial Field,Eagles,Seahawks
+401127996,2019-11-24,57754,18:00,FedExField,Commanders,Lions
+401128000,2019-11-24,60926,21:05,Nissan Stadium,Titans,Jaguars
+401127957,2019-11-24,65878,21:25,Gillette Stadium,Patriots,Cowboys
+401128004,2019-11-25,71500,01:20,Levi's Stadium,49ers,Packers
+401128012,2019-11-26,72409,01:15,Los Angeles Memorial Coliseum,Rams,Ravens
+401128015,2019-11-28,65412,17:30,Ford Field,Lions,Bears
+401128017,2019-11-28,90445,21:30,AT&T Stadium,Cowboys,Bills
+401128022,2019-11-29,71993,01:20,Mercedes-Benz Stadium,Falcons,Saints
+401128057,2019-12-01,39804,18:00,Paycor Stadium,Bengals,Jets
+401128058,2019-12-01,60361,18:00,Lucas Oil Stadium,Colts,Titans
+401128070,2019-12-01,65545,18:00,Hard Rock Stadium,Dolphins,Eagles
+401128095,2019-12-01,75950,18:00,MetLife Stadium,Giants,Packers
+401128107,2019-12-01,62157,18:00,Acrisure Stadium,Steelers,Browns
+401128032,2019-12-01,71504,18:00,Bank of America Stadium,Panthers,Commanders
+401128063,2019-12-01,62633,18:00,EverBank Stadium,Jaguars,Buccaneers
+401128027,2019-12-01,71029,18:00,M&T Bank Stadium,Ravens,49ers
+401128100,2019-12-01,60944,21:05,State Farm Stadium,Cardinals,Rams
+401128104,2019-12-01,74638,21:25,Empower Field at Mile High,Broncos,Chargers
+401128067,2019-12-01,73548,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+401127967,2019-12-02,72025,01:20,NRG Stadium,Texans,Patriots
+401128112,2019-12-03,69080,01:15,Lumen Field,Seahawks,Vikings
+401127871,2019-12-06,61276,01:20,Soldier Field,Bears,Cowboys
+401127869,2019-12-08,70592,18:00,Mercedes-Benz Stadium,Falcons,Panthers
+401127868,2019-12-08,69134,18:00,Highmark Stadium,Bills,Ravens
+401127867,2019-12-08,67431,18:00,Cleveland Browns Stadium,Browns,Bengals
+401127916,2019-12-08,77296,18:00,Lambeau Field,Packers,Commanders
+401127926,2019-12-08,66776,18:00,U.S. Bank Stadium,Vikings,Lions
+401127964,2019-12-08,73038,18:00,Caesars Superdome,Saints,49ers
+401127969,2019-12-08,78523,18:00,MetLife Stadium,Jets,Dolphins
+401127994,2019-12-08,50232,18:00,Raymond James Stadium,Buccaneers,Colts
+401127920,2019-12-08,71769,18:00,NRG Stadium,Texans,Broncos
+401127997,2019-12-08,57866,21:05,EverBank Stadium,Jaguars,Chargers
+401128005,2019-12-08,52760,21:25,Oakland Coliseum,Raiders,Titans
+401127930,2019-12-08,65878,21:25,Gillette Stadium,Patriots,Chiefs
+401128002,2019-12-08,63880,21:25,State Farm Stadium,Cardinals,Steelers
+401128009,2019-12-09,71501,01:20,Los Angeles Memorial Coliseum,Rams,Seahawks
+401128013,2019-12-10,69796,01:15,Lincoln Financial Field,Eagles,Giants
+401128020,2019-12-13,70545,01:20,M&T Bank Stadium,Ravens,Jets
+401127955,2019-12-15,57066,18:00,Paycor Stadium,Bengals,Patriots
+401128028,2019-12-15,56515,18:00,Ford Field,Lions,Buccaneers
+401128031,2019-12-15,78266,18:00,Lambeau Field,Packers,Bears
+401128068,2019-12-15,65265,18:00,Nissan Stadium,Titans,Texans
+401128056,2019-12-15,73257,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+401128060,2019-12-15,72894,18:00,MetLife Stadium,Giants,Dolphins
+401128071,2019-12-15,63246,18:00,FedExField,Commanders,Eagles
+401128024,2019-12-15,72544,18:00,Bank of America Stadium,Panthers,Seahawks
+401128099,2019-12-15,52788,21:05,Oakland Coliseum,Raiders,Jaguars
+401128094,2019-12-15,63345,21:05,State Farm Stadium,Cardinals,Browns
+401128113,2019-12-15,25446,21:05,Dignity Health Sports Park,Chargers,Vikings
+401128103,2019-12-15,90436,21:25,AT&T Stadium,Cowboys,Rams
+401128108,2019-12-15,70910,21:25,Levi's Stadium,49ers,Falcons
+401128065,2019-12-16,64694,01:20,Acrisure Stadium,Steelers,Bills
+401128117,2019-12-17,73053,01:15,Caesars Superdome,Saints,Colts
+401127901,2019-12-21,49036,18:00,Raymond James Stadium,Buccaneers,Texans
+401127898,2019-12-21,65878,21:30,Gillette Stadium,Patriots,Bills
+401127900,2019-12-22,70103,01:15,Levi's Stadium,49ers,Rams
+401127903,2019-12-22,70873,18:00,Mercedes-Benz Stadium,Falcons,Jaguars
+401127904,2019-12-22,67431,18:00,Cleveland Browns Stadium,Browns,Ravens
+401127935,2019-12-22,66756,18:00,Nissan Stadium,Titans,Saints
+401127906,2019-12-22,61845,18:00,Lucas Oil Stadium,Colts,Panthers
+401127910,2019-12-22,60968,18:00,Hard Rock Stadium,Dolphins,Bengals
+401127933,2019-12-22,78523,18:00,MetLife Stadium,Jets,Steelers
+401127937,2019-12-22,66083,18:00,FedExField,Commanders,Giants
+401127893,2019-12-22,74115,21:05,Empower Field at Mile High,Broncos,Lions
+401127896,2019-12-22,25380,21:05,Dignity Health Sports Park,Chargers,Raiders
+401127938,2019-12-22,69796,21:25,Lincoln Financial Field,Eagles,Cowboys
+401127941,2019-12-22,69022,21:25,Lumen Field,Seahawks,Cardinals
+401127943,2019-12-23,62213,01:20,Soldier Field,Bears,Chiefs
+401127946,2019-12-24,67157,01:15,U.S. Bank Stadium,Vikings,Packers
+401127973,2019-12-29,69016,18:00,Highmark Stadium,Bills,Jets
+401127978,2019-12-29,47759,18:00,Paycor Stadium,Bengals,Browns
+401127983,2019-12-29,62840,18:00,Ford Field,Lions,Packers
+401127990,2019-12-29,73680,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+401127991,2019-12-29,66913,18:00,U.S. Bank Stadium,Vikings,Bears
+401127909,2019-12-29,65878,18:00,Gillette Stadium,Patriots,Dolphins
+401128034,2019-12-29,50417,18:00,Raymond James Stadium,Buccaneers,Falcons
+401127975,2019-12-29,72203,18:00,Bank of America Stadium,Panthers,Saints
+401127980,2019-12-29,90646,21:25,AT&T Stadium,Cowboys,Commanders
+401128036,2019-12-29,76334,21:25,Empower Field at Mile High,Broncos,Raiders
+401128038,2019-12-29,68665,21:25,Los Angeles Memorial Coliseum,Rams,Cardinals
+401128033,2019-12-29,75029,21:25,MetLife Stadium,Giants,Eagles
+401127988,2019-12-29,58472,21:25,EverBank Stadium,Jaguars,Colts
+401127950,2019-12-29,70695,21:25,M&T Bank Stadium,Ravens,Steelers
+401127984,2019-12-29,71794,21:25,NRG Stadium,Texans,Titans
+401128040,2019-12-30,69162,01:20,Lumen Field,Seahawks,49ers
+401131037,2020-01-04,71699,21:35,NRG Stadium,Texans,Bills
+401131036,2020-01-05,65878,01:25,Gillette Stadium,Patriots,Titans
+401131038,2020-01-05,73038,18:05,Caesars Superdome,Saints,Vikings
+401131039,2020-01-05,69796,21:40,Lincoln Financial Field,Eagles,Seahawks
+401131040,2020-01-11,71649,21:35,Levi's Stadium,49ers,Vikings
+401131041,2020-01-12,71254,01:15,M&T Bank Stadium,Ravens,Titans
+401131043,2020-01-12,73503,20:05,GEHA Field at Arrowhead Stadium,Chiefs,Texans
+401131042,2020-01-12,78998,23:40,Lambeau Field,Packers,Seahawks
+401131044,2020-01-19,73656,20:05,GEHA Field at Arrowhead Stadium,Chiefs,Titans
+401131045,2020-01-19,72211,23:40,Levi's Stadium,49ers,Packers
+401131047,2020-02-02,62417,23:30,Hard Rock Stadium,Chiefs,49ers
+401220225,2020-09-11,15895,00:20,GEHA Field at Arrowhead Stadium,Chiefs,Texans
+401220313,2020-09-13,0,17:00,Mercedes-Benz Stadium,Falcons,Seahawks
+401220116,2020-09-13,0,17:00,Highmark Stadium,Bills,Jets
+401220282,2020-09-13,0,17:00,Ford Field,Lions,Bears
+401220300,2020-09-13,0,17:00,U.S. Bank Stadium,Vikings,Packers
+401220131,2020-09-13,0,17:00,Gillette Stadium,Patriots,Dolphins
+401220268,2020-09-13,0,17:00,FedExField,Commanders,Eagles
+401220370,2020-09-13,0,17:00,Bank of America Stadium,Panthers,Raiders
+401220195,2020-09-13,14100,17:00,EverBank Stadium,Jaguars,Colts
+401220147,2020-09-13,0,17:00,M&T Bank Stadium,Ravens,Browns
+401220161,2020-09-13,0,20:05,Paycor Stadium,Bengals,Chargers
+401220369,2020-09-13,0,20:25,Caesars Superdome,Saints,Buccaneers
+401220352,2020-09-13,0,20:25,Levi's Stadium,49ers,Cardinals
+401220347,2020-09-14,0,00:20,SoFi Stadium,Rams,Cowboys
+401220256,2020-09-14,0,23:15,MetLife Stadium,Giants,Steelers
+401220217,2020-09-15,0,02:10,Empower Field at Mile High,Broncos,Titans
+401220163,2020-09-18,6000,00:20,Cleveland Browns Stadium,Browns,Bengals
+401220281,2020-09-20,0,17:00,Soldier Field,Bears,Giants
+401220249,2020-09-20,21708,17:00,AT&T Stadium,Cowboys,Falcons
+401220291,2020-09-20,0,17:00,Lambeau Field,Packers,Lions
+401220204,2020-09-20,0,17:00,Nissan Stadium,Titans,Jaguars
+401220192,2020-09-20,2500,17:00,Lucas Oil Stadium,Colts,Vikings
+401220122,2020-09-20,11075,17:00,Hard Rock Stadium,Dolphins,Bills
+401220144,2020-09-20,0,17:00,MetLife Stadium,Jets,49ers
+401220261,2020-09-20,0,17:00,Lincoln Financial Field,Eagles,Rams
+401220177,2020-09-20,0,17:00,Acrisure Stadium,Steelers,Broncos
+401220329,2020-09-20,0,17:00,Raymond James Stadium,Buccaneers,Panthers
+401220340,2020-09-20,0,20:05,State Farm Stadium,Cardinals,Commanders
+401220235,2020-09-20,0,20:25,SoFi Stadium,Chargers,Chiefs
+401220181,2020-09-20,0,20:25,NRG Stadium,Texans,Ravens
+401220365,2020-09-21,0,00:20,Lumen Field,Seahawks,Patriots
+401220231,2020-09-22,0,00:15,Allegiant Stadium,Raiders,Saints
+401220201,2020-09-25,16563,00:20,EverBank Stadium,Jaguars,Dolphins
+401220309,2020-09-27,0,17:00,Mercedes-Benz Stadium,Falcons,Bears
+401220119,2020-09-27,0,17:00,Highmark Stadium,Bills,Rams
+401220168,2020-09-27,6000,17:00,Cleveland Browns Stadium,Browns,Commanders
+401220304,2020-09-27,0,17:00,U.S. Bank Stadium,Vikings,Titans
+401220134,2020-09-27,0,17:00,Gillette Stadium,Patriots,Raiders
+401220254,2020-09-27,0,17:00,MetLife Stadium,Giants,49ers
+401220264,2020-09-27,0,17:00,Lincoln Financial Field,Eagles,Bengals
+401220173,2020-09-27,0,17:00,Acrisure Stadium,Steelers,Texans
+401220193,2020-09-27,7480,20:05,Lucas Oil Stadium,Colts,Jets
+401220240,2020-09-27,0,20:05,SoFi Stadium,Chargers,Panthers
+401220216,2020-09-27,5226,20:25,Empower Field at Mile High,Broncos,Buccaneers
+401220343,2020-09-27,0,20:25,State Farm Stadium,Cardinals,Lions
+401220363,2020-09-27,0,20:25,Lumen Field,Seahawks,Cowboys
+401220323,2020-09-28,748,00:20,Caesars Superdome,Saints,Packers
+401220153,2020-09-29,0,00:15,M&T Bank Stadium,Ravens,Chiefs
+401220141,2020-10-02,0,00:20,MetLife Stadium,Jets,Broncos
+401220157,2020-10-04,6243,17:00,Paycor Stadium,Bengals,Jaguars
+401220247,2020-10-04,25021,17:00,AT&T Stadium,Cowboys,Browns
+401220285,2020-10-04,0,17:00,Ford Field,Lions,Saints
+401220128,2020-10-04,12369,17:00,Hard Rock Stadium,Dolphins,Seahawks
+401220334,2020-10-04,6383,17:00,Raymond James Stadium,Buccaneers,Chargers
+401220271,2020-10-04,0,17:00,FedExField,Commanders,Ravens
+401220320,2020-10-04,5120,17:00,Bank of America Stadium,Panthers,Cardinals
+401220184,2020-10-04,12102,17:00,NRG Stadium,Texans,Vikings
+401220348,2020-10-04,0,20:05,SoFi Stadium,Rams,Giants
+401220280,2020-10-04,0,20:25,Soldier Field,Bears,Colts
+401220229,2020-10-04,0,20:25,Allegiant Stadium,Raiders,Bills
+401220355,2020-10-05,0,00:20,Levi's Stadium,49ers,Eagles
+401220221,2020-10-05,12729,23:05,GEHA Field at Arrowhead Stadium,Chiefs,Patriots
+401220293,2020-10-06,0,01:00,Lambeau Field,Packers,Falcons
+401220278,2020-10-09,0,00:20,Soldier Field,Bears,Buccaneers
+401220306,2020-10-11,0,17:00,Mercedes-Benz Stadium,Falcons,Panthers
+401220219,2020-10-11,13311,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+401220143,2020-10-11,0,17:00,MetLife Stadium,Jets,Cardinals
+401220175,2020-10-11,4708,17:00,Acrisure Stadium,Steelers,Eagles
+401220269,2020-10-11,0,17:00,FedExField,Commanders,Rams
+401220146,2020-10-11,0,17:00,M&T Bank Stadium,Ravens,Bengals
+401220179,2020-10-11,12413,17:00,NRG Stadium,Texans,Jaguars
+401220358,2020-10-11,0,20:05,Levi's Stadium,49ers,Dolphins
+401220166,2020-10-11,0,20:25,Cleveland Browns Stadium,Browns,Colts
+401220242,2020-10-11,25147,20:25,AT&T Stadium,Cowboys,Giants
+401220367,2020-10-12,0,00:20,Lumen Field,Seahawks,Vikings
+401220326,2020-10-13,749,00:15,Caesars Superdome,Saints,Chargers
+401220209,2020-10-13,8403,23:00,Nissan Stadium,Titans,Bills
+401220202,2020-10-18,10166,17:00,Nissan Stadium,Titans,Texans
+401220190,2020-10-18,12453,17:00,Lucas Oil Stadium,Colts,Bengals
+401220301,2020-10-18,0,17:00,U.S. Bank Stadium,Vikings,Falcons
+401220133,2020-10-18,0,17:00,Gillette Stadium,Patriots,Broncos
+401220252,2020-10-18,0,17:00,MetLife Stadium,Giants,Commanders
+401220263,2020-10-18,0,17:00,Lincoln Financial Field,Eagles,Ravens
+401220172,2020-10-18,5260,17:00,Acrisure Stadium,Steelers,Browns
+401220317,2020-10-18,5240,17:00,Bank of America Stadium,Panthers,Bears
+401220200,2020-10-18,14513,17:00,EverBank Stadium,Jaguars,Lions
+401220124,2020-10-18,10772,20:05,Hard Rock Stadium,Dolphins,Jets
+401220331,2020-10-18,15540,20:25,Raymond James Stadium,Buccaneers,Packers
+401220353,2020-10-19,0,00:20,Levi's Stadium,49ers,Rams
+401220117,2020-10-19,0,21:00,Highmark Stadium,Bills,Chiefs
+401220245,2020-10-20,25174,00:15,AT&T Stadium,Cowboys,Cardinals
+401220259,2020-10-23,0,00:20,Lincoln Financial Field,Eagles,Giants
+401220310,2020-10-25,7796,17:00,Mercedes-Benz Stadium,Falcons,Lions
+401220155,2020-10-25,9732,17:00,Paycor Stadium,Bengals,Browns
+401249063,2020-10-25,10355,17:00,Nissan Stadium,Titans,Steelers
+401220322,2020-10-25,3000,17:00,Caesars Superdome,Saints,Panthers
+401220138,2020-10-25,0,17:00,MetLife Stadium,Jets,Bills
+401220266,2020-10-25,0,17:00,FedExField,Commanders,Cowboys
+401220183,2020-10-25,12618,17:00,NRG Stadium,Texans,Packers
+401220232,2020-10-25,0,20:05,Allegiant Stadium,Raiders,Buccaneers
+401220210,2020-10-25,5314,20:25,Empower Field at Mile High,Broncos,Chiefs
+401220136,2020-10-25,0,20:25,Gillette Stadium,Patriots,49ers
+401220241,2020-10-25,0,20:25,SoFi Stadium,Chargers,Jaguars
+401220338,2020-10-26,1200,00:20,State Farm Stadium,Cardinals,Seahawks
+401220351,2020-10-27,0,00:15,SoFi Stadium,Rams,Bears
+401220314,2020-10-30,5240,00:20,Bank of America Stadium,Panthers,Falcons
+401220115,2020-11-01,0,18:00,Highmark Stadium,Bills,Patriots
+401220158,2020-11-01,9712,18:00,Paycor Stadium,Bengals,Titans
+401220169,2020-11-01,10972,18:00,Cleveland Browns Stadium,Browns,Raiders
+401220288,2020-11-01,0,18:00,Ford Field,Lions,Colts
+401220292,2020-11-01,0,18:00,Lambeau Field,Packers,Vikings
+401220222,2020-11-01,11932,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Jets
+401220127,2020-11-01,12397,18:00,Hard Rock Stadium,Dolphins,Rams
+401220148,2020-11-01,4345,18:00,M&T Bank Stadium,Ravens,Steelers
+401220212,2020-11-01,5231,21:05,Empower Field at Mile High,Broncos,Chargers
+401220277,2020-11-01,0,21:25,Soldier Field,Bears,Saints
+401220361,2020-11-01,0,21:25,Lumen Field,Seahawks,49ers
+401220258,2020-11-02,0,01:20,Lincoln Financial Field,Eagles,Cowboys
+401220257,2020-11-03,0,01:15,MetLife Stadium,Giants,Buccaneers
+401220359,2020-11-06,0,01:20,Levi's Stadium,49ers,Packers
+401220311,2020-11-08,7665,18:00,Mercedes-Benz Stadium,Falcons,Broncos
+401220120,2020-11-08,0,18:00,Highmark Stadium,Bills,Seahawks
+401220207,2020-11-08,13871,18:00,Nissan Stadium,Titans,Bears
+401220189,2020-11-08,12200,18:00,Lucas Oil Stadium,Colts,Ravens
+401220224,2020-11-08,12073,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Panthers
+401220299,2020-11-08,0,18:00,U.S. Bank Stadium,Vikings,Lions
+401220267,2020-11-08,3000,18:00,FedExField,Commanders,Giants
+401220194,2020-11-08,15668,18:00,EverBank Stadium,Jaguars,Texans
+401220236,2020-11-08,0,21:05,SoFi Stadium,Chargers,Raiders
+401220248,2020-11-08,31700,21:25,AT&T Stadium,Cowboys,Steelers
+401220342,2020-11-08,4200,21:25,State Farm Stadium,Cardinals,Dolphins
+401220330,2020-11-09,15740,01:20,Raymond James Stadium,Buccaneers,Saints
+401220140,2020-11-10,0,01:15,MetLife Stadium,Jets,Patriots
+401220203,2020-11-13,13949,01:20,Nissan Stadium,Titans,Colts
+401220165,2020-11-15,10613,18:00,Cleveland Browns Stadium,Browns,Texans
+401220289,2020-11-15,0,18:00,Ford Field,Lions,Commanders
+401220295,2020-11-15,0,18:00,Lambeau Field,Packers,Jaguars
+401220251,2020-11-15,0,18:00,MetLife Stadium,Giants,Eagles
+401220368,2020-11-15,5815,18:00,Bank of America Stadium,Panthers,Buccaneers
+401220226,2020-11-15,0,21:05,Allegiant Stadium,Raiders,Broncos
+401220126,2020-11-15,12751,21:05,Hard Rock Stadium,Dolphins,Chargers
+401220341,2020-11-15,4200,21:05,State Farm Stadium,Cardinals,Bills
+401220346,2020-11-15,0,21:25,SoFi Stadium,Rams,Seahawks
+401220327,2020-11-15,5979,21:25,Caesars Superdome,Saints,49ers
+401220171,2020-11-15,5909,21:25,Acrisure Stadium,Steelers,Bengals
+401220137,2020-11-16,0,01:20,Gillette Stadium,Patriots,Ravens
+401220276,2020-11-17,0,01:15,Soldier Field,Bears,Vikings
+401220360,2020-11-20,0,01:20,Lumen Field,Seahawks,Cardinals
+401220167,2020-11-22,11133,18:00,Cleveland Browns Stadium,Browns,Eagles
+401220321,2020-11-22,6000,18:00,Caesars Superdome,Saints,Falcons
+401220272,2020-11-22,0,18:00,FedExField,Commanders,Bengals
+401220318,2020-11-22,5546,18:00,Bank of America Stadium,Panthers,Lions
+401220198,2020-11-22,17244,18:00,EverBank Stadium,Jaguars,Steelers
+401220150,2020-11-22,0,18:00,M&T Bank Stadium,Ravens,Titans
+401220185,2020-11-22,12503,18:00,NRG Stadium,Texans,Patriots
+401220214,2020-11-22,5351,21:05,Empower Field at Mile High,Broncos,Dolphins
+401220238,2020-11-22,0,21:05,SoFi Stadium,Chargers,Jets
+401220191,2020-11-22,12495,21:25,Lucas Oil Stadium,Colts,Packers
+401220305,2020-11-22,0,21:25,U.S. Bank Stadium,Vikings,Cowboys
+401220227,2020-11-23,0,01:20,Allegiant Stadium,Raiders,Chiefs
+401220335,2020-11-24,15730,01:15,Raymond James Stadium,Buccaneers,Rams
+401220287,2020-11-26,0,17:30,Ford Field,Lions,Texans
+401220244,2020-11-26,30048,21:30,AT&T Stadium,Cowboys,Commanders
+401220312,2020-11-29,9124,18:00,Mercedes-Benz Stadium,Falcons,Raiders
+401220118,2020-11-29,0,18:00,Highmark Stadium,Bills,Chargers
+401220160,2020-11-29,10208,18:00,Paycor Stadium,Bengals,Giants
+401220188,2020-11-29,12464,18:00,Lucas Oil Stadium,Colts,Titans
+401220302,2020-11-29,0,18:00,U.S. Bank Stadium,Vikings,Panthers
+401220135,2020-11-29,0,18:00,Gillette Stadium,Patriots,Cardinals
+401220139,2020-11-29,0,18:00,MetLife Stadium,Jets,Dolphins
+401220197,2020-11-29,15926,18:00,EverBank Stadium,Jaguars,Browns
+401220215,2020-11-29,0,21:05,Empower Field at Mile High,Broncos,Saints
+401220345,2020-11-29,0,21:05,SoFi Stadium,Rams,49ers
+401220333,2020-11-29,15950,21:25,Raymond James Stadium,Buccaneers,Chiefs
+401220290,2020-11-30,0,01:20,Lambeau Field,Packers,Bears
+401220262,2020-12-01,0,01:15,Lincoln Financial Field,Eagles,Seahawks
+401220170,2020-12-02,0,20:40,Acrisure Stadium,Steelers,Ravens
+401220307,2020-12-06,8713,18:00,Mercedes-Benz Stadium,Falcons,Saints
+401220274,2020-12-06,0,18:00,Soldier Field,Bears,Lions
+401220205,2020-12-06,13986,18:00,Nissan Stadium,Titans,Browns
+401220129,2020-12-06,12577,18:00,Hard Rock Stadium,Dolphins,Bengals
+401220303,2020-12-06,0,18:00,U.S. Bank Stadium,Vikings,Jaguars
+401220142,2020-12-06,0,18:00,MetLife Stadium,Jets,Raiders
+401220178,2020-12-06,12316,18:00,NRG Stadium,Texans,Colts
+401220336,2020-12-06,0,21:05,State Farm Stadium,Cardinals,Rams
+401220364,2020-12-06,0,21:05,Lumen Field,Seahawks,Giants
+401220297,2020-12-06,0,21:25,Lambeau Field,Packers,Eagles
+401220237,2020-12-06,0,21:25,SoFi Stadium,Chargers,Patriots
+401220218,2020-12-07,12578,01:20,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+401220176,2020-12-07,0,22:00,Acrisure Stadium,Steelers,Commanders
+401220357,2020-12-08,0,01:15,State Farm Stadium,49ers,Bills
+401220151,2020-12-09,0,01:05,M&T Bank Stadium,Ravens,Cowboys
+401220349,2020-12-11,0,01:20,SoFi Stadium,Rams,Patriots
+401220279,2020-12-13,0,18:00,Soldier Field,Bears,Texans
+401220159,2020-12-13,10322,18:00,Paycor Stadium,Bengals,Cowboys
+401220125,2020-12-13,13057,18:00,Hard Rock Stadium,Dolphins,Chiefs
+401220253,2020-12-13,0,18:00,MetLife Stadium,Giants,Cardinals
+401220332,2020-12-13,16031,18:00,Raymond James Stadium,Buccaneers,Vikings
+401220319,2020-12-13,5768,18:00,Bank of America Stadium,Panthers,Broncos
+401220196,2020-12-13,15896,18:00,EverBank Stadium,Jaguars,Titans
+401220233,2020-12-13,0,21:05,Allegiant Stadium,Raiders,Colts
+401220366,2020-12-13,0,21:05,Lumen Field,Seahawks,Jets
+401220283,2020-12-13,0,21:25,Ford Field,Lions,Packers
+401220265,2020-12-13,0,21:25,Lincoln Financial Field,Eagles,Saints
+401220239,2020-12-13,0,21:25,SoFi Stadium,Chargers,Falcons
+401220356,2020-12-13,0,21:25,State Farm Stadium,49ers,Commanders
+401220121,2020-12-14,0,01:20,Highmark Stadium,Bills,Steelers
+401220162,2020-12-15,11974,01:15,Cleveland Browns Stadium,Browns,Ravens
+401220228,2020-12-18,0,01:20,Allegiant Stadium,Raiders,Chargers
+401220213,2020-12-19,0,21:30,Empower Field at Mile High,Broncos,Bills
+401220294,2020-12-20,0,01:15,Lambeau Field,Packers,Panthers
+401220308,2020-12-20,10703,18:00,Mercedes-Benz Stadium,Falcons,Buccaneers
+401220246,2020-12-20,30092,18:00,AT&T Stadium,Cowboys,49ers
+401220208,2020-12-20,13797,18:00,Nissan Stadium,Titans,Lions
+401220186,2020-12-20,9992,18:00,Lucas Oil Stadium,Colts,Texans
+401220123,2020-12-20,13354,18:00,Hard Rock Stadium,Dolphins,Patriots
+401220298,2020-12-20,0,18:00,U.S. Bank Stadium,Vikings,Bears
+401220270,2020-12-20,0,18:00,FedExField,Commanders,Seahawks
+401220149,2020-12-20,0,18:00,M&T Bank Stadium,Ravens,Jaguars
+401220350,2020-12-20,0,21:05,SoFi Stadium,Rams,Jets
+401220339,2020-12-20,0,21:05,State Farm Stadium,Cardinals,Eagles
+401220325,2020-12-20,3000,21:25,Caesars Superdome,Saints,Chiefs
+401220255,2020-12-21,0,01:20,MetLife Stadium,Giants,Browns
+401220156,2020-12-22,10249,01:15,Paycor Stadium,Bengals,Steelers
+401220324,2020-12-25,3000,21:30,Caesars Superdome,Saints,Vikings
+401220286,2020-12-26,0,18:00,Ford Field,Lions,Buccaneers
+401220337,2020-12-26,0,21:30,State Farm Stadium,Cardinals,49ers
+401220230,2020-12-27,0,01:15,Allegiant Stadium,Raiders,Dolphins
+401220223,2020-12-27,13470,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Falcons
+401220145,2020-12-27,0,18:00,MetLife Stadium,Jets,Browns
+401220174,2020-12-27,0,18:00,Acrisure Stadium,Steelers,Colts
+401220199,2020-12-27,17445,18:00,EverBank Stadium,Jaguars,Bears
+401220152,2020-12-27,0,18:00,M&T Bank Stadium,Ravens,Giants
+401220182,2020-12-27,12344,18:00,NRG Stadium,Texans,Bengals
+401220234,2020-12-27,0,21:05,SoFi Stadium,Chargers,Broncos
+401220273,2020-12-27,0,21:05,FedExField,Commanders,Panthers
+401220243,2020-12-27,30131,21:25,AT&T Stadium,Cowboys,Eagles
+401220362,2020-12-27,0,21:25,Lumen Field,Seahawks,Rams
+401220296,2020-12-28,0,01:20,Lambeau Field,Packers,Titans
+401220130,2020-12-29,0,01:15,Gillette Stadium,Patriots,Bills
+401220114,2021-01-03,0,18:00,Highmark Stadium,Bills,Dolphins
+401220154,2021-01-03,10499,18:00,Paycor Stadium,Bengals,Ravens
+401220164,2021-01-03,11989,18:00,Cleveland Browns Stadium,Browns,Steelers
+401220284,2021-01-03,0,18:00,Ford Field,Lions,Vikings
+401220132,2021-01-03,0,18:00,Gillette Stadium,Patriots,Jets
+401220250,2021-01-03,0,18:00,MetLife Stadium,Giants,Cowboys
+401220328,2021-01-03,16009,18:00,Raymond James Stadium,Buccaneers,Falcons
+401220275,2021-01-03,0,21:25,Soldier Field,Bears,Packers
+401220211,2021-01-03,0,21:25,Empower Field at Mile High,Broncos,Raiders
+401220187,2021-01-03,9976,21:25,Lucas Oil Stadium,Colts,Jaguars
+401220220,2021-01-03,13240,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+401220344,2021-01-03,0,21:25,SoFi Stadium,Rams,Cardinals
+401220354,2021-01-03,0,21:25,State Farm Stadium,49ers,Seahawks
+401220315,2021-01-03,1500,21:25,Bank of America Stadium,Panthers,Saints
+401220180,2021-01-03,12504,21:25,NRG Stadium,Texans,Titans
+401220260,2021-01-04,0,01:20,Lincoln Financial Field,Eagles,Commanders
+401220393,2021-01-09,6772,18:05,Highmark Stadium,Bills,Colts
+401220372,2021-01-09,0,21:40,Lumen Field,Seahawks,Rams
+401220371,2021-01-10,0,01:15,FedExField,Commanders,Buccaneers
+401220396,2021-01-10,14029,18:05,Nissan Stadium,Titans,Ravens
+401220395,2021-01-10,3000,21:40,Caesars Superdome,Saints,Bears
+401220394,2021-01-11,0,01:15,Acrisure Stadium,Steelers,Browns
+401220398,2021-01-16,7439,21:35,Lambeau Field,Packers,Rams
+401220397,2021-01-17,6772,01:15,Highmark Stadium,Bills,Ravens
+401220400,2021-01-17,16730,20:05,GEHA Field at Arrowhead Stadium,Chiefs,Browns
+401220399,2021-01-17,3750,23:40,Caesars Superdome,Saints,Buccaneers
+401220402,2021-01-24,7772,20:05,Lambeau Field,Packers,Buccaneers
+401220401,2021-01-24,16993,23:40,GEHA Field at Arrowhead Stadium,Chiefs,Bills
+401220403,2021-02-07,24835,23:30,Raymond James Stadium,Buccaneers,Chiefs
+401326322,2021-09-10,65566,00:20,Raymond James Stadium,Buccaneers,Cowboys
+401326315,2021-09-12,68633,17:00,Mercedes-Benz Stadium,Falcons,Eagles
+401326308,2021-09-12,69787,17:00,Highmark Stadium,Bills,Steelers
+401326316,2021-09-12,56525,17:00,Paycor Stadium,Bengals,Vikings
+401326317,2021-09-12,59374,17:00,Ford Field,Lions,49ers
+401326311,2021-09-12,67216,17:00,Nissan Stadium,Titans,Cardinals
+401326318,2021-09-12,63347,17:00,Lucas Oil Stadium,Colts,Seahawks
+401326312,2021-09-12,52753,17:00,FedExField,Commanders,Chargers
+401326309,2021-09-12,70211,17:00,Bank of America Stadium,Panthers,Jets
+401326310,2021-09-12,68105,17:00,NRG Stadium,Texans,Jaguars
+401326314,2021-09-12,72973,20:25,GEHA Field at Arrowhead Stadium,Chiefs,Browns
+401326313,2021-09-12,65878,20:25,Gillette Stadium,Patriots,Dolphins
+401326319,2021-09-12,35242,20:25,EverBank Stadium,Saints,Packers
+401326320,2021-09-12,74119,20:25,MetLife Stadium,Giants,Broncos
+401326323,2021-09-13,70445,00:20,SoFi Stadium,Rams,Bears
+401326321,2021-09-14,61756,00:15,Allegiant Stadium,Raiders,Ravens
+401326127,2021-09-17,50118,00:20,FedExField,Commanders,Giants
+401326129,2021-09-19,60840,17:00,Soldier Field,Bears,Bengals
+401326130,2021-09-19,67431,17:00,Cleveland Browns Stadium,Browns,Texans
+401326131,2021-09-19,63076,17:00,Lucas Oil Stadium,Colts,Rams
+401326353,2021-09-19,65040,17:00,Hard Rock Stadium,Dolphins,Bills
+401326354,2021-09-19,75626,17:00,MetLife Stadium,Jets,Patriots
+401326355,2021-09-19,69796,17:00,Lincoln Financial Field,Eagles,49ers
+401326356,2021-09-19,63707,17:00,Acrisure Stadium,Steelers,Raiders
+401326128,2021-09-19,70675,17:00,Bank of America Stadium,Panthers,Saints
+401326132,2021-09-19,58461,17:00,EverBank Stadium,Jaguars,Broncos
+401326357,2021-09-19,60115,20:05,State Farm Stadium,Cardinals,Vikings
+401326358,2021-09-19,63694,20:05,Raymond James Stadium,Buccaneers,Falcons
+401326359,2021-09-19,70240,20:25,SoFi Stadium,Chargers,Cowboys
+401326360,2021-09-19,68585,20:25,Lumen Field,Seahawks,Titans
+401326361,2021-09-20,70417,00:20,M&T Bank Stadium,Ravens,Chiefs
+401326362,2021-09-21,77240,00:15,Lambeau Field,Packers,Lions
+401326363,2021-09-24,68320,00:20,NRG Stadium,Texans,Panthers
+401326364,2021-09-26,68434,17:00,Highmark Stadium,Bills,Commanders
+401326365,2021-09-26,67431,17:00,Cleveland Browns Stadium,Browns,Bears
+401326366,2021-09-26,50788,17:00,Ford Field,Lions,Ravens
+401326372,2021-09-26,67914,17:00,Nissan Stadium,Titans,Colts
+401326368,2021-09-26,72980,17:00,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+401326369,2021-09-26,65878,17:00,Gillette Stadium,Patriots,Saints
+401326370,2021-09-26,75307,17:00,MetLife Stadium,Giants,Falcons
+401326371,2021-09-26,58076,17:00,Acrisure Stadium,Steelers,Bengals
+401326367,2021-09-26,58012,17:00,EverBank Stadium,Jaguars,Cardinals
+401326373,2021-09-26,75882,20:05,Empower Field at Mile High,Broncos,Jets
+401326374,2021-09-26,59311,20:05,Allegiant Stadium,Raiders,Dolphins
+401326375,2021-09-26,73205,20:25,SoFi Stadium,Rams,Buccaneers
+401326376,2021-09-26,66729,20:25,U.S. Bank Stadium,Vikings,Seahawks
+401326377,2021-09-27,69853,00:20,Levi's Stadium,49ers,Packers
+401326378,2021-09-28,93267,00:15,AT&T Stadium,Cowboys,Eagles
+401326379,2021-10-01,63198,00:20,Paycor Stadium,Bengals,Jaguars
+401326380,2021-10-03,68259,17:00,Mercedes-Benz Stadium,Falcons,Commanders
+401326381,2021-10-03,68087,17:00,Highmark Stadium,Bills,Texans
+401326382,2021-10-03,61468,17:00,Soldier Field,Bears,Lions
+401326383,2021-10-03,93262,17:00,AT&T Stadium,Cowboys,Panthers
+401326384,2021-10-03,64571,17:00,Hard Rock Stadium,Dolphins,Colts
+401326385,2021-10-03,66703,17:00,U.S. Bank Stadium,Vikings,Browns
+401326386,2021-10-03,69170,17:00,Caesars Superdome,Saints,Giants
+401326387,2021-10-03,70232,17:00,MetLife Stadium,Jets,Titans
+401326388,2021-10-03,69796,17:00,Lincoln Financial Field,Eagles,Chiefs
+401326389,2021-10-03,70003,20:05,SoFi Stadium,Rams,Cardinals
+401326390,2021-10-03,68912,20:05,Levi's Stadium,49ers,Seahawks
+401326391,2021-10-03,76490,20:25,Empower Field at Mile High,Broncos,Ravens
+401326392,2021-10-03,78281,20:25,Lambeau Field,Packers,Steelers
+401326393,2021-10-04,65878,00:20,Gillette Stadium,Patriots,Buccaneers
+401326394,2021-10-05,70240,00:50,SoFi Stadium,Chargers,Raiders
+401326395,2021-10-08,68747,00:20,Lumen Field,Seahawks,Rams
+401326324,2021-10-10,60589,13:30,Tottenham Hotspur Stadium,Falcons,Jets
+401326397,2021-10-10,64195,17:00,Paycor Stadium,Bengals,Packers
+401326400,2021-10-10,66538,17:00,U.S. Bank Stadium,Vikings,Lions
+401326401,2021-10-10,59841,17:00,Acrisure Stadium,Steelers,Broncos
+401326402,2021-10-10,65570,17:00,Raymond James Stadium,Buccaneers,Dolphins
+401326403,2021-10-10,50137,17:00,FedExField,Commanders,Saints
+401326396,2021-10-10,72545,17:00,Bank of America Stadium,Panthers,Eagles
+401326399,2021-10-10,58282,17:00,EverBank Stadium,Jaguars,Titans
+401326398,2021-10-10,68450,17:00,NRG Stadium,Texans,Patriots
+401326405,2021-10-10,59122,20:05,Allegiant Stadium,Raiders,Bears
+401326404,2021-10-10,70240,20:05,SoFi Stadium,Chargers,Browns
+401326407,2021-10-10,93476,20:25,AT&T Stadium,Cowboys,Giants
+401326406,2021-10-10,62716,20:25,State Farm Stadium,Cardinals,49ers
+401326408,2021-10-11,73389,00:20,GEHA Field at Arrowhead Stadium,Chiefs,Bills
+401326409,2021-10-12,70510,00:15,M&T Bank Stadium,Ravens,Colts
+401326410,2021-10-15,69796,00:20,Lincoln Financial Field,Eagles,Buccaneers
+401326325,2021-10-17,60784,13:30,Tottenham Hotspur Stadium,Jaguars,Dolphins
+401326413,2021-10-17,62332,17:00,Soldier Field,Bears,Packers
+401326414,2021-10-17,50831,17:00,Ford Field,Lions,Bengals
+401326415,2021-10-17,57947,17:00,Lucas Oil Stadium,Colts,Texans
+401326416,2021-10-17,73920,17:00,MetLife Stadium,Giants,Rams
+401326417,2021-10-17,51322,17:00,FedExField,Commanders,Chiefs
+401326412,2021-10-17,72104,17:00,Bank of America Stadium,Panthers,Vikings
+401326411,2021-10-17,70704,17:00,M&T Bank Stadium,Ravens,Chargers
+401326418,2021-10-17,67431,20:05,Cleveland Browns Stadium,Browns,Cardinals
+401326419,2021-10-17,76854,20:25,Empower Field at Mile High,Broncos,Raiders
+401326420,2021-10-17,65878,20:25,Gillette Stadium,Patriots,Cowboys
+401326421,2021-10-18,60821,00:20,Acrisure Stadium,Steelers,Seahawks
+401326422,2021-10-19,69419,00:15,Nissan Stadium,Titans,Bills
+401326423,2021-10-22,67431,00:20,Cleveland Browns Stadium,Browns,Broncos
+401326425,2021-10-24,78219,17:00,Lambeau Field,Packers,Commanders
+401326429,2021-10-24,69484,17:00,Nissan Stadium,Titans,Chiefs
+401326426,2021-10-24,62739,17:00,Hard Rock Stadium,Dolphins,Falcons
+401326427,2021-10-24,65878,17:00,Gillette Stadium,Patriots,Jets
+401326428,2021-10-24,71899,17:00,MetLife Stadium,Giants,Panthers
+401326424,2021-10-24,70659,17:00,M&T Bank Stadium,Ravens,Bengals
+401326431,2021-10-24,62000,20:05,Allegiant Stadium,Raiders,Eagles
+401326430,2021-10-24,70540,20:05,SoFi Stadium,Rams,Lions
+401326432,2021-10-24,60297,20:25,State Farm Stadium,Cardinals,Texans
+401326433,2021-10-24,65635,20:25,Raymond James Stadium,Buccaneers,Bears
+401326434,2021-10-25,56576,00:20,Levi's Stadium,49ers,Colts
+401326435,2021-10-26,68563,00:15,Lumen Field,Seahawks,Saints
+401326436,2021-10-29,63696,00:20,State Farm Stadium,Cardinals,Packers
+401326437,2021-10-31,68583,17:00,Mercedes-Benz Stadium,Falcons,Panthers
+401326438,2021-10-31,69355,17:00,Highmark Stadium,Bills,Dolphins
+401326439,2021-10-31,60877,17:00,Soldier Field,Bears,49ers
+401326440,2021-10-31,67431,17:00,Cleveland Browns Stadium,Browns,Steelers
+401326441,2021-10-31,47192,17:00,Ford Field,Lions,Eagles
+401326443,2021-10-31,59175,17:00,Lucas Oil Stadium,Colts,Titans
+401326444,2021-10-31,67503,17:00,MetLife Stadium,Jets,Bengals
+401326442,2021-10-31,66013,17:00,NRG Stadium,Texans,Rams
+401326445,2021-10-31,70240,20:05,SoFi Stadium,Chargers,Patriots
+401326446,2021-10-31,67243,20:05,Lumen Field,Seahawks,Jaguars
+401326447,2021-10-31,75973,20:25,Empower Field at Mile High,Broncos,Commanders
+401326448,2021-10-31,69170,20:25,Caesars Superdome,Saints,Buccaneers
+401326449,2021-11-01,66633,00:20,U.S. Bank Stadium,Vikings,Cowboys
+401326450,2021-11-02,72898,00:15,GEHA Field at Arrowhead Stadium,Chiefs,Giants
+401326451,2021-11-05,59593,00:20,Lucas Oil Stadium,Colts,Jets
+401326454,2021-11-07,65451,18:00,Paycor Stadium,Bengals,Browns
+401326455,2021-11-07,93503,18:00,AT&T Stadium,Cowboys,Broncos
+401326457,2021-11-07,60232,18:00,Hard Rock Stadium,Dolphins,Texans
+401326458,2021-11-07,69170,18:00,Caesars Superdome,Saints,Falcons
+401326459,2021-11-07,74512,18:00,MetLife Stadium,Giants,Raiders
+401326453,2021-11-07,72203,18:00,Bank of America Stadium,Panthers,Patriots
+401326456,2021-11-07,63110,18:00,EverBank Stadium,Jaguars,Bills
+401326452,2021-11-07,70599,18:00,M&T Bank Stadium,Ravens,Vikings
+401326460,2021-11-07,69796,21:05,Lincoln Financial Field,Eagles,Chargers
+401326461,2021-11-07,73476,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Packers
+401326462,2021-11-07,59012,21:25,Levi's Stadium,49ers,Cardinals
+401326463,2021-11-08,71785,01:20,SoFi Stadium,Rams,Titans
+401326464,2021-11-09,60788,01:15,Acrisure Stadium,Steelers,Bears
+401326465,2021-11-12,65948,01:20,Hard Rock Stadium,Dolphins,Ravens
+401326466,2021-11-14,93436,18:00,AT&T Stadium,Cowboys,Falcons
+401326471,2021-11-14,69414,18:00,Nissan Stadium,Titans,Saints
+401326467,2021-11-14,60622,18:00,Lucas Oil Stadium,Colts,Jaguars
+401326468,2021-11-14,65878,18:00,Gillette Stadium,Patriots,Browns
+401326469,2021-11-14,77625,18:00,MetLife Stadium,Jets,Bills
+401326470,2021-11-14,58716,18:00,Acrisure Stadium,Steelers,Lions
+401326472,2021-11-14,52128,18:00,FedExField,Commanders,Buccaneers
+401326473,2021-11-14,62400,21:05,State Farm Stadium,Cardinals,Panthers
+401326474,2021-11-14,70240,21:05,SoFi Stadium,Chargers,Vikings
+401326475,2021-11-14,76766,21:25,Empower Field at Mile High,Broncos,Eagles
+401326476,2021-11-14,78235,21:25,Lambeau Field,Packers,Seahawks
+401326477,2021-11-15,62125,01:20,Allegiant Stadium,Raiders,Chiefs
+401326478,2021-11-16,64256,01:15,Levi's Stadium,49ers,Rams
+401326479,2021-11-19,68286,01:20,Mercedes-Benz Stadium,Falcons,Patriots
+401326480,2021-11-21,69866,18:00,Highmark Stadium,Bills,Colts
+401326482,2021-11-21,60679,18:00,Soldier Field,Bears,Ravens
+401326483,2021-11-21,67431,18:00,Cleveland Browns Stadium,Browns,Lions
+401326488,2021-11-21,67395,18:00,Nissan Stadium,Titans,Texans
+401326485,2021-11-21,66959,18:00,U.S. Bank Stadium,Vikings,Packers
+401326486,2021-11-21,72303,18:00,MetLife Stadium,Jets,Dolphins
+401326487,2021-11-21,69796,18:00,Lincoln Financial Field,Eagles,Saints
+401326481,2021-11-21,73350,18:00,Bank of America Stadium,Panthers,Commanders
+401326484,2021-11-21,60268,18:00,EverBank Stadium,Jaguars,49ers
+401326489,2021-11-21,61712,21:05,Allegiant Stadium,Raiders,Bengals
+401326490,2021-11-21,73494,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Cowboys
+401326491,2021-11-21,68833,21:25,Lumen Field,Seahawks,Cardinals
+401326492,2021-11-22,70240,01:20,SoFi Stadium,Chargers,Steelers
+401326493,2021-11-23,65643,01:15,Raymond James Stadium,Buccaneers,Giants
+401326494,2021-11-25,56355,17:30,Ford Field,Lions,Bears
+401326495,2021-11-25,93483,21:30,AT&T Stadium,Cowboys,Raiders
+401326496,2021-11-26,69170,01:20,Caesars Superdome,Saints,Bills
+401326497,2021-11-28,63238,18:00,Paycor Stadium,Bengals,Steelers
+401326499,2021-11-28,66140,18:00,Lucas Oil Stadium,Colts,Buccaneers
+401326501,2021-11-28,62389,18:00,Hard Rock Stadium,Dolphins,Panthers
+401326502,2021-11-28,65878,18:00,Gillette Stadium,Patriots,Titans
+401326503,2021-11-28,73969,18:00,MetLife Stadium,Giants,Eagles
+401326500,2021-11-28,60031,18:00,EverBank Stadium,Jaguars,Falcons
+401326498,2021-11-28,65120,18:00,NRG Stadium,Texans,Jets
+401326504,2021-11-28,75807,21:05,Empower Field at Mile High,Broncos,Chargers
+401326505,2021-11-28,77948,21:25,Lambeau Field,Packers,Rams
+401326506,2021-11-28,71493,21:25,Levi's Stadium,49ers,Vikings
+401326507,2021-11-29,70355,01:20,M&T Bank Stadium,Ravens,Browns
+401326508,2021-11-30,52680,01:15,FedExField,Commanders,Seahawks
+401326509,2021-12-03,69170,01:20,Caesars Superdome,Saints,Cowboys
+401326510,2021-12-05,69366,18:00,Mercedes-Benz Stadium,Falcons,Buccaneers
+401326511,2021-12-05,60803,18:00,Soldier Field,Bears,Cardinals
+401326512,2021-12-05,51414,18:00,Paycor Stadium,Bengals,Chargers
+401326513,2021-12-05,45691,18:00,Ford Field,Lions,Vikings
+401326516,2021-12-05,65898,18:00,Hard Rock Stadium,Dolphins,Giants
+401326517,2021-12-05,73311,18:00,MetLife Stadium,Jets,Eagles
+401326514,2021-12-05,65291,18:00,NRG Stadium,Texans,Colts
+401326518,2021-12-05,61607,21:05,Allegiant Stadium,Raiders,Commanders
+401326519,2021-12-05,70801,21:05,SoFi Stadium,Rams,Jaguars
+401326520,2021-12-05,59303,21:25,Acrisure Stadium,Steelers,Ravens
+401326521,2021-12-05,68758,21:25,Lumen Field,Seahawks,49ers
+401326515,2021-12-06,73185,01:20,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+401326522,2021-12-07,69694,01:15,Highmark Stadium,Bills,Patriots
+401326523,2021-12-10,66718,01:20,U.S. Bank Stadium,Vikings,Steelers
+401326526,2021-12-12,67431,18:00,Cleveland Browns Stadium,Browns,Ravens
+401326530,2021-12-12,67808,18:00,Nissan Stadium,Titans,Jaguars
+401326528,2021-12-12,73278,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+401326529,2021-12-12,69129,18:00,MetLife Stadium,Jets,Saints
+401326531,2021-12-12,61308,18:00,FedExField,Commanders,Cowboys
+401326524,2021-12-12,72243,18:00,Bank of America Stadium,Panthers,Falcons
+401326527,2021-12-12,67610,18:00,NRG Stadium,Texans,Seahawks
+401326532,2021-12-12,76211,21:05,Empower Field at Mile High,Broncos,Lions
+401326533,2021-12-12,70240,21:05,SoFi Stadium,Chargers,Giants
+401326525,2021-12-12,50481,21:25,Paycor Stadium,Bengals,49ers
+401326534,2021-12-12,65655,21:25,Raymond James Stadium,Buccaneers,Bills
+401326535,2021-12-13,78273,01:20,Lambeau Field,Packers,Bears
+401326536,2021-12-14,63999,01:15,State Farm Stadium,Cardinals,Rams
+401326537,2021-12-17,70240,01:20,SoFi Stadium,Chargers,Chiefs
+401326540,2021-12-19,66391,01:15,Lucas Oil Stadium,Colts,Patriots
+401326538,2021-12-19,65398,18:00,Highmark Stadium,Bills,Panthers
+401326544,2021-12-19,45211,18:00,Ford Field,Lions,Cardinals
+401326541,2021-12-19,66035,18:00,Hard Rock Stadium,Dolphins,Jets
+401326546,2021-12-19,77413,18:00,MetLife Stadium,Giants,Cowboys
+401326547,2021-12-19,59521,18:00,Acrisure Stadium,Steelers,Titans
+401326545,2021-12-19,60252,18:00,EverBank Stadium,Jaguars,Texans
+401326548,2021-12-19,76134,21:05,Empower Field at Mile High,Broncos,Bengals
+401326549,2021-12-19,71650,21:05,Levi's Stadium,49ers,Falcons
+401326543,2021-12-19,70815,21:25,M&T Bank Stadium,Ravens,Packers
+401326551,2021-12-20,65744,01:20,Raymond James Stadium,Buccaneers,Saints
+401326539,2021-12-20,67431,22:00,Cleveland Browns Stadium,Browns,Raiders
+401326552,2021-12-21,60082,01:15,Soldier Field,Bears,Vikings
+401326550,2021-12-22,71565,00:00,SoFi Stadium,Rams,Seahawks
+401326542,2021-12-22,69796,00:00,Lincoln Financial Field,Eagles,Commanders
+401326553,2021-12-24,69361,01:20,Nissan Stadium,Titans,49ers
+401326554,2021-12-25,77901,21:30,Lambeau Field,Packers,Browns
+401326555,2021-12-26,63900,01:15,State Farm Stadium,Cardinals,Colts
+401326556,2021-12-26,68638,18:00,Mercedes-Benz Stadium,Falcons,Lions
+401326558,2021-12-26,63922,18:00,Paycor Stadium,Bengals,Ravens
+401326560,2021-12-26,66708,18:00,U.S. Bank Stadium,Vikings,Rams
+401326561,2021-12-26,65878,18:00,Gillette Stadium,Patriots,Bills
+401326562,2021-12-26,67120,18:00,MetLife Stadium,Jets,Jaguars
+401326563,2021-12-26,69796,18:00,Lincoln Financial Field,Eagles,Giants
+401326557,2021-12-26,71918,18:00,Bank of America Stadium,Panthers,Buccaneers
+401326559,2021-12-26,65674,18:00,NRG Stadium,Texans,Chargers
+401326564,2021-12-26,68492,21:05,Lumen Field,Seahawks,Bears
+401326565,2021-12-26,73371,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Steelers
+401326566,2021-12-26,60972,21:25,Allegiant Stadium,Raiders,Broncos
+401326567,2021-12-27,93482,01:20,AT&T Stadium,Cowboys,Commanders
+401326568,2021-12-28,69170,01:15,Caesars Superdome,Saints,Dolphins
+401326569,2022-01-02,64948,18:00,Highmark Stadium,Bills,Falcons
+401326570,2022-01-02,59594,18:00,Soldier Field,Bears,Giants
+401326571,2022-01-02,64505,18:00,Paycor Stadium,Bengals,Chiefs
+401326577,2022-01-02,69091,18:00,Nissan Stadium,Titans,Dolphins
+401326573,2022-01-02,65985,18:00,Lucas Oil Stadium,Colts,Raiders
+401326574,2022-01-02,65878,18:00,Gillette Stadium,Patriots,Jaguars
+401326576,2022-01-02,72243,18:00,MetLife Stadium,Jets,Buccaneers
+401326578,2022-01-02,51563,18:00,FedExField,Commanders,Eagles
+401326581,2022-01-02,70328,18:00,M&T Bank Stadium,Ravens,Rams
+401326579,2022-01-02,70240,21:05,SoFi Stadium,Chargers,Broncos
+401326580,2022-01-02,71612,21:05,Levi's Stadium,49ers,Texans
+401326572,2022-01-02,93459,21:25,AT&T Stadium,Cowboys,Cardinals
+401326575,2022-01-02,69170,21:25,Caesars Superdome,Saints,Panthers
+401326582,2022-01-02,68043,21:25,Lumen Field,Seahawks,Lions
+401326583,2022-01-03,77832,01:20,Lambeau Field,Packers,Vikings
+401326584,2022-01-04,63624,01:15,Acrisure Stadium,Steelers,Browns
+401326598,2022-01-08,76012,21:30,Empower Field at Mile High,Broncos,Chiefs
+401326595,2022-01-09,69796,01:15,Lincoln Financial Field,Eagles,Cowboys
+401326588,2022-01-09,67431,18:00,Cleveland Browns Stadium,Browns,Bengals
+401326589,2022-01-09,56735,18:00,Ford Field,Lions,Packers
+401326593,2022-01-09,66625,18:00,U.S. Bank Stadium,Vikings,Bears
+401326594,2022-01-09,69923,18:00,MetLife Stadium,Giants,Commanders
+401326591,2022-01-09,60516,18:00,EverBank Stadium,Jaguars,Colts
+401326586,2022-01-09,70453,18:00,M&T Bank Stadium,Ravens,Steelers
+401326590,2022-01-09,66722,18:00,NRG Stadium,Texans,Titans
+401326585,2022-01-09,68336,21:25,Mercedes-Benz Stadium,Falcons,Saints
+401326587,2022-01-09,64783,21:25,Highmark Stadium,Bills,Jets
+401326599,2022-01-09,74447,21:25,SoFi Stadium,Rams,49ers
+401326592,2022-01-09,66514,21:25,Hard Rock Stadium,Dolphins,Patriots
+401326597,2022-01-09,63858,21:25,State Farm Stadium,Cardinals,Seahawks
+401326596,2022-01-09,65473,21:25,Raymond James Stadium,Buccaneers,Panthers
+401326600,2022-01-10,62068,01:20,Allegiant Stadium,Raiders,Chargers
+401326627,2022-01-15,66277,21:30,Paycor Stadium,Bengals,Raiders
+401326626,2022-01-16,69188,01:15,Highmark Stadium,Bills,Patriots
+401326630,2022-01-16,65077,18:00,Raymond James Stadium,Buccaneers,Eagles
+401326629,2022-01-16,93470,21:30,AT&T Stadium,Cowboys,49ers
+401326628,2022-01-17,73253,01:15,GEHA Field at Arrowhead Stadium,Chiefs,Steelers
+401326625,2022-01-18,70625,01:15,SoFi Stadium,Rams,Cardinals
+401326632,2022-01-22,69242,21:30,Nissan Stadium,Titans,Bengals
+401326631,2022-01-23,79132,01:15,Lambeau Field,Packers,49ers
+401326634,2022-01-23,65597,20:00,Raymond James Stadium,Buccaneers,Rams
+401326633,2022-01-23,73242,23:30,GEHA Field at Arrowhead Stadium,Chiefs,Bills
+401326635,2022-01-30,73377,20:00,GEHA Field at Arrowhead Stadium,Chiefs,Bengals
+401326636,2022-01-30,73202,23:30,SoFi Stadium,Rams,49ers
+401326638,2022-02-13,70048,23:30,SoFi Stadium,Bengals,Rams
+401437654,2022-09-09,73846,00:20,SoFi Stadium,Rams,Bills
+401437650,2022-09-11,70078,17:00,Mercedes-Benz Stadium,Falcons,Saints
+401437647,2022-09-11,62159,17:00,Soldier Field,Bears,49ers
+401437634,2022-09-11,65841,17:00,Paycor Stadium,Bengals,Steelers
+401437648,2022-09-11,64537,17:00,Ford Field,Lions,Eagles
+401437630,2022-09-11,65786,17:00,Hard Rock Stadium,Dolphins,Patriots
+401437632,2022-09-11,78827,17:00,MetLife Stadium,Jets,Ravens
+401437646,2022-09-11,58192,17:00,FedExField,Commanders,Jaguars
+401437651,2022-09-11,72205,17:00,Bank of America Stadium,Panthers,Browns
+401437637,2022-09-11,69415,17:00,NRG Stadium,Texans,Colts
+401437640,2022-09-11,67805,20:25,Nissan Stadium,Titans,Giants
+401437649,2022-09-11,66959,20:25,U.S. Bank Stadium,Vikings,Packers
+401437653,2022-09-11,63697,20:25,State Farm Stadium,Cardinals,Chiefs
+401437643,2022-09-11,70240,20:25,SoFi Stadium,Chargers,Raiders
+401437644,2022-09-12,93797,00:20,AT&T Stadium,Cowboys,Buccaneers
+401437655,2022-09-13,68965,00:15,Lumen Field,Seahawks,Broncos
+401434030,2022-09-16,73461,00:15,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+401437635,2022-09-18,67431,17:00,Cleveland Browns Stadium,Browns,Jets
+401437732,2022-09-18,57687,17:00,Ford Field,Lions,Commanders
+401437652,2022-09-18,70040,17:00,Caesars Superdome,Saints,Buccaneers
+401437645,2022-09-18,73843,17:00,MetLife Stadium,Giants,Panthers
+401437636,2022-09-18,67307,17:00,Acrisure Stadium,Steelers,Patriots
+401437639,2022-09-18,58360,17:00,EverBank Stadium,Jaguars,Colts
+401437633,2022-09-18,70582,17:00,M&T Bank Stadium,Ravens,Dolphins
+401437733,2022-09-18,71802,20:05,SoFi Stadium,Rams,Falcons
+401437605,2022-09-18,71597,20:05,Levi's Stadium,49ers,Seahawks
+401437734,2022-09-18,92944,20:25,AT&T Stadium,Cowboys,Bengals
+401437641,2022-09-18,76191,20:25,Empower Field at Mile High,Broncos,Texans
+401437642,2022-09-18,61707,20:25,Allegiant Stadium,Raiders,Cardinals
+401437606,2022-09-19,78350,00:20,Lambeau Field,Packers,Bears
+401436831,2022-09-19,70683,23:15,Highmark Stadium,Bills,Titans
+401436832,2022-09-20,69879,00:30,Lincoln Financial Field,Eagles,Vikings
+401437735,2022-09-23,67431,00:15,Cleveland Browns Stadium,Browns,Steelers
+401437737,2022-09-25,60592,17:00,Soldier Field,Bears,Texans
+401437741,2022-09-25,68649,17:00,Nissan Stadium,Titans,Raiders
+401437638,2022-09-25,65975,17:00,Lucas Oil Stadium,Colts,Chiefs
+401437738,2022-09-25,66206,17:00,Hard Rock Stadium,Dolphins,Bills
+401437739,2022-09-25,66638,17:00,U.S. Bank Stadium,Vikings,Lions
+401437631,2022-09-25,65878,17:00,Gillette Stadium,Patriots,Ravens
+401437740,2022-09-25,73708,17:00,MetLife Stadium,Jets,Bengals
+401437742,2022-09-25,64426,17:00,FedExField,Commanders,Eagles
+401437736,2022-09-25,70496,17:00,Bank of America Stadium,Panthers,Saints
+401437743,2022-09-25,67964,20:05,SoFi Stadium,Chargers,Jaguars
+401437744,2022-09-25,63243,20:25,State Farm Stadium,Cardinals,Rams
+401437745,2022-09-25,68773,20:25,Lumen Field,Seahawks,Falcons
+401437607,2022-09-25,69197,20:25,Raymond James Stadium,Buccaneers,Packers
+401437746,2022-09-26,77021,00:20,Empower Field at Mile High,Broncos,49ers
+401437747,2022-09-27,79445,00:15,MetLife Stadium,Giants,Cowboys
+401437748,2022-09-30,67260,00:15,Paycor Stadium,Bengals,Dolphins
+401435639,2022-10-02,60639,13:30,Tottenham Hotspur Stadium,Saints,Vikings
+401437749,2022-10-02,69435,17:00,Mercedes-Benz Stadium,Falcons,Browns
+401437751,2022-10-02,92946,17:00,AT&T Stadium,Cowboys,Commanders
+401437752,2022-10-02,63920,17:00,Ford Field,Lions,Seahawks
+401437754,2022-10-02,65781,17:00,Lucas Oil Stadium,Colts,Titans
+401437755,2022-10-02,74044,17:00,MetLife Stadium,Giants,Bears
+401437756,2022-10-02,69879,17:00,Lincoln Financial Field,Eagles,Jaguars
+401437757,2022-10-02,66578,17:00,Acrisure Stadium,Steelers,Jets
+401437750,2022-10-02,70494,17:00,M&T Bank Stadium,Ravens,Bills
+401437753,2022-10-02,69071,17:00,NRG Stadium,Texans,Chargers
+401437758,2022-10-02,69810,20:05,Bank of America Stadium,Panthers,Cardinals
+401437759,2022-10-02,78317,20:25,Lambeau Field,Packers,Patriots
+401437760,2022-10-02,62332,20:25,Allegiant Stadium,Raiders,Broncos
+401437470,2022-10-03,68348,00:20,Raymond James Stadium,Buccaneers,Chiefs
+401437761,2022-10-04,71597,00:15,Levi's Stadium,49ers,Rams
+401437762,2022-10-07,76667,00:15,Empower Field at Mile High,Broncos,Colts
+401435640,2022-10-09,61024,13:30,Tottenham Hotspur Stadium,Packers,Giants
+401437763,2022-10-09,70764,17:00,Highmark Stadium,Bills,Steelers
+401437764,2022-10-09,67431,17:00,Cleveland Browns Stadium,Browns,Chargers
+401437766,2022-10-09,66929,17:00,U.S. Bank Stadium,Vikings,Bears
+401437767,2022-10-09,65878,17:00,Gillette Stadium,Patriots,Lions
+401437768,2022-10-09,70003,17:00,Caesars Superdome,Saints,Seahawks
+401437769,2022-10-09,82500,17:00,MetLife Stadium,Jets,Dolphins
+401437770,2022-10-09,68299,17:00,Raymond James Stadium,Buccaneers,Falcons
+401437771,2022-10-09,51836,17:00,FedExField,Commanders,Titans
+401437765,2022-10-09,60018,17:00,EverBank Stadium,Jaguars,Texans
+401437772,2022-10-09,72321,20:05,Bank of America Stadium,Panthers,49ers
+401437774,2022-10-09,74154,20:25,SoFi Stadium,Rams,Cowboys
+401437773,2022-10-09,63919,20:25,State Farm Stadium,Cardinals,Eagles
+401437775,2022-10-10,70548,00:20,M&T Bank Stadium,Ravens,Bengals
+401437776,2022-10-11,73523,00:15,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+401437777,2022-10-14,61873,00:15,Soldier Field,Bears,Commanders
+401437778,2022-10-16,69813,17:00,Mercedes-Benz Stadium,Falcons,49ers
+401437779,2022-10-16,67431,17:00,Cleveland Browns Stadium,Browns,Patriots
+401437780,2022-10-16,78343,17:00,Lambeau Field,Packers,Jets
+401437781,2022-10-16,65749,17:00,Lucas Oil Stadium,Colts,Jaguars
+401437782,2022-10-16,66100,17:00,Hard Rock Stadium,Dolphins,Vikings
+401437783,2022-10-16,70004,17:00,Caesars Superdome,Saints,Bengals
+401437784,2022-10-16,78019,17:00,MetLife Stadium,Giants,Ravens
+401437785,2022-10-16,67307,17:00,Acrisure Stadium,Steelers,Buccaneers
+401437786,2022-10-16,71482,20:05,SoFi Stadium,Rams,Panthers
+401437787,2022-10-16,68867,20:05,Lumen Field,Seahawks,Cardinals
+401437788,2022-10-16,73586,20:25,GEHA Field at Arrowhead Stadium,Chiefs,Bills
+401437789,2022-10-17,69879,00:20,Lincoln Financial Field,Eagles,Cowboys
+401437790,2022-10-18,70240,00:15,SoFi Stadium,Chargers,Broncos
+401437791,2022-10-21,63290,00:15,State Farm Stadium,Cardinals,Saints
+401437794,2022-10-23,66158,17:00,Paycor Stadium,Bengals,Falcons
+401437795,2022-10-23,93487,17:00,AT&T Stadium,Cowboys,Lions
+401437797,2022-10-23,69459,17:00,Nissan Stadium,Titans,Colts
+401437798,2022-10-23,60427,17:00,FedExField,Commanders,Packers
+401437793,2022-10-23,71941,17:00,Bank of America Stadium,Panthers,Buccaneers
+401437796,2022-10-23,65664,17:00,EverBank Stadium,Jaguars,Giants
+401437792,2022-10-23,70461,17:00,M&T Bank Stadium,Ravens,Browns
+401437799,2022-10-23,76624,20:05,Empower Field at Mile High,Broncos,Jets
+401437800,2022-10-23,61228,20:05,Allegiant Stadium,Raiders,Texans
+401437801,2022-10-23,70240,20:25,SoFi Stadium,Chargers,Seahawks
+401437802,2022-10-23,71746,20:25,Levi's Stadium,49ers,Chiefs
+401437803,2022-10-24,66224,00:20,Hard Rock Stadium,Dolphins,Steelers
+401437804,2022-10-25,65878,00:15,Gillette Stadium,Patriots,Bears
+401437805,2022-10-28,68912,00:15,Raymond James Stadium,Buccaneers,Ravens
+401435641,2022-10-30,86215,13:30,Wembley Stadium,Jaguars,Broncos
+401437806,2022-10-30,68996,17:00,Mercedes-Benz Stadium,Falcons,Panthers
+401437807,2022-10-30,93767,17:00,AT&T Stadium,Cowboys,Bears
+401437808,2022-10-30,61447,17:00,Ford Field,Lions,Dolphins
+401437809,2022-10-30,66742,17:00,U.S. Bank Stadium,Vikings,Cardinals
+401437810,2022-10-30,70009,17:00,Caesars Superdome,Saints,Raiders
+401437811,2022-10-30,82823,17:00,MetLife Stadium,Jets,Patriots
+401437812,2022-10-30,69879,17:00,Lincoln Financial Field,Eagles,Steelers
+401437813,2022-10-30,68467,20:05,NRG Stadium,Texans,Titans
+401437814,2022-10-30,65515,20:25,Lucas Oil Stadium,Colts,Commanders
+401437815,2022-10-30,73505,20:25,SoFi Stadium,Rams,49ers
+401437816,2022-10-30,68921,20:25,Lumen Field,Seahawks,Giants
+401437817,2022-10-31,70863,00:20,Highmark Stadium,Bills,Packers
+401437818,2022-11-01,67431,00:15,Cleveland Browns Stadium,Browns,Bengals
+401437819,2022-11-04,68831,00:15,NRG Stadium,Texans,Eagles
+401437820,2022-11-06,69299,18:00,Mercedes-Benz Stadium,Falcons,Chargers
+401437821,2022-11-06,62377,18:00,Soldier Field,Bears,Dolphins
+401437822,2022-11-06,66160,18:00,Paycor Stadium,Bengals,Panthers
+401437823,2022-11-06,63379,18:00,Ford Field,Lions,Packers
+401437825,2022-11-06,65878,18:00,Gillette Stadium,Patriots,Colts
+401437826,2022-11-06,83135,18:00,MetLife Stadium,Jets,Bills
+401437827,2022-11-06,58651,18:00,FedExField,Commanders,Vikings
+401437824,2022-11-06,62758,18:00,EverBank Stadium,Jaguars,Raiders
+401437828,2022-11-06,63982,21:05,State Farm Stadium,Cardinals,Seahawks
+401437829,2022-11-06,69019,21:25,Raymond James Stadium,Buccaneers,Rams
+401437830,2022-11-07,73475,01:20,GEHA Field at Arrowhead Stadium,Chiefs,Titans
+401437831,2022-11-08,70010,01:15,Caesars Superdome,Saints,Ravens
+401437832,2022-11-11,72029,01:15,Bank of America Stadium,Panthers,Falcons
+401435638,2022-11-13,69811,14:30,Allianz Arena,Buccaneers,Seahawks
+401437833,2022-11-13,70844,18:00,Highmark Stadium,Bills,Vikings
+401437834,2022-11-13,61817,18:00,Soldier Field,Bears,Lions
+401437839,2022-11-13,69240,18:00,Nissan Stadium,Titans,Broncos
+401437835,2022-11-13,73493,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Jaguars
+401437836,2022-11-13,66563,18:00,Hard Rock Stadium,Dolphins,Browns
+401437837,2022-11-13,71615,18:00,MetLife Stadium,Giants,Texans
+401437838,2022-11-13,66544,18:00,Acrisure Stadium,Steelers,Saints
+401437840,2022-11-13,62197,21:05,Allegiant Stadium,Raiders,Colts
+401437131,2022-11-13,78433,21:25,Lambeau Field,Packers,Cowboys
+401437841,2022-11-13,71752,21:25,SoFi Stadium,Rams,Cardinals
+401437842,2022-11-14,71709,01:20,Levi's Stadium,49ers,Chargers
+401437843,2022-11-15,69879,01:15,Lincoln Financial Field,Eagles,Commanders
+401437844,2022-11-18,77506,01:15,Lambeau Field,Packers,Titans
+401437845,2022-11-20,69757,18:00,Mercedes-Benz Stadium,Falcons,Bears
+401437847,2022-11-20,52146,18:00,Ford Field,Bills,Browns
+401437849,2022-11-20,66241,18:00,Lucas Oil Stadium,Colts,Eagles
+401437850,2022-11-20,65878,18:00,Gillette Stadium,Patriots,Jets
+401437851,2022-11-20,70025,18:00,Caesars Superdome,Saints,Rams
+401437852,2022-11-20,76267,18:00,MetLife Stadium,Giants,Lions
+401437846,2022-11-20,70677,18:00,M&T Bank Stadium,Ravens,Panthers
+401437848,2022-11-20,65865,18:00,NRG Stadium,Texans,Commanders
+401437853,2022-11-20,76056,21:05,Empower Field at Mile High,Broncos,Raiders
+401437855,2022-11-20,65304,21:25,U.S. Bank Stadium,Vikings,Cowboys
+401437856,2022-11-20,66401,21:25,Acrisure Stadium,Steelers,Bengals
+401437854,2022-11-21,70240,01:20,SoFi Stadium,Chargers,Chiefs
+401435642,2022-11-22,78427,01:15,Estadio Azteca,Cardinals,49ers
+401437857,2022-11-24,66553,17:30,Ford Field,Lions,Bills
+401437858,2022-11-24,93568,21:30,AT&T Stadium,Cowboys,Giants
+401437859,2022-11-25,66918,01:20,U.S. Bank Stadium,Vikings,Patriots
+401437861,2022-11-27,67431,18:00,Cleveland Browns Stadium,Browns,Buccaneers
+401437865,2022-11-27,69441,18:00,Nissan Stadium,Titans,Bengals
+401437863,2022-11-27,66205,18:00,Hard Rock Stadium,Dolphins,Texans
+401437864,2022-11-27,77963,18:00,MetLife Stadium,Jets,Bears
+401437866,2022-11-27,53864,18:00,FedExField,Commanders,Falcons
+401437860,2022-11-27,70644,18:00,Bank of America Stadium,Panthers,Broncos
+401437862,2022-11-27,59560,18:00,EverBank Stadium,Jaguars,Ravens
+401437867,2022-11-27,63628,21:05,State Farm Stadium,Cardinals,Chargers
+401437868,2022-11-27,68849,21:05,Lumen Field,Seahawks,Raiders
+401437869,2022-11-27,73557,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Rams
+401437870,2022-11-27,71275,21:25,Levi's Stadium,49ers,Saints
+401437871,2022-11-28,69879,01:20,Lincoln Financial Field,Eagles,Packers
+401437872,2022-11-29,65982,01:15,Lucas Oil Stadium,Colts,Steelers
+401437873,2022-12-02,65878,01:15,Gillette Stadium,Patriots,Bills
+401437874,2022-12-04,70325,18:00,Mercedes-Benz Stadium,Falcons,Steelers
+401437876,2022-12-04,61233,18:00,Soldier Field,Bears,Packers
+401437877,2022-12-04,60743,18:00,Ford Field,Lions,Jaguars
+401437879,2022-12-04,66973,18:00,U.S. Bank Stadium,Vikings,Jets
+401437880,2022-12-04,76128,18:00,MetLife Stadium,Giants,Commanders
+401437881,2022-12-04,69879,18:00,Lincoln Financial Field,Eagles,Titans
+401437875,2022-12-04,70443,18:00,M&T Bank Stadium,Ravens,Broncos
+401437878,2022-12-04,66523,18:00,NRG Stadium,Texans,Browns
+401437882,2022-12-04,71802,21:05,SoFi Stadium,Rams,Seahawks
+401437883,2022-12-04,71732,21:05,Levi's Stadium,49ers,Dolphins
+401437884,2022-12-04,66243,21:25,Paycor Stadium,Bengals,Chiefs
+401437885,2022-12-04,62123,21:25,Allegiant Stadium,Raiders,Chargers
+401437886,2022-12-05,93086,01:20,AT&T Stadium,Cowboys,Colts
+401437887,2022-12-06,68709,01:15,Raymond James Stadium,Buccaneers,Saints
+401437888,2022-12-09,74738,01:15,SoFi Stadium,Rams,Raiders
+401437889,2022-12-11,70603,18:00,Highmark Stadium,Bills,Jets
+401437890,2022-12-11,66222,18:00,Paycor Stadium,Bengals,Browns
+401437891,2022-12-11,93843,18:00,AT&T Stadium,Cowboys,Texans
+401437892,2022-12-11,66374,18:00,Ford Field,Lions,Vikings
+401437895,2022-12-11,68409,18:00,Nissan Stadium,Titans,Jaguars
+401437893,2022-12-11,81506,18:00,MetLife Stadium,Giants,Eagles
+401437894,2022-12-11,66326,18:00,Acrisure Stadium,Steelers,Ravens
+401437899,2022-12-11,76072,21:05,Empower Field at Mile High,Broncos,Chiefs
+401437897,2022-12-11,71725,21:25,Levi's Stadium,49ers,Buccaneers
+401437898,2022-12-11,68672,21:25,Lumen Field,Seahawks,Panthers
+401437896,2022-12-12,70240,01:20,SoFi Stadium,Chargers,Dolphins
+401437900,2022-12-13,63251,01:15,State Farm Stadium,Cardinals,Patriots
+401437901,2022-12-16,68957,01:15,Lumen Field,Seahawks,49ers
+401437904,2022-12-17,66801,18:00,U.S. Bank Stadium,Vikings,Colts
+401437903,2022-12-17,67431,21:40,Cleveland Browns Stadium,Browns,Ravens
+401437902,2022-12-18,70794,01:15,Highmark Stadium,Bills,Dolphins
+401437908,2022-12-18,48423,18:00,Soldier Field,Bears,Eagles
+401437905,2022-12-18,70041,18:00,Caesars Superdome,Saints,Falcons
+401437911,2022-12-18,75076,18:00,MetLife Stadium,Jets,Lions
+401437907,2022-12-18,73548,18:00,Bank of America Stadium,Panthers,Steelers
+401437910,2022-12-18,69050,18:00,EverBank Stadium,Jaguars,Cowboys
+401437909,2022-12-18,70541,18:00,NRG Stadium,Texans,Chiefs
+401437912,2022-12-18,75179,21:05,Empower Field at Mile High,Broncos,Cardinals
+401437915,2022-12-18,62273,21:05,Allegiant Stadium,Raiders,Patriots
+401437913,2022-12-18,70240,21:25,SoFi Stadium,Chargers,Titans
+401437914,2022-12-18,69305,21:25,Raymond James Stadium,Buccaneers,Bengals
+401437906,2022-12-19,61917,01:20,FedExField,Commanders,Giants
+401437916,2022-12-20,77269,01:15,Lambeau Field,Packers,Rams
+401437917,2022-12-23,70043,01:15,MetLife Stadium,Jets,Jaguars
+401437920,2022-12-24,59929,18:00,Soldier Field,Bears,Bills
+401437921,2022-12-24,67431,18:00,Cleveland Browns Stadium,Browns,Saints
+401437922,2022-12-24,73331,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Seahawks
+401437923,2022-12-24,66919,18:00,U.S. Bank Stadium,Vikings,Giants
+401437924,2022-12-24,65878,18:00,Gillette Stadium,Patriots,Bengals
+401437919,2022-12-24,69173,18:00,Bank of America Stadium,Panthers,Lions
+401437918,2022-12-24,70467,18:00,M&T Bank Stadium,Ravens,Falcons
+401437925,2022-12-24,66634,19:00,Nissan Stadium,Titans,Texans
+401437926,2022-12-24,71642,21:05,Levi's Stadium,49ers,Commanders
+401437927,2022-12-24,93754,21:25,AT&T Stadium,Cowboys,Eagles
+401437928,2022-12-25,64761,01:15,Acrisure Stadium,Steelers,Raiders
+401437929,2022-12-25,66328,18:00,Hard Rock Stadium,Dolphins,Packers
+401436983,2022-12-25,71525,21:30,SoFi Stadium,Rams,Broncos
+401437930,2022-12-26,63393,01:20,State Farm Stadium,Cardinals,Buccaneers
+401437931,2022-12-27,65576,01:15,Lucas Oil Stadium,Colts,Chargers
+401437932,2022-12-30,69292,01:15,Nissan Stadium,Titans,Cowboys
+401437933,2023-01-01,69269,18:00,Mercedes-Benz Stadium,Falcons,Cardinals
+401437935,2023-01-01,66169,18:00,Ford Field,Lions,Bears
+401437937,2023-01-01,73571,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+401437938,2023-01-01,65878,18:00,Gillette Stadium,Patriots,Dolphins
+401437939,2023-01-01,77399,18:00,MetLife Stadium,Giants,Colts
+401437940,2023-01-01,69796,18:00,Lincoln Financial Field,Eagles,Saints
+401437941,2023-01-01,69298,18:00,Raymond James Stadium,Buccaneers,Panthers
+401437942,2023-01-01,50827,18:00,FedExField,Commanders,Browns
+401437936,2023-01-01,64581,18:00,NRG Stadium,Texans,Jaguars
+401437943,2023-01-01,62367,21:05,Allegiant Stadium,Raiders,49ers
+401437944,2023-01-01,68827,21:05,Lumen Field,Seahawks,Jets
+401437945,2023-01-01,78190,21:25,Lambeau Field,Packers,Vikings
+401437946,2023-01-01,70240,21:25,SoFi Stadium,Chargers,Rams
+401437934,2023-01-02,71042,01:20,M&T Bank Stadium,Ravens,Steelers
+401437961,2023-01-07,62136,21:30,Allegiant Stadium,Raiders,Chiefs
+401437954,2023-01-08,70050,01:15,EverBank Stadium,Jaguars,Titans
+401437948,2023-01-08,69276,18:00,Mercedes-Benz Stadium,Falcons,Buccaneers
+401437949,2023-01-08,70753,18:00,Highmark Stadium,Bills,Patriots
+401437950,2023-01-08,60007,18:00,Soldier Field,Bears,Vikings
+401437951,2023-01-08,65849,18:00,Paycor Stadium,Bengals,Ravens
+401437953,2023-01-08,63655,18:00,Lucas Oil Stadium,Colts,Texans
+401437955,2023-01-08,66429,18:00,Hard Rock Stadium,Dolphins,Jets
+401437956,2023-01-08,70118,18:00,Caesars Superdome,Saints,Panthers
+401437958,2023-01-08,65019,18:00,Acrisure Stadium,Steelers,Browns
+401437960,2023-01-08,74035,21:25,Empower Field at Mile High,Broncos,Chargers
+401437957,2023-01-08,69879,21:25,Lincoln Financial Field,Eagles,Giants
+401437962,2023-01-08,71638,21:25,Levi's Stadium,49ers,Cardinals
+401437963,2023-01-08,68660,21:25,Lumen Field,Seahawks,Rams
+401437959,2023-01-08,62814,21:25,FedExField,Commanders,Cowboys
+401437952,2023-01-09,78191,01:20,Lambeau Field,Packers,Lions
+401438000,2023-01-14,71299,21:30,Levi's Stadium,49ers,Seahawks
+401437998,2023-01-15,70250,01:15,EverBank Stadium,Jaguars,Chargers
+401438002,2023-01-15,70651,18:00,Highmark Stadium,Bills,Dolphins
+401438001,2023-01-15,66721,21:50,U.S. Bank Stadium,Vikings,Giants
+401437999,2023-01-16,66399,01:15,Paycor Stadium,Bengals,Ravens
+401438003,2023-01-17,69145,01:15,Raymond James Stadium,Buccaneers,Cowboys
+401438005,2023-01-21,73220,21:30,GEHA Field at Arrowhead Stadium,Chiefs,Jaguars
+401438004,2023-01-22,69879,01:15,Lincoln Financial Field,Eagles,Giants
+401438007,2023-01-22,70733,20:00,Highmark Stadium,Bills,Bengals
+401438006,2023-01-22,71888,23:30,Levi's Stadium,49ers,Cowboys
+401438009,2023-01-29,69879,20:00,Lincoln Financial Field,Eagles,49ers
+401438008,2023-01-29,73426,23:30,GEHA Field at Arrowhead Stadium,Chiefs,Bengals
+401438030,2023-02-12,67827,23:30,State Farm Stadium,Eagles,Chiefs
+401547353,2023-09-08,73522,00:20,GEHA Field at Arrowhead Stadium,Chiefs,Lions
+401547403,2023-09-10,69597,17:00,Mercedes-Benz Stadium,Falcons,Panthers
+401547397,2023-09-10,67919,17:00,Cleveland Browns Stadium,Browns,Bengals
+401547404,2023-09-10,65749,17:00,Lucas Oil Stadium,Colts,Jaguars
+401547398,2023-09-10,66741,17:00,U.S. Bank Stadium,Vikings,Buccaneers
+401547399,2023-09-10,70024,17:00,Caesars Superdome,Saints,Titans
+401547405,2023-09-10,67679,17:00,Acrisure Stadium,Steelers,49ers
+401547406,2023-09-10,64693,17:00,FedExField,Commanders,Cardinals
+401547396,2023-09-10,70136,17:00,M&T Bank Stadium,Ravens,Texans
+401547407,2023-09-10,62456,20:25,Soldier Field,Bears,Packers
+401547400,2023-09-10,76299,20:25,Empower Field at Mile High,Broncos,Raiders
+401547402,2023-09-10,64628,20:25,Gillette Stadium,Patriots,Eagles
+401547401,2023-09-10,70240,20:25,SoFi Stadium,Chargers,Dolphins
+401547408,2023-09-10,68683,20:25,Lumen Field,Seahawks,Rams
+401547409,2023-09-11,80809,00:20,MetLife Stadium,Giants,Cowboys
+401547352,2023-09-12,83345,00:15,MetLife Stadium,Jets,Bills
+401547410,2023-09-15,69879,00:15,Lincoln Financial Field,Eagles,Vikings
+401547417,2023-09-17,69251,17:00,Mercedes-Benz Stadium,Falcons,Packers
+401547411,2023-09-17,70772,17:00,Highmark Stadium,Bills,Raiders
+401547412,2023-09-17,66015,17:00,Paycor Stadium,Bengals,Ravens
+401547418,2023-09-17,66434,17:00,Ford Field,Lions,Seahawks
+401547414,2023-09-17,67438,17:00,Nissan Stadium,Titans,Chargers
+401547420,2023-09-17,62976,17:00,Raymond James Stadium,Buccaneers,Bears
+401547413,2023-09-17,69615,17:00,EverBank Stadium,Jaguars,Chiefs
+401547419,2023-09-17,71159,17:00,NRG Stadium,Texans,Colts
+401547422,2023-09-17,74742,20:05,SoFi Stadium,Rams,49ers
+401547421,2023-09-17,62080,20:05,State Farm Stadium,Cardinals,Giants
+401547415,2023-09-17,93689,20:25,AT&T Stadium,Cowboys,Jets
+401547416,2023-09-17,76108,20:25,Empower Field at Mile High,Broncos,Commanders
+401547423,2023-09-18,64628,00:20,Gillette Stadium,Patriots,Dolphins
+401547425,2023-09-18,72709,23:15,Bank of America Stadium,Panthers,Saints
+401547424,2023-09-19,67576,00:15,Acrisure Stadium,Steelers,Browns
+401547426,2023-09-22,71593,00:15,Levi's Stadium,49ers,Giants
+401547428,2023-09-24,67919,17:00,Cleveland Browns Stadium,Browns,Titans
+401547433,2023-09-24,63803,17:00,Ford Field,Lions,Falcons
+401547434,2023-09-24,78043,17:00,Lambeau Field,Packers,Saints
+401547429,2023-09-24,65522,17:00,Hard Rock Stadium,Dolphins,Broncos
+401547436,2023-09-24,66878,17:00,U.S. Bank Stadium,Vikings,Chargers
+401547430,2023-09-24,80878,17:00,MetLife Stadium,Jets,Patriots
+401547431,2023-09-24,64291,17:00,FedExField,Commanders,Bills
+401547435,2023-09-24,61466,17:00,EverBank Stadium,Jaguars,Texans
+401547427,2023-09-24,70038,17:00,M&T Bank Stadium,Ravens,Colts
+401547432,2023-09-24,68699,20:05,Lumen Field,Seahawks,Panthers
+401547438,2023-09-24,73562,20:25,GEHA Field at Arrowhead Stadium,Chiefs,Bears
+401547437,2023-09-24,62915,20:25,State Farm Stadium,Cardinals,Cowboys
+401547439,2023-09-25,62541,00:20,Allegiant Stadium,Raiders,Steelers
+401547440,2023-09-25,65426,23:15,Raymond James Stadium,Buccaneers,Eagles
+401547441,2023-09-26,65158,00:15,Paycor Stadium,Bengals,Rams
+401547442,2023-09-29,78052,00:15,Lambeau Field,Packers,Lions
+401547227,2023-10-01,85716,13:30,Wembley Stadium,Jaguars,Falcons
+401547443,2023-10-01,70881,17:00,Highmark Stadium,Bills,Dolphins
+401547444,2023-10-01,62220,17:00,Soldier Field,Bears,Broncos
+401547445,2023-10-01,67919,17:00,Cleveland Browns Stadium,Browns,Ravens
+401547452,2023-10-01,68951,17:00,Nissan Stadium,Titans,Bengals
+401547449,2023-10-01,65337,17:00,Lucas Oil Stadium,Colts,Rams
+401547450,2023-10-01,70003,17:00,Caesars Superdome,Saints,Buccaneers
+401547451,2023-10-01,69879,17:00,Lincoln Financial Field,Eagles,Commanders
+401547448,2023-10-01,72842,17:00,Bank of America Stadium,Panthers,Vikings
+401547446,2023-10-01,71399,17:00,NRG Stadium,Texans,Steelers
+401547447,2023-10-01,70240,20:05,SoFi Stadium,Chargers,Raiders
+401547453,2023-10-01,93719,20:25,AT&T Stadium,Cowboys,Patriots
+401547454,2023-10-01,71521,20:25,Levi's Stadium,49ers,Cardinals
+401547455,2023-10-02,80461,00:20,MetLife Stadium,Jets,Chiefs
+401547456,2023-10-03,78507,00:15,MetLife Stadium,Giants,Seahawks
+401547457,2023-10-06,63727,00:15,FedExField,Commanders,Bears
+401547228,2023-10-08,61273,13:30,Tottenham Hotspur Stadium,Bills,Jaguars
+401547463,2023-10-08,69461,17:00,Mercedes-Benz Stadium,Falcons,Texans
+401547464,2023-10-08,63648,17:00,Ford Field,Lions,Panthers
+401547458,2023-10-08,65287,17:00,Lucas Oil Stadium,Colts,Titans
+401547465,2023-10-08,65654,17:00,Hard Rock Stadium,Dolphins,Giants
+401547459,2023-10-08,64628,17:00,Gillette Stadium,Patriots,Saints
+401547460,2023-10-08,67272,17:00,Acrisure Stadium,Steelers,Ravens
+401547467,2023-10-08,74935,20:05,SoFi Stadium,Rams,Eagles
+401547466,2023-10-08,62651,20:05,State Farm Stadium,Cardinals,Bengals
+401547461,2023-10-08,76387,20:25,Empower Field at Mile High,Broncos,Jets
+401547462,2023-10-08,67003,20:25,U.S. Bank Stadium,Vikings,Chiefs
+401547354,2023-10-09,71617,00:20,Levi's Stadium,49ers,Cowboys
+401547468,2023-10-10,62572,00:15,Allegiant Stadium,Raiders,Packers
+401547469,2023-10-13,73528,00:15,GEHA Field at Arrowhead Stadium,Chiefs,Broncos
+401547229,2023-10-15,61011,13:30,Tottenham Hotspur Stadium,Titans,Ravens
+401547470,2023-10-15,69921,17:00,Mercedes-Benz Stadium,Falcons,Commanders
+401547475,2023-10-15,62167,17:00,Soldier Field,Bears,Vikings
+401547471,2023-10-15,66385,17:00,Paycor Stadium,Bengals,Seahawks
+401547476,2023-10-15,67431,17:00,Cleveland Browns Stadium,Browns,49ers
+401547473,2023-10-15,65529,17:00,Hard Rock Stadium,Dolphins,Panthers
+401547472,2023-10-15,64851,17:00,EverBank Stadium,Jaguars,Colts
+401547477,2023-10-15,71810,17:00,NRG Stadium,Texans,Saints
+401547474,2023-10-15,61985,20:05,Allegiant Stadium,Raiders,Patriots
+401547479,2023-10-15,71202,20:25,SoFi Stadium,Rams,Cardinals
+401547480,2023-10-15,83068,20:25,MetLife Stadium,Jets,Eagles
+401547478,2023-10-15,65854,20:25,Raymond James Stadium,Buccaneers,Lions
+401547481,2023-10-16,70515,00:20,Highmark Stadium,Bills,Giants
+401547482,2023-10-17,70240,00:15,SoFi Stadium,Chargers,Cowboys
+401547483,2023-10-20,70009,00:15,Caesars Superdome,Saints,Jaguars
+401547490,2023-10-22,62199,17:00,Soldier Field,Bears,Raiders
+401547484,2023-10-22,0,17:00,Lucas Oil Stadium,Colts,Browns
+401547485,2023-10-22,64628,17:00,Gillette Stadium,Patriots,Bills
+401547486,2023-10-22,81671,17:00,MetLife Stadium,Giants,Commanders
+401547491,2023-10-22,62620,17:00,Raymond James Stadium,Buccaneers,Falcons
+401547489,2023-10-22,70989,17:00,M&T Bank Stadium,Ravens,Lions
+401547492,2023-10-22,73471,20:05,SoFi Stadium,Rams,Steelers
+401547493,2023-10-22,68781,20:05,Lumen Field,Seahawks,Cardinals
+401547487,2023-10-22,76880,20:25,Empower Field at Mile High,Broncos,Packers
+401547488,2023-10-22,73642,20:25,GEHA Field at Arrowhead Stadium,Chiefs,Chargers
+401547494,2023-10-23,69879,00:20,Lincoln Financial Field,Eagles,Dolphins
+401547495,2023-10-24,66975,00:15,U.S. Bank Stadium,Vikings,49ers
+401547496,2023-10-27,70416,00:15,Highmark Stadium,Bills,Buccaneers
+401547505,2023-10-29,93448,17:00,AT&T Stadium,Cowboys,Rams
+401547506,2023-10-29,78113,17:00,Lambeau Field,Packers,Vikings
+401547500,2023-10-29,68008,17:00,Nissan Stadium,Titans,Falcons
+401547507,2023-10-29,65427,17:00,Lucas Oil Stadium,Colts,Saints
+401547497,2023-10-29,65836,17:00,Hard Rock Stadium,Dolphins,Patriots
+401547498,2023-10-29,83367,17:00,MetLife Stadium,Giants,Jets
+401547499,2023-10-29,67225,17:00,Acrisure Stadium,Steelers,Jaguars
+401547508,2023-10-29,64653,17:00,FedExField,Commanders,Eagles
+401547504,2023-10-29,71505,17:00,Bank of America Stadium,Panthers,Texans
+401547509,2023-10-29,68807,20:05,Lumen Field,Seahawks,Browns
+401547502,2023-10-29,76286,20:25,Empower Field at Mile High,Broncos,Chiefs
+401547501,2023-10-29,63064,20:25,State Farm Stadium,Cardinals,Ravens
+401547503,2023-10-29,71655,20:25,Levi's Stadium,49ers,Bengals
+401547510,2023-10-30,70240,00:20,SoFi Stadium,Chargers,Bears
+401547511,2023-10-31,66774,00:15,Ford Field,Lions,Raiders
+401547512,2023-11-03,65969,00:15,Acrisure Stadium,Steelers,Titans
+401547230,2023-11-05,50023,14:30,Frankfurt Stadium,Chiefs,Dolphins
+401547518,2023-11-05,69715,18:00,Mercedes-Benz Stadium,Falcons,Vikings
+401547514,2023-11-05,67919,18:00,Cleveland Browns Stadium,Browns,Cardinals
+401547519,2023-11-05,77409,18:00,Lambeau Field,Packers,Rams
+401547520,2023-11-05,64628,18:00,Gillette Stadium,Patriots,Commanders
+401547516,2023-11-05,70006,18:00,Caesars Superdome,Saints,Bears
+401547513,2023-11-05,70753,18:00,M&T Bank Stadium,Ravens,Seahawks
+401547515,2023-11-05,70785,18:00,NRG Stadium,Texans,Buccaneers
+401547517,2023-11-05,72301,21:05,Bank of America Stadium,Panthers,Colts
+401547521,2023-11-05,62082,21:25,Allegiant Stadium,Raiders,Giants
+401547522,2023-11-05,69876,21:25,Lincoln Financial Field,Eagles,Cowboys
+401547523,2023-11-06,66965,01:20,Paycor Stadium,Bengals,Bills
+401547524,2023-11-07,75407,01:15,MetLife Stadium,Jets,Chargers
+401547525,2023-11-10,61200,01:15,Soldier Field,Bears,Panthers
+401547231,2023-11-12,50144,14:30,Frankfurt Stadium,Patriots,Colts
+401547526,2023-11-12,66526,18:00,Paycor Stadium,Bengals,Texans
+401547533,2023-11-12,66933,18:00,U.S. Bank Stadium,Vikings,Saints
+401547527,2023-11-12,67617,18:00,Acrisure Stadium,Steelers,Packers
+401547528,2023-11-12,62725,18:00,Raymond James Stadium,Buccaneers,Titans
+401547532,2023-11-12,69271,18:00,EverBank Stadium,Jaguars,49ers
+401547531,2023-11-12,70424,18:00,M&T Bank Stadium,Ravens,Browns
+401547529,2023-11-12,62861,21:05,State Farm Stadium,Cardinals,Falcons
+401547530,2023-11-12,70240,21:05,SoFi Stadium,Chargers,Lions
+401547534,2023-11-12,93338,21:25,AT&T Stadium,Cowboys,Giants
+401547535,2023-11-12,68721,21:25,Lumen Field,Seahawks,Commanders
+401547536,2023-11-13,62383,01:20,Allegiant Stadium,Raiders,Jets
+401547537,2023-11-14,70318,01:15,Highmark Stadium,Bills,Broncos
+401547538,2023-11-17,70997,01:15,M&T Bank Stadium,Ravens,Bengals
+401547539,2023-11-19,67919,18:00,Cleveland Browns Stadium,Browns,Steelers
+401547546,2023-11-19,63873,18:00,Ford Field,Lions,Bears
+401547547,2023-11-19,77432,18:00,Lambeau Field,Packers,Chargers
+401547542,2023-11-19,66026,18:00,Hard Rock Stadium,Dolphins,Raiders
+401547548,2023-11-19,62714,18:00,FedExField,Commanders,Giants
+401547545,2023-11-19,73543,18:00,Bank of America Stadium,Panthers,Cowboys
+401547541,2023-11-19,67175,18:00,EverBank Stadium,Jaguars,Titans
+401547540,2023-11-19,70247,18:00,NRG Stadium,Texans,Cardinals
+401547549,2023-11-19,71607,21:05,Levi's Stadium,49ers,Buccaneers
+401547543,2023-11-19,70603,21:25,Highmark Stadium,Bills,Jets
+401547544,2023-11-19,72704,21:25,SoFi Stadium,Rams,Seahawks
+401547550,2023-11-20,76848,01:20,Empower Field at Mile High,Broncos,Vikings
+401547345,2023-11-21,73754,01:15,GEHA Field at Arrowhead Stadium,Chiefs,Eagles
+401547552,2023-11-23,66476,17:30,Ford Field,Lions,Packers
+401547551,2023-11-23,93711,21:30,AT&T Stadium,Cowboys,Commanders
+401547553,2023-11-24,68702,01:20,Lumen Field,Seahawks,49ers
+401547242,2023-11-24,82973,20:00,MetLife Stadium,Jets,Dolphins
+401547559,2023-11-26,70166,18:00,Mercedes-Benz Stadium,Falcons,Saints
+401547554,2023-11-26,65090,18:00,Paycor Stadium,Bengals,Steelers
+401547561,2023-11-26,62493,18:00,Nissan Stadium,Titans,Panthers
+401547556,2023-11-26,64407,18:00,Lucas Oil Stadium,Colts,Buccaneers
+401547560,2023-11-26,82211,18:00,MetLife Stadium,Giants,Patriots
+401547555,2023-11-26,71324,18:00,NRG Stadium,Texans,Jaguars
+401547563,2023-11-26,76261,21:05,Empower Field at Mile High,Broncos,Browns
+401547562,2023-11-26,62177,21:05,State Farm Stadium,Cardinals,Rams
+401547557,2023-11-26,62441,21:25,Allegiant Stadium,Raiders,Chiefs
+401547558,2023-11-26,69879,21:25,Lincoln Financial Field,Eagles,Bills
+401547564,2023-11-27,70240,01:20,SoFi Stadium,Chargers,Ravens
+401547565,2023-11-28,66843,01:15,U.S. Bank Stadium,Vikings,Bears
+401547566,2023-12-01,93367,01:15,AT&T Stadium,Cowboys,Seahawks
+401547570,2023-12-03,62641,18:00,Nissan Stadium,Titans,Colts
+401547567,2023-12-03,64628,18:00,Gillette Stadium,Patriots,Chargers
+401547572,2023-12-03,70003,18:00,Caesars Superdome,Saints,Lions
+401547573,2023-12-03,74455,18:00,MetLife Stadium,Jets,Falcons
+401547568,2023-12-03,66436,18:00,Acrisure Stadium,Steelers,Cardinals
+401547574,2023-12-03,63459,18:00,FedExField,Commanders,Dolphins
+401547571,2023-12-03,71670,18:00,NRG Stadium,Texans,Broncos
+401547569,2023-12-03,62432,21:05,Raymond James Stadium,Buccaneers,Panthers
+401547575,2023-12-03,72887,21:25,SoFi Stadium,Rams,Browns
+401547276,2023-12-03,69879,21:25,Lincoln Financial Field,Eagles,49ers
+401547576,2023-12-04,78124,01:20,Lambeau Field,Packers,Chiefs
+401547577,2023-12-05,67951,01:15,EverBank Stadium,Jaguars,Bengals
+401547578,2023-12-08,66376,01:15,Acrisure Stadium,Steelers,Patriots
+401547579,2023-12-10,69496,18:00,Mercedes-Benz Stadium,Falcons,Buccaneers
+401547586,2023-12-10,62185,18:00,Soldier Field,Bears,Lions
+401547580,2023-12-10,65981,18:00,Paycor Stadium,Bengals,Colts
+401547581,2023-12-10,67431,18:00,Cleveland Browns Stadium,Browns,Jaguars
+401547587,2023-12-10,70009,18:00,Caesars Superdome,Saints,Panthers
+401547582,2023-12-10,72956,18:00,MetLife Stadium,Jets,Texans
+401547585,2023-12-10,70492,18:00,M&T Bank Stadium,Ravens,Rams
+401547588,2023-12-10,62626,21:05,Allegiant Stadium,Raiders,Vikings
+401547589,2023-12-10,71816,21:05,Levi's Stadium,49ers,Seahawks
+401547583,2023-12-10,73639,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Bills
+401547584,2023-12-10,70240,21:25,SoFi Stadium,Chargers,Broncos
+401547590,2023-12-11,93752,01:20,AT&T Stadium,Cowboys,Eagles
+401547592,2023-12-12,66068,01:15,Hard Rock Stadium,Dolphins,Titans
+401547591,2023-12-12,76637,01:15,MetLife Stadium,Giants,Packers
+401547593,2023-12-15,61654,01:15,Allegiant Stadium,Raiders,Chargers
+401547604,2023-12-16,66376,18:00,Paycor Stadium,Bengals,Vikings
+401547607,2023-12-16,64171,21:30,Lucas Oil Stadium,Colts,Steelers
+401547606,2023-12-17,64560,01:15,Ford Field,Lions,Broncos
+401547605,2023-12-17,67919,18:00,Cleveland Browns Stadium,Browns,Bears
+401547598,2023-12-17,77275,18:00,Lambeau Field,Packers,Buccaneers
+401547595,2023-12-17,66219,18:00,Nissan Stadium,Titans,Texans
+401547594,2023-12-17,65967,18:00,Hard Rock Stadium,Dolphins,Jets
+401547608,2023-12-17,64628,18:00,Gillette Stadium,Patriots,Chiefs
+401547599,2023-12-17,70038,18:00,Caesars Superdome,Saints,Giants
+401547603,2023-12-17,70301,18:00,Bank of America Stadium,Panthers,Falcons
+401547597,2023-12-17,72035,21:05,SoFi Stadium,Rams,Commanders
+401547596,2023-12-17,63967,21:05,State Farm Stadium,Cardinals,49ers
+401547600,2023-12-17,70933,21:25,Highmark Stadium,Bills,Cowboys
+401547602,2023-12-18,68021,01:20,EverBank Stadium,Jaguars,Ravens
+401547601,2023-12-19,68758,01:15,Lumen Field,Seahawks,Eagles
+401547609,2023-12-22,73228,01:15,SoFi Stadium,Rams,Saints
+401547610,2023-12-23,66646,21:30,Acrisure Stadium,Steelers,Bengals
+401547611,2023-12-24,67678,01:00,SoFi Stadium,Chargers,Bills
+401547616,2023-12-24,69221,18:00,Mercedes-Benz Stadium,Falcons,Colts
+401547614,2023-12-24,60181,18:00,Nissan Stadium,Titans,Seahawks
+401547618,2023-12-24,66932,18:00,U.S. Bank Stadium,Vikings,Lions
+401547613,2023-12-24,67470,18:00,MetLife Stadium,Jets,Commanders
+401547617,2023-12-24,70875,18:00,Bank of America Stadium,Panthers,Packers
+401547612,2023-12-24,70831,18:00,NRG Stadium,Texans,Browns
+401547615,2023-12-24,62547,21:05,Raymond James Stadium,Buccaneers,Jaguars
+401547619,2023-12-24,59978,21:25,Soldier Field,Bears,Cardinals
+401547620,2023-12-24,66410,21:25,Hard Rock Stadium,Dolphins,Cowboys
+401547621,2023-12-25,76201,01:15,Empower Field at Mile High,Broncos,Patriots
+401547351,2023-12-25,73480,18:00,GEHA Field at Arrowhead Stadium,Chiefs,Raiders
+401547241,2023-12-25,69879,21:30,Lincoln Financial Field,Eagles,Giants
+401547622,2023-12-26,71812,01:15,Levi's Stadium,49ers,Ravens
+401547623,2023-12-29,67919,01:15,Cleveland Browns Stadium,Browns,Jets
+401547624,2023-12-31,93731,01:15,AT&T Stadium,Cowboys,Lions
+401547626,2023-12-31,70772,18:00,Highmark Stadium,Bills,Patriots
+401547627,2023-12-31,61752,18:00,Soldier Field,Bears,Falcons
+401547628,2023-12-31,65538,18:00,Lucas Oil Stadium,Colts,Raiders
+401547632,2023-12-31,75517,18:00,MetLife Stadium,Giants,Rams
+401547633,2023-12-31,69879,18:00,Lincoln Financial Field,Eagles,Cardinals
+401547634,2023-12-31,65471,18:00,Raymond James Stadium,Buccaneers,Saints
+401547635,2023-12-31,64424,18:00,FedExField,Commanders,49ers
+401547629,2023-12-31,67215,18:00,EverBank Stadium,Jaguars,Panthers
+401547625,2023-12-31,71196,18:00,M&T Bank Stadium,Ravens,Dolphins
+401547631,2023-12-31,71517,18:00,NRG Stadium,Texans,Titans
+401547636,2023-12-31,68735,21:05,Lumen Field,Seahawks,Steelers
+401547630,2023-12-31,76228,21:25,Empower Field at Mile High,Broncos,Chargers
+401547235,2023-12-31,73565,21:25,GEHA Field at Arrowhead Stadium,Chiefs,Bengals
+401547637,2024-01-01,67003,01:20,U.S. Bank Stadium,Vikings,Packers

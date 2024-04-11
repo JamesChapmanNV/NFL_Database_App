@@ -1,0 +1,33 @@
+location,team_name,abbreviation,primary_color,secondary_color,venue_name
+Houston,Texans,HOU,00143f,c41230,NRG Stadium
+Green Bay,Packers,GB,204e32,ffb612,Lambeau Field
+Baltimore,Ravens,BAL,29126f,000000,M&T Bank Stadium
+Washington,Commanders,WSH,5a1414,ffb612,FedExField
+Denver,Broncos,DEN,0a2343,fc4c02,Empower Field at Mile High
+San Francisco,49ers,SF,aa0000,b3995d,Levi's Stadium
+Atlanta,Falcons,ATL,a71930,000000,Mercedes-Benz Stadium
+New England,Patriots,NE,002a5c,c60c30,Gillette Stadium
+Buffalo,Bills,BUF,00338d,d50a0a,Highmark Stadium
+Chicago,Bears,CHI,0b1c3a,e64100,Soldier Field
+Cleveland,Browns,CLE,472a08,ff3c00,Cleveland Browns Stadium
+Detroit,Lions,DET,0076b6,bbbbbb,Ford Field
+Indianapolis,Colts,IND,003b75,ffffff,Lucas Oil Stadium
+New Orleans,Saints,NO,d3bc8d,000000,Caesars Superdome
+New York,Jets,NYJ,115740,ffffff,MetLife Stadium
+Pittsburgh,Steelers,PIT,000000,ffb612,Acrisure Stadium
+Carolina,Panthers,CAR,0085ca,000000,Bank of America Stadium
+Jacksonville,Jaguars,JAX,007487,d7a22a,EverBank Stadium
+Los Angeles,Rams,LAR,003594,ffd100,Los Angeles Memorial Coliseum
+Dallas,Cowboys,DAL,002a5c,b0b7bc,AT&T Stadium
+Los Angeles,Chargers,LAC,0080c6,ffc20e,Dignity Health Sports Park
+Kansas City,Chiefs,KC,e31837,ffb612,GEHA Field at Arrowhead Stadium
+Philadelphia,Eagles,PHI,06424d,000000,Lincoln Financial Field
+Arizona,Cardinals,ARI,a4113e,ffffff,State Farm Stadium
+Tampa Bay,Buccaneers,TB,bd1c36,3e3a35,Raymond James Stadium
+Las Vegas,Raiders,LV,000000,a5acaf,Allegiant Stadium
+New York,Giants,NYG,003c7f,c9243f,MetLife Stadium
+Seattle,Seahawks,SEA,002a5c,69be28,Lumen Field
+Cincinnati,Bengals,CIN,fb4f14,000000,Paycor Stadium
+Tennessee,Titans,TEN,4b92db,002a5c,Nissan Stadium
+Minnesota,Vikings,MIN,4f2683,ffc62f,U.S. Bank Stadium
+Miami,Dolphins,MIA,008e97,fc4c02,Hard Rock Stadium
