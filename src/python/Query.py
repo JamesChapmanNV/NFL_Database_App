@@ -11,7 +11,7 @@ class Query:
 
     def load_configuration(self):
         parser = ConfigParser()
-        parser.read('python/config.ini') # Required file for connection
+        parser.read('./config.ini') # Required file for connection
         params = parser.items('Database') # Required database section
         return {param[0]: param[1] for param in params}
 
@@ -46,24 +46,27 @@ class Query:
         
     def get_team(self, team_name: str) -> None:
         cursor = self.pgdb.cursor()
-        query = f"SELECT * FROM teams WHERE team_name = '{team_name}'"
+        query = "SELECT * FROM teams WHERE team_name = %s"
+        data = (team_name, )
         print(query)
         # query = "SELECT * FROM teams"
-        cursor.execute(query)
+        cursor.execute(query, data)
         for row in cursor:
             print(row)
 
     def get_venue(self, venue_name: str) -> None:
         cursor = self.pgdb.cursor()
-        query = f"SELECT * FROM venues WHERE venue_name = '{venue_name}'"
-        cursor.execute(query)
+        query = "SELECT * FROM venues WHERE venue_name = %s"
+        data = (venue_name, )
+        cursor.execute(query, data)
         for row in cursor:
             print(row)
 
     def get_game(self, game_id: int) -> None:
         cursor = self.pgdb.cursor()
-        query = f"SELECT * FROM games WHERE game_id = {game_id}"
-        cursor.execute(query)
+        query = "SELECT * FROM games WHERE game_id = %s"
+        data = (game_id, )
+        cursor.execute(query, data)
         for row in cursor:
             print(row)
 
