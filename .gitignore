@@ -3,3 +3,5 @@ config.ini
 .idea/
 src/__pycache__/
 src/.DS_Store
+src/python/python/*
+src/python/python
