@@ -46,21 +46,29 @@ class Query:
         cursor.close()
 
         
-    def get_team(self, team_name: str) -> None:
+    def get_team(self, team_name: str=None) -> None:
         cursor = self.pgdb.cursor()
-        query = "SELECT * FROM teams WHERE team_name = %s"
-        data = (team_name, )
-        print(query)
-        cursor.execute(query, data)
+        if team_name is not None:
+            query = "SELECT * FROM teams WHERE team_name = %s"
+            data = (team_name, )
+            print(query)
+            cursor.execute(query, data)
+        else:
+            query = 'SELECT * FROM teams'
+            cursor.execute(query)
         display(cursor,
                 [('Name', 0), ('Abbreviation', 1), ('Location', 2), ('Home Stadium', 3)],
                 (4, 5))
 
-    def get_venue(self, venue_name: str) -> None:
+    def get_venue(self, venue_name: str=None) -> None:
         cursor = self.pgdb.cursor()
-        query = "SELECT * FROM venues WHERE venue_name LIKE %s"
-        data = ('%' + venue_name + '%', )
-        cursor.execute(query, data)
+        if venue_name:
+            query = "SELECT * FROM venues WHERE venue_name LIKE %s"
+            data = ('%' + venue_name + '%', )
+            cursor.execute(query, data)
+        else:
+            query = 'SELECT * FROM venues'
+            cursor.execute(query)
         display(cursor,
                 [('Name', 0), ('Capacity', 1), ('City', 2), ('State', 3), ('Grass', 4), ('Indoor', 5)])
 

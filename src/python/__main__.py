@@ -11,8 +11,8 @@ class NFLapp:
     def usage():
         print("\n *** Please enter one of the following commands *** ")
         print("> Initialize_Database ")
-        print("> Team <team_name>")
-        print("> Venue <venue_name>")
+        print("> Team [<team_name>]")
+        print("> Venue [<venue_name>]")
         print("> Game <game_id>")
         print("> quit")
 
@@ -34,7 +34,7 @@ class NFLapp:
                     print(f"Getting Team - '{team_name}'")
                     self.query.get_team(team_name)
                 else:
-                    print("Error: Team <team_name>")
+                    self.query.get_team()
 
             elif command == "Venue":
                 if len(args) > 1:
@@ -42,7 +42,7 @@ class NFLapp:
                     print(f"Getting Venue - {venue_name}")
                     self.query.get_venue(venue_name)
                 else:
-                    print("Error: Venue <venue_name>")
+                    self.query.get_venue()
 
             elif command == "Game":
                 if len(args) > 1:
