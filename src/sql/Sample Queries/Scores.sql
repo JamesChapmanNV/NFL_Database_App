@@ -13,13 +13,13 @@ FROM games
                         JOIN linescores l ON l.game_id = g.game_id
                WHERE season_year = 2018
                  AND week = 10
-               GROUP BY team_name) AS home ON home.team_name = games.home_team
+               GROUP BY team_name) AS home ON home.team_name = games.home_team_name
          JOIN (SELECT team_name, SUM(score) AS total_score
                FROM season_dates sd
                         JOIN games g ON sd.date = g.date
                         JOIN linescores l ON l.game_id = g.game_id
                WHERE season_year = 2018
                  AND week = 10
-               GROUP BY team_name) AS away ON away.team_name = games.away_team
+               GROUP BY team_name) AS away ON away.team_name = games.away_team_name
 WHERE season_year = 2018
   AND week = 10;
