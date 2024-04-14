@@ -14,6 +14,7 @@ class NFLapp:
         print("> Team <team_name>")
         print("> Venue <venue_name>")
         print("> Game <game_id>")
+        print("> Scores <season_year> <week>")
         print("> quit")
 
     def menu(self):
@@ -21,7 +22,7 @@ class NFLapp:
             # main menu
             self.usage()
             response = input("> ").strip()
-            args = response.split(" ", 1)
+            args = response.split(" ", 2)    # Need to update after deciding how to process response string
             command = args[0]
 
             if command == "Initialize_Database":
@@ -51,6 +52,22 @@ class NFLapp:
                     self.query.get_game(game_id)
                 else:
                     print("Error: Game <game_id>")
+                    
+            elif command == "Scores":
+                if len(args) == 3:
+                    season_year = int(args[1])
+                    week = int(args[2])
+                    if (week < 0 or week > 18):       # Does week run from 0-17 or 1-18? Change condition and uncomment
+                        print("Error: Invalid week value(weeks-> 0-18 only)")
+                    if (season_year < 2013 or season_year > 2024):
+                        print("Error: Invalid year value(years-> 2013-2014 only)")
+                        
+                    self.query.get_game_scores(season_year, week)
+                    
+                elif len(args) == 1:
+                    print("Find the scores for each game in a week" + "\n Accepts input of season year and week")
+                else:
+                    print("Error: Incorrect number of parameters(only 0 or 2 is allowed)")
 
             elif command == "quit":
                 sys.exit(0)
