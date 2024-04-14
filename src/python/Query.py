@@ -2,6 +2,7 @@
 import psycopg # type: ignore
 from configparser import ConfigParser
 from pathlib import Path
+from rich import print
 
 
 class Query:
@@ -52,7 +53,9 @@ class Query:
         # query = "SELECT * FROM teams"
         cursor.execute(query, data)
         for row in cursor:
-            print(row)
+            primary_color = row[4]
+            secondary_color = row[5]
+            print(f"[#{secondary_color} on #{primary_color}]{row}")
 
     def get_venue(self, venue_name: str) -> None:
         cursor = self.pgdb.cursor()
