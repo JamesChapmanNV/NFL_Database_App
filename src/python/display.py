@@ -15,7 +15,6 @@ def display(results, columns, colors=None):
     for row in results:
         # Block size is adjusted by 2 because there are 2 additional characters included in the output (': ')
         block_size = _get_block_size(row, columns) + 2
-        print(block_size)
         print('\n')
         for name, index in columns:
             text = _pad_text(f"{name}: {row[index]}", block_size)
