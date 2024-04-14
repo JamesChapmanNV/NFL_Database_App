@@ -53,7 +53,7 @@ class Query:
         print(query)
         cursor.execute(query, data)
         display(cursor,
-                {'Name': 0, 'Abbreviation': 1, 'Location': 2, 'Home Stadium': 3},
+                [('Name', 0), ('Abbreviation', 1), ('Location', 2), ('Home Stadium', 3)],
                 (4, 5))
 
     def get_venue(self, venue_name: str) -> None:
@@ -62,7 +62,7 @@ class Query:
         data = ('%' + venue_name + '%', )
         cursor.execute(query, data)
         display(cursor,
-                {'Name': 0, 'Capacity': 1, 'City': 2, 'State': 3, 'Grass': 4, 'Indoor': 5})
+                [('Name', 0), ('Capacity', 1), ('City', 2), ('State', 3), ('Grass', 4), ('Indoor', 5)])
 
     def get_game(self, game_id: int) -> None:
         cursor = self.pgdb.cursor()
@@ -70,7 +70,7 @@ class Query:
         data = (game_id, )
         cursor.execute(query, data)
         display(cursor,
-                {'Game ID': 0, 'Date': 1, 'Attendance': 2, 'Home Team': 3, 'Away Team': 4, 'Venue': 5, 'Time': 6})
+                [('Game ID', 0), ('Date', 1), ('Attendance', 2), ('Home Team', 3), ('Away Team', 4), ('Venue', 5), ('Time', 6)])
 
 
 #     def transaction_login(self, name, password):
