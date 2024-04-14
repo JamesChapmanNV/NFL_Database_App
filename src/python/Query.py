@@ -55,7 +55,10 @@ class Query:
         for row in cursor:
             primary_color = row[4]
             secondary_color = row[5]
-            print(f"[#{secondary_color} on #{primary_color}]{row}")
+            print(f"[#{secondary_color} on #{primary_color}]Name: {row[0]}")
+            print(f"[#{secondary_color} on #{primary_color}]Abbreviation: {row[1]}")
+            print(f"[#{secondary_color} on #{primary_color}]Location: {row[2]}")
+            print(f"[#{secondary_color} on #{primary_color}]Home Stadium: {row[3]}")
 
     def get_venue(self, venue_name: str) -> None:
         cursor = self.pgdb.cursor()
