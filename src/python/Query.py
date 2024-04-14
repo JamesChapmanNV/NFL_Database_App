@@ -3,6 +3,7 @@ import psycopg # type: ignore
 from configparser import ConfigParser
 from pathlib import Path
 from rich import print
+from display import display
 
 
 class Query:
@@ -50,31 +51,26 @@ class Query:
         query = "SELECT * FROM teams WHERE team_name = %s"
         data = (team_name, )
         print(query)
-        # query = "SELECT * FROM teams"
         cursor.execute(query, data)
-        for row in cursor:
-            primary_color = row[4]
-            secondary_color = row[5]
-            print(f"[#{secondary_color} on #{primary_color}]Name: {row[0]}")
-            print(f"[#{secondary_color} on #{primary_color}]Abbreviation: {row[1]}")
-            print(f"[#{secondary_color} on #{primary_color}]Location: {row[2]}")
-            print(f"[#{secondary_color} on #{primary_color}]Home Stadium: {row[3]}")
+        display(cursor,
+                {'Name': 0, 'Abbreviation': 1, 'Location': 2, 'Home Stadium': 3},
+                (4, 5))
 
     def get_venue(self, venue_name: str) -> None:
         cursor = self.pgdb.cursor()
-        query = "SELECT * FROM venues WHERE venue_name = %s"
-        data = (venue_name, )
+        query = "SELECT * FROM venues WHERE venue_name LIKE %s"
+        data = ('%' + venue_name + '%', )
         cursor.execute(query, data)
-        for row in cursor:
-            print(row)
+        display(cursor,
+                {'Name': 0, 'Capacity': 1, 'City': 2, 'State': 3, 'Grass': 4, 'Indoor': 5})
 
     def get_game(self, game_id: int) -> None:
         cursor = self.pgdb.cursor()
         query = "SELECT * FROM games WHERE game_id = %s"
         data = (game_id, )
         cursor.execute(query, data)
-        for row in cursor:
-            print(row)
+        display(cursor,
+                {'Game ID': 0, 'Date': 1, 'Attendance': 2, 'Home Team': 3, 'Away Team': 4, 'Venue': 5, 'Time': 6})
 
 
 #     def transaction_login(self, name, password):
