@@ -3,7 +3,7 @@ import psycopg # type: ignore
 from configparser import ConfigParser
 from pathlib import Path
 from rich import print
-from display import display
+from display import display, display_matchup
 
 
 class Query:
@@ -72,7 +72,17 @@ class Query:
         display(cursor,
                 [('Game ID', 0), ('Date', 1), ('Attendance', 2), ('Home Team', 3), ('Away Team', 4), ('Venue', 5), ('Time', 6)])
 
-
+    def get_scores(self, year: int, week: int) -> None:
+        cursor = self.pgdb.cursor()
+        query = ""
+        with open('Queries/scores.sql') as file:
+            query = file.read()
+        data = (year, week, year, week, year, week, )
+        cursor.execute(query, data)
+        display_matchup(cursor,
+                [('name', 0), ('score', 1)],
+                        [('name', 2), ('score', 3)],
+                        [(4, 5), (6, 7)])
 #     def transaction_login(self, name, password):
 #         pass
 

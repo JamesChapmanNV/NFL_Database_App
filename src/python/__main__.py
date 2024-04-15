@@ -13,6 +13,7 @@ class NFLapp:
         print("> Initialize_Database ")
         print("> Team <team_name>")
         print("> Venue <venue_name>")
+        print("> Scores <year> <week>")
         print("> Game <game_id>")
         print("> quit")
 
@@ -21,7 +22,7 @@ class NFLapp:
             # main menu
             self.usage()
             response = input("> ").strip()
-            args = response.split(" ", 1)
+            args = response.split(" ", 3)
             command = args[0]
 
             if command == "Initialize_Database":
@@ -52,6 +53,13 @@ class NFLapp:
                 else:
                     print("Error: Game <game_id>")
 
+            elif command == "Scores":
+                if len(args) > 2:
+                    year = int(args[1])
+                    week = int(args[2])
+                    self.query.get_scores(year, week)
+                else:
+                    print("Error: Scores <year> <week>")
             elif command == "quit":
                 sys.exit(0)
 
