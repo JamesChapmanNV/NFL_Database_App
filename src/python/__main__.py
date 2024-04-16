@@ -15,6 +15,7 @@ class NFLapp:
         print("> Venue [<venue_name>]")
         print("> Scores <year> <week>")
         print("> Game <game_id>")
+        print("> Save <type> [<filename>]")
         print("> quit")
 
     def menu(self):
@@ -60,6 +61,16 @@ class NFLapp:
                     self.query.get_scores(year, week)
                 else:
                     print("Error: Scores <year> <week>")
+            elif command == "Save":
+                if len(args) > 2:
+                    filetype = args[1]
+                    filename = args[2]
+                    self.query.save_last_result(filetype, filename)
+                elif len(args) > 1:
+                    filetype = args[1]
+                    self.query.save_last_result(filetype)
+                else:
+                    print("Error: Save <filetype> [<filename>]")
             elif command == "quit":
                 sys.exit(0)
 
