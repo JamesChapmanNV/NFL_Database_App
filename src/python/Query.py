@@ -4,12 +4,16 @@ from configparser import ConfigParser
 from pathlib import Path
 from rich import print
 from display import display, display_matchup
+from FileManager import FileManager
 
 
 class Query:
     def __init__(self):
         self.config = self.load_configuration()
         self.pgdb = None  # PostgreSQL Connection
+        self.last_result = None # The output of the last executed query
+        self.last_result_column_names = None # The column names of the last output
+        self.file_manager = FileManager()
 
     def load_configuration(self):
         parser = ConfigParser()
@@ -45,6 +49,9 @@ class Query:
         # commit is needed!
         cursor.close()
 
+    def helper_set_column_names(self, cursor) -> None:
+        column_names = [desc[0] for desc in cursor.description]
+        self.last_result_column_names = tuple(column_names)
         
     def get_team(self, team_name: str=None) -> None:
         cursor = self.pgdb.cursor()
@@ -56,7 +63,9 @@ class Query:
         else:
             query = 'SELECT * FROM teams'
             cursor.execute(query)
-        display(cursor,
+        self.helper_set_column_names(cursor)
+        self.last_result = cursor.fetchall()
+        display(self.last_result,
                 [('Name', 0), ('Abbreviation', 1), ('Location', 2), ('Home Stadium', 3)],
                 (4, 5))
 
@@ -69,7 +78,9 @@ class Query:
         else:
             query = 'SELECT * FROM venues'
             cursor.execute(query)
-        display(cursor,
+        self.helper_set_column_names(cursor)
+        self.last_result = cursor.fetchall()
+        display(self.last_result,
                 [('Name', 0), ('Capacity', 1), ('City', 2), ('State', 3), ('Grass', 4), ('Indoor', 5)])
 
     def get_game(self, game_id: int) -> None:
@@ -77,7 +88,9 @@ class Query:
         query = "SELECT * FROM games WHERE game_id = %s"
         data = (game_id, )
         cursor.execute(query, data)
-        display(cursor,
+        self.helper_set_column_names(cursor)
+        self.last_result = cursor.fetchall()
+        display(self.last_result,
                 [('Game ID', 0), ('Date', 1), ('Attendance', 2), ('Home Team', 3), ('Away Team', 4), ('Venue', 5), ('Time', 6)])
 
     def get_scores(self, year: int, week: int) -> None:
@@ -87,10 +100,22 @@ class Query:
             query = file.read()
         data = (year, week, year, week, year, week, )
         cursor.execute(query, data)
-        display_matchup(cursor,
+        self.helper_set_column_names(cursor)
+        self.last_result = cursor.fetchall()
+        display_matchup(self.last_result,
                 [('name', 0), ('score', 1)],
                         [('name', 2), ('score', 3)],
                         [(4, 5), (6, 7)])
+
+    def save_last_result(self, filetype: str, filename: str=None) -> None:
+        name = filename or 'NFL_last_data'
+        data = [self.last_result_column_names] + self.last_result
+        if filetype.lower() == 'md':
+            self.file_manager.write_file(data, name + '.md', 'md')
+        elif filetype.lower() == 'csv':
+            self.file_manager.write_file(data, name + '.csv', 'csv')
+        else:
+            print("Error: Unsupported file type")
 #     def transaction_login(self, name, password):
 #         pass
 
