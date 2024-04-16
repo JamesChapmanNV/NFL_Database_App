@@ -29,6 +29,48 @@ def display(results, columns, colors=None):
                 print(f"{text}")
 
 
+def display_matchup(results, home_data, away_data, colors=None):
+    """
+    Display a matchup of 2 teams. The column names are not used for display, but are used to direct the
+    function to the scores. This function will look for the name score in both the home and away data to
+    determine the winner. If colors are passed, the result will be colored appropriately.
+    :param results: The result set
+    :param home_data: A list of tuples with the columns associated with the home team and their index
+    :param away_data: A list of tuples with the columns associated with the away team and their index
+    :param colors: A list of tuples containing the index for colors (primary, secondary) in the result set,
+    for the home team and away team
+    :return:
+    """
+    for row in results:
+        print('\n')
+        home_score = 0
+        away_score = 0
+        message = ""
+        for name, index in home_data:
+            message += f"{row[index]} "
+            if name == 'score':
+                home_score = row[index]
+
+        message += " -- "
+
+        for name, index in away_data:
+            message += f"{row[index]} "
+            if name == 'score':
+                away_score = row[index]
+
+        if colors:
+            primary_color = ""
+            secondary_color = ""
+            if home_score > away_score:
+                primary_color = row[colors[0][0]]
+                secondary_color = row[colors[0][1]]
+            else:
+                primary_color = row[colors[1][0]]
+                secondary_color = row[colors[1][1]]
+            print(f"[#{secondary_color} on #{primary_color}]{message}")
+        else:
+            print(message)
+
 def _get_block_size(row, columns) -> int:
     """
     Get the width of the row to print

@@ -65,7 +65,7 @@ CREATE TABLE plays(
     quarter INT NOT NULL,
     yards INT NOT NULL,
     score_value INT NOT NULL,
-    play_type VARCHAR(45),
+    play_type VARCHAR(45) NOT NULL,
     text TEXT,
     seconds_remaining INT,
     start_down INT NOT NULL,
