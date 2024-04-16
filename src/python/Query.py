@@ -110,10 +110,9 @@ class Query:
     def save_last_result(self, filetype: str, filename: str=None) -> None:
         name = filename or 'NFL_last_data'
         data = [self.last_result_column_names] + self.last_result
-        if filetype.lower() == 'md':
-            self.file_manager.write_file(data, name + '.md', 'md')
-        elif filetype.lower() == 'csv':
-            self.file_manager.write_file(data, name + '.csv', 'csv')
+        result = self.file_manager.write_file(data, name + f'.{filetype}', filetype)
+        if result > 0:
+            print("Data saved successfully")
         else:
             print("Error: Unsupported file type")
 #     def transaction_login(self, name, password):
