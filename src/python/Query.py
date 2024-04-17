@@ -92,13 +92,16 @@ class Query:
             # User provided a year
             query = query.format(column_name='date_part(\'year\', date)')
         else:
-            query = query.format(column_name='game_id')
+            query = query.format(column_name='g.game_id')
         data = (game_id, )
         cursor.execute(query, data)
         self.helper_set_column_names(cursor)
         self.last_result = cursor.fetchall()
         display(self.last_result,
-                [('Game ID', 0), ('Date', 1), ('Attendance', 2), ('Home Team', 3), ('Away Team', 4), ('Venue', 5), ('Time', 6)])
+                [('Game ID', 0), ('Date', 1), ('Attendance', 2),
+                 ('Home Team', 3), ('Away Team', 4), ('Venue', 5),
+                 ('Time', 6), ('Home Score', 7), ('Away Score', 8)],
+                colors=(9, 10))
 
     def get_scores(self, year: int, week: int) -> None:
         cursor = self.pgdb.cursor()
