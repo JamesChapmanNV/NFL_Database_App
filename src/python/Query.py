@@ -14,6 +14,7 @@ class Query:
         self.last_result = None # The output of the last executed query
         self.last_result_column_names = None # The column names of the last output
         self.file_manager = FileManager()
+        self.file_manager.set_input_path('./Queries/')
 
     def load_configuration(self):
         parser = ConfigParser()
@@ -71,17 +72,18 @@ class Query:
 
     def get_venue(self, venue_name: str=None) -> None:
         cursor = self.pgdb.cursor()
+        query = self.file_manager.read_file('venues.sql')
         if venue_name:
-            query = "SELECT * FROM venues WHERE venue_name LIKE %s"
             data = ('%' + venue_name + '%', )
             cursor.execute(query, data)
         else:
-            query = 'SELECT * FROM venues'
-            cursor.execute(query)
+            data = ('%', )
+            cursor.execute(query, data)
         self.helper_set_column_names(cursor)
         self.last_result = cursor.fetchall()
         display(self.last_result,
-                [('Name', 0), ('Capacity', 1), ('City', 2), ('State', 3), ('Grass', 4), ('Indoor', 5)])
+                [('Name', 0), ('Home Team', 6), ('Capacity', 1),
+                 ('City', 2), ('State', 3), ('Grass', 4), ('Indoor', 5)])
 
     def get_game(self, game_id: int) -> None:
         cursor = self.pgdb.cursor()
