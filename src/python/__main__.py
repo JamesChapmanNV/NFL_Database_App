@@ -14,7 +14,7 @@ class NFLapp:
         print("> Team [<team_name>]")
         print("> Venue [<venue_name>]")
         print("> Scores <year> <week>")
-        print("> Game <game_id>")
+        print("> Game <game_id | year>")
         print("> Save <type> [<filename>]")
         print("> quit")
 
@@ -52,7 +52,7 @@ class NFLapp:
                     print(f"Getting game - {game_id}")
                     self.query.get_game(game_id)
                 else:
-                    print("Error: Game <game_id>")
+                    print("Error: Game <game_id | year>")
 
             elif command == "Scores":
                 if len(args) > 2:

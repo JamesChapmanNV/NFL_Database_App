@@ -87,7 +87,12 @@ class Query:
 
     def get_game(self, game_id: int) -> None:
         cursor = self.pgdb.cursor()
-        query = "SELECT * FROM games WHERE game_id = %s"
+        query = self.file_manager.read_file('games.sql')
+        if len(str(game_id)) == 4:
+            # User provided a year
+            query = query.format(column_name='date_part(\'year\', date)')
+        else:
+            query = query.format(column_name='game_id')
         data = (game_id, )
         cursor.execute(query, data)
         self.helper_set_column_names(cursor)
