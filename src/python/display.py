@@ -22,7 +22,7 @@ def display(results, columns, colors=None):
                 if isinstance(colors[0], int):
                     primary_color = row[colors[0]]
                     secondary_color = row[colors[1]]
-                    print(f"[#{secondary_color} on #{primary_color}]{text}")
+                    print(f"[bold #{secondary_color} on #{primary_color}]{text}")
                 else:
                     print(f"[#{colors[1]} on #{colors[0]}]{text}")
             else:
@@ -67,7 +67,7 @@ def display_matchup(results, home_data, away_data, colors=None):
             else:
                 primary_color = row[colors[1][0]]
                 secondary_color = row[colors[1][1]]
-            print(f"[#{secondary_color} on #{primary_color}]{message}")
+            print(f"[bold #{secondary_color} on #{primary_color}]{message}")
         else:
             print(message)
 
