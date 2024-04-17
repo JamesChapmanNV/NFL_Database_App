@@ -90,7 +90,7 @@ class FileManager:
                 ret += cur_line
                 cur_line = '|'
                 for j in range(0, len(data[i])):
-                    cur_line += ' ----- |'
+                    cur_line += ' ' + '-' * len(data[i][j]) + ' |'
                 cur_line += '\n'
                 ret += cur_line
                 cur_line = '|'
