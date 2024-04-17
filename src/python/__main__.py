@@ -76,7 +76,7 @@ class NFLapp:
 
             else:
                 print(f"Error: unrecognized command '{command}'")
-                sys.exit(1)
+                continue
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
