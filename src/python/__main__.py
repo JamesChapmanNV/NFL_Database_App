@@ -10,11 +10,12 @@ class NFLapp:
     @staticmethod
     def usage():
         print("\n *** Please enter one of the following commands *** ")
-        print("> Initialize_Database ")
+        print("> Build_Database ")
         print("> Team [<team_name>]")
         print("> Venue [<venue_name>]")
         print("> Scores <year> <week>")
         print("> Game <game_id | year>")
+        print("> Win_probability <team_name> <team_score> <opponent_score>")
         print("> Save <type> [<filename>]")
         print("> quit")
 
@@ -26,9 +27,9 @@ class NFLapp:
             args = response.split(" ", 3)
             command = args[0]
 
-            if command == "Initialize_Database":
-                print(f"Initializing Database . . .'")
-                self.query.initialize_database()
+            if command == "Build_Database":
+                print(f"Building Database . . .'")
+                self.query.build_database()
 
             if command == "Team":
                 if len(args) > 1:
@@ -61,6 +62,16 @@ class NFLapp:
                     self.query.get_scores(year, week)
                 else:
                     print("Error: Scores <year> <week>")
+
+            elif command == "Win_probability":
+                if len(args) > 3:
+                    team_name = args[1]
+                    team_score = int(args[2])
+                    opponent_score = int(args[3])
+                    self.query.win_probability(team_name, team_score, opponent_score)
+                else:
+                    print("Error: Win_probability <team_name> <team_score> <opponent_score>")
+
             elif command == "Save":
                 if len(args) > 2:
                     filetype = args[1]

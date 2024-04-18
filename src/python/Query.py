@@ -6,6 +6,10 @@ from rich import print
 from display import display, display_matchup
 from FileManager import FileManager
 
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+
 
 class Query:
     def __init__(self):
@@ -40,13 +44,23 @@ class Query:
         if self.pgdb:
             self.pgdb.close()
     
-    def initialize_database(self):
+    def build_database(self):
         cursor = self.pgdb.cursor()
-        
-        with open('NFL_database/src/sql/table.sql', 'r') as file:
+        with open('./sql/drop_tables.sql', 'r') as file:
             create_table_commands = file.read()
         cursor.execute(create_table_commands)
-
+        with open('./sql/create_tables.sql', 'r') as file:
+            create_table_commands = file.read()
+        cursor.execute(create_table_commands)
+        with open('./sql/data_import.sql', 'r') as file:
+            create_table_commands = file.read()
+        cursor.execute(create_table_commands)
+        with open('./sql/rosters_decomposition.sql', 'r') as file:
+            create_table_commands = file.read()
+        cursor.execute(create_table_commands)
+        with open('./sql/views_indexes_functions.sql', 'r') as file:
+            create_table_commands = file.read()
+        cursor.execute(create_table_commands)
         # commit is needed!
         cursor.close()
 
@@ -116,6 +130,27 @@ class Query:
                 [('name', 0), ('score', 1)],
                         [('name', 2), ('score', 3)],
                         [(4, 5), (6, 7)])
+        
+    def win_probability(self, team_name: str=None, team_score: int, opponent_score: int) -> None:
+        cursor = self.pgdb.cursor()
+        query = ""
+        with open('Queries/win_probability.sql') as file:
+            query = file.read()
+        data = (team_name, team_name, )
+        cursor.execute(query, data)
+        self.helper_set_column_names(cursor)
+        self.last_result = cursor.fetchall()
+        df = pd.DataFrame(data, columns=['all_team_scores', 'all_opponent_scores', 'winner_bool'])
+        df.loc[(df['winner_bool']=='f'),'winner_bool']= -1
+        df.loc[(df['winner_bool']=='t'),'winner_bool']= 1
+        df.loc[(df['winner_bool'].isnull()),'winner_bool']= 0
+        df.fillna(0, inplace=True)
+        df['winner_bool'] = df['winner_bool'].astype('int64')
+        X = df[['all_team_scores', 'all_opponent_scores']]
+        y = df['winner_bool']  # where -1 = away win, 0 = tie, 1 = home win
+        model = LogisticRegression(multi_class='multinomial', solver='lbfgs').fit(X, y)
+        probability = model.predict_proba([[team_score, opponent_score]])
+        print(probability)
 
     def save_last_result(self, filetype: str, filename: str=None) -> None:
         name = filename or 'NFL_last_data'
