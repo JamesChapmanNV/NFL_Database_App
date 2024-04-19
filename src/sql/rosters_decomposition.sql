@@ -55,7 +55,7 @@ CREATE TABLE rosters(
     team_name VARCHAR(45) REFERENCES teams(team_name),
     position_name VARCHAR(20) REFERENCES positions(position_name),
     start_date DATE,
-    end_data DATE,
+    end_date DATE,
     PRIMARY KEY (athlete_id, team_name, position_name, start_date)
 );
 
