@@ -65,7 +65,7 @@ class FileManager:
         for line in data:
             for cell in line:
                 if cur_line == '':
-                    cur_line += cell
+                    cur_line += str(cell)
                 else:
                     cur_line += f',{cell}'
             cur_line += '\n'
