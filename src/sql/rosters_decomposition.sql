@@ -16,21 +16,11 @@ or position name should trigger a new grouping.
 
  */
 
+DROP TABLE IF EXISTS rosters_temp;
 DROP TABLE IF EXISTS rosters_old;
-ALTER TABLE rosters RENAME TO rosters_old; 
-
-DROP TABLE IF EXISTS rosters;
-CREATE TABLE rosters(
-    athlete_id BIGINT REFERENCES athletes(athlete_id),
-    team_name VARCHAR(45) REFERENCES teams(team_name),
-    position_name VARCHAR(20) REFERENCES positions(position_name),
-    start_date DATE,
-    end_data DATE,
-    PRIMARY KEY (athlete_id, team_name, position_name, start_date)
-);
 
 SELECT *
-INTO rosters
+INTO rosters_temp
 FROM (
     SELECT athlete_id, team_name, position_name, min(date) AS start_date, max(date) AS end_date
 FROM (
@@ -54,3 +44,20 @@ FROM (SELECT ROW_NUMBER() OVER (ORDER BY athlete_id, date, team_name, position_n
 GROUP BY roster_groups.athlete_id, roster_groups.team_name, roster_groups.position_name, roster_groups.island_id
 ORDER BY athlete_id, start_date
      ) AS new_roster;
+
+SELECT *
+INTO rosters_old
+FROM rosters;
+
+DROP TABLE if EXISTS rosters;
+CREATE TABLE rosters(
+    athlete_id BIGINT REFERENCES athletes(athlete_id),
+    team_name VARCHAR(45) REFERENCES teams(team_name),
+    position_name VARCHAR(20) REFERENCES positions(position_name),
+    start_date DATE,
+    end_data DATE,
+    PRIMARY KEY (athlete_id, team_name, position_name, start_date)
+);
+
+INSERT INTO rosters
+SELECT * FROM rosters_temp;

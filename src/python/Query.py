@@ -5,7 +5,6 @@ from pathlib import Path
 from rich import print
 from display import display, display_matchup
 from FileManager import FileManager
-
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
@@ -47,22 +46,43 @@ class Query:
     def build_database(self):
         cursor = self.pgdb.cursor()
         with open('./sql/drop_tables.sql', 'r') as file:
-            create_table_commands = file.read()
-        cursor.execute(create_table_commands)
+            drop_tables_commands = file.read()
+        cursor.execute(drop_tables_commands)
         with open('./sql/create_tables.sql', 'r') as file:
             create_table_commands = file.read()
         cursor.execute(create_table_commands)
-        with open('./sql/data_import.sql', 'r') as file:
-            create_table_commands = file.read()
-        cursor.execute(create_table_commands)
+
+        with cursor.copy("copy venues(venue_name, capacity, city, state, grass, indoor) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
+            copy.write(open("../data/venues.csv").read())
+        with cursor.copy("copy teams(team_name, abbreviation, location, venue_name, primary_color, secondary_color) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
+            copy.write(open("../data/teams.csv").read())
+        with cursor.copy("copy positions(position_name, abbreviation, platoon) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
+            copy.write(open("../data/positions.csv").read())
+        with cursor.copy("copy athletes(athlete_id, first_name, last_name, dob, height, weight, birth_city, birth_state) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
+            copy.write(open("../data/athletes.csv").read())
+        with cursor.copy("copy season_dates(date, season_year, season_type, week) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
+            copy.write(open("../data/season_dates.csv").read())
+        with cursor.copy("copy games(game_id, date, attendance, home_team_name, away_team_name, venue_name, utc_time) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
+            copy.write(open("../data/games.csv").read())
+        with cursor.copy("copy rosters(game_id, team_name, athlete_id, position_name, played) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
+            copy.write(open("../data/rosters.csv").read())
+        with cursor.copy("copy plays(play_id, quarter, yards, score_value, play_type, text, seconds_remaining, start_down, end_down) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
+            copy.write(open("../data/plays.csv").read())
+        with cursor.copy("copy player_plays(play_id, player_id, game_id, type) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
+            copy.write(open("../data/player_plays.csv").read())
+        with cursor.copy("copy linescores(game_id, quarter, score, team_name) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
+            copy.write(open("../data/linescores.csv").read())
+
         with open('./sql/rosters_decomposition.sql', 'r') as file:
-            create_table_commands = file.read()
-        cursor.execute(create_table_commands)
+            rosters_decomposition_commands = file.read()
+        cursor.execute(rosters_decomposition_commands)
         with open('./sql/views_indexes_functions.sql', 'r') as file:
-            create_table_commands = file.read()
-        cursor.execute(create_table_commands)
-        # commit is needed!
-        cursor.close()
+            views_indexes_functions_commands = file.read()
+        cursor.execute(views_indexes_functions_commands)
+        self.pgdb.commit()
+
+        print('success')
+
 
     def helper_set_column_names(self, cursor) -> None:
         column_names = [desc[0] for desc in cursor.description]
@@ -131,7 +151,7 @@ class Query:
                         [('name', 2), ('score', 3)],
                         [(4, 5), (6, 7)])
         
-    def win_probability(self, team_name: str=None, team_score: int, opponent_score: int) -> None:
+    def win_probability(self, team_name: str, team_score: int, opponent_score: int) -> None:
         cursor = self.pgdb.cursor()
         query = ""
         with open('Queries/win_probability.sql') as file:

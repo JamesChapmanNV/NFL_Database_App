@@ -10,7 +10,7 @@ class NFLapp:
     @staticmethod
     def usage():
         print("\n *** Please enter one of the following commands *** ")
-        print("> Build_Database ")
+        print("> Build_Database")
         print("> Team [<team_name>]")
         print("> Venue [<venue_name>]")
         print("> Scores <year> <week>")
@@ -31,7 +31,7 @@ class NFLapp:
                 print(f"Building Database . . .'")
                 self.query.build_database()
 
-            if command == "Team":
+            elif command == "Team":
                 if len(args) > 1:
                     team_name = args[1]
                     print(f"Getting Team - '{team_name}'")
