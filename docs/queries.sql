@@ -1,54 +1,36 @@
 /*
-	Write data modification commands to illustrate the following scenarios and submit a
-	file viols.sql containing all five commands below, together with screenshots that show
-	proper functionality:
-		a. An INSERT command creating a key violation
-		b. An UPDATE command creating a key violation
-		c. An INSERT command creating a referential integrity violation
-		d. A DELETE command creating a referential integrity violation
-		e. An UPDATE command creating a referential integrity violation
+	Write  at least 15 queries (ten question-type queries and five
+	report-type queries) that are "interesting," substantially-different, and structurallydifferent,
+	i.e., operations that require some of the more complex SQL constructs
+	such as subqueries, aggregates, set operators, etc.
+
+	Remember that, while queries are supposed to answer a particular question, the
+	purpose of a report is to provide a summary of more of the content of the
+	database. Sometimes the difference really comes down to quantity: while a query
+	generates a single tuple or a small set of tuples, a report may generate dozens or
+	more tuples. In general, a report is designed to be more human readable and to
+	present information in tabular form. (See the original General Project Description
+	document for some specific examples.)
+
+	For the SQL queries demonstrated, ensure that there is at least one join, at least one
+	nested query, at least one appropriate use of an aggregate function (such as min(),
+	max(), avg(), sum(), etc.) within a select statement; at least one group-by, and at
+	least one compound where condition (with at least a couple of sub-conditions that
+	are different from join conditions). Note that these requirements ask for structurally
+	different queries (these queries will be part of the 15 required queries).
+
+	For the SQL reports demonstrated, at least two of your reports should be based on
+	queries involving more than one table. You may employ concatenation to put
+	together a full name or an address into a more readable form. You may also employ
+	more than one query to construct a report. For instance, you may have a table with
+	sales of a particular item or set of items, and then also compute the sales total.
+
+	****************************
+	Make sure that your script is well commented and it clearly describes your
+	queries and the rationale for each of them. Furthermore, the results should be clearly
+	labeled, well-organized and easy to read.
+	****************************
+
 */
 
--- a.
--- SELECT * FROM athletes ORDER BY random() LIMIT 1;
-INSERT INTO athletes (athlete_id, first_name, last_name, dob, height, weight, birth_city, birth_state) VALUES
-('4682912', 'James', 'Chapman', '1990-02-09', '69', '168', 'Las Vegas', 'NV');
-/*OUTPUT
-	ERROR:  duplicate key value violates unique constraint "athletes_pkey"
-	DETAIL:  Key (athlete_id)=(4682912) already exists.
-*/
 
--- b.
-UPDATE teams 
-SET team_name = 'Texans' 
-WHERE abbreviation = 'GB' ;
-/* OUTPUT
-	ERROR:  duplicate key value violates unique constraint "teams_pkey"
-	DETAIL:  Key (team_name)=(Texans) already exists.
-*/
-
--- c.
-INSERT INTO rosters (athlete_id, team_name, position_name, start_date, end_data) VALUES
-('13860', 'Buccaneers', 'Benchwarmer', '2011-09-09', '2011-12-30');
-/*OUTPUT
-	ERROR:  insert or update on table "rosters" violates foreign key constraint "rosters_position_name_fkey"
-	DETAIL:  Key (position_name)=(Benchwarmer) is not present in table "positions".
-*/
-
--- d.
--- SELECT game_id FROM games ORDER BY random() LIMIT 1;
-DELETE FROM games 
-WHERE game_id = 400554298 ;
-/* OUTPUT
-	ERROR:  update or delete on table "games" violates foreign key constraint "player_plays_game_id_fkey" on table "player_plays"
-	DETAIL:  Key (game_id)=(400554298) is still referenced from table "player_plays".
-*/
-
--- e.
-UPDATE venues 
-SET venue_name = 'strip club' 
-WHERE city = 'Las Vegas' ;
-/* OUTPUT
-	ERROR:  update or delete on table "venues" violates foreign key constraint "teams_venue_name_fkey" on table "teams"
-	DETAIL:  Key (venue_name)=(Allegiant Stadium) is still referenced from table "teams".
-*/
