@@ -82,6 +82,7 @@ class NFLapp:
                     self.query.save_last_result(filetype)
                 else:
                     print("Error: Save <filetype> [<filename>]")
+
             elif command == "quit":
                 sys.exit(0)
 
@@ -96,8 +97,8 @@ if __name__ == "__main__":
     try:
         username = sys.argv[1]
         password = sys.argv[2]
-        print(username,password)
-        app = NFLapp(username, u"\u25CF"*12) # Prints 12 password black circles instead of password
+        # print(username,u"\u25CF"*12)
+        app = NFLapp(username, password) # Prints 12 password black circles instead of password
         app.query.open_connections()
         app.menu()  # Enter the main menu loop
     except Exception as e:
