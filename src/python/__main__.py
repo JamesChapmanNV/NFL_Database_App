@@ -10,11 +10,13 @@ class NFLapp:
     @staticmethod
     def usage():
         print("\n *** Please enter one of the following commands *** ")
-        print("> Initialize_Database ")
+        print("> Build_Database")
         print("> Team [<team_name>]")
         print("> Venue [<venue_name>]")
         print("> Scores <year> <week>")
         print("> Game <game_id | year>")
+        print("> Top_Comeback_Wins [<year>]")
+        print("> Win_probability <team_name> <team_score> <opponent_score>")
         print("> Save <type> [<filename>]")
         print("> quit")
 
@@ -26,11 +28,11 @@ class NFLapp:
             args = response.split(" ", 3)
             command = args[0]
 
-            if command == "Initialize_Database":
-                print(f"Initializing Database . . .'")
-                self.query.initialize_database()
+            if command == "Build_Database":
+                print(f"Building Database . . .'")
+                self.query.build_database()
 
-            if command == "Team":
+            elif command == "Team":
                 if len(args) > 1:
                     team_name = args[1]
                     print(f"Getting Team - '{team_name}'")
@@ -61,6 +63,23 @@ class NFLapp:
                     self.query.get_scores(year, week)
                 else:
                     print("Error: Scores <year> <week>")
+            
+            elif command == "Top_Comeback_Wins":
+                if len(args) > 1:
+                    year = int(args[1])
+                    self.query.top_comeback_wins(year)
+                else:
+                    self.query.top_comeback_wins()
+
+            elif command == "Win_probability":
+                if len(args) > 3:
+                    team_name = args[1]
+                    team_score = int(args[2])
+                    opponent_score = int(args[3])
+                    self.query.win_probability(team_name, team_score, opponent_score)
+                else:
+                    print("Error: Win_probability <team_name> <team_score> <opponent_score>")
+
             elif command == "Save":
                 if len(args) > 2:
                     filetype = args[1]
@@ -71,6 +90,7 @@ class NFLapp:
                     self.query.save_last_result(filetype)
                 else:
                     print("Error: Save <filetype> [<filename>]")
+
             elif command == "quit":
                 sys.exit(0)
 
@@ -85,8 +105,8 @@ if __name__ == "__main__":
     try:
         username = sys.argv[1]
         password = sys.argv[2]
-        print(username,password)
-        app = NFLapp(username, u"\u25CF"*12) # Prints 12 password black circles instead of password
+        # print(username,u"\u25CF"*12)
+        app = NFLapp(username, password) # Prints 12 password black circles instead of password
         app.query.open_connections()
         app.menu()  # Enter the main menu loop
     except Exception as e:
