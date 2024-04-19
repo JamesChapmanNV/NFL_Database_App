@@ -150,6 +150,21 @@ class Query:
                         [('name', 2), ('score', 3)],
                         [(4, 5), (6, 7)])
         
+    def top_comeback_wins(self, year: int=None) -> None:
+        cursor = self.pgdb.cursor()
+        query = ""
+        with open('./python/Queries/top_comeback_wins.sql') as file:
+            query = file.read()
+        data = (year,year, )
+        if year is None:
+            data = (2011,2026, )
+        cursor.execute(query, data)
+        self.helper_set_column_names(cursor)
+        self.last_result = cursor.fetchall()
+        display(self.last_result,
+                [('Team_name', 0), ('Comebacks', 1)],
+                (2, 3))
+        
     def win_probability(self, team_name: str, team_score: int, opponent_score: int) -> None:
         cursor = self.pgdb.cursor()
         query = ""
@@ -157,7 +172,7 @@ class Query:
             query = file.read()
         data = (team_name, team_name, )
         cursor.execute(query, data)
-        # self.helper_set_column_names(cursor)
+        self.helper_set_column_names(cursor)
         self.last_result = cursor.fetchall()
         df = pd.DataFrame(self.last_result, columns=['all_team_scores', 'all_opponent_scores', 'winner_bool'])
         df.loc[(df['winner_bool']=='f'),'winner_bool']= -1
@@ -171,7 +186,7 @@ class Query:
         probabilities = model.predict_proba([[team_score, opponent_score]])[0]
         home_team_index = np.where(model.classes_==1)[0][0]
         print(f'Given a score of {team_score} to {opponent_score},')
-        print(f'The probability of the {team_name} winning is{round(probabilities[home_team_index]*100, 1)}%')
+        print(f'The probability of the {team_name} winning is {round(probabilities[home_team_index]*100, 1)}%')
 
     def save_last_result(self, filetype: str, filename: str=None) -> None:
         name = filename or 'NFL_last_data'

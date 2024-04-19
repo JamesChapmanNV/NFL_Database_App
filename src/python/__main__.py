@@ -15,6 +15,7 @@ class NFLapp:
         print("> Venue [<venue_name>]")
         print("> Scores <year> <week>")
         print("> Game <game_id | year>")
+        print("> Top_Comeback_Wins [<year>]")
         print("> Win_probability <team_name> <team_score> <opponent_score>")
         print("> Save <type> [<filename>]")
         print("> quit")
@@ -62,6 +63,13 @@ class NFLapp:
                     self.query.get_scores(year, week)
                 else:
                     print("Error: Scores <year> <week>")
+            
+            elif command == "Top_Comeback_Wins":
+                if len(args) > 1:
+                    year = int(args[1])
+                    self.query.top_comeback_wins(year)
+                else:
+                    self.query.top_comeback_wins()
 
             elif command == "Win_probability":
                 if len(args) > 3:
