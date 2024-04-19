@@ -1,2 +1,5 @@
 psycopg[binary]
 rich
+pandas
+scikit-learn
+numpy<1.25.0
