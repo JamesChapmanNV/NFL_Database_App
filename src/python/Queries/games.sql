@@ -23,4 +23,5 @@ FROM games g
          JOIN teams away ON away.team_name = g.away_team_name
 WHERE {column_name} = %s
   AND home_score.team_name = g.home_team_name
-  AND away_score.team_name = g.away_team_name;
+  AND away_score.team_name = g.away_team_name
+ORDER BY g.date, g.utc_time;
