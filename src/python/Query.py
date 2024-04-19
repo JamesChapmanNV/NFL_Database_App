@@ -1,13 +1,13 @@
 
 import psycopg # type: ignore
 from configparser import ConfigParser
-from pathlib import Path
 from rich import print
-from display import display, display_matchup
-from FileManager import FileManager
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
+
+from display import display, display_matchup
+from FileManager import FileManager
 
 
 class Query:
@@ -17,7 +17,7 @@ class Query:
         self.last_result = None # The output of the last executed query
         self.last_result_column_names = None # The column names of the last output
         self.file_manager = FileManager()
-        self.file_manager.set_input_path('./Queries/')
+        self.file_manager.set_input_path('./python/Queries/')
 
     def load_configuration(self):
         parser = ConfigParser()
@@ -79,8 +79,8 @@ class Query:
         with open('./sql/views_indexes_functions.sql', 'r') as file:
             views_indexes_functions_commands = file.read()
         cursor.execute(views_indexes_functions_commands)
-        self.pgdb.commit()
 
+        self.pgdb.commit()
         print('success')
 
 
@@ -93,7 +93,6 @@ class Query:
         if team_name is not None:
             query = "SELECT * FROM teams WHERE team_name = %s"
             data = (team_name, )
-            print(query)
             cursor.execute(query, data)
         else:
             query = 'SELECT * FROM teams'
@@ -140,7 +139,7 @@ class Query:
     def get_scores(self, year: int, week: int) -> None:
         cursor = self.pgdb.cursor()
         query = ""
-        with open('Queries/scores.sql') as file:
+        with open('./python/Queries/scores.sql') as file:
             query = file.read()
         data = (year, week, year, week, year, week, )
         cursor.execute(query, data)
@@ -154,13 +153,13 @@ class Query:
     def win_probability(self, team_name: str, team_score: int, opponent_score: int) -> None:
         cursor = self.pgdb.cursor()
         query = ""
-        with open('Queries/win_probability.sql') as file:
+        with open('./python/Queries/win_probability.sql') as file:
             query = file.read()
         data = (team_name, team_name, )
         cursor.execute(query, data)
-        self.helper_set_column_names(cursor)
+        # self.helper_set_column_names(cursor)
         self.last_result = cursor.fetchall()
-        df = pd.DataFrame(data, columns=['all_team_scores', 'all_opponent_scores', 'winner_bool'])
+        df = pd.DataFrame(self.last_result, columns=['all_team_scores', 'all_opponent_scores', 'winner_bool'])
         df.loc[(df['winner_bool']=='f'),'winner_bool']= -1
         df.loc[(df['winner_bool']=='t'),'winner_bool']= 1
         df.loc[(df['winner_bool'].isnull()),'winner_bool']= 0
@@ -168,9 +167,11 @@ class Query:
         df['winner_bool'] = df['winner_bool'].astype('int64')
         X = df[['all_team_scores', 'all_opponent_scores']]
         y = df['winner_bool']  # where -1 = away win, 0 = tie, 1 = home win
-        model = LogisticRegression(multi_class='multinomial', solver='lbfgs').fit(X, y)
-        probability = model.predict_proba([[team_score, opponent_score]])
-        print(probability)
+        model = LogisticRegression(multi_class='multinomial', solver='lbfgs').fit(X.values, y.values)
+        probabilities = model.predict_proba([[team_score, opponent_score]])[0]
+        home_team_index = np.where(model.classes_==1)[0][0]
+        print(f'Given a score of {team_score} to {opponent_score},')
+        print(f'The probability of the {team_name} winning is{round(probabilities[home_team_index]*100, 1)}%')
 
     def save_last_result(self, filetype: str, filename: str=None) -> None:
         name = filename or 'NFL_last_data'

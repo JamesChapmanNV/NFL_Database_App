@@ -1,4 +1,4 @@
--- requires a single team_name (%s,%s) as input
+-- requires a single team_name as input
 -- requires 2 Views - game_scores & Third_Quarter_scores
 -- returns all games played by given team with 3 columns
 -- 		team_score-		given team score at end of 3rd quarter
