@@ -73,6 +73,9 @@ class Query:
         with cursor.copy("copy linescores(game_id, quarter, score, team_name) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
             copy.write(open("../data/linescores.csv").read())
 
+        with open('./sql/users.sql', 'r') as file:
+            users_commands = file.read()
+        cursor.execute(users_commands)
         with open('./sql/rosters_decomposition.sql', 'r') as file:
             rosters_decomposition_commands = file.read()
         cursor.execute(rosters_decomposition_commands)
