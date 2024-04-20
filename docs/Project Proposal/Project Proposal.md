@@ -9,6 +9,9 @@
 This project will model NFL data for a sports network using a PostgreSQL database. The database will contain data regarding players, positions, teams, venues, games, and plays within each game. The application will allow users to obtain information regarding their favorite players or teams, and allow them to view statistics for players, teams, and games. The data will be obtained through a publically available ESPN API. 
 
 ## Requirements
+* Users are identified by a uid and have attributes username, password, first name, last name, and created on.
+* Users can favorite zero or one team
+* Users can favorite zero or one athlete
 * Teams will be identified by a team name and have attributes location, abbreviation, primary color, and secondary color.
 * Athletes will be identified by an athlete ID and have attributes date of birth, birth city, birth state, first name, last name, height, and weight.
 * A player can play for many teams in their career, and a team can have many players.

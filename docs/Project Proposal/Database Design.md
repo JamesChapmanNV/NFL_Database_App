@@ -5,6 +5,11 @@ Please see the attached E/R diagram png file. Weak entity sets and their relatio
 
 ## Relations
 
+Users([uid]{.underline}, username, password, first_name, last_name, created_on, favorite_team_name, favorite_athlete_id)
+
+* favorite_team_name is a foreign key referencing Teams.team_name
+* favorite_athlete_id is a foreign key referencing Athletes.athlete_id
+
 Teams([team_name]{.underline}, location, abbreviation, venue_name, primary_color, secondary_color)
 
 * venue_name is a foreign key referencing Venues.venue_name
@@ -24,9 +29,8 @@ Athletes([athlete_id]{.underline}, first_name, last_name, dob, height, weight, b
 
 Positions([position_name]{.underline}, abbreviation, platoon)
 
-Rosters([game_id]{.underline}, [team_name]{.underline}, [athlete_id]{.underline}, position_name, played)
+Rosters([team_name]{.underline}, [athlete_id]{.underline}, position_name, start_date, end_date)
 
-* game_id is a foreign key referencing games.game_id
 * team_name is a foreign key referencing teams.team_name
 * athlete_id is a foreign key referencing players.player_id
 * position_name is a foreign key referencing positions.position_name
@@ -60,6 +64,7 @@ $venue\_name \to capacity, city, state, grass, indoor$
 **Games**
 
 $game\_id \to attendance, date, utc\_time, home\_team\_id, away\_team\_id, venue\_name$
+$home\_team\_id, away\_team\_id, date \to game\_id, attendance, utc\_time, venue\_name$
 
 **Season_Dates**
 
@@ -74,10 +79,12 @@ $first\_name, last\_name, dob, birth\_city, birth\_state \to athlete\_id, height
 **Positions**
 
 $position\_name \to abbreviation, platoon$
+$abbreviation \to position\_name, platoon$
 
 **Rosters**
 
-$game\_id, team\_name, athlete\_id \to position\_name, played$
+$team\_name, athlete\_id, start\_date \to position\_name, end\_date$
+$team\_name, athlete\_id, end\_date \to position\_name, start\_date$
 
 **Linescores**
 
