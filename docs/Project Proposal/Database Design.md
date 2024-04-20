@@ -9,6 +9,7 @@ Users([uid]{.underline}, username, password, first_name, last_name, created_on, 
 
 * favorite_team_name is a foreign key referencing Teams.team_name
 * favorite_athlete_id is a foreign key referencing Athletes.athlete_id
+* username is a unique key
 
 Teams([team_name]{.underline}, location, abbreviation, venue_name, primary_color, secondary_color)
 
@@ -22,6 +23,7 @@ Games([game_id]{.underline}, date, attendance, home_team_name, away_team_name, v
 * home_team_name is a foreign key referencing Teams.team_name
 * away_team_name is a foreign key referencing Teams.team_name
 * venue_name is a foreign key referencing Venues.venue_name
+* date, home_team_name, away_team_name is a unique key
 
 Season_dates([date]{.underline}, season_year, season_type, week)
 	
@@ -50,6 +52,12 @@ Player_Plays([play_id]{.underline}, [player_id]{.underline}, game_id, type)
 
 ## Functional Dependencies
 
+**Users**:
+
+$uid \to username, password, first\_name, last\_name, created\_on, favorite\_team\_name, favorite\_athlete\_name$
+
+$username \to uid, password, first\_name, last\_name, created\_on, favorite\_team\_name, favorite\_athlete\_name$
+
 **Teams**:
 
 $team\_name \to location, abbreviation, venue\_name, primary\_color, secondary\_color$
@@ -64,6 +72,7 @@ $venue\_name \to capacity, city, state, grass, indoor$
 **Games**
 
 $game\_id \to attendance, date, utc\_time, home\_team\_id, away\_team\_id, venue\_name$
+
 $home\_team\_id, away\_team\_id, date \to game\_id, attendance, utc\_time, venue\_name$
 
 **Season_Dates**
@@ -79,11 +88,13 @@ $first\_name, last\_name, dob, birth\_city, birth\_state \to athlete\_id, height
 **Positions**
 
 $position\_name \to abbreviation, platoon$
+
 $abbreviation \to position\_name, platoon$
 
 **Rosters**
 
 $team\_name, athlete\_id, start\_date \to position\_name, end\_date$
+
 $team\_name, athlete\_id, end\_date \to position\_name, start\_date$
 
 **Linescores**
