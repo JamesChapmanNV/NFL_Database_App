@@ -1,4 +1,12 @@
 /*
+	Kansas State University
+	CIS 761: Database Management Systems
+	NFL Database Project - Interim Project Update 
+
+	Vishnu Bondalakunta
+	Chuck Zumbaugh
+	James Chapman
+*//*
 	Write data modification commands to illustrate the following scenarios and submit a
 	file viols.sql containing all five commands below, together with screenshots that show
 	proper functionality:
