@@ -19,6 +19,7 @@ DROP TABLE IF EXISTS athletes CASCADE;
 DROP TABLE IF EXISTS positions CASCADE;
 DROP TABLE IF EXISTS teams CASCADE;
 DROP TABLE IF EXISTS venues CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
 
 -- copied from create_tables.sql
 -- Create tables in the database
@@ -111,8 +112,8 @@ CREATE TABLE linescores(
     PRIMARY KEY(team_name, game_id, quarter)
 );
 
-CREATE TABLE Users(
-    uid BIGINT PRIMARY KEY,
+CREATE TABLE users(
+    uid SERIAL PRIMARY KEY,
     username VARCHAR(45),
     password VARCHAR(45),
     first_name VARCHAR(45),

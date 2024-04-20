@@ -3,7 +3,7 @@
  */
 
 DROP TABLE IF EXISTS Users;
-CREATE TABLE Users(
+CREATE TABLE users(
     uid SERIAL PRIMARY KEY,
     username VARCHAR(45),
     password VARCHAR(45),
@@ -14,5 +14,5 @@ CREATE TABLE Users(
     favorite_athlete_id BIGINT REFERENCES athletes(athlete_id)
 );
 
-INSERT INTO athletes (username, password, first_name, last_name, created_on, favorite_team_name, favorite_athlete_id) VALUES
+INSERT INTO users (username, password, first_name, last_name, created_on, favorite_team_name, favorite_athlete_id) VALUES
 ('JamesChapmanNV', 'secret', 'James', 'Chapman', '2024-04-19', 'Raiders', '13229');
