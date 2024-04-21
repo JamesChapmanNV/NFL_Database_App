@@ -1,6 +1,7 @@
 -- this is my attempt at  finding the 
 -- top 10 teams with the most fourth-quarter comeback wins
 -- QUERY TYPE: Question 
+-- 15+ query requirement: Satisfied(? Not sure about compound where)
 
 
 WITH TeamScores AS (

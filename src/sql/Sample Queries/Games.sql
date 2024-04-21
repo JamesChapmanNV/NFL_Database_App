@@ -1,6 +1,6 @@
 -- Find information for the requested game, including the scores and winner.
 -- QUERY TYPE: Question 
-
+-- 15+ query requirement: Satisfied(? Not sure about compound where requirement)
 SELECT g.*,
        home_score.final_score_home,
        away_score.final_score_away,

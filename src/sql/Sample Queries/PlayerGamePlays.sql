@@ -1,7 +1,7 @@
 -- Find the plays made by a given player in a given game. This will require a second to pull the
 -- player info so it doesn't get replicated many times
 -- QUERY TYPE: Report
-
+-- 15+ query requirement: Not satisfied(No group by used, no aggregate function used)
 SELECT p.text,
        p.quarter,
        p.seconds_remaining,

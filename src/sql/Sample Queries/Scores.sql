@@ -2,7 +2,7 @@
 -- Find the scores for each game in a week
 -- Accepts input of season year and week
 -- QUERY TYPE: REPORT
-
+--15+ query requirement: Satisfied(? Not sure about the compound where condition)
 SELECT home.team_name   AS home_team,
        home.total_score AS home_score,
        away.team_name   AS away_team,

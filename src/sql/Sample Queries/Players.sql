@@ -4,7 +4,7 @@
 -- game being played within the last year. Also return which side of the ball they play on
 -- (ie. offense, defense, special teams)
 -- QUERY TYPE: Question 
-
+-- 15+ query requirement: Not satisfied (No group by, no aggregate function in select statement)
 SELECT a.*,
        r.team_name,
        r.position_name,

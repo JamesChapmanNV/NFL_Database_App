@@ -5,6 +5,9 @@
 -- Find total passing, rushing, and receiving yards for top players in a given game
 
 -- QUERY TYPE: Question
+
+-- 15+ query requirement: Satisfied(? Not sure about compound where)
+
 WITH stats AS (SELECT first_name, last_name, position_name, r.team_name, play_type, total_yards
                FROM athletes ath
                         JOIN (SELECT play_type, athlete_id, date, SUM(yards) AS total_yards
