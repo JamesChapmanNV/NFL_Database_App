@@ -1,6 +1,7 @@
 # SQL Query Requirements
 
 Total Queries: 12/15 ❌
+
 Question Queries: 8/10 ❌
 * [Attendance](Attendance.sql)
 * [Games](Games.sql)
@@ -10,6 +11,7 @@ Question Queries: 8/10 ❌
 * [TopComebackWins](TopComebackWins.sql)
 * [Venue](Venue.sql)
 * [PercentFilled](PercentFilled.sql)
+
 Report Queries: 4/5 ❌
 * [FirstQuarterGreater](FirstQuarterGreater.sql)
 * [Passing](Passing.sql)
@@ -18,11 +20,11 @@ Report Queries: 4/5 ❌
 
 
 ## Viols.sql
-An insert command creating a key violation: 1/1 ✅ 
-An update command creating a key violation: 1/1 ✅
-An insert command creating a referential integrity violation: 1/1 ✅
-A delete command creating a referential integrity violation: 1/1 ✅
-An update command creating a referential integrity violation: 1/1 ✅
+* An insert command creating a key violation: 1/1 ✅ 
+* An update command creating a key violation: 1/1 ✅
+* An insert command creating a referential integrity violation: 1/1 ✅
+* A delete command creating a referential integrity violation: 1/1 ✅
+* An update command creating a referential integrity violation: 1/1 ✅
 
 ## Specific query requirements:
 
