@@ -1,4 +1,5 @@
 /* Find the teams with the highest average attendance per game in a specific season: */
+/* QUERY TYPE: Question */
 
 SELECT sd.season_year, t.team_name, ROUND(AVG(g.attendance)) AS avg_attendance_per_game
 FROM Season_Dates sd

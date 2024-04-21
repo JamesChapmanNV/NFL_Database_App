@@ -1,4 +1,5 @@
 /* List all games where the total number of points scored in the first quarter is greater than the total number of points scored in any other quarter: */
+/* QUERY TYPE: Report */
 
 SELECT g.game_id, g.date, g.home_team, g.away_team
 FROM Games g

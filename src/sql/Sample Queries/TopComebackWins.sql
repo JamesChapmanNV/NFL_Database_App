@@ -1,5 +1,6 @@
 -- this is my attempt at  finding the 
 -- top 10 teams with the most fourth-quarter comeback wins
+-- QUERY TYPE: Question 
 
 
 WITH TeamScores AS (

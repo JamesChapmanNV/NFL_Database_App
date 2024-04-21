@@ -1,5 +1,6 @@
 -- Find information for the requested game, including the scores and winner.
--- Question query
+-- QUERY TYPE: Question 
+
 SELECT g.*,
        home_score.final_score_home,
        away_score.final_score_away,

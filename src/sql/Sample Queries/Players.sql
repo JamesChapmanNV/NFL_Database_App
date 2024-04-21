@@ -3,7 +3,8 @@
 -- (end with the last game of the previous season), their active status is defined as their last
 -- game being played within the last year. Also return which side of the ball they play on
 -- (ie. offense, defense, special teams)
--- Question query
+-- QUERY TYPE: Question 
+
 SELECT a.*,
        r.team_name,
        r.position_name,

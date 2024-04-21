@@ -2,6 +2,7 @@
 considering only games with an attendance above a certain threshold, 
 and display the percentage change in attendance compared to the previous season:
 */
+/* QUERY TYPE: Question */
 
 WITH AvgAttendance AS (
     SELECT 
