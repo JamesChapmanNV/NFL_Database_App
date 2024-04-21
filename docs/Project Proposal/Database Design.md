@@ -75,6 +75,12 @@ $game\_id \to attendance, date, utc\_time, home\_team\_id, away\_team\_id, venue
 
 $home\_team\_id, away\_team\_id, date \to game\_id, attendance, utc\_time, venue\_name$
 
+$home\_team\_id, date \to game\_id, away\_team\_id, attendance, utc\_time, venue\_name$
+
+$away\_team\_id, date \to game\_id, home\_team\_id, attendance, utc\_time, venue\_name$
+
+$date, venue\_name \to game\_id, home\_team\_id, away\_team\_id, attendance, utc\_time, venue\_name$
+
 **Season_Dates**
 
 $date \to season\_year, season\_type, week$
@@ -93,9 +99,9 @@ $abbreviation \to position\_name, platoon$
 
 **Rosters**
 
-$team\_name, athlete\_id, start\_date \to position\_name, end\_date$
+$start\_date, athlete\_id \to team\_name, position\_name, end\_date$
 
-$team\_name, athlete\_id, end\_date \to position\_name, start\_date$
+$end\_date, athlete\_id \to team\_name, position\_name, start\_date$
 
 **Linescores**
 
