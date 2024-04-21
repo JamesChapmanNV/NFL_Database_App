@@ -26,6 +26,85 @@ created by running the following command
 -- Data for Name: season_dates; Type: TABLE DATA; Schema: public; Owner: jameschapman
 --
 
+/* 
+How the database was populated?
+-> NFL raw data was scraped from the NFL ESPN API.
+-> Scraped data was processed and stored into csv files 'teams.csv', 'venues.csv', 'positions.csv', 'linescores.csv', 'player_plays.csv', 'plays.csv', 'rosters.csv', 'games.csv', 'season_dates.csv', 'athletes.csv'
+
+Sizes of the tables:
+
+1.) "teams"
+ select count(*) from teams;
+ count
+-------
+    32
+(1 row)
+
+2.) "venues"
+ select count(*) from venues;
+ count
+-------
+    46
+(1 row)
+
+3.) "positions"
+ select count(*) from positions;
+ count
+-------
+    24
+(1 row)
+
+4.) "linescores"
+select count(*) from linescores;
+ count
+-------
+ 24140
+(1 row)
+
+5.) "player_plays"
+ select count(*) from player_plays;
+  count
+---------
+ 1116823
+(1 row)
+
+6.) "plays"
+ select count(*) from plays;
+ count
+--------
+ 522707
+(1 row)
+
+7.) "rosters"
+ select count(*) from rosters;
+ count
+-------
+ 16233
+(1 row)
+
+8.) "games"
+ select count(*) from games;
+ count
+-------
+  2976
+(1 row)
+
+9.) "season_dates"
+ select count(*) from season_dates;
+ count
+-------
+   827
+(1 row)
+
+10.) "athletes"
+ select count(*) from athletes;
+ count
+-------
+  7165
+(1 row)
+
+*/
+
 INSERT INTO "public"."season_dates" ("date", "season_year", "season_type", "week") VALUES
 	('2013-01-05', 2012, 'Post Season', 1),
 	('2013-01-06', 2012, 'Post Season', 1),
