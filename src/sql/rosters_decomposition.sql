@@ -35,7 +35,7 @@ SELECT *,
 FROM (SELECT ROW_NUMBER() OVER (ORDER BY athlete_id, date, team_name, position_name)          AS row_number,
              athlete_id,
              team_name,
-             position_name,
+             CASE WHEN position_name = 'Unknown' THEN NULL ELSE position_name END AS position_name,
              date,
              LAG(team_name, 1) OVER (ORDER BY athlete_id, date, team_name, position_name)     AS previous_team,
              LAG(position_name, 1) OVER (ORDER BY athlete_id, date, team_name, position_name) AS previous_position
