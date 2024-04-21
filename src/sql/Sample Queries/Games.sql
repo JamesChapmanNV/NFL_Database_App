@@ -24,3 +24,12 @@ FROM games g
 WHERE g.game_id = 330106033
   AND home_score.team_name = g.home_team_name
   AND away_score.team_name = g.away_team_name;
+  
+/* Query result
+
+  game_id  |    date    | attendance | home_team_name | away_team_name |    venue_name    | utc_time | final_score_home | final_score_away | primary_color | secondary_color
+-----------+------------+------------+----------------+----------------+------------------+----------+------------------+------------------+---------------+-----------------
+ 330106033 | 2013-01-06 |          0 | Ravens         | Colts          | M&T Bank Stadium | 18:00:00 |               24 |                9 | 29126f        | 9e7c0c
+(1 row)
+
+*/

@@ -75,3 +75,16 @@ WHERE s.season_year = 2019
 GROUP BY team_name
 ORDER BY comebacks DESC
 LIMIT 5;
+
+/* Query result
+
+ team_name | comebacks
+-----------+-----------
+ Texans    |         4
+ Seahawks  |         3
+ Bills     |         3
+ 49ers     |         2
+ Chiefs    |         2
+(5 rows)
+
+*/
