@@ -1,8 +1,8 @@
 # SQL Query Requirements
 
-Total Queries: 12/15 ❌
+Total Queries: 13/15 ❌
 
-Question Queries: 8/10 ❌
+Question Queries: 9/10 ❌
 * [Attendance](Attendance.sql)
 * [Games](Games.sql)
 * [Players](Players.sql)
@@ -11,6 +11,7 @@ Question Queries: 8/10 ❌
 * [TopComebackWins](TopComebackWins.sql)
 * [Venue](Venue.sql)
 * [PercentFilled](PercentFilled.sql)
+* [HomeFieldAdvantage](HomeFieldAdvantage.sql)
 
 Report Queries: 4/5 ❌
 * [FirstQuarterGreater](FirstQuarterGreater.sql)
@@ -29,8 +30,8 @@ Report Queries: 4/5 ❌
 ## Specific query requirements:
 
 * Join: 1/1 ✅ Most of our queries involve joins
-* Nested query: 1/1 ✅ [Players.sql](Players.sql)
-* Aggregate function in select: 1/1 ✅ [Attendance.sql](Attendance.sql)
-* Group by: 8/1 ✅ [Attendance.sql](Attendance.sql), [FirstQuarterGreater.sql](FirstQuarterGreater.sql), [Statistics.sql](Statistics.sql), [Top5TeamAttendances.sql](Top5TeamAttendances.sql), [Games.sql](Games.sql), [Passing.sql](Passing.sql), [Scores.sql](Scores.sql), [TopComebackWins.sql](TopComebackWins.sql)
-* Compound where: 7/1 ✅ [PlayerGamePlays.sql](PlayerGamePlays.sql), [Statistics.sql](Statistics.sql), [Top5TeamAttendance.sql](Top5TeamAttendance.sql), [Games.sql](Games.sql), [Passing.sql](Passing.sql), [Players.sql](Players.sql), [Scores.sql](Scores.sql)
+* Nested query: 2/1 ✅ [Players.sql](Players.sql), [HomeFieldAdvantage](HomeFieldAdvantage.sql)
+* Aggregate function in select: 2/1 ✅ [Attendance.sql](Attendance.sql), [HomeFieldAdvantage](HomeFieldAdvantage.sql)
+* Group by: 9/1 ✅ [Attendance.sql](Attendance.sql), [FirstQuarterGreater.sql](FirstQuarterGreater.sql), [Statistics.sql](Statistics.sql), [Top5TeamAttendances.sql](Top5TeamAttendances.sql), [Games.sql](Games.sql), [Passing.sql](Passing.sql), [Scores.sql](Scores.sql), [TopComebackWins.sql](TopComebackWins.sql), [HomeFieldAdvantage](HomeFieldAdvantage.sql)
+* Compound where: 8/1 ✅ [PlayerGamePlays.sql](PlayerGamePlays.sql), [Statistics.sql](Statistics.sql), [Top5TeamAttendance.sql](Top5TeamAttendance.sql), [Games.sql](Games.sql), [Passing.sql](Passing.sql), [Players.sql](Players.sql), [Scores.sql](Scores.sql), [HomeFieldAdvantage](HomeFieldAdvantage.sql)
 * Two reports based on queries involving multiple tables: 2/2 ✅ 
