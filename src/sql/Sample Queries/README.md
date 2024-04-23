@@ -1,6 +1,6 @@
 # SQL Query Requirements
 
-Total Queries: 13/15 ❌
+Total Queries: 14/15 ❌
 
 Question Queries: 9/10 ❌
 * [Attendance](Attendance.sql)
@@ -13,11 +13,12 @@ Question Queries: 9/10 ❌
 * [PercentFilled](PercentFilled.sql)
 * [HomeFieldAdvantage](HomeFieldAdvantage.sql)
 
-Report Queries: 4/5 ❌
+Report Queries: 5/5 ✅
 * [FirstQuarterGreater](FirstQuarterGreater.sql)
 * [Passing](Passing.sql)
 * [PlayerGamePlays](PlayerGamePlays.sql)
 * [Scores](Scores.sql)
+* [TeamRecords.sql](TeamRecords.sql)
 
 
 ## Viols.sql
