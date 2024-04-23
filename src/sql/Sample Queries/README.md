@@ -1,8 +1,8 @@
 # SQL Query Requirements
 
-Total Queries: 14/15 ❌
+Total Queries: 17/15 ✅
 
-Question Queries: 9/10 ❌
+Question Queries: 10/10 ✅
 * [Attendance](Attendance.sql)
 * [Games](Games.sql)
 * [Players](Players.sql)
