@@ -39,7 +39,7 @@ FROM (SELECT home_team_name,
 ORDER BY home_team_name;
 
 /*
-Query Results:
+Query Results: Using season year of 2021
 
 +----------+---------+-----------+---------+-----------+
 |team_name |home_wins|home_losses|away_wins|away_losses|
