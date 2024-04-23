@@ -18,7 +18,7 @@ WITH stats AS (SELECT first_name, last_name, position_name, r.team_name, play_ty
                               WHERE games.game_id = 401437790
                                 AND play_type IN ('Rush', 'Pass Reception')
                               GROUP BY play_type, a.athlete_id, date) AS x ON x.athlete_id = ath.athlete_id
-                        JOIN rosters r ON r.athlete_id = ath.athlete_id AND r.start_date <= x.date AND r.end_data >= x.date
+                        JOIN rosters r ON r.athlete_id = ath.athlete_id AND r.start_date <= x.date AND r.end_date >= x.date
                ORDER BY x.play_type, total_yards DESC)
 SELECT *
 FROM stats
