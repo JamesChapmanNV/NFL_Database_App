@@ -15,6 +15,7 @@ our project. But I was able to upload it to the branch - testing large files
 it is only 135 MB, and I tried uploading it to Kansas state canvas and it looks like it works.
  I'm not sure we technically need the entire database in this form. (CSV's on GitHub)
  but, if you run that command with PG dump it's easy to get.
+ games teams venues season_dates
 ******************************************************************************************
 
 *** Raw NFL data was scraped from a public ESPN API using a Jupyter notebook.
