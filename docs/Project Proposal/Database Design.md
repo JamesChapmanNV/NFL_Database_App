@@ -120,3 +120,4 @@ As it stands, we are happy with the schema as it stands. Originally the data con
 1. We assume the functional dependency $city \to state$ does not hold (ex. Kansas City in MO or KS)
 2. While a single attribute (city, state) may be used instead of two attributes, the modelling we used is convienent as it allows us to more easily use the data and does not violate BCNF.
 3. We may make small changes to the database design as we collect additional data.
+4. We kept team name in the rosters primary key in case a player is contacted with one team on a given date, and then immediately re-contracted with a different team on the same day.
