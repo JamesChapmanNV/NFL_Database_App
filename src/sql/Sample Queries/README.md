@@ -12,6 +12,7 @@ Question Queries: 9/10 ❌
 * [Venue](Venue.sql)
 * [PercentFilled](PercentFilled.sql)
 * [HomeFieldAdvantage](HomeFieldAdvantage.sql)
+* [TeamRivals](TeamRivals.sql)
 
 Report Queries: 5/5 ✅
 * [FirstQuarterGreater](FirstQuarterGreater.sql)
@@ -19,6 +20,8 @@ Report Queries: 5/5 ✅
 * [PlayerGamePlays](PlayerGamePlays.sql)
 * [Scores](Scores.sql)
 * [TeamRecords.sql](TeamRecords.sql)
+* [TeamPostSeasonGameCount](TeamPostSeasonGameCount.sql)
+* [AvgPtsGrassIndoor](AvgPtsGrassIndoor.sql)
 
 
 ## Viols.sql
