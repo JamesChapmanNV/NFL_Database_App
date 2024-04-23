@@ -73,13 +73,10 @@ $venue\_name \to capacity, city, state, grass, indoor$
 
 $game\_id \to attendance, date, utc\_time, home\_team\_id, away\_team\_id, venue\_name$
 
-$home\_team\_id, away\_team\_id, date \to game\_id, attendance, utc\_time, venue\_name$
-
 $home\_team\_id, date \to game\_id, away\_team\_id, attendance, utc\_time, venue\_name$
 
 $away\_team\_id, date \to game\_id, home\_team\_id, attendance, utc\_time, venue\_name$
 
-$date, venue\_name \to game\_id, home\_team\_id, away\_team\_id, attendance, utc\_time, venue\_name$
 
 **Season_Dates**
 
