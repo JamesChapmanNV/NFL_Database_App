@@ -31,7 +31,7 @@ Athletes([athlete_id]{.underline}, first_name, last_name, dob, height, weight, b
 
 Positions([position_name]{.underline}, abbreviation, platoon)
 
-Rosters([team_name]{.underline}, [athlete_id]{.underline}, position_name, start_date, end_date)
+Rosters([team_name]{.underline}, [athlete_id]{.underline}, position_name, [start_date]{.underline}, end_date)
 
 * team_name is a foreign key referencing teams.team_name
 * athlete_id is a foreign key referencing players.player_id
@@ -99,9 +99,9 @@ $abbreviation \to position\_name, platoon$
 
 **Rosters**
 
-$start\_date, athlete\_id \to team\_name, position\_name, end\_date$
+$start\_date, athlete\_id, team\_name \to position\_name, end\_date$
 
-$end\_date, athlete\_id \to team\_name, position\_name, start\_date$
+$end\_date, team\_name, athlete\_id \to position\_name, start\_date$
 
 **Linescores**
 

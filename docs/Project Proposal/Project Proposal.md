@@ -16,7 +16,7 @@ This project will model NFL data for a sports network using a PostgreSQL databas
 * Athletes will be identified by an athlete ID and have attributes date of birth, birth city, birth state, first name, last name, height, and weight.
 * A player can play for many teams in their career, and a team can have many players.
 * Each position will be identified by a position name and have attributes abbreviation and platoon (offense, defense, or special teams).
-* A position can be played by many players and a player can play many positions in different games. However, a player can only play a single position within a game.
+* A player is contracted to play for a certain team in a specific position, and the contract lasts from the start date to the end date.
 * Venues will be identified by a name and have attributes capacity, city, state, grass (boolean), and indoor (boolean).
 * A venue can have many home teams (ex. MetLife Stadium), but a team must have exactly one venue.
 * Games will be identified by a game ID and have attributes attendance, date, and utc_time.
