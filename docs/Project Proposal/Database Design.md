@@ -89,8 +89,6 @@ $date \to season\_year, season\_type, week$
 
 $athlete\_id \to first\_name, last\_name, dob, height, weight, birth\_city, birth\_state$
 
-$first\_name, last\_name, dob, birth\_city, birth\_state \to athlete\_id, height, weight$
-
 **Positions**
 
 $position\_name \to abbreviation, platoon$
