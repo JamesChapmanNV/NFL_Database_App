@@ -1,6 +1,6 @@
 
 -- average points based on grass/turf & indoor/outdoor
--- indoor seems to have greater points
+-- indoor games seems to have greater points
 -- grass/turf seems to not matter
 -- QUERY TYPE: report 
 

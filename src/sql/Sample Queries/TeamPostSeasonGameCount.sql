@@ -1,5 +1,5 @@
 
--- number of games each team played in the postseason
+-- Number of games each team played in the postseason 
 -- QUERY TYPE: report 
 
 SELECT team_name, 

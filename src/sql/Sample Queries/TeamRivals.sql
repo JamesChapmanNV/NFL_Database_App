@@ -1,6 +1,6 @@
 
--- find all games between 2 given teams
--- QUERY TYPE: report 
+-- Find all games between 2 given teams
+-- QUERY TYPE: question 
 
 SELECT g.date, 
 	g.home_team_name, 
