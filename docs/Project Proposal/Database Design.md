@@ -31,6 +31,8 @@ Athletes([athlete_id]{.underline}, first_name, last_name, dob, height, weight, b
 
 Positions([position_name]{.underline}, abbreviation, platoon)
 
+* abbreviation is a unique key
+
 Rosters([team_name]{.underline}, [athlete_id]{.underline}, position_name, [start_date]{.underline}, end_date)
 
 * team_name is a foreign key referencing teams.team_name
