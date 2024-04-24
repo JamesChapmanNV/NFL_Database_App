@@ -16,6 +16,7 @@ it is only 135 MB, and I tried uploading it to Kansas state canvas and it looks 
  I'm not sure we technically need the entire database in this form. (CSV's on GitHub)
  but, if you run that command with PG dump it's easy to get.
  games teams venues season_dates
+ https://github.com/JamesChapmanNV/NFL_database/blob/testing-large-files/docs/Interim%20Update/records_long.sql
 ******************************************************************************************
 
 *** Raw NFL data was scraped from a public ESPN API using a Jupyter notebook.
