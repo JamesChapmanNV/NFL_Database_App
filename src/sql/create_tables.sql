@@ -88,3 +88,14 @@ CREATE TABLE linescores(
     PRIMARY KEY(team_name, game_id, quarter)
 );
 
+CREATE TABLE users(
+    uid SERIAL PRIMARY KEY,
+    username VARCHAR(45) UNIQUE NOT NULL,
+    password VARCHAR(45) NOT NULL,
+    first_name VARCHAR(45),
+    last_name VARCHAR(45) NOT NULL,
+    created_on DATE NOT NULL,
+    favorite_team_name VARCHAR(45) REFERENCES teams(team_name),
+    favorite_athlete_id BIGINT REFERENCES athletes(athlete_id)
+);
+
