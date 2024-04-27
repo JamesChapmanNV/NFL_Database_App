@@ -90,6 +90,35 @@ class Query:
     def helper_set_column_names(self, cursor) -> None:
         column_names = [desc[0] for desc in cursor.description]
         self.last_result_column_names = tuple(column_names)
+
+    def login(self, username: str, password: str) -> int:
+        cursor = self.pgdb.cursor()
+        if username is not None and password is not None:
+            try:
+                query = 'SELECT * FROM users WHERE username = %s AND password = %s'
+                data = (username, password, )
+                cursor.execute(query, data)
+                user = cursor.fetchone()
+                return user[0] # return the user's uid
+            except:
+                return -1
+        else:
+            return -1
+
+    def register_user(self, username, password, first_name, last_name) -> None:
+        if username is not None and password is not None:
+            try:
+                cursor = self.pgdb.cursor()
+                query = 'SELECT register_user(%s, %s, %s, %s);'
+                data = (username, password, first_name, last_name, )
+                cursor.execute(query, data)
+                self.pgdb.commit()
+                print('Thank you for registering for an account')
+            except Exception as e:
+                print('An error occured')
+
+
+        return
         
     def get_team(self, team_name: str=None) -> None:
         cursor = self.pgdb.cursor()
