@@ -1,9 +1,8 @@
-
-import psycopg # type: ignore
-from configparser import ConfigParser
-from rich import print
+import psycopg
 import numpy as np
 import pandas as pd
+from rich import print
+from configparser import ConfigParser
 from sklearn.linear_model import LogisticRegression
 
 from display import display, display_matchup
@@ -19,13 +18,13 @@ class Query:
         self.file_manager = FileManager()
         self.file_manager.set_input_path('./python/Queries/')
 
-    def load_configuration(self):
+    def load_configuration(self) -> dict:
         parser = ConfigParser()
         parser.read('./python/config.ini') # Required file for connection
         params = parser.items('Database') # Required database section
         return {param[0]: param[1] for param in params}
 
-    def open_connections(self):
+    def open_connections(self) -> None:
         try:
             self.pgdb = psycopg.connect(
                 host = self.config['postgresqlserverurl'],
@@ -39,19 +38,22 @@ class Query:
         except Exception as e:
             print('Connection Error: %s' % (e))
 
-    def close_connections(self):
+    def close_connections(self) -> None:
         if self.pgdb:
             self.pgdb.close()
     
-    def build_database(self):
+    def build_database(self) -> None:
+        print(f"Building Database . . .'")
+        # Drop tables FROM drop_tables.sql
         cursor = self.pgdb.cursor()
         with open('./sql/drop_tables.sql', 'r') as file:
             drop_tables_commands = file.read()
         cursor.execute(drop_tables_commands)
+        # create tables FROM create_tables.sql
         with open('./sql/create_tables.sql', 'r') as file:
             create_table_commands = file.read()
         cursor.execute(create_table_commands)
-
+        # Import data FROM data/CSV's
         with cursor.copy("copy venues(venue_name, capacity, city, state, grass, indoor) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
             copy.write(open("../data/venues.csv").read())
         with cursor.copy("copy teams(team_name, abbreviation, location, venue_name, primary_color, secondary_color) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
@@ -72,17 +74,19 @@ class Query:
             copy.write(open("../data/player_plays.csv").read())
         with cursor.copy("copy linescores(game_id, quarter, score, team_name) FROM STDIN DELIMITER ',' CSV HEADER") as copy:
             copy.write(open("../data/linescores.csv").read())
-
+        # create and add users FROM users.sql
         with open('./sql/users.sql', 'r') as file:
             users_commands = file.read()
         cursor.execute(users_commands)
+        # Change rosters FROM rosters_decomposition.sql
         with open('./sql/rosters_decomposition.sql', 'r') as file:
             rosters_decomposition_commands = file.read()
         cursor.execute(rosters_decomposition_commands)
+        # Create views indexes and functions FROM views_indexes_functions.sql
         with open('./sql/views_indexes_functions.sql', 'r') as file:
             views_indexes_functions_commands = file.read()
         cursor.execute(views_indexes_functions_commands)
-
+        # commit transaction
         self.pgdb.commit()
         print('success')
 
@@ -206,6 +210,11 @@ class Query:
         cursor.execute(query, data)
         self.helper_set_column_names(cursor)
         self.last_result = cursor.fetchall()
+        """
+        Use query results ('all_team_scores', 'all_opponent_scores', 'winner_bool')  
+        to perform simple logistic regression from SKlearn: The target (Boolean) is 
+        if the given team wins (Boolean). The features are simply game scores of a team.
+        """
         df = pd.DataFrame(self.last_result, columns=['all_team_scores', 'all_opponent_scores', 'winner_bool'])
         df.loc[(df['winner_bool']=='f'),'winner_bool']= -1
         df.loc[(df['winner_bool']=='t'),'winner_bool']= 1
@@ -217,6 +226,7 @@ class Query:
         model = LogisticRegression(multi_class='multinomial', solver='lbfgs').fit(X.values, y.values)
         probabilities = model.predict_proba([[team_score, opponent_score]])[0]
         home_team_index = np.where(model.classes_==1)[0][0]
+        # display results
         print(f'Given a score of {team_score} to {opponent_score},')
         print(f'The probability of the {team_name} winning is {round(probabilities[home_team_index]*100, 1)}%')
 
@@ -228,11 +238,4 @@ class Query:
             print("Data saved successfully")
         else:
             print("Error: Unsupported file type")
-#     def transaction_login(self, name, password):
-#         pass
 
-#     def transaction_personal_data(self, cid):
-#         pass
-
-#     def transaction_search(self, cid, movie_name):
-#         pass
