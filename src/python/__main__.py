@@ -96,6 +96,7 @@ class NFLapp:
             else:
                 print(f"Error: unrecognized command '{command}'")
                 continue
+            
 def main() -> None:
     app = NFLapp()  
     app.query.open_connections()
