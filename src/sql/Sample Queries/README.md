@@ -1,8 +1,8 @@
 # SQL Query Requirements
 
-Total Queries: 17/15 ✅
+Total Queries: 19/15 ✅
 
-Question Queries: 10/10 ✅
+Question Queries: 12/10 ✅
 * [Attendance](Attendance.sql)
 * [Games](Games.sql)
 * [Players](Players.sql)
@@ -13,8 +13,10 @@ Question Queries: 10/10 ✅
 * [PercentFilled](PercentFilled.sql)
 * [HomeFieldAdvantage](HomeFieldAdvantage.sql)
 * [TeamRivals](TeamRivals.sql)
+* [WeeklyReceivingStats](WeeklyReceivingStats.sql)
+* [AthleteReceivingStats](AthleteReceivingStats.sql)
 
-Report Queries: 5/5 ✅
+Report Queries: 7/5 ✅
 * [FirstQuarterGreater](FirstQuarterGreater.sql)
 * [Passing](Passing.sql)
 * [PlayerGamePlays](PlayerGamePlays.sql)
