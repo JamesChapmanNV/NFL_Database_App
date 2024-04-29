@@ -1,11 +1,23 @@
 import sys
 from Query import Query
+from RegistrationManager import RegistrationManager
 
 class NFLapp:
-    def __init__(self, username, password):
+    def __init__(self, username=None, password=None):
         self.username = username
         self.password = password
         self.query = Query()
+        self.registration_manager = RegistrationManager(self.query)
+
+    def set_username(self, username: str) -> None:
+        self.username = username
+
+    def set_password(self, password: str) -> None:
+        self.password = password
+
+    def login(self) -> int:
+        uid = self.query.login(self.username, self.password)
+        return uid
 
     @staticmethod
     def usage():
@@ -99,16 +111,25 @@ class NFLapp:
                 continue
 
 if __name__ == "__main__":
+    app = NFLapp()  # Prints 12 password black circles instead of password
+    app.query.open_connections()
+
     if len(sys.argv) < 3:
+        app.registration_manager.register_account()
         print("Usage: python NFLdata.py USERNAME PASSWORD")
         sys.exit(1)
     try:
         username = sys.argv[1]
         password = sys.argv[2]
         # print(username,u"\u25CF"*12)
-        app = NFLapp(username, password) # Prints 12 password black circles instead of password
-        app.query.open_connections()
-        app.menu()  # Enter the main menu loop
+        app.set_username(username)
+        app.set_password(password)
+        uid = app.login()
+
+        if uid > 0:
+            app.menu()  # Enter the main menu loop
+        else:
+            print('Invalid credentials')
     except Exception as e:
         print("An error occurred:", e)
         sys.exit(1)
