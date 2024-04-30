@@ -10,6 +10,118 @@
 */
 
 
+
+/******************************************************************************
+**** THIS IS A VIEW !!!                                                     ***
+**** all_final_game_scores                                                  ***
+*******************************************************************************
+2 views were created and used in 3 queries.  The database lists the scores, of 
+each quarter, of each game (linescores table). These views make the queries 
+easier to understand and saves time writing queries.
+Also, it's good practice, as a beginner.
+
+VIEW explanation
+****************************************
+all_final_game_scores produces 6 attributes FOR EACH GAME:
+	-game_id 
+	-home_team_name
+	-home_team_score
+	-away_team_name
+	-away_team_score
+	-home_winner_bool (true if home team wins, NULL if tie )
+
+TeamScores is a CTE  meant to find all scores, of each game, of each team.
+This is because the table 'linescores' must be aggregated on score attribute.
+'linescores' is organized by game_id & team_name, 
+therefore requiring a self join of the TeamScores CTE (HOME & AWAY).
+
+The first instance of TeamScores matches games.home_team_name 
+The 2nd instance of TeamScores matches games.away_team_name
+
+The attribute 'home_winner_bool' is created & produces
+True if home team wins, NULL if the result is a tie
+****************************************
+*/
+CREATE VIEW all_final_game_scores AS
+WITH TeamScores AS (
+    SELECT game_id, team_name, SUM(score) AS team_score
+    FROM linescores
+    GROUP BY game_id, team_name
+)
+	SELECT x.game_id, 
+	x.home_team_name, 
+	y.team_score AS home_team_score, 
+	x.away_team_name, 
+	z.team_score AS away_team_score,
+    CASE
+        WHEN y.team_score > z.team_score THEN TRUE
+        WHEN y.team_score < z.team_score THEN FALSE
+        ELSE NULL 
+    END AS home_winner_bool
+FROM games x
+LEFT JOIN TeamScores y 
+	ON x.game_id = y.game_id 
+	AND x.home_team_name = y.team_name 
+LEFT JOIN TeamScores z
+	ON x.game_id = z.game_id 
+	AND x.away_team_name = z.team_name ;
+
+/******************************************************************************
+**** THIS IS A VIEW !!!                                                     ***
+**** all_third_quarter_scores                                               ***
+*******************************************************************************
+2 views were created and used in 3 queries.  The database lists the scores, of 
+each quarter, of each game (linescores table). These views make the queries 
+easier to understand and saves time writing queries.
+Also, it's good practice, as a beginner.
+
+VIEW explanation
+****************************************
+VIEW 'all_third_quarter_scores' produces 6 attributes for each game:
+	-game_id 
+	-home_team_name 
+	-home_team_score (at end of 3rd quarter)
+	-away_team_name
+	-away_team_score (at end of 3rd quarter)
+	-away_team_winng_bool (true if AWAY team is currently winning, NULL if tie )
+
+ThirdQuarterTeamScores is a CTE meant to find all scores (AT THE END OF 3RD 
+QUARTER), of each game, of each team.
+This filters the linescores WHERE quarter <= 3.
+
+The first instance of ThirdQuarterTeamScores matches games.home_team_name
+The 2nd instance of ThirdQuarterTeamScores matches games.away_team_name
+
+The attribute 'away_team_winng_bool' is created & produces
+True if AWAY team IS WINNING, NULL if there is currently a tie
+****************************************
+*/
+CREATE VIEW all_third_quarter_scores AS
+WITH ThirdQuarterTeamScores AS (
+    SELECT game_id, team_name, SUM(score) AS team_score
+    FROM linescores
+	WHERE quarter <= 3
+    GROUP BY game_id, team_name
+)
+	SELECT x.game_id, 
+	x.home_team_name, 
+	y.team_score AS home_team_score, 
+	x.away_team_name, 
+	z.team_score AS away_team_score,
+    CASE
+        WHEN y.team_score < z.team_score THEN TRUE
+        WHEN y.team_score > z.team_score THEN FALSE
+        ELSE NULL 
+    END AS away_team_winng_bool
+FROM games x
+LEFT JOIN ThirdQuarterTeamScores y 
+	ON x.game_id = y.game_id 
+	AND x.home_team_name = y.team_name 
+LEFT JOIN ThirdQuarterTeamScores z
+	ON x.game_id = z.game_id 
+	AND x.away_team_name = z.team_name ;
+
+
 /******************************************************************************
 **** weekly_receiving_stats                                                 ***
 *******************************************************************************
@@ -244,118 +356,6 @@ JOIN games g ON gs.game_id = g.game_id
 JOIN venues v ON g.venue_name = v.venue_name
 GROUP BY v.grass,v.indoor
 ORDER BY avg_total_points DESC;
-
-
-
-/******************************************************************************
-**** THIS IS A VIEW !!!                                                     ***
-**** all_final_game_scores                                                  ***
-*******************************************************************************
-2 views were created and used in 3 queries.  The database lists the scores, of 
-each quarter, of each game (linescores table). These views make the queries 
-easier to understand and saves time writing queries.
-Also, it's good practice, as a beginner.
-
-VIEW explanation
-****************************************
-all_final_game_scores produces 6 attributes FOR EACH GAME:
-	-game_id 
-	-home_team_name
-	-home_team_score
-	-away_team_name
-	-away_team_score
-	-home_winner_bool (true if home team wins, NULL if tie )
-
-TeamScores is a CTE  meant to find all scores, of each game, of each team.
-This is because the table 'linescores' must be aggregated on score attribute.
-'linescores' is organized by game_id & team_name, 
-therefore requiring a self join of the TeamScores CTE (HOME & AWAY).
-
-The first instance of TeamScores matches games.home_team_name 
-The 2nd instance of TeamScores matches games.away_team_name
-
-The attribute 'home_winner_bool' is created & produces
-True if home team wins, NULL if the result is a tie
-****************************************
-*/
-CREATE VIEW all_final_game_scores AS
-WITH TeamScores AS (
-    SELECT game_id, team_name, SUM(score) AS team_score
-    FROM linescores
-    GROUP BY game_id, team_name
-)
-	SELECT x.game_id, 
-	x.home_team_name, 
-	y.team_score AS home_team_score, 
-	x.away_team_name, 
-	z.team_score AS away_team_score,
-    CASE
-        WHEN y.team_score > z.team_score THEN TRUE
-        WHEN y.team_score < z.team_score THEN FALSE
-        ELSE NULL 
-    END AS home_winner_bool
-FROM games x
-LEFT JOIN TeamScores y 
-	ON x.game_id = y.game_id 
-	AND x.home_team_name = y.team_name 
-LEFT JOIN TeamScores z
-	ON x.game_id = z.game_id 
-	AND x.away_team_name = z.team_name ;
-
-/******************************************************************************
-**** THIS IS A VIEW !!!                                                     ***
-**** all_third_quarter_scores                                               ***
-*******************************************************************************
-2 views were created and used in 3 queries.  The database lists the scores, of 
-each quarter, of each game (linescores table). These views make the queries 
-easier to understand and saves time writing queries.
-Also, it's good practice, as a beginner.
-
-VIEW explanation
-****************************************
-VIEW 'all_third_quarter_scores' produces 6 attributes for each game:
-	-game_id 
-	-home_team_name 
-	-home_team_score (at end of 3rd quarter)
-	-away_team_name
-	-away_team_score (at end of 3rd quarter)
-	-away_team_winng_bool (true if AWAY team is currently winning, NULL if tie )
-
-ThirdQuarterTeamScores is a CTE meant to find all scores (AT THE END OF 3RD 
-QUARTER), of each game, of each team.
-This filters the linescores WHERE quarter <= 3.
-
-The first instance of ThirdQuarterTeamScores matches games.home_team_name
-The 2nd instance of ThirdQuarterTeamScores matches games.away_team_name
-
-The attribute 'away_team_winng_bool' is created & produces
-True if AWAY team IS WINNING, NULL if there is currently a tie
-****************************************
-*/
-CREATE VIEW all_third_quarter_scores AS
-WITH ThirdQuarterTeamScores AS (
-    SELECT game_id, team_name, SUM(score) AS team_score
-    FROM linescores
-	WHERE quarter <= 3
-    GROUP BY game_id, team_name
-)
-	SELECT x.game_id, 
-	x.home_team_name, 
-	y.team_score AS home_team_score, 
-	x.away_team_name, 
-	z.team_score AS away_team_score,
-    CASE
-        WHEN y.team_score < z.team_score THEN TRUE
-        WHEN y.team_score > z.team_score THEN FALSE
-        ELSE NULL 
-    END AS away_team_winng_bool
-FROM games x
-LEFT JOIN ThirdQuarterTeamScores y 
-	ON x.game_id = y.game_id 
-	AND x.home_team_name = y.team_name 
-LEFT JOIN ThirdQuarterTeamScores z
-	ON x.game_id = z.game_id 
-	AND x.away_team_name = z.team_name ;
 
 /******************************************************************************
 **** team_rivals                                                            ***
