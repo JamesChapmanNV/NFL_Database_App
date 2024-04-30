@@ -7,7 +7,7 @@
 	Vishnu Bondalakunta
 	Chuck Zumbaugh
 	James Chapman
-/**/
+*//*
 *******************************************************************************
 THIS FILE ONLY CONTAINS 4 TABLES DUE TO GitHub limits (CSV's are on GitHub).
 TABLES: games, teams, venues, & season_dates
