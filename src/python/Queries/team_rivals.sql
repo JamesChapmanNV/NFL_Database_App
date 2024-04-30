@@ -45,7 +45,7 @@ SELECT g.date,
 FROM games g
 JOIN all_final_game_scores a ON g.game_id = a.game_id
 JOIN venues v ON g.venue_name = v.venue_name
-WHERE (g.home_team_name LIKE '%Texans%' OR g.away_team_name LIKE '%Texans%')
-  AND (g.home_team_name LIKE '%Patriots%' OR g.away_team_name LIKE '%Patriots%')
+WHERE (g.home_team_name LIKE %s OR g.away_team_name LIKE %s)
+  AND (g.home_team_name LIKE %s OR g.away_team_name LIKE %s)
 ORDER BY g.date DESC;
 
