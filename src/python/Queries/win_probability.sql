@@ -78,7 +78,7 @@ probabilities = model.predict_proba([[team_score, opponent_score]])[0]
 given_team_index = np.where(model.classes_==1)[0][0]
 # display results
 print(f'Given a score of {team_score} to {opponent_score},')
-print(f'The probability of the {team_name} winning is {round(probabilities[given_team_index]*100, 1)}%')
+print(f'The probability of the {team_name} winning is {round(probabilities[given_team_index]*100, 1)}')
 ****************************************
 
 Sample app result - Texans 25 25
