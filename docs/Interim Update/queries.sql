@@ -39,20 +39,19 @@ There are other types (incomplete pass, interception, etc.), but this works.
 
 Sample Query result (%s,%s,%s) = (2019, 'Regular Season', 10)
 
-  game_id  | first_name |   last_name    | receiving_yards
------------+------------+----------------+-----------------
- 401127948 | Michael    | Thomas         |             167
- 401127981 | Tyreek     | Hill           |             157
- 401128041 | Amari      | Cooper         |             147
- 401127976 | Christian  | Kirk           |             138
- 401127944 | DJ         | Moore          |             120
- 401127944 | Davante    | Adams          |             118
- 401127952 | Darius     | Slayton        |             113
- 401128041 | Dalvin     | Cook           |             110
++---------+--------------+---------------+
+|game_id  |name          |receiving_yards|
++---------+--------------+---------------+
+|401127948|Michael Thomas|167            |
+|401127981|Tyreek Hill   |157            |
+|401128041|Amari Cooper  |147            |
+|401127976|Christian Kirk|138            |
+|401127944|DJ Moore      |120            |
++---------+--------------+---------------+
 
 (177 rows)
 */
-SELECT g.game_id, a.first_name, a.last_name, SUM(yards) as Receiving_yards
+SELECT g.game_id, a.first_name || ' ' || a.last_name AS name, SUM(yards) as Receiving_yards
 FROM player_plays pp
 JOIN plays p ON pp.play_id = p.play_id
 JOIN athletes a ON pp.player_id = a.athlete_id
@@ -98,21 +97,19 @@ There are other types (incomplete pass, interception, etc.), but this works.
 
 Sample Query result (%s) = (13982)
 
-first_name | last_name | season_year |  season_type   | week | receiving_yards
-------------+-----------+-------------+----------------+------+-----------------
- Julio      | Jones     |        2023 | Regular Season |   17 |              34
- Julio      | Jones     |        2023 | Regular Season |   16 |               5
- Julio      | Jones     |        2023 | Regular Season |   15 |               6
- Julio      | Jones     |        2023 | Regular Season |   12 |               0
- Julio      | Jones     |        2023 | Regular Season |   11 |               5
- Julio      | Jones     |        2023 | Regular Season |    8 |               8
- Julio      | Jones     |        2023 | Regular Season |    7 |               3
- Julio      | Jones     |        2022 | Regular Season |   17 |              10
- Julio      | Jones     |        2022 | Regular Season |   16 |               0
++-----------+-----------+--------------+----+---------------+
+|name       |season_year|season_type   |week|receiving_yards|
++-----------+-----------+--------------+----+---------------+
+|Julio Jones|2023       |Regular Season|17  |34             |
+|Julio Jones|2023       |Regular Season|16  |5              |
+|Julio Jones|2023       |Regular Season|15  |6              |
+|Julio Jones|2023       |Regular Season|12  |0              |
+|Julio Jones|2023       |Regular Season|11  |5              |
++-----------+-----------+--------------+----+---------------+
 
 (134 rows)
 */
-SELECT a.first_name, a.last_name, s.season_year, s.season_type, s.week, SUM(yards) as Receiving_yards
+SELECT a.first_name || ' ' || a.last_name AS name, s.season_year, s.season_type, s.week, SUM(yards) as Receiving_yards
 FROM player_plays pp
 JOIN plays p ON pp.play_id = p.play_id
 JOIN athletes a ON pp.player_id = a.athlete_id
@@ -665,77 +662,6 @@ JOIN all_third_quarter_scores y
 WHERE y.away_team_name = 'Texans';
 
 /*
-Find the total receiving yards for a given player in each week of the season that they played.
-Query type: Report
-*/
-SELECT a.first_name || ' ' || a.last_name AS name, s.season_year, s.season_type, s.week, SUM(yards) as Receiving_yards
-FROM player_plays pp
-JOIN plays p ON pp.play_id = p.play_id
-JOIN athletes a ON pp.player_id = a.athlete_id
-JOIN games g ON pp.game_id = g.game_id
-JOIN season_dates s ON g.date = s.date
-WHERE a.athlete_id=13982
-	AND pp.type='receiver'
-	AND p.play_type in ('Pass',
-						'Rush',
-						'Fumble Recovery (Own)',
-						'Pass Reception',
-						'Passing Touchdown')
-Group by a.athlete_id, a.first_name, a.last_name, s.season_year, s.season_type, s.week
-ORDER BY s.season_year DESC, s.season_type DESC, s.week DESC;
-
-/*
-Truncated Output:
-+-----------+-----------+--------------+----+---------------+
-|name       |season_year|season_type   |week|receiving_yards|
-+-----------+-----------+--------------+----+---------------+
-|Julio Jones|2023       |Regular Season|17  |34             |
-|Julio Jones|2023       |Regular Season|16  |5              |
-|Julio Jones|2023       |Regular Season|15  |6              |
-|Julio Jones|2023       |Regular Season|12  |0              |
-|Julio Jones|2023       |Regular Season|11  |5              |
-+-----------+-----------+--------------+----+---------------+
-
-*/
-
-/*
-Find the average total points per game for different combinations of fields.
-A given field can be played on either grass or turf field, and either indoors or outdoors.
-
-Query Type: Question
-*/
-
-SELECT 
-    CASE 
-        WHEN v.grass THEN 'Grass' 
-        ELSE 'Turf' 
-    END AS field,
-    CASE 
-        WHEN v.indoor THEN 'Indoor' 
-        ELSE 'Outdoor' 
-	END AS venue,
-	ROUND( AVG(gs.home_team_score + gs.away_team_score) , 1) AS avg_total_points
-FROM all_final_game_scores gs
-JOIN games g ON gs.game_id = g.game_id
-JOIN venues v ON g.venue_name = v.venue_name
-GROUP BY v.grass,v.indoor
-ORDER BY avg_total_points DESC;
-
-/*
-Output:
-
-+-----+-------+-------------------+
- field |  venue  | avg_total_points
--------+---------+------------------
- Turf  | Indoor  |             48.2
- Grass | Indoor  |             47.4
- Turf  | Outdoor |             44.8
- Grass | Outdoor |             44.8
-+-----+-------+-------------------+
-
-*/
-
-/*
 Find all games where the total number of points scored in the first quarter is greater than
 the total number of points scored in any other quarter.
 
@@ -1092,45 +1018,6 @@ Truncated Results:
 */
 
 /*
-Find the number of games each team played in the post-season.
-   
-Query Type: Report   
-*/
-SELECT team_name, 
-count (*) AS total_postseason_game_count,
-   sum(CASE WHEN week=1 THEN 1 ELSE 0 END) AS WildCard,
-   sum(CASE WHEN week=2 THEN 1 ELSE 0 END) AS Divisional,
-   sum(CASE WHEN week=3 THEN 1 ELSE 0 END) AS Conference,
-   sum(CASE WHEN week=5 THEN 1 ELSE 0 END) AS SuperBowl
-FROM (
-SELECT g.home_team_name as team_name, sd.week
-FROM games g 
-JOIN season_dates sd ON g.date = sd.date
-WHERE sd.season_type = 'Post Season'
-
-Union ALL
-SELECT g.away_team_name as team_name, sd.week
-FROM games g 
-JOIN season_dates sd ON g.date = sd.date
-WHERE sd.season_type = 'Post Season') team_week
-group by team_name;
-
-/*
-Truncated Results:
-
-+----------+---------------------------+--------+----------+----------+---------+
-|team_name |total_postseason_game_count|wildcard|divisional|conference|superbowl|
-+----------+---------------------------+--------+----------+----------+---------+
-|Broncos   |8                          |0       |4         |2         |2        |
-|Packers   |15                         |4       |7         |4         |0        |
-|Bills     |9                          |5       |3         |1         |0        |
-|Steelers  |9                          |5       |3         |1         |0        |
-|Commanders|3                          |3       |0         |0         |0        |
-+----------+---------------------------+--------+----------+----------+---------+
-
-*/
-
-/*
 Get the win-loss records for all teams in a given season. The results are given in home wins/losses
 and away wins/losses
 
@@ -1345,45 +1232,6 @@ Results:
 +-------------------------------+--------+---------------+-----+------+---------+
 |GEHA Field at Arrowhead Stadium|76416   |Kansas City, MO|true |false |Chiefs   |
 +-------------------------------+--------+---------------+-----+------+---------+
-
-*/
-
-/*
-Find the receiving stats for all players in a given season year and week.
-
-Query Type: Report
-*/
-
-SELECT g.game_id, a.first_name || ' ' || a.last_name AS name, SUM(yards) as Receiving_yards
-FROM player_plays pp
-JOIN plays p ON pp.play_id = p.play_id
-JOIN athletes a ON pp.player_id = a.athlete_id
-JOIN games g ON pp.game_id = g.game_id
-JOIN season_dates s ON g.date = s.date
-WHERE type='receiver'
-	AND season_year = 2019
-	AND season_type = 'Regular Season'
-	AND week = 10
-	AND play_type in ('Pass',
-					'Rush',
-					'Fumble Recovery (Own)',
-					'Pass Reception',
-					'Passing Touchdown')
-Group by player_id, g.game_id, a.first_name, a.last_name
-ORDER BY SUM(yards) DESC;
-
-/*
-Truncated Results:
-
-+---------+--------------+---------------+
-|game_id  |name          |receiving_yards|
-+---------+--------------+---------------+
-|401127948|Michael Thomas|167            |
-|401127981|Tyreek Hill   |157            |
-|401128041|Amari Cooper  |147            |
-|401127976|Christian Kirk|138            |
-|401127944|DJ Moore      |120            |
-+---------+--------------+---------------+
 
 */
 
