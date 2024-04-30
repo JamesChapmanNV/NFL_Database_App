@@ -5,13 +5,18 @@
 -- (ie. offense, defense, special teams)
 -- QUERY TYPE: Question 
 -- 15+ query requirement: Not satisfied (No group by, no aggregate function in select statement)
-SELECT a.*,
+SELECT a.athlete_id,
+       a.first_name || ' ' || a.last_name as name,
+       a.dob,
+       a.height,
+       a.weight,
+       a.birth_city || ', ' || coalesce(a.birth_state, 'UNKNOWN') AS birth_place,
        r.team_name,
        r.position_name,
-       p.platoon,
+       coalesce(p.platoon, 'Unknown') AS platoon,
        r.start_date,
-       r.end_data,
-       CASE WHEN r.end_data < CURRENT_DATE - INTERVAL '1 year' THEN 'False' ELSE 'True' END AS active
+       r.end_date,
+       CASE WHEN r.end_date < CURRENT_DATE - INTERVAL '1 year' THEN 'False' ELSE 'True' END AS active
 FROM athletes a
          JOIN rosters r ON r.athlete_id = a.athlete_id
 JOIN positions p ON p.position_name = r.position_name

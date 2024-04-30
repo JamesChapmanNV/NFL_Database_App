@@ -41,7 +41,7 @@ Sample Query result (%s,%s,%s) = (2019, 'Regular Season', 10)
 
 */
 
-SELECT g.game_id, a.first_name, a.last_name, SUM(yards) as Receiving_yards
+SELECT g.game_id, a.first_name || ' ' || a.last_name AS name, SUM(yards) as Receiving_yards
 FROM player_plays pp
 JOIN plays p ON pp.play_id = p.play_id
 JOIN athletes a ON pp.player_id = a.athlete_id

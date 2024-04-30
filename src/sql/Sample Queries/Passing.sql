@@ -20,8 +20,7 @@
 SELECT 
     -- Selecting player ID, first name, and last name.
     a.athlete_id AS player_id, 
-    a.first_name, 
-    a.last_name,
+    a.first_name || ' ' || a.last_name AS name,
     -- Selecting passing yards, pass attempts, pass completions, touchdown passes, interceptions, and passer rating.
     passing_yards, 
     pass_attempts, 

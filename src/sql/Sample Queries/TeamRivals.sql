@@ -40,8 +40,7 @@ SELECT g.date,
 	a.home_team_score, 
 	a.away_team_score, 
 	v.venue_name,
-	v.city,
-	v.state
+	v.city || ', ' || coalesce(v.state, 'UNKNOWN') AS location
 FROM games g
 JOIN all_final_game_scores a ON g.game_id = a.game_id
 JOIN venues v ON g.venue_name = v.venue_name

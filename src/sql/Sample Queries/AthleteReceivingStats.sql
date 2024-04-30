@@ -41,7 +41,7 @@ first_name | last_name | season_year |  season_type   | week | receiving_yards
 
 
 */
-SELECT a.first_name, a.last_name, s.season_year, s.season_type, s.week, SUM(yards) as Receiving_yards
+SELECT a.first_name || ' ' || a.last_name AS name, s.season_year, s.season_type, s.week, SUM(yards) as Receiving_yards
 FROM player_plays pp
 JOIN plays p ON pp.play_id = p.play_id
 JOIN athletes a ON pp.player_id = a.athlete_id
