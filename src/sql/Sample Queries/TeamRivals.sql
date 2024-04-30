@@ -11,8 +11,16 @@ SELECT g.date,
 	v.city,
 	v.state
 FROM games g
-JOIN linescores l1 ON g.game_id = l1.game_id AND g.home_team_name = l1.team_name
-JOIN linescores l2 ON g.game_id = l2.game_id AND g.away_team_name = l2.team_name
+JOIN (
+    SELECT game_id, team_name, sum(score) AS score
+    FROM linescores
+    GROUP BY game_id, team_name
+) l1 ON g.game_id = l1.game_id AND g.home_team_name = l1.team_name
+JOIN (
+    SELECT game_id, team_name, sum(score) AS score
+    FROM linescores
+    GROUP BY game_id, team_name
+) l2 ON g.game_id = l2.game_id AND g.away_team_name = l2.team_name
 JOIN venues v ON g.venue_name = v.venue_name
 WHERE (g.home_team_name LIKE '%Texans%' OR g.away_team_name LIKE '%Texans%')
   AND (g.home_team_name LIKE '%Patriots%' OR g.away_team_name LIKE '%Patriots%')
