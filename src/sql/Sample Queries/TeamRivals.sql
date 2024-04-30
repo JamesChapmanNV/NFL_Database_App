@@ -8,8 +8,7 @@ SELECT g.date,
 	l1.score AS home_score, 
 	l2.score AS away_score, 
 	v.venue_name,
-	v.city,
-	v.state
+	v.city || ', ' || coalesce(v.state, 'UNKNOWN') AS location
 FROM games g
 JOIN (
     SELECT game_id, team_name, sum(score) AS score

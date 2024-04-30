@@ -168,7 +168,7 @@ WHERE y.away_team_name = %s;
 Find the total receiving yards for a given player in each week of the season that they played.
 Query type: Report
 */
-SELECT a.first_name, a.last_name, s.season_year, s.season_type, s.week, SUM(yards) as Receiving_yards
+SELECT a.first_name || ' ' || a.last_name AS name, s.season_year, s.season_type, s.week, SUM(yards) as Receiving_yards
 FROM player_plays pp
 JOIN plays p ON pp.play_id = p.play_id
 JOIN athletes a ON pp.player_id = a.athlete_id
@@ -186,20 +186,15 @@ ORDER BY s.season_year DESC, s.season_type DESC, s.week DESC;
 
 /*
 Truncated Output:
-+----------+---------+-----------+--------------+----+---------------+
-|first_name|last_name|season_year|season_type   |week|receiving_yards|
-+----------+---------+-----------+--------------+----+---------------+
-|Julio     |Jones    |2023       |Regular Season|17  |34             |
-|Julio     |Jones    |2023       |Regular Season|16  |5              |
-|Julio     |Jones    |2023       |Regular Season|15  |6              |
-|Julio     |Jones    |2023       |Regular Season|12  |0              |
-|Julio     |Jones    |2023       |Regular Season|11  |5              |
-|Julio     |Jones    |2023       |Regular Season|8   |8              |
-|Julio     |Jones    |2023       |Regular Season|7   |3              |
-|Julio     |Jones    |2022       |Regular Season|17  |10             |
-|Julio     |Jones    |2022       |Regular Season|16  |0              |
-|Julio     |Jones    |2022       |Regular Season|14  |38             |
-+----------+---------+-----------+--------------+----+---------------+
++-----------+-----------+--------------+----+---------------+
+|name       |season_year|season_type   |week|receiving_yards|
++-----------+-----------+--------------+----+---------------+
+|Julio Jones|2023       |Regular Season|17  |34             |
+|Julio Jones|2023       |Regular Season|16  |5              |
+|Julio Jones|2023       |Regular Season|15  |6              |
+|Julio Jones|2023       |Regular Season|12  |0              |
+|Julio Jones|2023       |Regular Season|11  |5              |
++-----------+-----------+--------------+----+---------------+
 
 */
 
@@ -381,8 +376,7 @@ Query Type: Report
  SELECT 
      -- Selecting player ID, first name, and last name.
      a.athlete_id AS player_id, 
-     a.first_name, 
-     a.last_name,
+     a.first_name || ' ' || a.last_name AS name,
      -- Selecting passing yards, pass attempts, pass completions, touchdown passes, interceptions, and passer rating.
      passing_yards, 
      pass_attempts, 
@@ -438,21 +432,16 @@ Query Type: Report
 /*
 Truncated Results:
 	 
-+---------+----------+---------+-------------+-------------+----------------+----------------+------------------+-------------+
-|player_id|first_name|last_name|passing_yards|pass_attempts|pass_completions|touchdown_passes|passes_intercepted|passer_rating|
-+---------+----------+---------+-------------+-------------+----------------+----------------+------------------+-------------+
-|2330     |Tom       |Brady    |5602         |752          |491             |46              |10                |56.3         |
-|2580     |Drew      |Brees    |4646         |586          |396             |31              |10                |56.3         |
-|14881    |Russell   |Wilson   |4612         |524          |348             |37              |13                |60.4         |
-|5529     |Philip    |Rivers   |4606         |621          |415             |27              |7                 |56.3         |
-|4459     |Carson    |Palmer   |4554         |520          |329             |34              |10                |60.4         |
-|12483    |Matthew   |Stafford |4445         |594          |397             |30              |14                |56.3         |
-|16724    |Blake     |Bortles  |4368         |575          |341             |35              |13                |56.3         |
-|5526     |Eli       |Manning  |4315         |575          |362             |33              |12                |56.3         |
-|11237    |Matt      |Ryan     |4269         |581          |384             |19              |14                |56.3         |
-|13994    |Cam       |Newton   |4175         |540          |318             |37              |12                |56.3         |
-+---------+----------+---------+-------------+-------------+----------------+----------------+------------------+-------------+
-	 
++---------+--------------+-------------+-------------+----------------+----------------+------------------+-------------+
+|player_id|name          |passing_yards|pass_attempts|pass_completions|touchdown_passes|passes_intercepted|passer_rating|
++---------+--------------+-------------+-------------+----------------+----------------+------------------+-------------+
+|2330     |Tom Brady     |5602         |752          |491             |46              |10                |56.3         |
+|2580     |Drew Brees    |4646         |586          |396             |31              |10                |56.3         |
+|14881    |Russell Wilson|4612         |524          |348             |37              |13                |60.4         |
+|5529     |Philip Rivers |4606         |621          |415             |27              |7                 |56.3         |
+|4459     |Carson Palmer |4554         |520          |329             |34              |10                |60.4         |
++---------+--------------+-------------+-------------+----------------+----------------+------------------+-------------+
+
 */
 
 /*
@@ -517,10 +506,15 @@ special teams).
 Query Type: Question
 */
 
-SELECT a.*,
+SELECT a.athlete_id,
+       a.first_name || ' ' || a.last_name as name,
+       a.dob,
+       a.height,
+       a.weight,
+       a.birth_city || ', ' || coalesce(a.birth_state, 'UNKNOWN') AS birth_place,
        r.team_name,
        r.position_name,
-       p.platoon,
+       coalesce(p.platoon, 'Unknown') AS platoon,
        r.start_date,
        r.end_date,
        CASE WHEN r.end_date < CURRENT_DATE - INTERVAL '1 year' THEN 'False' ELSE 'True' END AS active
@@ -536,20 +530,15 @@ WHERE first_name LIKE '%Patrick%'
 /*
 Truncated Results:
 						 
-+----------+----------+---------+----------+------+------+-----------------+-----------+---------+-------------+-------------+----------+----------+------+
-|athlete_id|first_name|last_name|dob       |height|weight|birth_city       |birth_state|team_name|position_name|platoon      |start_date|end_date  |active|
-+----------+----------+---------+----------+------+------+-----------------+-----------+---------+-------------+-------------+----------+----------+------+
-|1577      |Patrick   |Mannelly |1975-04-18|77    |265   |Atlanta          |GA         |Bears    |Unknown      |null         |2013-09-08|2013-12-29|False |
-|2706      |Patrick   |Chukwurah|1979-03-01|73    |250   |Nigeria          |null       |Seahawks |Unknown      |null         |2013-01-13|2013-01-13|False |
-|10455     |Patrick   |Willis   |1985-01-25|73    |240   |Bruceton         |TN         |49ers    |Linebacker   |Defense      |2014-09-07|2014-12-28|False |
-|11496     |Patrick   |Bailey   |1985-11-19|76    |243   |Elmendorf        |TX         |Titans   |Unknown      |null         |2013-09-08|2013-12-29|False |
-|12527     |Patrick   |Chung    |1987-08-19|71    |215   |Rancho Cucamonga |CA         |Patriots |Safety       |Defense      |2015-09-11|2021-01-03|False |
-|13238     |Patrick   |Robinson |1987-09-07|71    |191   |Miami            |FL         |Saints   |Cornerback   |Defense      |2018-09-09|2021-01-17|False |
-|13980     |Patrick   |Peterson |1990-07-11|73    |203   |Pompano Beach    |FL         |Steelers |Cornerback   |Defense      |2023-09-10|2023-12-31|True  |
-|14332     |Patrick   |DiMarco  |1989-04-30|73    |234   |Altamonte Springs|FL         |Bills    |Fullback     |Offense      |2017-09-10|2020-01-04|False |
-|14572     |Patrick   |Scales   |1988-02-11|75    |226   |Louisville       |KY         |Bears    |Long Snapper |Special Teams|2015-12-06|2023-12-31|True  |
-|15474     |Patrick   |Edwards  |1988-10-25|69    |175   |Temple           |TX         |Lions    |Unknown      |null         |2013-09-08|2013-10-13|False |
-+----------+----------+---------+----------+------+------+-----------------+-----------+---------+-------------+-------------+----------+----------+------+
++----------+-----------------+----------+------+------+--------------------+---------+-------------+-------+----------+----------+------+
+|athlete_id|name             |dob       |height|weight|birth_place         |team_name|position_name|platoon|start_date|end_date  |active|
++----------+-----------------+----------+------+------+--------------------+---------+-------------+-------+----------+----------+------+
+|1577      |Patrick Mannelly |1975-04-18|77    |265   |Atlanta, GA         |Bears    |Unknown      |Unknown|2013-09-08|2013-12-29|False |
+|2706      |Patrick Chukwurah|1979-03-01|73    |250   |Nigeria, UNKNOWN    |Seahawks |Unknown      |Unknown|2013-01-13|2013-01-13|False |
+|10455     |Patrick Willis   |1985-01-25|73    |240   |Bruceton, TN        |49ers    |Linebacker   |Defense|2014-09-07|2014-12-28|False |
+|11496     |Patrick Bailey   |1985-11-19|76    |243   |Elmendorf, TX       |Titans   |Unknown      |Unknown|2013-09-08|2013-12-29|False |
+|12527     |Patrick Chung    |1987-08-19|71    |215   |Rancho Cucamonga, CA|Patriots |Safety       |Defense|2015-09-11|2021-01-03|False |
++----------+-----------------+----------+------+------+--------------------+---------+-------------+-------+----------+----------+------+
 
 */
 
@@ -709,8 +698,7 @@ SELECT g.date,
 	l1.score AS home_score, 
 	l2.score AS away_score, 
 	v.venue_name,
-	v.city,
-	v.state
+	v.city || ', ' || coalesce(v.state, 'UNKNOWN') AS location
 FROM games g
 JOIN (
     SELECT game_id, team_name, sum(score) AS score
@@ -730,20 +718,20 @@ ORDER BY g.date DESC;
 /*
 Results:
 
-+----------+--------------+--------------+----------+----------+----------------+----------+-----+
-|date      |home_team_name|away_team_name|home_score|away_score|venue_name      |city      |state|
-+----------+--------------+--------------+----------+----------+----------------+----------+-----+
-|2021-10-10|Texans        |Patriots      |22        |25        |NRG Stadium     |Houston   |TX   |
-|2020-11-22|Texans        |Patriots      |27        |20        |NRG Stadium     |Houston   |TX   |
-|2019-12-02|Texans        |Patriots      |28        |22        |NRG Stadium     |Houston   |TX   |
-|2018-09-09|Patriots      |Texans        |27        |20        |Gillette Stadium|Foxborough|MA   |
-|2017-09-24|Patriots      |Texans        |36        |33        |Gillette Stadium|Foxborough|MA   |
-|2017-01-15|Patriots      |Texans        |34        |16        |Gillette Stadium|Foxborough|MA   |
-|2016-09-23|Patriots      |Texans        |27        |0         |Gillette Stadium|Foxborough|MA   |
-|2015-12-14|Texans        |Patriots      |6         |27        |NRG Stadium     |Houston   |TX   |
-|2013-12-01|Texans        |Patriots      |31        |34        |NRG Stadium     |Houston   |TX   |
-|2013-01-13|Patriots      |Texans        |41        |28        |Gillette Stadium|Foxborough|MA   |
-+----------+--------------+--------------+----------+----------+----------------+----------+-----+
++----------+--------------+--------------+----------+----------+----------------+--------------+
+|date      |home_team_name|away_team_name|home_score|away_score|venue_name      |location      |
++----------+--------------+--------------+----------+----------+----------------+--------------+
+|2021-10-10|Texans        |Patriots      |22        |25        |NRG Stadium     |Houston, TX   |
+|2020-11-22|Texans        |Patriots      |27        |20        |NRG Stadium     |Houston, TX   |
+|2019-12-02|Texans        |Patriots      |28        |22        |NRG Stadium     |Houston, TX   |
+|2018-09-09|Patriots      |Texans        |27        |20        |Gillette Stadium|Foxborough, MA|
+|2017-09-24|Patriots      |Texans        |36        |33        |Gillette Stadium|Foxborough, MA|
+|2017-01-15|Patriots      |Texans        |34        |16        |Gillette Stadium|Foxborough, MA|
+|2016-09-23|Patriots      |Texans        |27        |0         |Gillette Stadium|Foxborough, MA|
+|2015-12-14|Texans        |Patriots      |6         |27        |NRG Stadium     |Houston, TX   |
+|2013-12-01|Texans        |Patriots      |31        |34        |NRG Stadium     |Houston, TX   |
+|2013-01-13|Patriots      |Texans        |41        |28        |Gillette Stadium|Foxborough, MA|
++----------+--------------+--------------+----------+----------+----------------+--------------+
 
 */
 
@@ -839,19 +827,24 @@ Get the venue information, including the home team that matches a given search c
 Query Type: Question
 */
 
-SELECT v.*, teams.team_name
+SELECT v.venue_name,
+       v.capacity,
+       v.city || ', ' || v.state AS location,
+       v.grass,
+       v.indoor,
+       teams.team_name
 FROM venues v
-JOIN teams ON teams.venue_name = v.venue_name
+         JOIN teams ON teams.venue_name = v.venue_name
 WHERE v.venue_name LIKE '%GEHA%';
 
 /*
 Results:
 
-+-------------------------------+--------+-----------+-----+-----+------+---------+
-|venue_name                     |capacity|city       |state|grass|indoor|team_name|
-+-------------------------------+--------+-----------+-----+-----+------+---------+
-|GEHA Field at Arrowhead Stadium|76416   |Kansas City|MO   |true |false |Chiefs   |
-+-------------------------------+--------+-----------+-----+-----+------+---------+
++-------------------------------+--------+---------------+-----+------+---------+
+|venue_name                     |capacity|location       |grass|indoor|team_name|
++-------------------------------+--------+---------------+-----+------+---------+
+|GEHA Field at Arrowhead Stadium|76416   |Kansas City, MO|true |false |Chiefs   |
++-------------------------------+--------+---------------+-----+------+---------+
 
 */
 
@@ -861,7 +854,7 @@ Find the receiving stats for all players in a given season year and week.
 Query Type: Report
 */
 
-SELECT g.game_id, a.first_name, a.last_name, SUM(yards) as Receiving_yards
+SELECT g.game_id, a.first_name || ' ' || a.last_name AS name, SUM(yards) as Receiving_yards
 FROM player_plays pp
 JOIN plays p ON pp.play_id = p.play_id
 JOIN athletes a ON pp.player_id = a.athlete_id
@@ -882,15 +875,15 @@ ORDER BY SUM(yards) DESC;
 /*
 Truncated Results:
 
-+---------+----------+---------+---------------+
-|game_id  |first_name|last_name|receiving_yards|
-+---------+----------+---------+---------------+
-|401127948|Michael   |Thomas   |167            |
-|401127981|Tyreek    |Hill     |157            |
-|401128041|Amari     |Cooper   |147            |
-|401127976|Christian |Kirk     |138            |
-|401127944|DJ        |Moore    |120            |
-+---------+----------+---------+---------------+
++---------+--------------+---------------+
+|game_id  |name          |receiving_yards|
++---------+--------------+---------------+
+|401127948|Michael Thomas|167            |
+|401127981|Tyreek Hill   |157            |
+|401128041|Amari Cooper  |147            |
+|401127976|Christian Kirk|138            |
+|401127944|DJ Moore      |120            |
++---------+--------------+---------------+
 
 */
 
