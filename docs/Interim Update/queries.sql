@@ -662,8 +662,13 @@ JOIN all_third_quarter_scores y
 WHERE y.away_team_name = 'Texans';
 
 /*
+*******************************************************************************
+**** First Quarter Greatest                                                 ***
+*******************************************************************************
 Find all games where the total number of points scored in the first quarter is greater than
 the total number of points scored in any other quarter.
+
+Query Explanation: Which games had the greatest number of total points scored in the first quarter.
 
 Query Type: Report
 */
