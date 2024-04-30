@@ -47,7 +47,7 @@ JOIN plays p ON pp.play_id = p.play_id
 JOIN athletes a ON pp.player_id = a.athlete_id
 JOIN games g ON pp.game_id = g.game_id
 JOIN season_dates s ON g.date = s.date
-WHERE a.athlete_id= 13982
+WHERE a.athlete_id=%s
 	AND pp.type='receiver'
 	AND p.play_type in ('Pass',
 						'Rush',

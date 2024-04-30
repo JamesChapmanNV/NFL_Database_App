@@ -93,7 +93,7 @@ SELECT y.home_team_score AS third_quarter_team_scores,
 FROM all_final_game_scores x
 JOIN all_third_quarter_scores y 
 	ON x.game_id = y.game_id 
-WHERE y.home_team_name = 'Texans'
+WHERE y.home_team_name = %s
 UNION ALL
 SELECT y.away_team_score AS third_quarter_team_scores, 
 		y.home_team_score AS opponent_scores, 
@@ -101,4 +101,4 @@ SELECT y.away_team_score AS third_quarter_team_scores,
 FROM all_final_game_scores x
 JOIN all_third_quarter_scores y 
 	ON x.game_id = y.game_id  
-WHERE y.away_team_name = 'Texans';
+WHERE y.away_team_name = %s;
