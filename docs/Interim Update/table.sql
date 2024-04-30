@@ -81,7 +81,7 @@ CREATE TABLE rosters(
     position_name VARCHAR(20) REFERENCES positions(position_name),
     start_date DATE,
     end_date DATE,
-    PRIMARY KEY (athlete_id, team_name, position_name, start_date)
+    PRIMARY KEY (athlete_id, team_name, start_date)
 );
 
 CREATE TABLE plays(
