@@ -6,7 +6,7 @@
 -- The result is used, in the app, to find the probability of 
 -- a given team (from input) to win the game based on 
 -- the score at the end of the 3rd quarter (from input).
--- INPUT: (%s) = (team_name) 
+-- INPUT: (s) = (team_name) 
 -- OUTPUT: all games played by input team with 3 columns
 -- 		-third_quarter_team_scores- score of input team
 -- 		-opponent_scores- same game
@@ -43,7 +43,7 @@ Note the NOT operator on the away team subquery (bottom).  This is because
 all_final_game_scores.home_winner_bool is true if the home team wins.
 
 ****************************************
-Sample Query result (%s) = (Texans)
+Sample Query result (s) = (Texans)
 
  third_quarter_team_scores | opponent_scores | winner_bool
 ---------------------------+-----------------+-------------
