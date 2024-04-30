@@ -7,8 +7,10 @@
 	Chuck Zumbaugh
 	James Chapman
 */
+-- CREATES 11 TABLES
 
 -- copied from drop_tables.sql
+DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS linescores CASCADE;
 DROP TABLE IF EXISTS player_plays CASCADE;
 DROP TABLE IF EXISTS plays CASCADE;
@@ -19,10 +21,10 @@ DROP TABLE IF EXISTS athletes CASCADE;
 DROP TABLE IF EXISTS positions CASCADE;
 DROP TABLE IF EXISTS teams CASCADE;
 DROP TABLE IF EXISTS venues CASCADE;
-DROP TABLE IF EXISTS users CASCADE;
 
--- copied from create_tables.sql
--- Create tables in the database
+-- Copied from create_tables.sql
+-- Replaced rosters with rosters_decomposition.SQL
+-- Added users
 CREATE TABLE venues(
     venue_name VARCHAR(45) PRIMARY KEY,
     capacity INT,
@@ -75,14 +77,6 @@ CREATE TABLE games(
     utc_time TIME
 );
 
-CREATE TABLE rosters(
-    athlete_id BIGINT REFERENCES athletes(athlete_id),
-    team_name VARCHAR(45) REFERENCES teams(team_name),
-    position_name VARCHAR(20) REFERENCES positions(position_name),
-    start_date DATE,
-    end_date DATE,
-    PRIMARY KEY (athlete_id, team_name, start_date)
-);
 
 CREATE TABLE plays(
     play_id BIGINT PRIMARY KEY,
@@ -112,13 +106,22 @@ CREATE TABLE linescores(
     PRIMARY KEY(team_name, game_id, quarter)
 );
 
+CREATE TABLE rosters(
+    athlete_id BIGINT REFERENCES athletes(athlete_id),
+    team_name VARCHAR(45) REFERENCES teams(team_name),
+    position_name VARCHAR(20) REFERENCES positions(position_name),
+    start_date DATE,
+    end_date DATE,
+    PRIMARY KEY (athlete_id, team_name, start_date)
+);
+
 CREATE TABLE users(
     uid SERIAL PRIMARY KEY,
-    username VARCHAR(45),
-    password VARCHAR(45),
+    username VARCHAR(45) UNIQUE NOT NULL,
+    password VARCHAR(45) NOT NULL,
     first_name VARCHAR(45),
-    last_name VARCHAR(45),
-    created_on DATE,
+    last_name VARCHAR(45) NOT NULL,
+    created_on DATE NOT NULL,
     favorite_team_name VARCHAR(45) REFERENCES teams(team_name),
     favorite_athlete_id BIGINT REFERENCES athletes(athlete_id)
 );

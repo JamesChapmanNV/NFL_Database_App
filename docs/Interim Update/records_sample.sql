@@ -7,68 +7,69 @@
 	Vishnu Bondalakunta
 	Chuck Zumbaugh
 	James Chapman
+/**/
+*******************************************************************************
+THIS FILE ONLY CONTAINS 4 TABLES DUE TO GitHub limits (CSV's are on GitHub).
+TABLES: games, teams, venues,  & season_dates
 
-******************************************************************************************
-THIS FILE ONLY CONTAINS CERTAIN TABLES DUE TO GitHub  limits
-in the meeting, I'll talk more about it. I don't know if GitHubLFS will affect
-our project. But I was able to upload it to the branch - testing large files
-it is only 135 MB, and I tried uploading it to Kansas state canvas and it looks like it works.
- I'm not sure we technically need the entire database in this form. (CSV's on GitHub)
- but, if you run that command with PG dump it's easy to get.
- games teams venues season_dates
- https://github.com/JamesChapmanNV/NFL_database/blob/testing-large-files/docs/Interim%20Update/records_long.sql
-******************************************************************************************
+ALL TABLES FOUND AT THE FOLLOWING LINK:
+https://github.com/JamesChapmanNV/NFL_database/blob/large-files/docs/Interim%20Update/records.sql
+*******************************************************************************
 
-*** Raw NFL data was scraped from a public ESPN API using a Jupyter notebook.
-*** The entire dataset can be collected, start to finish.
-*** There is a substantial amount of processing required (expect ~9 hours).
-*** The notebook can be found at the project's GitHub repository.
-*** 
-*** 	https://github.com/JamesChapmanNV/NFL_database/blob/main/data/ESPN_WebScraping.ipynb
-*** 
-*** The the notebook creates 10 CSV files, found in the same directory (also on GitHub). 
-*** The CSV data can be imported into PostgreSQL in 2 ways.
-*** 	1. PUTTY command line - clone GitHub repository
-*** 
-*** 		run file-> NFL_database/src/sql/build.sql
-***
-*** 			This calls 5 SQL files that builds the database.
-*** 			\i drop_tables.sql
-*** 			\i create_tables.sql
-*** 			\i data_import.sql
-*** 			\i rosters_decomposition.sql
-*** 			\i users.sql
-*** 			\i views_indexes_functions.sql
-*** 	2. In app command call 'Build_Database' (which mimics build.sql, in Python)
-*** 		This might be a concern. TBD - user permission security?
-*** 
+Raw NFL data was scraped from a public ESPN API using a Jupyter notebook.
+The entire dataset can be collected, start to finish, using the Jupyter notebook.
+There is a substantial amount of processing required (expect ~9 hours).
+The notebook can be found at the project's GitHub repository.
+
+	https://github.com/JamesChapmanNV/NFL_database/blob/main/data/ESPN_WebScraping.ipynb
+
+The the notebook creates 10 CSV files, found in the same directory (also on GitHub). 
+The CSV data can be imported into PostgreSQL in 2 ways.
+	1. Using PUTTY command line & PostgreSQL database.
+
+		clone GitHub repository
+		run file-> NFL_database/src/sql/build.sql
+
+			This calls 5 SQL files that builds the database.
+			\i drop_tables.sql
+			\i create_tables.sql
+			\i data_import.sql
+			\i rosters_decomposition.sql
+			\i users.sql
+			\i views_indexes_functions.sql
+
+	2. In app command 'Build_Database' (which mimics build.sql, in Python)
+		This might be a concern. TBD - user permission security?
+
 *** Additionally, the ROSTERS table was decomposed by eliminating game_id.
-*** The athletes were grouped by team & position, by adding date ranges.
-*** The following SQL file accomplished this with some clever SQL, and drastically reduces the size of the table
-*** 
-*** 	 NFL_database/src/sql/rosters_decomposition.sql
-*** 
+*** The athletes were grouped by team & position, by adding date ranges contracts.
+*** The following SQL file accomplished this with some clever SQL, 
+*** and drastically reduces the size of the table
+
+	 NFL_database/src/sql/rosters_decomposition.sql
+
 *** The USERS table was created from scratch.
 *** Lastly, views_indexes_functions.sql includes views, indexes, & functions.
-*** 
-*** 
-*** Sizes of the tables:
-*** 
-*** 1.) "teams" 			   32
-*** 2.) "venues"			   46
-*** 3.) "positions"		       24
-*** 4.) "linescores" 	   24,140
-*** 5.) "player_plays"	1,116,823
-*** 6.) "plays" 		  522,707
-*** 7.) "rosters" 		   16,233
-*** 8.) "games" 		    2,976
-*** 9.) "season_dates" 	      827
-*** 10.) "athletes" 	    7,165
-*** 
+
+
+Sizes of the tables:
+
+1.) "teams"                32
+2.) "venues"               46
+3.) "positions"            24
+4.) "linescores"       24,140
+5.) "player_plays"  1,116,823
+6.) "plays"           522,707
+7.) "rosters"          16,233
+8.) "games"             2,976
+9.) "season_dates"        827
+10.) "athletes"         7,165
+11.) "athletes"             3
+
 ****************************************************************/
 
 -- The rest of this file was created with pg_dump by running the following command
--- >>> pg_dump -h postgresql.cs.ksu.edu -t teams -t venues -t positions -t linescores -t player_plays -t plays -t rosters -t games -t season_dates -t athletes --data-only --rows-per-insert=100000 --quote-all-identifiers --column-inserts > records.sql
+-- >>> pg_dump -h postgresql.cs.ksu.edu -t teams -t venues -t games -t season_dates --data-only --rows-per-insert=100000 --quote-all-identifiers --column-inserts > records_sample.sql
 -- >>> (Enter Password)
 
 --

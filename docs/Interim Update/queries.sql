@@ -6,16 +6,20 @@
 	Vishnu Bondalakunta
 	Chuck Zumbaugh
 	James Chapman
+
 */
 
--- ***  weekly_receiving_stats ***
+
+/******************************************************************************
+**** weekly_receiving_stats                                                 ***
+*******************************************************************************
 -- For each player, with receiving stats in a given week,
 -- count the number of receiving yards.
 -- INPUT: (%s,%s,%s) = (year, season_type, week) 
 -- OUTPUT: all receivers with 4 columns
 -- QUERY TYPE: Report 
 
-/*Query explanation
+Query explanation
 ****************************************
 Receiving yards are found in the play-by-play data (plays table).
 
@@ -66,13 +70,15 @@ WHERE type='receiver'
 Group by player_id, g.game_id, a.first_name, a.last_name
 ORDER BY SUM(yards) DESC;
 
--- ***  athlete_receiving_stats ***
+/******************************************************************************
+**** athlete_receiving_stats                                                ***
+*******************************************************************************
 -- When given athletes_id, find receiving stats, for each week.
 -- INPUT: (%s) = (athletes_id) 
--- OUTPUT: all game 2 with receiving stats with 6 columns
+-- OUTPUT: all games with receiving stats - 6 columns
 -- QUERY TYPE: Question 
 
-/*Query explanation
+Query explanation
 ****************************************
 Receiving yards are found in the play-by-play data (plays table).
 
@@ -122,7 +128,9 @@ WHERE a.athlete_id=13982
 Group by a.athlete_id, a.first_name, a.last_name, s.season_year, s.season_type, s.week
 ORDER BY s.season_year DESC, s.season_type DESC, s.week DESC;
 
--- ***  post_season_game_count ***
+/******************************************************************************
+**** post_season_game_count                                                 ***
+*******************************************************************************
 -- For each team, count the number of postseason games played
 -- There are 4 rounds of postseason games:
 -- 		WildCard (similar to eighth-finals)
@@ -133,7 +141,7 @@ ORDER BY s.season_year DESC, s.season_type DESC, s.week DESC;
 -- OUTPUT: all teams with 6 columns
 -- QUERY TYPE: Report 
 
-/*Query explanation
+Query explanation
 ****************************************
 Find all games each team played in the postseason, as home_team or away_team.
 Postseason games are identified by a season type
@@ -196,7 +204,9 @@ FROM (
 	WHERE sd.season_type = 'Post Season') team_week
 group by team_name;
 
--- ***  avg_pts_grass_indoor ***
+/******************************************************************************
+**** avg_pts_grass_indoor                                                   ***
+*******************************************************************************
 -- average points based on grass/turf & indoor/outdoor
 -- indoor games seems to have greater points
 -- grass/turf seems to not matter
@@ -204,10 +214,10 @@ group by team_name;
 -- OUTPUT: average points scored 
 -- QUERY TYPE: Report 
 
-/*Query explanation
+Query explanation
 ****************************************
-Simple idea,  how does indoor/outdoor affect points
- how does grass/turf affect points?
+Simple idea, how does indoor/outdoor affect total points?
+How does grass/turf affect total points?
 ****************************************
 
 Sample Query result 
@@ -239,13 +249,18 @@ GROUP BY v.grass,v.indoor
 ORDER BY avg_total_points DESC;
 
 
-/*** VIEW all_final_game_scores ***
-2 views were created and used in 3 queries.  The database lists the scores,
-of each quarter, of each game (linescores table). These views make the
-queries easier to understand and saves time writing queries.
+
+/******************************************************************************
+**** THIS IS A VIEW !!!                                                     ***
+**** all_final_game_scores                                                  ***
+*******************************************************************************
+2 views were created and used in 3 queries.  The database lists the scores, of 
+each quarter, of each game (linescores table). These views make the queries 
+easier to understand and saves time writing queries.
 Also, it's good practice, as a beginner.
 
 VIEW explanation
+****************************************
 all_final_game_scores produces 6 attributes FOR EACH GAME:
 	-game_id 
 	-home_team_name
@@ -264,6 +279,7 @@ The 2nd instance of TeamScores matches games.away_team_name
 
 The attribute 'home_winner_bool' is created & produces
 True if home team wins, NULL if the result is a tie
+****************************************
 */
 CREATE VIEW all_final_game_scores AS
 WITH TeamScores AS (
@@ -289,13 +305,17 @@ LEFT JOIN TeamScores z
 	ON x.game_id = z.game_id 
 	AND x.away_team_name = z.team_name ;
 
-/*** VIEW all_third_quarter_scores ***
-2 views were created and used in 3 queries.  The database lists the scores,
-of each quarter, of each game (linescores table). These views make the
-queries easier to understand and saves time writing queries.
+/******************************************************************************
+**** THIS IS A VIEW !!!                                                     ***
+**** all_third_quarter_scores                                               ***
+*******************************************************************************
+2 views were created and used in 3 queries.  The database lists the scores, of 
+each quarter, of each game (linescores table). These views make the queries 
+easier to understand and saves time writing queries.
 Also, it's good practice, as a beginner.
 
 VIEW explanation
+****************************************
 VIEW 'all_third_quarter_scores' produces 6 attributes for each game:
 	-game_id 
 	-home_team_name 
@@ -304,8 +324,8 @@ VIEW 'all_third_quarter_scores' produces 6 attributes for each game:
 	-away_team_score (at end of 3rd quarter)
 	-away_team_winng_bool (true if AWAY team is currently winning, NULL if tie )
 
-ThirdQuarterTeamScores is a CTE meant to 
-find all scores (AT THE END OF 3RD QUARTER), of each game, of each team.
+ThirdQuarterTeamScores is a CTE meant to find all scores (AT THE END OF 3RD 
+QUARTER), of each game, of each team.
 This filters the linescores WHERE quarter <= 3.
 
 The first instance of ThirdQuarterTeamScores matches games.home_team_name
@@ -313,6 +333,7 @@ The 2nd instance of ThirdQuarterTeamScores matches games.away_team_name
 
 The attribute 'away_team_winng_bool' is created & produces
 True if AWAY team IS WINNING, NULL if there is currently a tie
+****************************************
 */
 CREATE VIEW all_third_quarter_scores AS
 WITH ThirdQuarterTeamScores AS (
@@ -339,13 +360,15 @@ LEFT JOIN ThirdQuarterTeamScores z
 	ON x.game_id = z.game_id 
 	AND x.away_team_name = z.team_name ;
 
--- ***  team_rivals ***
+/******************************************************************************
+**** team_rivals                                                            ***
+*******************************************************************************
 -- Find all games and info between 2 given teams
 -- INPUT: (%s,%s,%s,%s) = (team1, team2, team2, team1) 
 -- OUTPUT: all games with 8 columns, ordered by date desc
 -- QUERY TYPE: Question 
 
-/*Query explanation
+Query explanation
 ****************************************
 This query requires 1 VIEW named 'all_final_game_scores'
 VIEW 'all_final_game_scores' produces 6 attributes for each game:
@@ -391,7 +414,10 @@ WHERE (g.home_team_name LIKE '%Texans%' OR g.away_team_name LIKE '%Texans%')
 ORDER BY g.date DESC;
 
 
--- *** top_comeback_wins ***
+
+/******************************************************************************
+**** top_comeback_wins                                                      ***
+*******************************************************************************
 -- Top 10 teams with the MOST 4th-quarter comeback wins
 -- Definition of '4th-quarter comeback win': 
 -- 		team is losing at end of 3rd-quarter, & wins the game
@@ -403,7 +429,7 @@ ORDER BY g.date DESC;
 -- 		-secondary_color
 -- QUERY TYPE: Question 
 
-/* Query explanation
+Query explanation
 ****************************************
 This query requires 2 VIEWs named 'all_final_game_scores' & 'all_third_quarter_scores'
 VIEW 'all_final_game_scores' produces 6 attributes for each game:
@@ -480,26 +506,28 @@ ORDER BY comebacks DESC
 LIMIT 10;
 
 
--- *** win_probability ***
--- Query produces table with 3rd quarter scores of all games
--- played by a given team (from input), 
--- AND whether that team won the game (Boolean).
+/******************************************************************************
+**** win_probability                                                        ***
+*******************************************************************************
+-- Query produces table with 3rd quarter scores of all games played by a given 
+-- team (from input), AND whether that team won the game (Boolean).
 -- 
--- The result is used, in the app, to find the probability of 
--- a given team (from input) to win the game based on 
--- the score at the end of the 3rd quarter (from input).
--- Below is further explanation.
+-- The result is used, in the app, to find the probability of a given team 
+-- (from input) to win the game based on the score at the end of the 3rd 
+-- quarter (from input).
+-- More explanation below.
 -- 
--- INPUT: (%s) = (team_name) 
+-- APP INPUT: (team_name,  team_name_score_3rd_quarter,  opponent_score) 
+-- QUERY INPUT: (%s) = (team_name) 
 -- OUTPUT: all games played by input team, with 3 columns
 -- 		-third_quarter_team_scores- score of input team
 -- 		-opponent_scores- score of opponent, same game
 -- 		-winner_bool- if input team wins, NULL if tie
 -- QUERY TYPE: Question 
 
-/* Query explanation
+Query explanation
 ********************
-This query requires 2 VIEWs named 'all_final_game_scores' & 'all_third_quarter_scores'
+This query requires 2 VIEWs 
 VIEW 'all_final_game_scores' produces 6 attributes for each game:
 	-game_id 
 	-home_team_name
@@ -543,24 +571,31 @@ Sample Query result (%s) = (Texans)
 . . .
 (186 rows)
 
-****************************************
+*******************************************************************************
 IN APP PROCESSING OF QUERY 
 (logistic regression, unique to each team)
 
-The input of this application command requires the team (used above), and the current LIVE
-3rd quarter team score & opponent score.  This is meant to be used at the end of the 3rd quarter,
-of a live game. 
+The input of this application command requires the team (used above), and the 
+current LIVE 3rd quarter team score & opponent score. This is meant to be used 
+at the end of the 3rd quarter, of a live game. 
 
-The idea comes from the fact that certain teams tend to have better/worse 4th quarter performances.
-So each team has its unique probability distribution. Although this model is 
-slightly naive (more features are required, etc.), this is a good proof of concept.
+The idea comes from the fact that certain teams tend to have better/worse 4th 
+quarter performances. So each team has its unique probability distribution. 
+Although this model is slightly naive (more features are required, etc.), 
+this is a good proof of concept.
+
+FURTHER, this brings up the topic of database choice. PostgreSQL does not offer 
+in-database machine learning. Ideally, logistic regression like this would run
+within the database engine, on server.
 
 INPUTS
+team_name- team of interest
 team_score- input of current 3rd quarter team score
 opponent_score- input of current 3rd quarter opponents score
 
 SAMPLE CODE FROM APPLICATION
-df = pd.DataFrame(self.last_result, columns=['third_quarter_team_scores', 'opponent_scores', 'winner_bool'])
+df = pd.DataFrame(self.last_result, columns=['third_quarter_team_scores', 
+                                            'opponent_scores', 'winner_bool'])
 df.loc[(df['winner_bool']=='f'),'winner_bool']= -1 # given team wins
 df.loc[(df['winner_bool']=='t'),'winner_bool']= 1 # opponent wins
 df.loc[(df['winner_bool'].isnull()),'winner_bool']= 0 # tie
@@ -577,7 +612,6 @@ print(f'The probability of the {team_name} winning is {round(probabilities[given
 ****************************************
 
 Sample app results
-
 
 
 > Win_probability Texans 8 25
@@ -680,8 +714,8 @@ SELECT
         WHEN v.indoor THEN 'Indoor' 
         ELSE 'Outdoor' 
 	END AS venue,
-	AVG(gs.home_team_score + gs.away_team_score) AS avg_total_points
-FROM game_scores gs
+	ROUND( AVG(gs.home_team_score + gs.away_team_score) , 1) AS avg_total_points
+FROM all_final_game_scores gs
 JOIN games g ON gs.game_id = g.game_id
 JOIN venues v ON g.venue_name = v.venue_name
 GROUP BY v.grass,v.indoor
@@ -691,12 +725,12 @@ ORDER BY avg_total_points DESC;
 Output:
 
 +-----+-------+-------------------+
-|field|venue  |avg_total_points   |
-+-----+-------+-------------------+
-|Turf |Indoor |48.1671270718232044|
-|Grass|Indoor |47.4365079365079365|
-|Turf |Outdoor|44.8225165562913907|
-|Grass|Outdoor|44.7786705624543462|
+ field |  venue  | avg_total_points
+-------+---------+------------------
+ Turf  | Indoor  |             48.2
+ Grass | Indoor  |             47.4
+ Turf  | Outdoor |             44.8
+ Grass | Outdoor |             44.8
 +-----+-------+-------------------+
 
 */
