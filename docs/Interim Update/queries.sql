@@ -533,9 +533,41 @@ print(f'Given a score of {team_score} to {opponent_score},')
 print(f'The probability of the {team_name} winning is {round(probabilities[given_team_index]*100, 1)}%')
 ****************************************
 
-Sample app result - Texans 25 25
+Sample app results
 
 
+
+> Win_probability Texans 8 25
+Given a score of 8 to 25,
+The probability of the Texans winning is 2.7%
+
+> Win_probability Texans 25 8
+Given a score of 25 to 8,
+The probability of the Texans winning is 96.0%
+
+> Win_probability Texans 15 12
+Given a score of 15 to 12,
+The probability of the Texans winning is 64.0%
+
+> Win_probability Texans 15 8
+Given a score of 15 to 8,
+The probability of the Texans winning is 81.6%
+
+> Win_probability Dolphins 25 25
+Given a score of 25 to 25,
+The probability of the Dolphins winning is 55.4%
+
+> Win_probability Raiders 25 25
+Given a score of 25 to 25,
+The probability of the Raiders winning is 57.8%
+
+> Win_probability Panthers 25 25
+Given a score of 25 to 25,
+The probability of the Panthers winning is 40.3%
+
+> Win_probability Patriots 25 25
+Given a score of 25 to 25,
+The probability of the Patriots winning is 71.8%
 
 */
 
