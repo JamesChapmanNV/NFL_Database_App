@@ -10,7 +10,7 @@
 /**/
 *******************************************************************************
 THIS FILE ONLY CONTAINS 4 TABLES DUE TO GitHub limits (CSV's are on GitHub).
-TABLES: games, teams, venues,  & season_dates
+TABLES: games, teams, venues, & season_dates
 
 ALL TABLES FOUND AT THE FOLLOWING LINK:
 https://github.com/JamesChapmanNV/NFL_database/blob/large-files/docs/Interim%20Update/records.sql
