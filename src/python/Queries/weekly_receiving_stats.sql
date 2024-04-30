@@ -41,16 +41,16 @@ Sample Query result (%s,%s,%s) = (2019, 'Regular Season', 10)
 
 */
 
-SELECT g.game_id, a.first_name || ' ' || a.last_name AS name, SUM(yards) as Receiving_yards
+SELECT g.game_id, a.first_name, a.last_name, SUM(yards) as Receiving_yards
 FROM player_plays pp
 JOIN plays p ON pp.play_id = p.play_id
 JOIN athletes a ON pp.player_id = a.athlete_id
 JOIN games g ON pp.game_id = g.game_id
 JOIN season_dates s ON g.date = s.date
 WHERE type='receiver'
-	AND season_year = 2019
-	AND season_type = 'Regular Season'
-	AND week = 10
+	AND season_year = %s
+	AND season_type = %s
+	AND week = %s
 	AND play_type in ('Pass',
 					'Rush',
 					'Fumble Recovery (Own)',

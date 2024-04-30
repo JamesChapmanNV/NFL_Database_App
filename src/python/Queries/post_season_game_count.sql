@@ -1,29 +1,22 @@
+-- ***  post_season_game_count ***
+-- For each team, count the number of postseason games played
+-- There are 4 rounds of postseason games:
+-- 		WildCard (similar to eighth-finals)
+-- 		Divisional  (quarter-finals)
+-- 		Conference (semi-finals)
+-- 		SuperBowl (finals)
+-- INPUT: 
+-- OUTPUT: all teams with 6 columns
+-- QUERY TYPE: Report 
 
--- Number of games each team played in the postseason 
--- QUERY TYPE: report 
+/*Query explanation
+****************************************
+Find all games each team played in the postseason, as home_team or away_team.
+Postseason games are identified by a season type
+Postseason weeks are numbered 1-5, week 4 is Pro bowl (ignored)
+****************************************
 
-SELECT team_name, 
-	count (*) AS total_postseason_game_count,
-    sum(CASE WHEN week=1 THEN 1 ELSE 0 END) AS WildCard,
-    sum(CASE WHEN week=2 THEN 1 ELSE 0 END) AS Divisional,
-    sum(CASE WHEN week=3 THEN 1 ELSE 0 END) AS Conference,
-    sum(CASE WHEN week=5 THEN 1 ELSE 0 END) AS SuperBowl
-FROM (
-	SELECT g.home_team_name as team_name, sd.week
-	FROM games g 
-	JOIN season_dates sd ON g.date = sd.date
-	WHERE sd.season_type = 'Post Season'
-	
-	Union ALL
-	SELECT g.away_team_name as team_name, sd.week
-	FROM games g 
-	JOIN season_dates sd ON g.date = sd.date
-	WHERE sd.season_type = 'Post Season') team_week
-group by team_name;
-
-
-/* SAMPLE OUTPUT
-
+Sample Query result 
 
  team_name  | total_postseason_game_count | wildcard | divisional | conference | superbowl
 ------------+-----------------------------+----------+------------+------------+-----------
@@ -60,7 +53,26 @@ group by team_name;
  Browns     |                           2 |        1 |          1 |          0 |         0
 (31 rows)
 
-
-
-
 */
+
+
+SELECT team_name, 
+	count (*) AS total_postseason_game_count,
+    sum(CASE WHEN week=1 THEN 1 ELSE 0 END) AS WildCard,
+    sum(CASE WHEN week=2 THEN 1 ELSE 0 END) AS Divisional,
+    sum(CASE WHEN week=3 THEN 1 ELSE 0 END) AS Conference,
+    sum(CASE WHEN week=5 THEN 1 ELSE 0 END) AS SuperBowl
+FROM (
+	SELECT g.home_team_name as team_name, sd.week
+	FROM games g 
+	JOIN season_dates sd ON g.date = sd.date
+	WHERE sd.season_type = 'Post Season'
+	
+	Union ALL
+	SELECT g.away_team_name as team_name, sd.week
+	FROM games g 
+	JOIN season_dates sd ON g.date = sd.date
+	WHERE sd.season_type = 'Post Season') team_week
+group by team_name;
+
+
