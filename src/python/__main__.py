@@ -24,9 +24,11 @@ class NFLapp:
         print("\n *** Please enter one of the following commands *** ")
         print("> Build_Database")
         print("> Team [<team_name>]")
+        print("> Athlete <athlete_name>")
         print("> Venue [<venue_name>]")
         print("> Scores <year> <week>")
         print("> Game <game_id | year>")
+        print("> Plays <athlete_id> <game_id>")
         print("> Top_Comeback_Wins [<year>]")
         print("> Win_probability <team_name> <team_score> <opponent_score>")
         print("> Save <type> [<filename>]")
@@ -36,7 +38,7 @@ class NFLapp:
         while True:
             self.usage()
             response = input("> ").strip()
-            args = response.split(" ", 3)
+            args = response.split(" ", 10)
             command = args[0]
 
             if command == "Build_Database":
@@ -45,6 +47,11 @@ class NFLapp:
             elif command == "Team":
                 team_name = args[1] if len(args) > 1 else None
                 self.query.get_team(team_name)
+
+            elif command == "Athlete":
+                athlete_name = args[1] if len(args) > 1 else None
+                if athlete_name:
+                    self.query.get_athlete(athlete_name)
 
             elif command == "Venue":
                 venue_name = args[1] if len(args) > 1 else None
@@ -57,6 +64,12 @@ class NFLapp:
                     self.query.get_game(game_id)
                 else:
                     print("Error: Game <game_id | year>")
+
+            elif command == "Plays":
+                athlete_id = args[1] if len(args) > 2 else None
+                game_id = args[2] if len(args) > 2 else None
+                if athlete_id is not None and game_id is not None:
+                    self.query.get_plays(athlete_id, game_id)
 
             elif command == "Scores":
                 if len(args) > 2:
@@ -103,7 +116,6 @@ def main() -> None:
 
     if len(sys.argv) < 3:
         app.registration_manager.register_account()
-        print("Usage: python NFLdata.py USERNAME PASSWORD")
         sys.exit(1)
     try:
         username = sys.argv[1]

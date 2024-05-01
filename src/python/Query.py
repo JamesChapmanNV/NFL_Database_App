@@ -70,7 +70,7 @@ class Query:
                 self.pgdb.commit()
                 print('Thank you for registering for an account')
             except Exception as e:
-                print('An error occured')
+                print('An error occured: {}'.format(str(e)))
 
         return
     
@@ -97,6 +97,17 @@ class Query:
         display(self.last_result,
                 [('Name', 0), ('Abbreviation', 1), ('Location', 2), ('Home Stadium', 3)],
                 (4, 5))
+
+    def get_athlete(self, athlete_name: str) -> None:
+        cursor = self.pgdb.cursor()
+        query = self.file_manager.read_file('athletes.sql')
+        data = ('%' + athlete_name + '%', )
+        cursor.execute(query, data)
+        self.helper_set_column_names(cursor)
+        self.last_result = cursor.fetchall()
+        display(self.last_result,
+                [('ID', 0), ('Name', 1), ('Date of Birth', 2), ('Height, in', 3),
+                 ('Weight, lbs', 4), ('Birth Place', 5), ('Team Name', 6), ('Position', 7), ('Platoon', 8)])
 
     def get_venue(self, venue_name: str=None) -> None:
         cursor = self.pgdb.cursor()
@@ -130,6 +141,19 @@ class Query:
                  ('Home Team', 3), ('Away Team', 4), ('Venue', 5),
                  ('Time', 6), ('Home Score', 7), ('Away Score', 8)],
                 colors=(9, 10))
+
+    def get_plays(self, athlete_id: int, game_id: int):
+        print(athlete_id)
+        print(game_id)
+        cursor = self.pgdb.cursor()
+        query = self.file_manager.read_file('player_game_plays.sql')
+        data = (game_id, athlete_id, )
+        cursor.execute(query, data)
+        self.helper_set_column_names(cursor)
+        self.last_result = cursor.fetchall()
+        display(self.last_result,
+                [('Quarter', 0), ('Seconds Remaining', 1), ('Yards', 2), ('Score Value', 3),
+                 ('Play Type', 4), ('Start Down', 5), ('End Down', 6)])
 
     def get_scores(self, year: int, week: int) -> None:
         cursor = self.pgdb.cursor()
