@@ -13,7 +13,7 @@ SELECT a.athlete_id,
 FROM athletes a
     JOIN rosters r ON r.athlete_id = a.athlete_id
     JOIN positions p ON p.position_name = r.position_name
-WHERE first_name LIKE %s
+WHERE {column_name} LIKE %s
   AND start_date >= ALL (SELECT start_date
     FROM athletes a2
     JOIN rosters r2 ON r2.athlete_id = a2.athlete_id
