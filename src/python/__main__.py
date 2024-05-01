@@ -50,8 +50,9 @@ class NFLapp:
 
             elif command == "Athlete":
                 athlete_name = args[1] if len(args) > 1 else None
+                col_flag = args[2] if len(args) > 2 else '-f'
                 if athlete_name:
-                    self.query.get_athlete(athlete_name)
+                    self.query.get_athlete(athlete_name, col_flag)
 
             elif command == "Venue":
                 venue_name = args[1] if len(args) > 1 else None
