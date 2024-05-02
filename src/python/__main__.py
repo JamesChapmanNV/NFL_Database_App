@@ -47,7 +47,8 @@ class NFLapp:
         Register the subparsers for the program
         :return:
         """
-        subparsers = self.parser.add_subparsers(help='Functions')
+        subparsers = self.parser.add_subparsers(help='Functions',
+                                                dest='command')
         self.register_login_parser(subparsers)
         self.register_team_parser(subparsers)
         self.register_athlete_parser(subparsers)
@@ -70,7 +71,7 @@ class NFLapp:
         team_parser = subparsers.add_parser('Team', help='Search for a team by name')
         team_parser.add_argument('team_name', nargs='?', default=None, type=str,
                                  help='Name of the team')
-        team_parser.set_defaults(func=self.query.get_team)
+        team_parser.set_defaults(func=self.query.execute)
 
     def register_athlete_parser(self, subparsers):
         athlete_parser = subparsers.add_parser('Athlete',
@@ -79,7 +80,7 @@ class NFLapp:
         athlete_parser.add_argument('-l', '--last',
                                     action='store_true',
                                     help='Search by last name')
-        athlete_parser.set_defaults(func=self.query.get_athlete)
+        athlete_parser.set_defaults(func=self.query.execute)
 
     def register_venue_parser(self, subparsers):
         venue_parser = subparsers.add_parser('Venue',
@@ -89,7 +90,7 @@ class NFLapp:
                                   default=None,
                                   type=str,
                                   help='Name of the venue')
-        venue_parser.set_defaults(func=self.query.get_venue)
+        venue_parser.set_defaults(func=self.query.execute)
 
     def register_game_parser(self, subparsers):
         game_parser = subparsers.add_parser('Game',
@@ -117,7 +118,7 @@ class NFLapp:
                                  default=None,
                                  type=str,
                                  help='The athlete to get plays for if the -p flag is used')
-        game_parser.set_defaults(func=self.query.get_game)
+        game_parser.set_defaults(func=self.query.execute)
 
     def register_comeback_parser(self, subparsers):
         comeback_parser = subparsers.add_parser('Top_Comeback_Wins',

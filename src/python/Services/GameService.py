@@ -1,6 +1,6 @@
 from FileManager import FileManager
 import display
-
+from Services.Service import Service
 """
 Service to get data related to games in the database. This service is involked when the user uses the 'Game' command.
 The user can obtain information on specific games, games in a given year, plays made by a athlete in a given game,
@@ -11,14 +11,15 @@ simply pass everything between the cursor and the display method into the method
 """
 
 
-class GameService:
+class GameService(Service):
 
     def __init__(self, file_manager: FileManager, conn=None):
-        self.__conn = conn
+        super().__init__(conn)
         self.__file_manager = file_manager
 
-    def set_connection(self, conn):
-        self.__conn = conn
+    def get_data(self, args: [str]) -> ():
+        print(args)
+        return self.get_game(args)
 
     def get_game(self, args: [str]) -> ():
         """
@@ -34,7 +35,7 @@ class GameService:
         else:
             game_id = args.game_id
             year = args.year
-            cursor = self.__conn.cursor()
+            cursor = self.conn.cursor()
             query = self.__file_manager.read_file('games.sql')
             if year is not None:
                 # User provided a year
@@ -61,7 +62,7 @@ class GameService:
         """
         year = args.year
         week = args.week
-        cursor = self.__conn.cursor()
+        cursor = self.conn.cursor()
         query = ""
         with open('./python/Queries/scores.sql') as file:
             query = file.read()
@@ -82,7 +83,7 @@ class GameService:
         """
         athlete_id = args.athlete
         game_id = args.game_id
-        cursor = self.__conn.cursor()
+        cursor = self.conn.cursor()
         query = self.__file_manager.read_file('player_game_plays.sql')
         data = (game_id, athlete_id,)
         cursor.execute(query, data)
