@@ -22,6 +22,10 @@ CIS 761: Database Management Systems
 5. Evaluation
 6. Technical Details and Justification
 7. Summary and Discussion
+	* General Summary
+	* Learnings and Future Changes
+	* Possible Improvements and Future Direction
+8. Team Work Division and Experience
 
 \newpage
 
