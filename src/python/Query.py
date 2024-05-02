@@ -4,8 +4,11 @@ import pandas as pd
 from rich import print
 from configparser import ConfigParser
 from sklearn.linear_model import LogisticRegression
+
 from display import display, display_matchup
 from FileManager import FileManager
+from UserService import UserService
+from GameService import GameService
 
 
 class Query:
@@ -16,6 +19,8 @@ class Query:
         self.last_result_column_names = None # The column names of the last output
         self.file_manager = FileManager()
         self.file_manager.set_input_path('./python/Queries/')
+        self.user_service = UserService(None)
+        self.game_service = GameService(file_manager=self.file_manager)
 
     def load_configuration(self) -> dict:
         parser = ConfigParser()
@@ -33,6 +38,8 @@ class Query:
                 sslmode = 'require'
             )
             # self.pgdb.set_autocommit(False)
+            self.user_service.set_connection(self.pgdb)
+            self.game_service.set_connection(self.pgdb)
             print('Connection Established!')
         except Exception as e:
             print('Connection Error: %s' % (e))
@@ -46,32 +53,10 @@ class Query:
         self.last_result_column_names = tuple(column_names)
 
     def login(self, username: str, password: str) -> int:
-        cursor = self.pgdb.cursor()
-        if username is not None and password is not None:
-            try:
-                query = 'SELECT * FROM users WHERE username = %s AND password = %s'
-                data = (username, password, )
-                cursor.execute(query, data)
-                user = cursor.fetchone()
-                return user[0] # return the user's uid
-            except:
-                return -1
-        else:
-            return -1
+        return self.user_service.login(username, password)
 
     def register_user(self, username, password, first_name, last_name) -> None:
-        if username is not None and password is not None:
-            try:
-                cursor = self.pgdb.cursor()
-                query = 'SELECT register_user(%s, %s, %s, %s);'
-                data = (username, password, first_name, last_name, )
-                cursor.execute(query, data)
-                self.pgdb.commit()
-                print('Thank you for registering for an account')
-            except Exception as e:
-                print('An error occured: {}'.format(str(e)))
-
-        return
+        self.user_service.register_user(username, password, first_name, last_name)
     
     def save_last_result(self, args: [str]) -> None:
         name = args.output or 'NFL_last_data'
@@ -132,31 +117,14 @@ class Query:
                  ('City', 2), ('State', 3), ('Grass', 4), ('Indoor', 5)])
 
     def get_game(self, args: [str]) -> None:
-        game_id = args.game_id
-        year = args.year
-        if args.score:
-            self.get_scores(args)
-        elif args.plays:
-            self.get_plays(args)
-        else:
-            cursor = self.pgdb.cursor()
-            query = self.file_manager.read_file('games.sql')
-            if year is not None:
-                # User provided a year
-                query = query.format(column_name='date_part(\'year\', date)')
-                data = (year,)
-            else:
-                query = query.format(column_name='g.game_id')
-                data = (game_id,)
-
-            cursor.execute(query, data)
-            self.helper_set_column_names(cursor)
-            self.last_result = cursor.fetchall()
-            display(self.last_result,
-                    [('Game ID', 0), ('Date', 1), ('Attendance', 2),
-                     ('Home Team', 3), ('Away Team', 4), ('Venue', 5),
-                     ('Time', 6), ('Home Score', 7), ('Away Score', 8)],
-                    colors=(9, 10))
+        cursor = self.game_service.get_game(args)
+        self.helper_set_column_names(cursor)
+        self.last_result = cursor.fetchall()
+        display(self.last_result,
+                [('Game ID', 0), ('Date', 1), ('Attendance', 2),
+                 ('Home Team', 3), ('Away Team', 4), ('Venue', 5),
+                 ('Time', 6), ('Home Score', 7), ('Away Score', 8)],
+                colors=(9, 10))
 
     def get_plays(self, args: [str]):
         athlete_id = args.athlete
@@ -172,14 +140,7 @@ class Query:
                  ('Play Type', 4), ('Start Down', 5), ('End Down', 6)])
 
     def get_scores(self, args: [str]) -> None:
-        year = args.year
-        week = args.week
-        cursor = self.pgdb.cursor()
-        query = ""
-        with open('./python/Queries/scores.sql') as file:
-            query = file.read()
-        data = (year, week, year, week, year, week, )
-        cursor.execute(query, data)
+        cursor = self.game_service.get_scores(args)
         self.helper_set_column_names(cursor)
         self.last_result = cursor.fetchall()
         display_matchup(self.last_result,
