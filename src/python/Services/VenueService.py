@@ -10,9 +10,9 @@ class VenueService(Service):
         self.file_manager = file_manager
 
     def get_data(self, args: [str]) -> ():
-        return self.get_venue(args)
+        return self.__get_venue(args)
 
-    def get_venue(self, args: [str]) -> ():
+    def __get_venue(self, args: [str]) -> ():
         venue_name = args.venue_name
         cursor = self.conn.cursor()
         query = self.file_manager.read_file('venues.sql')

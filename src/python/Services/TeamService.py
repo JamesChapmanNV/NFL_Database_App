@@ -6,9 +6,9 @@ from Services.Service import Service
 class TeamService(Service):
 
     def get_data(self, args: [str]) -> ():
-        return self.get_team(args)
+        return self.__get_team(args)
 
-    def get_team(self, args: [str]) -> ():
+    def __get_team(self, args: [str]) -> ():
         team_name = args.team_name
         cursor = self.conn.cursor()
         if team_name is not None:

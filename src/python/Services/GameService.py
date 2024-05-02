@@ -19,9 +19,9 @@ class GameService(Service):
 
     def get_data(self, args: [str]) -> ():
         print(args)
-        return self.get_game(args)
+        return self.__get_game(args)
 
-    def get_game(self, args: [str]) -> ():
+    def __get_game(self, args: [str]) -> ():
         """
         Main game service method. Dispatches to other methods depending on the flag
         :param args: Command line arguments
@@ -29,9 +29,9 @@ class GameService(Service):
         The column and color data should be provided in-order the display method requires.
         """
         if args.score:
-            return self.get_scores(args)
+            return self.__get_scores(args)
         elif args.plays:
-            return self.get_plays(args)
+            return self.__get_plays(args)
         else:
             game_id = args.game_id
             year = args.year
@@ -53,7 +53,7 @@ class GameService(Service):
                     (9, 10),
                     display.display)
 
-    def get_scores(self, args: [str]):
+    def __get_scores(self, args: [str]):
         """
         Get scores for the game is the -s flag is used
         :param args: Command line arguments
@@ -74,7 +74,7 @@ class GameService(Service):
                 [(4, 5), (6, 7)],
                 display.display_matchup)
 
-    def get_plays(self, args: [str]):
+    def __get_plays(self, args: [str]):
         """
         Get plays for the game is the -p flag is used with a corresponding game and athlete id
         :param args: Command line arguments

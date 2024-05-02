@@ -10,9 +10,9 @@ class AthleteService(Service):
         self.file_manager = file_manager
 
     def get_data(self, args: [str]) -> ():
-        return self.get_athlete(args)
+        return self.__get_athlete(args)
 
-    def get_athlete(self, args: [str]) -> ():
+    def __get_athlete(self, args: [str]) -> ():
         if args.last:
             column_name = 'last_name'
         else:
