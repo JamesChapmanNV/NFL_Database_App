@@ -21,6 +21,9 @@ Parser flags:
 """
 
 class ErrorCatchingArgumentParser(argparse.ArgumentParser):
+    """
+    Subclass of ArgumentParser to prevent the default exit
+    """
     def exit(self, status=0, message=None):
         # Rather than exiting the application when the ArgumentParser says so,
         # lets raise an error we can recover from

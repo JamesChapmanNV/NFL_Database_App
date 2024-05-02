@@ -117,36 +117,10 @@ class Query:
                  ('City', 2), ('State', 3), ('Grass', 4), ('Indoor', 5)])
 
     def get_game(self, args: [str]) -> None:
-        cursor = self.game_service.get_game(args)
+        cursor, *rest, display_method = self.game_service.get_game(args)
         self.helper_set_column_names(cursor)
         self.last_result = cursor.fetchall()
-        display(self.last_result,
-                [('Game ID', 0), ('Date', 1), ('Attendance', 2),
-                 ('Home Team', 3), ('Away Team', 4), ('Venue', 5),
-                 ('Time', 6), ('Home Score', 7), ('Away Score', 8)],
-                colors=(9, 10))
-
-    def get_plays(self, args: [str]):
-        athlete_id = args.athlete
-        game_id = args.game_id
-        cursor = self.pgdb.cursor()
-        query = self.file_manager.read_file('player_game_plays.sql')
-        data = (game_id, athlete_id, )
-        cursor.execute(query, data)
-        self.helper_set_column_names(cursor)
-        self.last_result = cursor.fetchall()
-        display(self.last_result,
-                [('Quarter', 0), ('Seconds Remaining', 1), ('Yards', 2), ('Score Value', 3),
-                 ('Play Type', 4), ('Start Down', 5), ('End Down', 6)])
-
-    def get_scores(self, args: [str]) -> None:
-        cursor = self.game_service.get_scores(args)
-        self.helper_set_column_names(cursor)
-        self.last_result = cursor.fetchall()
-        display_matchup(self.last_result,
-                [('name', 0), ('score', 1)],
-                        [('name', 2), ('score', 3)],
-                        [(4, 5), (6, 7)])
+        display_method(self.last_result, *rest)
         
     def top_comeback_wins(self, args: [str]) -> None:
         year = args.year
