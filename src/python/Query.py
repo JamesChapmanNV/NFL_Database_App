@@ -5,13 +5,17 @@ from rich import print
 from configparser import ConfigParser
 from sklearn.linear_model import LogisticRegression
 
-from display import display, display_matchup
+from display import display
 from FileManager import FileManager
-from UserService import UserService
-from GameService import GameService
+from Services.UserService import UserService
+from Services.GameService import GameService
+from Services.TeamService import TeamService
+from Services.VenueService import VenueService
+from Services.AthleteService import AthleteService
 
 
 class Query:
+
     def __init__(self):
         self.config = self.load_configuration()
         self.pgdb = None  # PostgreSQL Connection
@@ -21,6 +25,15 @@ class Query:
         self.file_manager.set_input_path('./python/Queries/')
         self.user_service = UserService(None)
         self.game_service = GameService(file_manager=self.file_manager)
+        self.team_service = TeamService()
+        self.venue_service = VenueService(file_manager=self.file_manager)
+        self.athlete_service = AthleteService(file_manager=self.file_manager)
+        self.SERVICE_MAPPING = {
+            'Game': self.game_service,
+            'Team': self.team_service,
+            'Venue': self.venue_service,
+            'Athlete': self.athlete_service
+        }
 
     def load_configuration(self) -> dict:
         parser = ConfigParser()
@@ -40,6 +53,9 @@ class Query:
             # self.pgdb.set_autocommit(False)
             self.user_service.set_connection(self.pgdb)
             self.game_service.set_connection(self.pgdb)
+            self.team_service.set_connection(self.pgdb)
+            self.venue_service.set_connection(self.pgdb)
+            self.athlete_service.set_connection(self.pgdb)
             print('Connection Established!')
         except Exception as e:
             print('Connection Error: %s' % (e))
@@ -55,6 +71,14 @@ class Query:
     def login(self, username: str, password: str) -> int:
         return self.user_service.login(username, password)
 
+    def execute(self, args: [str]) -> None:
+        command = args.command
+        cursor, *rest, display_method = self.SERVICE_MAPPING[command].get_data(args)
+        self.helper_set_column_names(cursor)
+        self.last_result = cursor.fetchall()
+        if display_method is not None:
+            display_method(self.last_result, *rest)
+
     def register_user(self, username, password, first_name, last_name) -> None:
         self.user_service.register_user(username, password, first_name, last_name)
     
@@ -67,60 +91,6 @@ class Query:
             print("Data saved successfully")
         else:
             print("Error: Unsupported file type")
-
-    def get_team(self, args: [str]) -> None:
-        team_name = args.team_name
-        cursor = self.pgdb.cursor()
-        if team_name is not None:
-            query = "SELECT * FROM teams WHERE team_name = %s"
-            data = (team_name, )
-            cursor.execute(query, data)
-        else:
-            query = 'SELECT * FROM teams'
-            cursor.execute(query)
-        self.helper_set_column_names(cursor)
-        self.last_result = cursor.fetchall()
-        display(self.last_result,
-                [('Name', 0), ('Abbreviation', 1), ('Location', 2), ('Home Stadium', 3)],
-                (4, 5))
-
-    def get_athlete(self, args: [str]) -> None:
-        if args.last:
-            column_name = 'last_name'
-        else:
-            column_name='first_name'
-        athlete_name = args.athlete_name
-        cursor = self.pgdb.cursor()
-        query = self.file_manager.read_file('athletes.sql').format(column_name=column_name)
-        data = ('%' + athlete_name + '%', )
-        cursor.execute(query, data)
-        self.helper_set_column_names(cursor)
-        self.last_result = cursor.fetchall()
-        display(self.last_result,
-                [('ID', 0), ('Name', 1), ('Date of Birth', 2), ('Height, in', 3),
-                 ('Weight, lbs', 4), ('Birth Place', 5), ('Team Name', 6), ('Position', 7), ('Platoon', 8)])
-
-    def get_venue(self, args: [str]) -> None:
-        venue_name = args.venue_name
-        cursor = self.pgdb.cursor()
-        query = self.file_manager.read_file('venues.sql')
-        if venue_name:
-            data = ('%' + venue_name + '%', )
-            cursor.execute(query, data)
-        else:
-            data = ('%', )
-            cursor.execute(query, data)
-        self.helper_set_column_names(cursor)
-        self.last_result = cursor.fetchall()
-        display(self.last_result,
-                [('Name', 0), ('Home Team', 6), ('Capacity', 1),
-                 ('City', 2), ('State', 3), ('Grass', 4), ('Indoor', 5)])
-
-    def get_game(self, args: [str]) -> None:
-        cursor, *rest, display_method = self.game_service.get_game(args)
-        self.helper_set_column_names(cursor)
-        self.last_result = cursor.fetchall()
-        display_method(self.last_result, *rest)
         
     def top_comeback_wins(self, args: [str]) -> None:
         year = args.year
