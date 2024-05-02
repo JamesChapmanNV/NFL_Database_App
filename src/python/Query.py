@@ -4,7 +4,6 @@ import pandas as pd
 from rich import print
 from configparser import ConfigParser
 from sklearn.linear_model import LogisticRegression
-
 from display import display, display_matchup
 from FileManager import FileManager
 
@@ -74,8 +73,9 @@ class Query:
 
         return
     
-    def save_last_result(self, filetype: str, filename: str=None) -> None:
-        name = filename or 'NFL_last_data'
+    def save_last_result(self, args: [str]) -> None:
+        name = args.output or 'NFL_last_data'
+        filetype = args.file_type
         data = [self.last_result_column_names] + self.last_result
         result = self.file_manager.write_file(data, name + f'.{filetype}', filetype)
         if result > 0:
@@ -83,7 +83,8 @@ class Query:
         else:
             print("Error: Unsupported file type")
 
-    def get_team(self, team_name: str=None) -> None:
+    def get_team(self, args: [str]) -> None:
+        team_name = args.team_name
         cursor = self.pgdb.cursor()
         if team_name is not None:
             query = "SELECT * FROM teams WHERE team_name = %s"
@@ -98,9 +99,14 @@ class Query:
                 [('Name', 0), ('Abbreviation', 1), ('Location', 2), ('Home Stadium', 3)],
                 (4, 5))
 
-    def get_athlete(self, athlete_name: str) -> None:
+    def get_athlete(self, args: [str]) -> None:
+        if args.last:
+            column_name = 'last_name'
+        else:
+            column_name='first_name'
+        athlete_name = args.athlete_name
         cursor = self.pgdb.cursor()
-        query = self.file_manager.read_file('athletes.sql')
+        query = self.file_manager.read_file('athletes.sql').format(column_name=column_name)
         data = ('%' + athlete_name + '%', )
         cursor.execute(query, data)
         self.helper_set_column_names(cursor)
@@ -109,7 +115,8 @@ class Query:
                 [('ID', 0), ('Name', 1), ('Date of Birth', 2), ('Height, in', 3),
                  ('Weight, lbs', 4), ('Birth Place', 5), ('Team Name', 6), ('Position', 7), ('Platoon', 8)])
 
-    def get_venue(self, venue_name: str=None) -> None:
+    def get_venue(self, args: [str]) -> None:
+        venue_name = args.venue_name
         cursor = self.pgdb.cursor()
         query = self.file_manager.read_file('venues.sql')
         if venue_name:
@@ -124,27 +131,36 @@ class Query:
                 [('Name', 0), ('Home Team', 6), ('Capacity', 1),
                  ('City', 2), ('State', 3), ('Grass', 4), ('Indoor', 5)])
 
-    def get_game(self, game_id: int) -> None:
-        cursor = self.pgdb.cursor()
-        query = self.file_manager.read_file('games.sql')
-        if len(str(game_id)) == 4:
-            # User provided a year
-            query = query.format(column_name='date_part(\'year\', date)')
+    def get_game(self, args: [str]) -> None:
+        game_id = args.game_id
+        year = args.year
+        if args.score:
+            self.get_scores(args)
+        elif args.plays:
+            self.get_plays(args)
         else:
-            query = query.format(column_name='g.game_id')
-        data = (game_id, )
-        cursor.execute(query, data)
-        self.helper_set_column_names(cursor)
-        self.last_result = cursor.fetchall()
-        display(self.last_result,
-                [('Game ID', 0), ('Date', 1), ('Attendance', 2),
-                 ('Home Team', 3), ('Away Team', 4), ('Venue', 5),
-                 ('Time', 6), ('Home Score', 7), ('Away Score', 8)],
-                colors=(9, 10))
+            cursor = self.pgdb.cursor()
+            query = self.file_manager.read_file('games.sql')
+            if year is not None:
+                # User provided a year
+                query = query.format(column_name='date_part(\'year\', date)')
+                data = (year,)
+            else:
+                query = query.format(column_name='g.game_id')
+                data = (game_id,)
 
-    def get_plays(self, athlete_id: int, game_id: int):
-        print(athlete_id)
-        print(game_id)
+            cursor.execute(query, data)
+            self.helper_set_column_names(cursor)
+            self.last_result = cursor.fetchall()
+            display(self.last_result,
+                    [('Game ID', 0), ('Date', 1), ('Attendance', 2),
+                     ('Home Team', 3), ('Away Team', 4), ('Venue', 5),
+                     ('Time', 6), ('Home Score', 7), ('Away Score', 8)],
+                    colors=(9, 10))
+
+    def get_plays(self, args: [str]):
+        athlete_id = args.athlete
+        game_id = args.game_id
         cursor = self.pgdb.cursor()
         query = self.file_manager.read_file('player_game_plays.sql')
         data = (game_id, athlete_id, )
@@ -155,7 +171,9 @@ class Query:
                 [('Quarter', 0), ('Seconds Remaining', 1), ('Yards', 2), ('Score Value', 3),
                  ('Play Type', 4), ('Start Down', 5), ('End Down', 6)])
 
-    def get_scores(self, year: int, week: int) -> None:
+    def get_scores(self, args: [str]) -> None:
+        year = args.year
+        week = args.week
         cursor = self.pgdb.cursor()
         query = ""
         with open('./python/Queries/scores.sql') as file:
@@ -169,7 +187,8 @@ class Query:
                         [('name', 2), ('score', 3)],
                         [(4, 5), (6, 7)])
         
-    def top_comeback_wins(self, year: int=None) -> None:
+    def top_comeback_wins(self, args: [str]) -> None:
+        year = args.year
         cursor = self.pgdb.cursor()
         query = ""
         with open('./python/Queries/top_comeback_wins.sql') as file:
@@ -184,7 +203,10 @@ class Query:
                 [('Team_name', 0), ('Comebacks', 1)],
                 (2, 3))
         
-    def win_probability(self, team_name: str, team_score: int, opponent_score: int) -> None:
+    def win_probability(self, args) -> None:
+        team_name = args.team
+        team_score = args.score
+        opponent_score = args.opponent_score
         cursor = self.pgdb.cursor()
         query = ""
         with open('./python/Queries/win_probability.sql') as file:
