@@ -17,6 +17,6 @@ class Service(ABC):
         self.conn = conn
 
     @abstractmethod
-    def get_data(self, args: [str]) -> ServiceResponse:
+    def get_data(self, args: [str], **kwargs) -> ServiceResponse:
         pass
 

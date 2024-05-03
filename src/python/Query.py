@@ -71,9 +71,9 @@ class Query:
         column_names = [desc[0] for desc in cursor.description]
         self.last_result_column_names = tuple(column_names)
 
-    def execute(self, args: [str]) -> Any:
+    def execute(self, args: [str], **kwargs) -> Any:
         command = args.command
-        response = self.SERVICE_MAPPING[command].get_data(args)
+        response = self.SERVICE_MAPPING[command].get_data(args, **kwargs)
         if response.cursor:
             self.helper_set_column_names(response.cursor)
             self.last_result = response.cursor.fetchall()

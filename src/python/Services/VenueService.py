@@ -10,7 +10,7 @@ class VenueService(Service):
         super().__init__(conn)
         self.file_manager = file_manager
 
-    def get_data(self, args: [str]) -> ServiceResponse:
+    def get_data(self, args: [str], **kwargs) -> ServiceResponse:
         return self.__get_venue(args)
 
     def __get_venue(self, args: [str]) -> ServiceResponse:

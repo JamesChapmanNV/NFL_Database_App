@@ -11,7 +11,7 @@ class TeamService(Service):
         self.file_manager = file_manager
         super().__init__(conn)
 
-    def get_data(self, args: [str]) -> ServiceResponse:
+    def get_data(self, args: [str], **kwargs) -> ServiceResponse:
         if args.year:
             return self.__get_record(args)
         else:

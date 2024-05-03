@@ -18,7 +18,7 @@ class GameService(Service):
         super().__init__(conn)
         self.__file_manager = file_manager
 
-    def get_data(self, args: [str]) -> ServiceResponse:
+    def get_data(self, args: [str], **kwargs) -> ServiceResponse:
         if args.score:
             return self.__get_scores(args)
         elif args.plays:
