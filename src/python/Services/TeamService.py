@@ -42,5 +42,6 @@ class TeamService(Service):
             data = (year, year, )
         cursor.execute(query, data)
         return (cursor,
-                [('Team Name', 0), ('Home Wins', 1), ('Home Losses', 2), ('Away Wins', 3), ('Away Losses', 4)],
+                [('Team Name', 0), ('Home Wins', 1), ('Home Losses', 2), ('Away Wins', 3),
+                 ('Away Losses', 4), ('Record', 5)],
                 display.display)

@@ -1,4 +1,5 @@
-SELECT home_team_name AS team_name, home_wins, home_losses, away_wins, away_losses
+SELECT home_team_name AS team_name, home_wins, home_losses, away_wins, away_losses,
+       home_wins + away_wins || ' W - ' || home_losses + away_losses || ' L' as record
 FROM (SELECT home_team_name,
              SUM(CASE WHEN home.score > away.score THEN 1 ELSE 0 END) AS home_wins,
              SUM(CASE WHEN home.score < away.score THEN 1 ELSE 0 END) AS home_losses
