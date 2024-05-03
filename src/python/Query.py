@@ -5,6 +5,7 @@ from rich import print
 from configparser import ConfigParser
 from sklearn.linear_model import LogisticRegression
 
+from Services.AccountService import AccountService
 from display import display
 from FileManager import FileManager
 from Services.UserService import UserService
@@ -12,6 +13,7 @@ from Services.GameService import GameService
 from Services.TeamService import TeamService
 from Services.VenueService import VenueService
 from Services.AthleteService import AthleteService
+from Services.AccountService import AccountService
 
 
 class Query:
@@ -28,11 +30,13 @@ class Query:
         self.team_service = TeamService(file_manager=self.file_manager)
         self.venue_service = VenueService(file_manager=self.file_manager)
         self.athlete_service = AthleteService(file_manager=self.file_manager)
+        self.account_service = AccountService(file_manager=self.file_manager)
         self.SERVICE_MAPPING = {
             'Game': self.game_service,
             'Team': self.team_service,
             'Venue': self.venue_service,
-            'Athlete': self.athlete_service
+            'Athlete': self.athlete_service,
+            'Account': self.account_service
         }
 
     def load_configuration(self) -> dict:
@@ -56,6 +60,7 @@ class Query:
             self.team_service.set_connection(self.pgdb)
             self.venue_service.set_connection(self.pgdb)
             self.athlete_service.set_connection(self.pgdb)
+            self.account_service.set_connection(self.pgdb)
             print('Connection Established!')
         except Exception as e:
             print('Connection Error: %s' % (e))
@@ -73,11 +78,13 @@ class Query:
 
     def execute(self, args: [str]) -> None:
         command = args.command
-        cursor, *rest, display_method = self.SERVICE_MAPPING[command].get_data(args)
-        self.helper_set_column_names(cursor)
-        self.last_result = cursor.fetchall()
-        if display_method is not None:
-            display_method(self.last_result, *rest)
+        response = self.SERVICE_MAPPING[command].get_data(args)
+        if response.cursor:
+            self.helper_set_column_names(response.cursor)
+            self.last_result = response.cursor.fetchall()
+            if response.display_method is not None:
+                response.display_method(self.last_result, *response.display_args)
+
 
     def register_user(self, username, password, first_name, last_name) -> None:
         self.user_service.register_user(username, password, first_name, last_name)

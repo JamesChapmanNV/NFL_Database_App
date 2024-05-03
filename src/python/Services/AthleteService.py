@@ -1,4 +1,5 @@
 from Services.Service import Service
+from Services.ServiceResponse import ServiceResponse
 from psycopg import Connection
 from FileManager import FileManager
 import display
@@ -9,10 +10,10 @@ class AthleteService(Service):
         super().__init__(conn)
         self.file_manager = file_manager
 
-    def get_data(self, args: [str]) -> ():
+    def get_data(self, args: [str]) -> ServiceResponse:
         return self.__get_athlete(args)
 
-    def __get_athlete(self, args: [str]) -> ():
+    def __get_athlete(self, args: [str]) -> ServiceResponse:
         if args.last:
             column_name = 'last_name'
         else:
@@ -22,7 +23,11 @@ class AthleteService(Service):
         query = self.file_manager.read_file('athletes.sql').format(column_name=column_name)
         data = ('%' + athlete_name + '%', )
         cursor.execute(query, data)
-        return(cursor,
-               [('ID', 0), ('Name', 1), ('Date of Birth', 2), ('Height, in', 3),
-                ('Weight, lbs', 4), ('Birth Place', 5), ('Team Name', 6), ('Position', 7), ('Platoon', 8)],
-               display.display)
+        response = ServiceResponse(cursor=cursor,
+                                   display_args=(
+                                       [('ID', 0), ('Name', 1), ('Date of Birth', 2), ('Height, in', 3),
+                                        ('Weight, lbs', 4), ('Birth Place', 5), ('Team Name', 6), ('Position', 7),
+                                        ('Platoon', 8)],
+                                   ),
+                                   display_method=display.display)
+        return response

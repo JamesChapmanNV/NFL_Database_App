@@ -1,5 +1,6 @@
 from psycopg import Connection
 from abc import ABC, abstractmethod
+from Services.ServiceResponse import ServiceResponse
 
 
 class Service(ABC):
@@ -16,6 +17,6 @@ class Service(ABC):
         self.conn = conn
 
     @abstractmethod
-    def get_data(self, args: [str]) -> ():
+    def get_data(self, args: [str]) -> ServiceResponse:
         pass
 
