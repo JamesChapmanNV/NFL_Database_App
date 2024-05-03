@@ -25,7 +25,7 @@ class Query:
         self.file_manager.set_input_path('./python/Queries/')
         self.user_service = UserService(None)
         self.game_service = GameService(file_manager=self.file_manager)
-        self.team_service = TeamService()
+        self.team_service = TeamService(file_manager=self.file_manager)
         self.venue_service = VenueService(file_manager=self.file_manager)
         self.athlete_service = AthleteService(file_manager=self.file_manager)
         self.SERVICE_MAPPING = {

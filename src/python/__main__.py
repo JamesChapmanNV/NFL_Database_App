@@ -71,6 +71,14 @@ class NFLapp:
         team_parser = subparsers.add_parser('Team', help='Search for a team by name')
         team_parser.add_argument('team_name', nargs='?', default=None, type=str,
                                  help='Name of the team')
+        team_parser.add_argument('-y', '--year',
+                                 default=None,
+                                 type=int,
+                                 help='Search for the record of a given team in a specific season')
+        team_parser.add_argument('-t', '--team',
+                                 default=None,
+                                 type=str,
+                                 help='Specify the team to find records for')
         team_parser.set_defaults(func=self.query.execute)
 
     def register_athlete_parser(self, subparsers):
