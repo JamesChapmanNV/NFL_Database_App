@@ -58,8 +58,11 @@ None
 
 #### Flags and Optional Arguments
 
-* `-y or --year <year>` This is used when retrieving the records for teams in a given season. When only this flag is used, the records of all teams during that season will be returned.
-* `-t or --team <team_name>` This is used in conjunction with the `-y or --year` flag. When provided, only the record for the provided team name in the given season is returned.
+#####`-y or --year <year>` 
+This is used when retrieving the records for teams in a given season. When only this flag is used, the records of all teams during that season will be returned.
+
+#####`-t or --team <team_name>`
+This is used in conjunction with the `-y or --year` flag. When provided, only the record for the provided team name in the given season is returned.
 
 #### Usage
 
@@ -76,7 +79,8 @@ Either the first or last name of the athlete must directly follow the `Athlete` 
 
 #### Flags and Optional Arguments
 
-* `-l or --last` Search by last name instead of first
+#####`-l or --last`
+Search by last name instead of first
 
 #### Usage
 `> Athlete Patrick` Returns all athletes with the first name of Patrick
@@ -147,7 +151,8 @@ The filetype must immediately follow the `Save` command. Supported filetypes are
 
 #### Flags and Optional Arguments
 
-* `-o or --output <filename>` The name of the file, without the extension. If this is not provided, the default filename is NFL_last_data.
+#####`-o or --output <filename>`
+The name of the file, without the extension. If this is not provided, the default filename is NFL_last_data.
 	
 #### Usage
 `> Save md` Save the results of the last executed query as a markdown file<br>
