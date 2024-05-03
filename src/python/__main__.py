@@ -118,6 +118,14 @@ class NFLapp:
                                  default=None,
                                  type=str,
                                  help='The athlete to get plays for if the -p flag is used')
+        game_parser.add_argument('-t', '--team',
+                                 default=None,
+                                 type=str,
+                                 help='If searching for games between two teams, the first team name')
+        game_parser.add_argument('-op', '--opponent',
+                                 default=None,
+                                 type=str,
+                                 help='If searching for games between two teams, the opposing team name')
         game_parser.set_defaults(func=self.query.execute)
 
     def register_comeback_parser(self, subparsers):

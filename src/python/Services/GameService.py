@@ -18,40 +18,65 @@ class GameService(Service):
         self.__file_manager = file_manager
 
     def get_data(self, args: [str]) -> ():
-        print(args)
-        return self.__get_game(args)
-
-    def __get_game(self, args: [str]) -> ():
-        """
-        Main game service method. Dispatches to other methods depending on the flag
-        :param args: Command line arguments
-        :return: A tuple containing the cursor, column and optional color data, and the display method to use.
-        The column and color data should be provided in-order the display method requires.
-        """
         if args.score:
             return self.__get_scores(args)
         elif args.plays:
             return self.__get_plays(args)
+        elif args.team:
+            return self.__get_rival_games(args)
         else:
-            game_id = args.game_id
-            year = args.year
-            cursor = self.conn.cursor()
-            query = self.__file_manager.read_file('games.sql')
-            if year is not None:
-                # User provided a year
-                query = query.format(column_name='date_part(\'year\', date)')
-                data = (year,)
-            else:
-                query = query.format(column_name='g.game_id')
-                data = (game_id,)
+            return self.__get_game(args)
 
-            cursor.execute(query, data)
-            return (cursor,
-                    [('Game ID', 0), ('Date', 1), ('Attendance', 2),
-                     ('Home Team', 3), ('Away Team', 4), ('Venue', 5),
-                     ('Time', 6), ('Home Score', 7), ('Away Score', 8)],
-                    (9, 10),
-                    display.display)
+    def __get_rival_games(self, args: [str]) -> ():
+        """
+        Get the games played by two opposing teams. Required flags are -t and -op to specify the two teams.
+        The user can optionally pass a year using the -y flag to only return games in a specific year. The user
+        can obtain all games played by a given team (possibly in a given season) by passing the same team
+        name in -t and -op.
+        :param args:
+        :return:
+        """
+        team_1 = '%' + args.team + '%'
+        team_2 = '%' + args.opponent + '%'
+        cursor = self.conn.cursor()
+        if args.year:
+            query = self.__file_manager.read_file('team_rivals_year.sql')
+            data = (team_1, team_1, team_2, team_2, args.year, )
+        else:
+            query = self.__file_manager.read_file('team_rivals.sql')
+            data = (team_1, team_1, team_2, team_2, )
+
+        cursor.execute(query, data)
+        return (cursor,
+                [('Date', 0), ('Home Team', 1), ('Away Team', 2), ('Home Score', 3), ('Away Score', 4),
+                 ('Venue', 5), ('Location', 6)],
+                display.display)
+
+    def __get_game(self, args: [str]) -> ():
+        """
+        Get a game either by its ID specified with the -g flag, or all games in a given year using the -y flag.
+        :param args:
+        :return:
+        """
+        game_id = args.game_id
+        year = args.year
+        cursor = self.conn.cursor()
+        query = self.__file_manager.read_file('games.sql')
+        if year is not None:
+            # User provided a year
+            query = query.format(column_name='date_part(\'year\', date)')
+            data = (year,)
+        else:
+            query = query.format(column_name='g.game_id')
+            data = (game_id,)
+
+        cursor.execute(query, data)
+        return (cursor,
+                [('Game ID', 0), ('Date', 1), ('Attendance', 2),
+                 ('Home Team', 3), ('Away Team', 4), ('Venue', 5),
+                 ('Time', 6), ('Home Score', 7), ('Away Score', 8)],
+                (9, 10),
+                display.display)
 
     def __get_scores(self, args: [str]):
         """
