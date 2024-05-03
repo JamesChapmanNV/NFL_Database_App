@@ -47,6 +47,8 @@ There are 7 top level commands that can be executed:
 5. `Top_Comeback_Wins`
 6. `Win_probability`
 7. `Save`
+8. `Login`
+9. `Register`
 
 Each of these commands requires additional arguments and flags to retrieve specific data.
 
@@ -158,3 +160,25 @@ The name of the file, without the extension. If this is not provided, the defaul
 `> Save md` Save the results of the last executed query as a markdown file<br>
 `> Save csv` Save the results of the last executed query as a CSV file<br>
 `> Save md -o my_data` Save the results of the last executed query as a markdown file with the filename of 'my_data'<br>
+
+### The Login Command
+The login command is used to authenticate and gain access to the program.
+
+#### Required Arguments and Flags
+You must specify the username and password to use. This is done as follows.
+
+`-u or --username <username>` Provide the username<br>
+`-p or --password <password>` Provide the password<br>
+	
+#### Usage
+`> NFLapp Login -u <username> -p <password>`
+	
+### The Register Command
+The `Register` command is used to register an account. The system will prompt you to enter various details.
+
+#### Required Arguments
+None
+
+#### Usage
+`> NFLapp Register`<br>
+Prompts to enter information will follow and you will need to provide a username, password, and name.
