@@ -192,6 +192,12 @@ class NFLapp:
         quit_parser.set_defaults(func=self.quit)
 
     def login(self, args: [str]):
+        """
+        Log the user in using the provided credentials. This method calls the execute method of Query,
+        and creates a User object from the response. The user object is saved as an instance variable.
+        :param args: Arguments to pass to Query.execute()
+        :return: None
+        """
         response = self.query.execute(args)
         user = response.value
         if user:
@@ -205,6 +211,11 @@ class NFLapp:
             self.menu()
 
     def create_account(self, args: [str]):
+        """
+        Create a new account for the user.
+        :param args: Arguments to pass to Query.execute()
+        :return: None
+        """
         response = self.query.execute(args)
         if response.status == ResponseStatus.SUCCESSFUL_WRITE:
             print('Your account was created successfully. Please log in.')
@@ -212,6 +223,13 @@ class NFLapp:
             print('Registration unsuccessful.')
 
     def submit_request(self, args: [str]):
+        """
+        Main entry point for query execution. This method ensures the user is logged in, and if so, submits
+        the request to the Query object to execute. If the user is not logged in, alert them that they must log in
+        and do nothing
+        :param args: Arguments to pass to Query.execute()
+        :return: None
+        """
         if self.user:
             self.query.execute(args)
         else:
