@@ -62,7 +62,6 @@ class NFLapp:
         self.register_probability_parser(subparsers)
         self.register_save_parser(subparsers)
         self.register_quit_parser(subparsers)
-        self.register_login_parser(subparsers)
         self.register_registration_parser(subparsers)
 
     def register_login_parser(self, subparsers):
