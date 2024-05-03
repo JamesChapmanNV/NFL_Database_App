@@ -24,6 +24,8 @@ class GameService(Service):
             return self.__get_plays(args)
         elif args.team:
             return self.__get_rival_games(args)
+        elif args.percent_filled:
+            return self.__get_percent_filled(args)
         else:
             return self.__get_game(args)
 
@@ -116,4 +118,14 @@ class GameService(Service):
                 [('Quarter', 0), ('Seconds Remaining', 1), ('Yards', 2), ('Score Value', 3),
                  ('Play Type', 4), ('Start Down', 5), ('End Down', 6)],
                 None,
+                display.display)
+
+    def __get_percent_filled(self, args: [str]) -> ():
+        game_id = args.game_id
+        cursor = self.conn.cursor()
+        query = self.__file_manager.read_file('percent_filled.sql')
+        data = (game_id, )
+        cursor.execute(query, data)
+        return (cursor,
+                [('Percent Fill', 0)],
                 display.display)

@@ -134,6 +134,9 @@ class NFLapp:
                                  default=None,
                                  type=str,
                                  help='If searching for games between two teams, the opposing team name')
+        game_parser.add_argument('-pf', '--percent_filled',
+                                 action='store_true',
+                                 help='Find how full the stadium was for the given game')
         game_parser.set_defaults(func=self.query.execute)
 
     def register_comeback_parser(self, subparsers):
