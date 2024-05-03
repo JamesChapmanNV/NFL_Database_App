@@ -1,9 +1,10 @@
 import sys
 from Query import Query
-from RegistrationManager import RegistrationManager
 import argparse
 from argparse import Action, SUPPRESS
 from Exceptions.ArgParserException import ArgParserException
+from User import User
+from Services.ServiceResponse import ResponseStatus
 
 """
 Parser flags:
@@ -18,6 +19,9 @@ Parser flags:
     * -t team
     * -op opponent score
     * -o output filename
+    * -up --update update a field
+    * -vl --value Specify a value to update to
+    * -d --delete Delete
 """
 
 class ErrorCatchingArgumentParser(argparse.ArgumentParser):
@@ -34,13 +38,13 @@ class NFLapp:
         self.username = username
         self.password = password
         self.query = Query()
-        self.registration_manager = RegistrationManager(self.query)
         self.parser = ErrorCatchingArgumentParser(add_help=False)
         self.parser.add_argument('-h', '--help',
                                  action='store_false',
                                  default=argparse.SUPPRESS)
         self.parser.set_defaults(func=self.print_help)
         self.configure_parser()
+        self.user = None
 
     def configure_parser(self):
         """
@@ -58,13 +62,22 @@ class NFLapp:
         self.register_probability_parser(subparsers)
         self.register_save_parser(subparsers)
         self.register_quit_parser(subparsers)
+        self.register_login_parser(subparsers)
+        self.register_registration_parser(subparsers)
 
     def register_login_parser(self, subparsers):
         # Create the parser to handle login arguments
-        login_parser = subparsers.add_parser('Login', help='Login to the NFL database program')
+        login_parser = subparsers.add_parser('Login',
+                                             help='Login to the NFL database program')
         login_parser.add_argument('-u', '--username', type=str)
         login_parser.add_argument('-p', '--password', type=str)
         login_parser.set_defaults(func=self.login)
+
+    def register_registration_parser(self, subparsers):
+        registration_parser = subparsers.add_parser('Register',
+                                                    help='Register for an account')
+        registration_parser.set_defaults(func=self.create_account)
+
 
     def register_team_parser(self, subparsers):
         # Create the parser to handle team searches
@@ -184,20 +197,32 @@ class NFLapp:
     def set_password(self, password: str) -> None:
         self.password = password
 
-    def login(self) -> None:
-        uid = self.query.login(self.username, self.password)
-        if uid > 0:
+    def login(self, args: [str]):
+        response = self.query.execute(args)
+        user = response.value
+        if user:
+            self.user = User(uid=user[0],
+                             username=user[1],
+                             password=user[2],
+                             first_name=user[3],
+                             last_name=user[4],
+                             favorite_team=user[5],
+                             favorite_athlete=user[6])
             self.menu()
+
+    def create_account(self, args: [str]):
+        response = self.query.execute(args)
+        if response.status == ResponseStatus.SUCCESSFUL_WRITE:
+            print('Your account was created successfully. Please log in.')
         else:
-            print('Invalid credentials')
-            exit(1)
+            print('Registration unsuccessful.')
 
     def print_help(self, args: [str]):
         self.parser.print_help()
 
-    @staticmethod
-    def usage():
-        print("\n *** Please enter one of the following commands *** ")
+    def usage(self):
+        print(f'\nWelcome, {self.user.get_first_name()}!')
+        print("*** Please enter one of the following commands *** ")
         print("> Build_Database")
         print("> Team [<team_name>]")
         print("> Athlete <athlete_name> [-l]")
@@ -227,29 +252,17 @@ class NFLapp:
             except ArgParserException:
                 continue
 
+
 def main() -> None:
-    app = NFLapp()  
-    app.query.open_connections()
-
-    if len(sys.argv) < 3:
-        app.registration_manager.register_account()
-        sys.exit(1)
     try:
-        # Parse the initial login command and enter the run loop
+        app = NFLapp()
+        app.query.open_connections()
         args = app.parser.parse_args()
-        username = args.username
-        password = args.password
-        app.set_username(username)
-        app.set_password(password)
-        uid = app.login()
-
-        if uid > 0:
-            app.menu()  # Enter the main menu loop
-        else:
-            print('Invalid credentials')
+        args.func(args)
     except Exception as e:
         print("An error occurred:", e)
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
