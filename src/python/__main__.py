@@ -92,7 +92,7 @@ class NFLapp:
                                  default=None,
                                  type=str,
                                  help='Specify the team to find records for')
-        team_parser.set_defaults(func=self.query.execute)
+        team_parser.set_defaults(func=self.submit_request)
 
     def register_athlete_parser(self, subparsers):
         athlete_parser = subparsers.add_parser('Athlete',
@@ -101,7 +101,7 @@ class NFLapp:
         athlete_parser.add_argument('-l', '--last',
                                     action='store_true',
                                     help='Search by last name')
-        athlete_parser.set_defaults(func=self.query.execute)
+        athlete_parser.set_defaults(func=self.submit_request)
 
     def register_venue_parser(self, subparsers):
         venue_parser = subparsers.add_parser('Venue',
@@ -111,7 +111,7 @@ class NFLapp:
                                   default=None,
                                   type=str,
                                   help='Name of the venue')
-        venue_parser.set_defaults(func=self.query.execute)
+        venue_parser.set_defaults(func=self.submit_request)
 
     def register_game_parser(self, subparsers):
         game_parser = subparsers.add_parser('Game',
@@ -150,7 +150,7 @@ class NFLapp:
         game_parser.add_argument('-pf', '--percent_filled',
                                  action='store_true',
                                  help='Find how full the stadium was for the given game')
-        game_parser.set_defaults(func=self.query.execute)
+        game_parser.set_defaults(func=self.submit_request)
 
     def register_comeback_parser(self, subparsers):
         comeback_parser = subparsers.add_parser('Top_Comeback_Wins',
@@ -191,12 +191,6 @@ class NFLapp:
         quit_parser = subparsers.add_parser('quit', help='Quit the program')
         quit_parser.set_defaults(func=self.quit)
 
-    def set_username(self, username: str) -> None:
-        self.username = username
-
-    def set_password(self, password: str) -> None:
-        self.password = password
-
     def login(self, args: [str]):
         response = self.query.execute(args)
         user = response.value
@@ -216,6 +210,12 @@ class NFLapp:
             print('Your account was created successfully. Please log in.')
         else:
             print('Registration unsuccessful.')
+
+    def submit_request(self, args: [str]):
+        if self.user:
+            self.query.execute(args)
+        else:
+            print('You must be logged in to use the program')
 
     def print_help(self, args: [str]):
         self.parser.print_help()
