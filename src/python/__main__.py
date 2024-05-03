@@ -63,6 +63,7 @@ class NFLapp:
         self.register_save_parser(subparsers)
         self.register_quit_parser(subparsers)
         self.register_registration_parser(subparsers)
+        self.register_user_parser(subparsers)
 
     def register_login_parser(self, subparsers):
         # Create the parser to handle login arguments
@@ -186,6 +187,18 @@ class NFLapp:
                                  help='[optional] The filename')
         save_parser.set_defaults(func=self.query.save_last_result)
 
+    def register_user_parser(self, subparsers):
+        user_parser = subparsers.add_parser('User',
+                                            help='Update user information')
+        user_parser.add_argument('-f', '--favorite',
+                                 action='store_true',
+                                 help='Update user favorites')
+        user_parser.add_argument('-t', '--team',
+                                 default=None,
+                                 type=str,
+                                 help='Specify a team to favorite')
+        user_parser.set_defaults(func=self.submit_request)
+
     def register_quit_parser(self, subparsers):
         quit_parser = subparsers.add_parser('quit', help='Quit the program')
         quit_parser.set_defaults(func=self.quit)
@@ -230,7 +243,7 @@ class NFLapp:
         :return: None
         """
         if self.user:
-            self.query.execute(args)
+            self.query.execute(args, uid=self.user.get_uid())
         else:
             print('You must be logged in to use the program')
 

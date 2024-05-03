@@ -35,7 +35,8 @@ class Query:
             'Venue': self.venue_service,
             'Athlete': self.athlete_service,
             'Login': self.user_service,
-            'Register': self.user_service
+            'Register': self.user_service,
+            'User': self.user_service
         }
 
     def load_configuration(self) -> dict:

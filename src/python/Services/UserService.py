@@ -7,12 +7,14 @@ class UserService(Service):
     def __init__(self, conn):
         super().__init__(conn)
 
-    def get_data(self, args: [str]) -> ServiceResponse:
+    def get_data(self, args: [str], **kwargs) -> ServiceResponse:
         command = args.command
         if command == 'Login':
             return self.__login(args.username, args.password)
         elif command == 'Register':
             return self.__prompt_registration_input()
+        elif command == 'User':
+            return self.__favorite_team(args, **kwargs)
 
     def __login(self, username: str, password: str) -> ServiceResponse:
         cursor = self.conn.cursor()
@@ -51,4 +53,27 @@ class UserService(Service):
                 return ServiceResponse(status=ResponseStatus.SUCCESSFUL_WRITE)
             except Exception as e:
                 return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+
+    def __favorite_team(self, args: [str], **kwargs):
+        """
+        Set the user's favorite team
+        :param args:
+        :return:
+        """
+        uid = None
+        for key, value in kwargs.items():
+            if key == 'uid':
+                uid = value
+        team_query = 'SELECT * FROM teams WHERE team_name = %s'
+        team_data = (args.team, )
+        update_query = 'UPDATE users SET favorite_team_name = %s WHERE uid = %s'
+        update_data = (args.team, uid, )
+        cursor = self.conn.cursor()
+        cursor.execute(team_query, team_data)
+        team = cursor.fetchone()
+        if team:
+            cursor = self.conn.cursor()
+            cursor.execute(update_query, update_data, )
+            self.conn.commit()
+            print('Updated')
 
