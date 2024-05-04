@@ -97,10 +97,18 @@ class NFLapp:
     def register_athlete_parser(self, subparsers):
         athlete_parser = subparsers.add_parser('Athlete',
                                                help='Search for a athlete by name')
-        athlete_parser.add_argument('athlete_name', type=str)
+        athlete_parser.add_argument('athlete_name',
+                                    nargs='?',
+                                    default=None,
+                                    type=str)
         athlete_parser.add_argument('-l', '--last',
                                     action='store_true',
                                     help='Search by last name')
+        athlete_parser.add_argument('-a', '--athlete',
+                                    nargs='?',
+                                    default=None,
+                                    type=str,
+                                    help='Search by athlete ID')
         athlete_parser.set_defaults(func=self.submit_request)
 
     def register_venue_parser(self, subparsers):
@@ -291,6 +299,12 @@ class NFLapp:
             args = self.parser.parse_args(f'Team -y 2023 -t {fav_team}'.split())
             args.func(args)
             print('***************************************')
+        if self.user.get_favorite_athlete():
+            print('***Favorite Athlete***')
+            fav_athlete = self.user.get_favorite_athlete()
+            args = self.parser.parse_args(f'Athlete -a {fav_athlete}'.split())
+            args.func(args)
+            print('****************************************')
 
 
     def usage(self):

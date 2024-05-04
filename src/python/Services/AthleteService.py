@@ -1,5 +1,5 @@
 from Services.Service import Service
-from Services.ServiceResponse import ServiceResponse
+from Services.ServiceResponse import ServiceResponse, ResponseStatus
 from psycopg import Connection
 from FileManager import FileManager
 import display
@@ -11,7 +11,10 @@ class AthleteService(Service):
         self.file_manager = file_manager
 
     def get_data(self, args: [str], **kwargs) -> ServiceResponse:
-        return self.__get_athlete(args)
+        if args.athlete:
+            return self.__get_athlete_by_id(args)
+        else:
+            return self.__get_athlete(args)
 
     def __get_athlete(self, args: [str]) -> ServiceResponse:
         if args.last:
@@ -24,6 +27,7 @@ class AthleteService(Service):
         data = ('%' + athlete_name + '%', )
         cursor.execute(query, data)
         response = ServiceResponse(cursor=cursor,
+                                   status=ResponseStatus.SUCCESSFUL_READ,
                                    display_args=(
                                        [('ID', 0), ('Name', 1), ('Date of Birth', 2), ('Height, in', 3),
                                         ('Weight, lbs', 4), ('Birth Place', 5), ('Team Name', 6), ('Position', 7),
@@ -31,3 +35,23 @@ class AthleteService(Service):
                                    ),
                                    display_method=display.display)
         return response
+
+    def __get_athlete_by_id(self, args: [str]) -> ServiceResponse:
+        athlete_id = args.athlete
+        query = self.file_manager.read_file('athlete_by_id.sql')
+        data = (athlete_id,)
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(query, data)
+            response = ServiceResponse(cursor=cursor,
+                                       status=ResponseStatus.SUCCESSFUL_READ,
+                                       display_args=(
+                                           [('ID', 0), ('Name', 1), ('Date of Birth', 2), ('Height, in', 3),
+                                            ('Weight, lbs', 4), ('Birth Place', 5), ('Team Name', 6), ('Position', 7),
+                                            ('Platoon', 8)],
+                                       ),
+                                       display_method=display.display)
+            return response
+        except:
+            response = ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+            return response
