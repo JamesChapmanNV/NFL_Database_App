@@ -89,7 +89,23 @@ class UserService(Service):
                 return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
 
     def __delete_user(self, args: [str], **kwargs) -> ServiceResponse:
-        pass
+        uid = kwargs['uid']
+        delete_query = 'DELETE FROM users WHERE uid = %s'
+        delete_data = (uid, )
+        confirmation = input('Are you sure you want to delete this account? (y/n) ').strip()
+        if confirmation == 'y':
+            cursor = self.conn.cursor()
+            cursor.execute(delete_query, delete_data)
+            self.conn.commit()
+            print('Account successfully deleted')
+            response = ServiceResponse(status=ResponseStatus.SUCCESSFUL_DELETE,
+                                       value={'user': {
+                                           'updated_field': 'delete',
+                                           'updated_value': None
+                                       }})
+            return response
+        else:
+            return ServiceResponse(status=ResponseStatus.CANCELLED)
 
     def __favorite_team(self, args: [str], **kwargs) -> ServiceResponse:
         """
@@ -126,24 +142,28 @@ class UserService(Service):
 
     def __delete_favorite_team(self, args: [str], **kwargs) -> ServiceResponse:
         uid = kwargs['uid']
-        try:
-            delete_query = 'UPDATE users SET favorite_team_name = NULL WHERE uid = %s'
-            delete_data = (uid,)
-            cursor = self.conn.cursor()
-            cursor.execute(delete_query, delete_data)
-            self.conn.commit()
-            response = ServiceResponse(value={
-                'user': {
-                    'updated_field': 'favorite_team_name',
-                    'updated_value': None
-                }
-            },
-                status=ResponseStatus.SUCCESSFUL_WRITE)
-            return response
-        except:
-            self.conn.rollback()
-            response = ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
-            return response
+        confirmation = input('Are you sure you want to delete your favorite team team? (y/n) ').strip()
+        if confirmation == 'y':
+            try:
+                delete_query = 'UPDATE users SET favorite_team_name = NULL WHERE uid = %s'
+                delete_data = (uid,)
+                cursor = self.conn.cursor()
+                cursor.execute(delete_query, delete_data)
+                self.conn.commit()
+                response = ServiceResponse(value={
+                    'user': {
+                        'updated_field': 'favorite_team_name',
+                        'updated_value': None
+                    }
+                },
+                    status=ResponseStatus.SUCCESSFUL_WRITE)
+                return response
+            except:
+                self.conn.rollback()
+                response = ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+                return response
+        else:
+            return ServiceResponse(status=ResponseStatus.CANCELLED)
 
     def __favorite_athlete(self, args: [str], **kwargs) -> ServiceResponse:
         if args.delete:
@@ -175,21 +195,26 @@ class UserService(Service):
 
     def __delete_favorite_athlete(self, args, **kwargs) -> ServiceResponse:
         uid = kwargs['uid']
-        try:
-            query = 'UPDATE users SET favorite_athlete_id = NULL WHERE uid = %s'
-            update_data = (uid,)
-            cursor = self.conn.cursor()
-            cursor.execute(query, update_data)
-            self.conn.commit()
-            response = ServiceResponse(value={
-                'user': {
-                    'updated_field': 'favorite_athlete_id',
-                    'updated_value': None
-                }
-            },
-                status=ResponseStatus.SUCCESSFUL_WRITE)
-            return response
-        except:
-            self.conn.rollback()
-            response = ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+        confirmation = input('Are you sure you want to delete your favorite athlete? (y/n) ').strip()
+        if confirmation == 'y':
+            try:
+                query = 'UPDATE users SET favorite_athlete_id = NULL WHERE uid = %s'
+                update_data = (uid,)
+                cursor = self.conn.cursor()
+                cursor.execute(query, update_data)
+                self.conn.commit()
+                response = ServiceResponse(value={
+                    'user': {
+                        'updated_field': 'favorite_athlete_id',
+                        'updated_value': None
+                    }
+                },
+                    status=ResponseStatus.SUCCESSFUL_WRITE)
+                return response
+            except:
+                self.conn.rollback()
+                response = ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+                return response
+        else:
+            response = ServiceResponse(status=ResponseStatus.CANCELLED)
             return response

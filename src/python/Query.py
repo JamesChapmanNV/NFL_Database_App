@@ -13,6 +13,7 @@ from Services.GameService import GameService
 from Services.TeamService import TeamService
 from Services.VenueService import VenueService
 from Services.AthleteService import AthleteService
+from Services.ServiceResponse import ResponseStatus
 
 
 class Query:
@@ -81,6 +82,9 @@ class Query:
             if response.display_method is not None:
                 response.display_method(self.last_result, *response.display_args)
         else:
+            if response.status:
+                if response.status == ResponseStatus.UNSUCCESSFUL:
+                    print('Something went wrong :(')
             # If there is no data to display, return the response for further processing
             return response
     

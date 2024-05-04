@@ -231,6 +231,8 @@ class NFLapp:
                              favorite_team=user[6],
                              favorite_athlete=user[7])
             self.menu()
+        else:
+            print('Invalid Credentials')
 
     def create_account(self, args: [str]):
         """
@@ -258,7 +260,8 @@ class NFLapp:
             'last_name': self.user.set_last_name,
             'password': self.user.set_password,
             'favorite_team_name': self.user.set_favorite_team,
-            'favorite_athlete_id': self.user.set_favorite_athlete
+            'favorite_athlete_id': self.user.set_favorite_athlete,
+            'delete': self.logout
         }
         if self.user:
             response = self.query.execute(args, uid=self.user.get_uid())
@@ -273,6 +276,10 @@ class NFLapp:
                 return
         else:
             print('You must be logged in to use the program')
+
+    def logout(self, *args):
+        self.user = None
+        exit(1)
 
     def print_help(self, args: [str]):
         self.parser.print_help()
