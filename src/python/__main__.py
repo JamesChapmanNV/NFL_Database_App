@@ -194,9 +194,18 @@ class NFLapp:
                                  action='store_true',
                                  help='Update user favorites')
         user_parser.add_argument('-t', '--team',
-                                 default=None,
+                                 nargs='?',
+                                 default=SUPPRESS,
                                  type=str,
                                  help='Specify a team to favorite')
+        user_parser.add_argument('-a', '--athlete',
+                                 nargs='?',
+                                 default=SUPPRESS,
+                                 type=str,
+                                 help='Specify an athlete ID to favorite')
+        user_parser.add_argument('-d', '--delete',
+                                 action='store_true',
+                                 help='Delete user data')
         user_parser.set_defaults(func=self.submit_request)
 
     def register_quit_parser(self, subparsers):
@@ -218,8 +227,9 @@ class NFLapp:
                              password=user[2],
                              first_name=user[3],
                              last_name=user[4],
-                             favorite_team=user[5],
-                             favorite_athlete=user[6])
+                             created_on=user[5],
+                             favorite_team=user[6],
+                             favorite_athlete=user[7])
             self.menu()
 
     def create_account(self, args: [str]):
@@ -238,20 +248,48 @@ class NFLapp:
         """
         Main entry point for query execution. This method ensures the user is logged in, and if so, submits
         the request to the Query object to execute. If the user is not logged in, alert them that they must log in
-        and do nothing
+        and do nothing. After a successful response, the ServiceResponse object checks to see if user data was updated.
+        If it was, the appropriate field in the User object is updated for the current session.
         :param args: Arguments to pass to Query.execute()
         :return: None
         """
+        response_field_mapping = {
+            'first_name': self.user.set_first_name,
+            'last_name': self.user.set_last_name,
+            'password': self.user.set_password,
+            'favorite_team_name': self.user.set_favorite_team,
+            'favorite_athlete_id': self.user.set_favorite_athlete
+        }
         if self.user:
-            self.query.execute(args, uid=self.user.get_uid())
+            response = self.query.execute(args, uid=self.user.get_uid())
+            try:
+                if response.value['user']:
+                    payload = response.value['user']
+                    updated_field = payload['updated_field']
+                    updated_value = payload['updated_value']
+                    setter = response_field_mapping[updated_field]
+                    setter(updated_value)
+            except Exception as e:
+                return
         else:
             print('You must be logged in to use the program')
 
     def print_help(self, args: [str]):
         self.parser.print_help()
 
+    def display_startup_data(self):
+        if self.user.get_favorite_team():
+            print('***Favorite Team Most Recent Record:***')
+            fav_team = self.user.get_favorite_team()
+            args = self.parser.parse_args(f'Team -y 2023 -t {fav_team}'.split())
+            args.func(args)
+            print('***************************************')
+
+
     def usage(self):
         print(f'\nWelcome, {self.user.get_first_name()}!')
+        print(f'Favorite Team: {self.user.get_favorite_team()}')
+        print(f'Favorite Athlete: {self.user.get_favorite_athlete()}')
         print("*** Please enter one of the following commands *** ")
         print("> Build_Database")
         print("> Team [<team_name>]")
@@ -261,6 +299,7 @@ class NFLapp:
         print("> Top_Comeback_Wins [-y <year>]")
         print("> Win_probability -t <team_name> -s <team_score> -op <opponent_score>")
         print("> Save <type> [-o <filename>]")
+        print('> User [-f] [-t] [-a] [-d]')
         print("> quit")
 
     @staticmethod
@@ -268,6 +307,7 @@ class NFLapp:
         sys.exit(0)
 
     def menu(self):
+        self.display_startup_data()
         while True:
             try:
                 self.usage()
@@ -284,14 +324,15 @@ class NFLapp:
 
 
 def main() -> None:
+    app = NFLapp()
     try:
-        app = NFLapp()
         app.query.open_connections()
         args = app.parser.parse_args()
         args.func(args)
     except Exception as e:
-        print("An error occurred:", e)
-        sys.exit(1)
+        print("An error occurred. Please ensure you are using the correct command and try again")
+        app.menu()
+        # sys.exit(1)
 
 
 if __name__ == "__main__":
