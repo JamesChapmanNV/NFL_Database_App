@@ -1,7 +1,7 @@
 from FileManager import FileManager
 import display
 from Services.Service import Service
-from Services.ServiceResponse import ServiceResponse
+from Services.ServiceResponse import ServiceResponse, ResponseStatus
 """
 Service to get data related to games in the database. This service is involked when the user uses the 'Game' command.
 The user can obtain information on specific games, games in a given year, plays made by a athlete in a given game,
@@ -27,6 +27,8 @@ class GameService(Service):
             return self.__get_rival_games(args)
         elif args.percent_filled:
             return self.__get_percent_filled(args)
+        elif args.statistics:
+            return self.__get_stat_leaders(args)
         else:
             return self.__get_game(args)
 
@@ -87,6 +89,24 @@ class GameService(Service):
                                    ),
                                    display_method=display.display)
         return response
+
+    def __get_stat_leaders(self, args: [str]) -> ServiceResponse:
+        game_id = args.game_id
+        query = self.__file_manager.read_file('statistics.sql')
+        data = (game_id, )
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(query, data)
+            response = ServiceResponse(cursor = cursor,
+                                       status=ResponseStatus.SUCCESSFUL_READ,
+                                       display_args=(
+                                           [('Name', 0), ('Position', 1), ('Team', 2), ('Category', 3), ('Yards', 4)],
+                                       ),
+                                       display_method=display.display)
+            return response
+        except:
+            return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+
 
     def __get_scores(self, args: [str]) -> ServiceResponse:
         """

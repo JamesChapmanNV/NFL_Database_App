@@ -15,9 +15,11 @@ Parser flags:
     * -p password for login or plays
     * -l last
     * -s score
+    * -S statistics
     * -w week
     * -t team
     * -op opponent score
+    * -pf percent_filled
     * -o output filename
     * -up --update update a field
     * -vl --value Specify a value to update to
@@ -76,7 +78,6 @@ class NFLapp:
         registration_parser = subparsers.add_parser('Register',
                                                     help='Register for an account')
         registration_parser.set_defaults(func=self.create_account)
-
 
     def register_team_parser(self, subparsers):
         # Create the parser to handle team searches
@@ -149,6 +150,9 @@ class NFLapp:
         game_parser.add_argument('-pf', '--percent_filled',
                                  action='store_true',
                                  help='Find how full the stadium was for the given game')
+        game_parser.add_argument('-S', '--statistics',
+                                 action='store_true',
+                                 help='Find passing, rushing, and receiving leaders for a given game')
         game_parser.set_defaults(func=self.submit_request)
 
     def register_comeback_parser(self, subparsers):
