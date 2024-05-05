@@ -81,6 +81,7 @@ class GameService(Service):
 
         cursor.execute(query, data)
         response = ServiceResponse(cursor = cursor,
+                                   status=ResponseStatus.SUCCESSFUL_READ,
                                    display_args=(
                                        [('Game ID', 0), ('Date', 1), ('Attendance', 2),
                                         ('Home Team', 3), ('Away Team', 4), ('Venue', 5),
@@ -96,13 +97,16 @@ class GameService(Service):
         data = (game_id, )
         try:
             cursor = self.conn.cursor()
+            cursor.execute('SELECT * from games WHERE game_id = %s', (game_id, ))
+            game = cursor.fetchone()
             cursor.execute(query, data)
             response = ServiceResponse(cursor = cursor,
                                        status=ResponseStatus.SUCCESSFUL_READ,
                                        display_args=(
                                            [('Name', 0), ('Position', 1), ('Team', 2), ('Category', 3), ('Yards', 4)],
                                        ),
-                                       display_method=display.display)
+                                       display_method=display.display,
+                                       prefix_message=f'Leaders for the {game[3]} vs. {game[4]} game on {game[1]}')
             return response
         except:
             return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
@@ -124,6 +128,7 @@ class GameService(Service):
         data = (year, week, year, week, year, week, )
         cursor.execute(query, data)
         response = ServiceResponse(cursor = cursor,
+                                   status=ResponseStatus.SUCCESSFUL_READ,
                                    display_args=(
                                        [('name', 0), ('score', 1)],
                                        [('name', 2), ('score', 3)],
@@ -146,6 +151,7 @@ class GameService(Service):
         data = (game_id, athlete_id,)
         cursor.execute(query, data)
         response = ServiceResponse(cursor = cursor,
+                                   status=ResponseStatus.SUCCESSFUL_READ,
                                    display_args=(
                                        [('Quarter', 0), ('Seconds Remaining', 1), ('Yards', 2), ('Score Value', 3),
                                         ('Play Type', 4), ('Start Down', 5), ('End Down', 6)],
@@ -161,6 +167,7 @@ class GameService(Service):
         data = (game_id, )
         cursor.execute(query, data)
         response = ServiceResponse(cursor = cursor,
+                                   status=ResponseStatus.SUCCESSFUL_READ,
                                    display_args=(
                                        [('Percent Fill', 0)],
                                    ),
