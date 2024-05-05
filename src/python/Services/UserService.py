@@ -50,5 +50,6 @@ class UserService(Service):
                 print('Thank you for registering for an account')
                 return ServiceResponse(status=ResponseStatus.SUCCESSFUL_WRITE)
             except Exception as e:
-                return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+                return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL,
+                                       prefix_message='Username already taken')
 
