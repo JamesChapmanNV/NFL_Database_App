@@ -8,8 +8,7 @@
 
 -- 15+ query requirement: Satisfied(? Not sure about compound where)
 
-WITH stats AS (SELECT first_name,
-                      last_name,
+WITH stats AS (SELECT first_name || ' ' || last_name AS name,
                       r.position_name,
                       r.team_name,
                       CASE
