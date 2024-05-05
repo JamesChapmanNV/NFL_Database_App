@@ -50,7 +50,8 @@ class VenueService(Service):
                                        display_args=(
                                            [('Venue', 0), ('Team', 1), ('Home Wins', 2)],
                                        ),
-                                       display_method=display.display)
+                                       display_method=display.display,
+                                       prefix_message=f'Venues with the most home wins in {year}')
             return response
         except:
             return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
