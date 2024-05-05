@@ -12,7 +12,8 @@ class ResponseStatus(Enum):
 class ServiceResponse:
     def __init__(self, cursor: Cursor = None, display_args: (Any) = None,
                  display_method: Callable[[Any], Any] = None,
-                 status: ResponseStatus = None, value: Any = None):
+                 status: ResponseStatus = None, value: Any = None,
+                 prefix_message: str = None):
         """
         Initialize a new ServiceResponse object. ServiceResponse is a container object to hold all relevant data
         returned by a given service.
@@ -27,3 +28,4 @@ class ServiceResponse:
         self.display_method = display_method
         self.status = status
         self.value = value
+        self.prefix_message = prefix_message
