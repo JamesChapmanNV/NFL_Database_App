@@ -76,6 +76,8 @@ class Query:
     def execute(self, args: [str], **kwargs) -> Any:
         command = args.command
         response = self.SERVICE_MAPPING[command].get_data(args, **kwargs)
+        if response.prefix_message is not None:
+            print('\n' + response.prefix_message)
         if response.cursor:
             self.helper_set_column_names(response.cursor)
             self.last_result = response.cursor.fetchall()

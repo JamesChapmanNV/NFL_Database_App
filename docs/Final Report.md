@@ -95,12 +95,13 @@ The `Venue` command is used to retrieve information related to venues (or stadiu
 None
 
 #### Flags and Optional Arguments
-This command does not accept any flags. However, the (partial) venue name can be specified to search for a specific venue.
+`-y or --year <year>` If a year is specified, the venues with the greatest number of home wins, their teams, and the number of wins in that season will be returned.
 
 #### Usage
 `> Venue` Returns all venues<br>
 `> Venue GEHA` Returns all venues with 'GEHA' in the name<br>
 `> Venue Field` Returns all venues with 'Field' in the name<br>
+`> Venue -y 2023` Returns venues with the greatest number of home wins in 2023<br>
 
 ### The Game Command
 The `Game` command is one of the more flexible and powerful commands in the program. It is used to retrieve all information related to a given game or games. A large number of flags and arguments can be given to the `Game` command to control it's execution.
@@ -132,6 +133,9 @@ Specify the name of the team to search for. This flag is used when retrieving th
 ##### `-pf or --percent_filled`
 Specify that you would like to know how full the stadium was for a given game. This flag takes no arguments, but requires you to specify which game to compute the statistic for through the `-g or --game <game_id>` flag.
 
+##### `-S or --statistics`
+Specify that you would like to retrieve the leaders for passing, rushing, and receiving yards in the given game. This flag takes no arguments, but requires you to specify which game to compute the statistic for through the `-g or --game <game_id>` flag.
+
 #### Usage
 The general use pattern for each of the features is listed below.
 
@@ -144,6 +148,7 @@ The general use pattern for each of the features is listed below.
 `> Game -t Chiefs -op Raiders -y 2020` Return all games played by the Chiefs and Raiders in the 2020 season<br>
 `> Game -t Chiefs -op Chiefs` Return all games played by the Chiefs against any opponent in the database<br>
 `> Game -t Chiefs -op Chiefs -y 2020` Return all games played by the Chiefs against any opponent in the 2020 season<br>
+`> Game -g 401547235 -S` Return the leaders for passing, receiving, and rushing yards in the game with an ID of 401547235<br>
 
 ### The Save Command
 In some cases, a user may wish to save the results returned by the program. This can be accomplished with the `Save` command. The `Save` command requires a filetype to be specified, and optionally a filename. The results of the most recently executed query will be saved in the user's Downloads folder.
