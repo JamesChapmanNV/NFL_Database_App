@@ -4,3 +4,4 @@
 \i users.sql
 \i rosters_decomposition.sql
 \i views_indexes_functions.sql
+\i register_user.sql
