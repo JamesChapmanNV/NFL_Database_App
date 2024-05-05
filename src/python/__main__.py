@@ -19,8 +19,8 @@ Parser flags:
     * -t team
     * -op opponent score
     * -o output filename
-    * -up --update update a field
-    * -vl --value Specify a value to update to
+    * -U --update update a field
+    * -V --value Specify a value to update to
     * -d --delete Delete
 """
 
@@ -214,6 +214,14 @@ class NFLapp:
         user_parser.add_argument('-d', '--delete',
                                  action='store_true',
                                  help='Delete user data')
+        user_parser.add_argument('-U', '--update',
+                                 default=None,
+                                 type=str,
+                                 help='Update user data')
+        user_parser.add_argument('-V', '--value',
+                                 default=None,
+                                 type=str,
+                                 help='Specify the new value to update')
         user_parser.set_defaults(func=self.submit_request)
 
     def register_quit_parser(self, subparsers):
@@ -351,6 +359,7 @@ def main() -> None:
         args = app.parser.parse_args()
         args.func(args)
     except Exception as e:
+        print(e)
         print("An error occurred. Please ensure you are using the correct command and try again")
         app.menu()
         # sys.exit(1)

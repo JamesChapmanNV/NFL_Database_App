@@ -22,6 +22,8 @@ class UserService(Service):
             return self.__handle_favorite(args, **kwargs)
         elif args.delete:
             return self.__delete_user(args, **kwargs)
+        elif args.update:
+            return self.__update_data(args, **kwargs)
         else:
             return self.__get_user_by_uid(kwargs['uid'])
 
@@ -48,7 +50,6 @@ class UserService(Service):
                                    ),
                                    display_method=display.display)
         return response
-
 
     def __login(self, username: str, password: str) -> ServiceResponse:
         cursor = self.conn.cursor()
@@ -218,3 +219,36 @@ class UserService(Service):
         else:
             response = ServiceResponse(status=ResponseStatus.CANCELLED)
             return response
+
+    def __update_data(self, args: [str], **kwargs) -> ServiceResponse:
+        uid = kwargs['uid']
+        field = args.update
+        value = args.value
+        if field.lower() == 'first_name':
+            column = 'first_name'
+        elif field.lower() == 'last_name':
+            column = 'last_name'
+        elif field.lower() == 'password':
+            column = 'password'
+        else:
+            return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+
+        query = f'UPDATE users SET {column} = %s WHERE uid = %s'
+        data = (value, uid)
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(query, data)
+            self.conn.commit()
+            response = ServiceResponse(status=ResponseStatus.SUCCESSFUL_WRITE,
+                                       value={
+                                           'user': {
+                                               'updated_field': column,
+                                               'updated_value': value
+                                           }
+                                       })
+            print(f'{column} has been successfully updated')
+            return response
+        except:
+            print(f'An error occurred updating {column}')
+            return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+
