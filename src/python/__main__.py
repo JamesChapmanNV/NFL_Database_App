@@ -111,6 +111,10 @@ class NFLapp:
                                   default=None,
                                   type=str,
                                   help='Name of the venue')
+        venue_parser.add_argument('-y', '--year',
+                                  default=None,
+                                  type=int,
+                                  help='Search for the venues with the most home wins in the provided year')
         venue_parser.set_defaults(func=self.submit_request)
 
     def register_game_parser(self, subparsers):
