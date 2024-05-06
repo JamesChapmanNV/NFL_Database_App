@@ -1,6 +1,29 @@
 # NFL_database
 
+**Installing the application**
 
+1.) Clone this repository by running the following command,
+
+##
+    git clone https://github.com/JamesChapmanNV/NFL_database
+
+2.) Navigate to /src/python/ExampleConfig.ini and modify according to user's postgresql server credentials. Rename the file as 'Config.ini'
+
+3.) Navigate to /src/sql/ and connect to the same postgresql server and database as mentioned in 'Config.ini'
+
+4.) Run the following command to build the tables and function.
+
+##
+    \i build.sql
+
+**Running the application**
+
+1.) Ensure that the python modules mentioned in /src/python/requirements.txt are installed
+
+2.) Navigate to /src/ and execute the following command to display the help and possible options in using the application.
+##
+    python3 python -h
+    
 Work in progress …
 
 Current tables are as follows:
