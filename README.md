@@ -18,7 +18,9 @@
 
 **Running the application**
 
-Navigate to /src/ and execute the following command to display the help and possible options in using the application.
+1.) Ensure that the python modules mentioned in /src/python/requirements.txt are installed
+
+2.) Navigate to /src/ and execute the following command to display the help and possible options in using the application.
 ##
     python3 python -h
     
