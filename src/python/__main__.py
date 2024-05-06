@@ -21,8 +21,8 @@ Parser flags:
     * -op opponent score
     * -pf percent_filled
     * -o output filename
-    * -up --update update a field
-    * -vl --value Specify a value to update to
+    * -U --update update a field
+    * -V --value Specify a value to update to
     * -d --delete Delete
 """
 
@@ -65,6 +65,7 @@ class NFLapp:
         self.register_save_parser(subparsers)
         self.register_quit_parser(subparsers)
         self.register_registration_parser(subparsers)
+        self.register_user_parser(subparsers)
 
     def register_login_parser(self, subparsers):
         # Create the parser to handle login arguments
@@ -97,10 +98,18 @@ class NFLapp:
     def register_athlete_parser(self, subparsers):
         athlete_parser = subparsers.add_parser('Athlete',
                                                help='Search for a athlete by name')
-        athlete_parser.add_argument('athlete_name', type=str)
+        athlete_parser.add_argument('athlete_name',
+                                    nargs='?',
+                                    default=None,
+                                    type=str)
         athlete_parser.add_argument('-l', '--last',
                                     action='store_true',
                                     help='Search by last name')
+        athlete_parser.add_argument('-a', '--athlete',
+                                    nargs='?',
+                                    default=None,
+                                    type=str,
+                                    help='Search by athlete ID')
         athlete_parser.set_defaults(func=self.submit_request)
 
     def register_venue_parser(self, subparsers):
@@ -194,6 +203,35 @@ class NFLapp:
                                  help='[optional] The filename')
         save_parser.set_defaults(func=self.query.save_last_result)
 
+    def register_user_parser(self, subparsers):
+        user_parser = subparsers.add_parser('User',
+                                            help='Update user information')
+        user_parser.add_argument('-f', '--favorite',
+                                 action='store_true',
+                                 help='Update user favorites')
+        user_parser.add_argument('-t', '--team',
+                                 nargs='?',
+                                 default=SUPPRESS,
+                                 type=str,
+                                 help='Specify a team to favorite')
+        user_parser.add_argument('-a', '--athlete',
+                                 nargs='?',
+                                 default=SUPPRESS,
+                                 type=str,
+                                 help='Specify an athlete ID to favorite')
+        user_parser.add_argument('-d', '--delete',
+                                 action='store_true',
+                                 help='Delete user data')
+        user_parser.add_argument('-U', '--update',
+                                 default=None,
+                                 type=str,
+                                 help='Update user data')
+        user_parser.add_argument('-V', '--value',
+                                 default=None,
+                                 type=str,
+                                 help='Specify the new value to update')
+        user_parser.set_defaults(func=self.submit_request)
+
     def register_quit_parser(self, subparsers):
         quit_parser = subparsers.add_parser('quit', help='Quit the program')
         quit_parser.set_defaults(func=self.quit)
@@ -213,9 +251,12 @@ class NFLapp:
                              password=user[2],
                              first_name=user[3],
                              last_name=user[4],
-                             favorite_team=user[5],
-                             favorite_athlete=user[6])
+                             created_on=user[5],
+                             favorite_team=user[6],
+                             favorite_athlete=user[7])
             self.menu()
+        else:
+            print('Invalid Credentials')
 
     def create_account(self, args: [str]):
         """
@@ -233,20 +274,59 @@ class NFLapp:
         """
         Main entry point for query execution. This method ensures the user is logged in, and if so, submits
         the request to the Query object to execute. If the user is not logged in, alert them that they must log in
-        and do nothing
+        and do nothing. After a successful response, the ServiceResponse object checks to see if user data was updated.
+        If it was, the appropriate field in the User object is updated for the current session.
         :param args: Arguments to pass to Query.execute()
         :return: None
         """
+        response_field_mapping = {
+            'first_name': self.user.set_first_name,
+            'last_name': self.user.set_last_name,
+            'password': self.user.set_password,
+            'favorite_team_name': self.user.set_favorite_team,
+            'favorite_athlete_id': self.user.set_favorite_athlete,
+            'delete': self.logout
+        }
         if self.user:
-            self.query.execute(args)
+            response = self.query.execute(args, uid=self.user.get_uid())
+            try:
+                if response.value['user']:
+                    payload = response.value['user']
+                    updated_field = payload['updated_field']
+                    updated_value = payload['updated_value']
+                    setter = response_field_mapping[updated_field]
+                    setter(updated_value)
+            except Exception as e:
+                return
         else:
             print('You must be logged in to use the program')
+
+    def logout(self, *args):
+        self.user = None
+        exit(1)
 
     def print_help(self, args: [str]):
         self.parser.print_help()
 
+    def display_startup_data(self):
+        if self.user.get_favorite_team():
+            print('***Favorite Team Most Recent Record:***')
+            fav_team = self.user.get_favorite_team()
+            args = self.parser.parse_args(f'Team -y 2023 -t {fav_team}'.split())
+            args.func(args)
+            print('***************************************')
+        if self.user.get_favorite_athlete():
+            print('***Favorite Athlete***')
+            fav_athlete = self.user.get_favorite_athlete()
+            args = self.parser.parse_args(f'Athlete -a {fav_athlete}'.split())
+            args.func(args)
+            print('****************************************')
+
+
     def usage(self):
         print(f'\nWelcome, {self.user.get_first_name()}!')
+        print(f'Favorite Team: {self.user.get_favorite_team()}')
+        print(f'Favorite Athlete: {self.user.get_favorite_athlete()}')
         print("*** Please enter one of the following commands *** ")
         print("> Build_Database")
         print("> Team [<team_name>]")
@@ -256,6 +336,7 @@ class NFLapp:
         print("> Top_Comeback_Wins [-y <year>]")
         print("> Win_probability -t <team_name> -s <team_score> -op <opponent_score>")
         print("> Save <type> [-o <filename>]")
+        print('> User [-f] [-t] [-a] [-d]')
         print("> quit")
 
     @staticmethod
@@ -263,6 +344,7 @@ class NFLapp:
         sys.exit(0)
 
     def menu(self):
+        self.display_startup_data()
         while True:
             try:
                 self.usage()
@@ -279,14 +361,16 @@ class NFLapp:
 
 
 def main() -> None:
+    app = NFLapp()
     try:
-        app = NFLapp()
         app.query.open_connections()
         args = app.parser.parse_args()
         args.func(args)
     except Exception as e:
-        print("An error occurred:", e)
-        sys.exit(1)
+        print(e)
+        print("An error occurred. Please ensure you are using the correct command and try again")
+        app.menu()
+        # sys.exit(1)
 
 
 if __name__ == "__main__":

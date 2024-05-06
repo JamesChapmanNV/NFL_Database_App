@@ -5,8 +5,10 @@ from enum import Enum
 
 class ResponseStatus(Enum):
     UNSUCCESSFUL = -1,
-    SUCCESSFUL_READ = 0,
-    SUCCESSFUL_WRITE = 1,
+    CANCELLED = 0,
+    SUCCESSFUL_READ = 1,
+    SUCCESSFUL_WRITE = 2,
+    SUCCESSFUL_DELETE = 3,
 
 
 class ServiceResponse:
