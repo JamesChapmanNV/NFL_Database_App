@@ -11,7 +11,11 @@ class AthleteService(Service):
         self.file_manager = file_manager
 
     def get_data(self, args: [str], **kwargs) -> ServiceResponse:
-        if args.athlete:
+        if args.statistics and args.week and args.year and args.season_type:
+            return self.__get_weekly_receiving_stats(args)
+        elif args.statistics:
+            return self.__get_receiving_stats_for_athlete(args)
+        elif args.athlete:
             return self.__get_athlete_by_id(args)
         else:
             return self.__get_athlete(args)
@@ -55,3 +59,54 @@ class AthleteService(Service):
         except:
             response = ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
             return response
+
+    def __get_receiving_stats_for_athlete(self, args: [str]) -> ServiceResponse:
+        athlete_id = args.athlete
+        query = self.file_manager.read_file('athlete_receiving_stats.sql')
+        data = (athlete_id,)
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(query, data)
+            response = ServiceResponse(cursor=cursor,
+                                       status=ResponseStatus.SUCCESSFUL_READ,
+                                       display_args=(
+                                           [('Name', 0), ('Year', 1), ('Season Type', 2), ('Week', 3),
+                                            ('Receiving Yards', 4)],
+                                       ),
+                                       display_method=display.display)
+            return response
+        except:
+            response = ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+            return response
+
+    def __get_weekly_receiving_stats(self, args: [str]) -> ServiceResponse:
+        year = args.year
+        week = args.week
+        query = self.file_manager.read_file('weekly_receiving_stats.sql')
+        try:
+            if args.season_type == 'rs':
+                season_type = 'Regular Season'
+            elif args.season_type == 'ps':
+                season_type = 'Post Season'
+            else:
+                raise Exception('Unknown season type')
+            cursor = self.conn.cursor()
+            data = (year, season_type, week)
+            cursor.execute(query, data)
+            response = ServiceResponse(cursor=cursor,
+                                       status=ResponseStatus.SUCCESSFUL_READ,
+                                       display_args=(
+                                           [('Game ID', 0), ('Name', 1), ('Receiving Yards', 2)],
+                                       ),
+                                       display_method=display.display,
+                                       prefix_message=f'Weekly Receiving Statistics for week {week} in the {year} {season_type}')
+            return response
+        except Exception as e:
+            print(e)
+            if str(e) == 'Unknown season type':
+                response = ServiceResponse(status=ResponseStatus.UNSUCCESSFUL,
+                                           prefix_message='Unknown season type. Accepted values are rs for regular season and ps for post season')
+                return response
+            else:
+                response = ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+                return response

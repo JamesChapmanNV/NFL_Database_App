@@ -113,6 +113,21 @@ class NFLapp:
                                     default=None,
                                     type=str,
                                     help='Search by athlete ID')
+        athlete_parser.add_argument('-S', '--statistics',
+                                    action='store_true',
+                                    help='Get receiving statistics, either for an athlete or for all athletes during a given week')
+        athlete_parser.add_argument('-y', '--year',
+                                    default=None,
+                                    type=int,
+                                    help='Specify the year to get receiving statistics for')
+        athlete_parser.add_argument('-w', '--week',
+                                    default=None,
+                                    type=int,
+                                    help='Specify the week to get receiving statistics for')
+        athlete_parser.add_argument('-st', '--season_type',
+                                    default=None,
+                                    type=str,
+                                    help='Specify the season type to get receiving statistics for')
         athlete_parser.set_defaults(func=self.submit_request)
 
     def register_venue_parser(self, subparsers):
