@@ -88,9 +88,23 @@ Either the first or last name of the athlete must directly follow the `Athlete` 
 #####`-l or --last`
 Search by last name instead of first
 
+##### `-S or --statistics`
+Get receiving statistics for an athlete
+
+##### `-y or --year <year>`
+Specify the year to get weekly receiving statistics for
+
+##### `-w or --week <week>`
+Specify the week to get the weekly receiving statistics for
+
+##### `-st or --season_type <season_type>`
+Specify the season type to get the weekly receiving statistics for. Accepted values are rs for regular season and ps for post season.
+
 #### Usage
-`> Athlete Patrick` Returns all athletes with the first name of Patrick
-`> Athlete Mahomes -l` Returns all athletes with the last name of Mahomes
+`> Athlete Patrick` Returns all athletes with the first name of Patrick<br>
+`> Athlete Mahomes -l` Returns all athletes with the last name of Mahomes<br>
+`> Athlete -a 3116406 -S` Get weekly receiving statistics for the athlete with an ID of 3116406<br>
+`> Athlete -S -y 2023 -w 10 -st rs` Get receiving statistics for all athletes during week 10 of the 2023 regular season.<br>
 
 ### The Venue Command
 The `Venue` command is used to retrieve information related to venues (or stadiums). This can be executed with no arguments, in which case it returns all venues used by the NFL. Optionally, the user can specify the venue name (or a substring of the name).
