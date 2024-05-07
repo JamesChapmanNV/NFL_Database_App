@@ -56,23 +56,26 @@ Sample Query result
 */
 
 
-SELECT team_name, 
+SELECT team_name,
 	count (*) AS total_postseason_game_count,
     sum(CASE WHEN week=1 THEN 1 ELSE 0 END) AS WildCard,
     sum(CASE WHEN week=2 THEN 1 ELSE 0 END) AS Divisional,
     sum(CASE WHEN week=3 THEN 1 ELSE 0 END) AS Conference,
-    sum(CASE WHEN week=5 THEN 1 ELSE 0 END) AS SuperBowl
+    sum(CASE WHEN week=5 THEN 1 ELSE 0 END) AS SuperBowl,
+    primary_color, secondary_color
 FROM (
-	SELECT g.home_team_name as team_name, sd.week
-	FROM games g 
+	SELECT g.home_team_name as team_name, primary_color, secondary_color, sd.week
+	FROM games g
 	JOIN season_dates sd ON g.date = sd.date
+	JOIN teams t ON t.team_name = g.home_team_name
 	WHERE sd.season_type = 'Post Season'
-	
+
 	Union ALL
-	SELECT g.away_team_name as team_name, sd.week
-	FROM games g 
+	SELECT g.away_team_name as team_name, primary_color, secondary_color, sd.week
+	FROM games g
 	JOIN season_dates sd ON g.date = sd.date
+	JOIN teams t ON t.team_name = g.away_team_name
 	WHERE sd.season_type = 'Post Season') team_week
-group by team_name;
+group by team_name, primary_color, secondary_color;
 
 

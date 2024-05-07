@@ -67,6 +67,9 @@ This is used when retrieving the records for teams in a given season. When only 
 #####`-t or --team <team_name>`
 This is used in conjunction with the `-y or --year` flag. When provided, only the record for the provided team name in the given season is returned.
 
+##### `-psc or --postseason_count`
+Get post-season game counts for each team
+
 #### Usage
 
 `> Team` Returns all teams in the NFL<br>
@@ -96,13 +99,17 @@ The `Venue` command is used to retrieve information related to venues (or stadiu
 None
 
 #### Flags and Optional Arguments
-`-y or --year <year>` If a year is specified, the venues with the greatest number of home wins, their teams, and the number of wins in that season will be returned.
+##### `-y or --year <year>`
+	If a year is specified, the venues with the greatest number of home wins, their teams, and the number of wins in that season will be returned.
+##### `-S or --statistics`
+Get the average points scored for various stadium and field combinations
 
 #### Usage
 `> Venue` Returns all venues<br>
 `> Venue GEHA` Returns all venues with 'GEHA' in the name<br>
 `> Venue Field` Returns all venues with 'Field' in the name<br>
 `> Venue -y 2023` Returns venues with the greatest number of home wins in 2023<br>
+`> Venue -S` Returns the average points scored for combinations of grass/turf fields and indoor/outdoor stadiums<br>
 
 ### The Game Command
 The `Game` command is one of the more flexible and powerful commands in the program. It is used to retrieve all information related to a given game or games. A large number of flags and arguments can be given to the `Game` command to control it's execution.
@@ -197,12 +204,18 @@ While the `User` command does not require any arguments on it's own, arguments a
 
 #### Flags and Optional Arguments
 
-##### `-f or --favorite` Specify that you would like to favorite either a team or athlete
-##### `-t or --team <team_name>` Used in combination with the `-f` flag to specify a team name to favorite
-##### `-a or --athlete <athlete_id>` Used in combination with the `-f` flag to specify an athlete to favorite.
-##### `-d or --delete` Specify that you would like to perform a delete operation. When used without other flags, this will prompt an account deletion. When combined with the `-f` flag and either `-t` or `-a`, specify that you would like to delete your favorite team or athlete.
-##### `-U or --update <field>` Specify that you would like to update the provided field. Accepted fields are `first_name`, `last_name`, or `password` 
-##### `-V or --update <value>` Set the new value to use with the `-U` flag.
+##### `-f or --favorite`
+Specify that you would like to favorite either a team or athlete
+##### `-t or --team <team_name>`
+Used in combination with the `-f` flag to specify a team name to favorite
+##### `-a or --athlete <athlete_id>`
+Used in combination with the `-f` flag to specify an athlete to favorite.
+##### `-d or --delete`
+Specify that you would like to perform a delete operation. When used without other flags, this will prompt an account deletion. When combined with the `-f` flag and either `-t` or `-a`, specify that you would like to delete your favorite team or athlete.
+##### `-U or --update <field>`
+Specify that you would like to update the provided field. Accepted fields are `first_name`, `last_name`, or `password` 
+##### `-V or --update <value>`
+Set the new value to use with the `-U` flag.
 	
 #### Usage
 `User` Show the user's details

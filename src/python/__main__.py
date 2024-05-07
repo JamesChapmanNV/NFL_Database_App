@@ -93,6 +93,9 @@ class NFLapp:
                                  default=None,
                                  type=str,
                                  help='Specify the team to find records for')
+        team_parser.add_argument('-psc', '--postseason_count',
+                                 action='store_true',
+                                 help='Get the post-season game count for each team')
         team_parser.set_defaults(func=self.submit_request)
 
     def register_athlete_parser(self, subparsers):
