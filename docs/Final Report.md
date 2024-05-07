@@ -49,6 +49,7 @@ There are 7 top level commands that can be executed:
 7. `Save`
 8. `Login`
 9. `Register`
+10. `User`
 
 Each of these commands requires additional arguments and flags to retrieve specific data.
 
@@ -187,3 +188,28 @@ None
 #### Usage
 `> NFLapp Register`<br>
 Prompts to enter information will follow and you will need to provide a username, password, and name.
+
+### The User Command
+The `User` command is used for user related services. This command is used to update data in the user's account, and can be used to delete the account if desired.
+
+#### Required Arguments
+While the `User` command does not require any arguments on it's own, arguments are expected for some of the various flags that are used to update and delete data.
+
+#### Flags and Optional Arguments
+
+##### `-f or --favorite` Specify that you would like to favorite either a team or athlete
+##### `-t or --team <team_name>` Used in combination with the `-f` flag to specify a team name to favorite
+##### `-a or --athlete <athlete_id>` Used in combination with the `-f` flag to specify an athlete to favorite.
+##### `-d or --delete` Specify that you would like to perform a delete operation. When used without other flags, this will prompt an account deletion. When combined with the `-f` flag and either `-t` or `-a`, specify that you would like to delete your favorite team or athlete.
+##### `-U or --update <field>` Specify that you would like to update the provided field. Accepted fields are `first_name`, `last_name`, or `password` 
+##### `-V or --update <value>` Set the new value to use with the `-U` flag.
+	
+#### Usage
+`User -f -t Chiefs` Set Chiefs as your favorite team<br>
+`User -f -a 3139477` Set the athlete with an ID of 3139477 as your favorite<br>
+`User -f -t -d` Delete your favorite team<br>
+`User -f -a -d` Delete your favorite athlete<br>
+`User -d` Delete your account. This is an irreversible action<br>
+`User -U first_name -V John` Change your first name to John<br>
+`User -U last_name -V Smith` Change your last name to Smith<br>
+`User -U password -V securePassword` Change your password to securePassword. You will not be logged out by this action, but you will need your new password during the next sign in.<br>
