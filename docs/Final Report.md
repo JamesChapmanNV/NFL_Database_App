@@ -193,7 +193,7 @@ Prompts to enter information will follow and you will need to provide a username
 The `User` command is used for user related services. This command is used to update data in the user's account, and can be used to delete the account if desired.
 
 #### Required Arguments
-While the `User` command does not require any arguments on it's own, arguments are expected for some of the various flags that are used to update and delete data.
+While the `User` command does not require any arguments on it's own, arguments are expected for some of the various flags that are used to update and delete data. If nothing is given to the `User` command, the user's details are printed.
 
 #### Flags and Optional Arguments
 
@@ -205,6 +205,7 @@ While the `User` command does not require any arguments on it's own, arguments a
 ##### `-V or --update <value>` Set the new value to use with the `-U` flag.
 	
 #### Usage
+`User` Show the user's details
 `User -f -t Chiefs` Set Chiefs as your favorite team<br>
 `User -f -a 3139477` Set the athlete with an ID of 3139477 as your favorite<br>
 `User -f -t -d` Delete your favorite team<br>
