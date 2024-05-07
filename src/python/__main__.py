@@ -124,6 +124,9 @@ class NFLapp:
                                   default=None,
                                   type=int,
                                   help='Search for the venues with the most home wins in the provided year')
+        venue_parser.add_argument('-S', '--statistics',
+                                  action='store_true',
+                                  help='Show statistics for all venues based on field and stadium type')
         venue_parser.set_defaults(func=self.submit_request)
 
     def register_game_parser(self, subparsers):

@@ -13,6 +13,8 @@ class VenueService(Service):
     def get_data(self, args: [str], **kwargs) -> ServiceResponse:
         if args.year:
             return self.__get_most_home_wins(args)
+        elif args.statistics:
+            return self.__get_stadium_stats(args)
         else:
             return self.__get_venue(args)
 
@@ -52,6 +54,28 @@ class VenueService(Service):
                                        ),
                                        display_method=display.display,
                                        prefix_message=f'Venues with the most home wins in {year}')
+            return response
+        except:
+            return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
+
+    def __get_stadium_stats(self, args: [str]) -> ServiceResponse:
+        """
+        Get statistics related to the average number of points scored for various stadium combinations
+        (grass vs turf field and indoor vs outdoor stadium)
+        :param args: Arguments provided by the user
+        :return: A ServiceResponse object
+        """
+        query = self.file_manager.read_file('avg_pts_grass_indoor.sql')
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(query)
+            response = ServiceResponse(cursor=cursor,
+                                       status=ResponseStatus.SUCCESSFUL_READ,
+                                       display_args=(
+                                           [('Field', 0), ('Venue', 1), ('Average Total Points', 2)],
+                                       ),
+                                       display_method=display.display,
+                                       prefix_message='Average points scored for various stadium combinations')
             return response
         except:
             return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)

@@ -1,30 +1,3 @@
-
--- ***  avg_pts_grass_indoor ***
--- average points based on grass/turf & indoor/outdoor
--- indoor games seems to have greater points
--- grass/turf seems to not matter
--- INPUT: 
--- OUTPUT: average points scored 
--- QUERY TYPE: Report 
-
-/*Query explanation
-****************************************
-Simple idea,  how does indoor/outdoor affect points
- how does grass/turf affect points?
-****************************************
-
-Sample Query result 
-
- field |  venue  | avg_total_points
--------+---------+------------------
- Turf  | Indoor  |             48.2
- Grass | Indoor  |             47.4
- Turf  | Outdoor |             44.8
- Grass | Outdoor |             44.8
-(4 rows)
-
-*/
-
 SELECT
     CASE
         WHEN v.grass THEN 'Grass'
