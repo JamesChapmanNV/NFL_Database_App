@@ -68,7 +68,7 @@ This is used when retrieving the records for teams in a given season. When only 
 This is used in conjunction with the `-y or --year` flag. When provided, only the record for the provided team name in the given season is returned.
 
 ##### `-psc or --postseason_count`
-Get post-season game counts for each team
+Get post-season game counts for each team. This calculates appearances in each of these games, not wins.
 
 #### Usage
 
@@ -100,7 +100,7 @@ None
 
 #### Flags and Optional Arguments
 ##### `-y or --year <year>`
-	If a year is specified, the venues with the greatest number of home wins, their teams, and the number of wins in that season will be returned.
+If a year is specified, the venues with the greatest number of home wins, their teams, and the number of wins in that season will be returned.
 ##### `-S or --statistics`
 Get the average points scored for various stadium and field combinations
 
