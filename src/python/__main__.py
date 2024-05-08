@@ -184,6 +184,9 @@ class NFLapp:
         game_parser.add_argument('-pf', '--percent_filled',
                                  action='store_true',
                                  help='Find how full the stadium was for the given game')
+        game_parser.add_argument('-fq', '--first_quarter',
+                                 action='store_true',
+                                 help='Find games in which the points scored in the first quarter was greater than any other quarter')
         game_parser.add_argument('-S', '--statistics',
                                  action='store_true',
                                  help='Find passing, rushing, and receiving leaders for a given game')

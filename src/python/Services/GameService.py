@@ -19,7 +19,9 @@ class GameService(Service):
         self.__file_manager = file_manager
 
     def get_data(self, args: [str], **kwargs) -> ServiceResponse:
-        if args.score:
+        if args.first_quarter:
+            return self.__get_first_quarter_greater(args)
+        elif args.score:
             return self.__get_scores(args)
         elif args.plays:
             return self.__get_plays(args)
@@ -173,3 +175,31 @@ class GameService(Service):
                                    ),
                                    display_method=display.display)
         return response
+
+    def __get_first_quarter_greater(self, args: [str]) -> ServiceResponse:
+        """
+        Get games in which the points scored in the first quarter were greater than any other quarter
+        :param args: Arguments from the user
+        :return: A ServiceReponse object
+        """
+        query = self.__file_manager.read_file('first_quarter_greater.sql')
+        if args.year:
+            query = query.format(year_filter='AND sd.season_year = %s')
+            data = (args.year, )
+        else:
+            query = query.format(year_filter='')
+            data = ()
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(query, data)
+            response = ServiceResponse(cursor = cursor,
+                                       status=ResponseStatus.SUCCESSFUL_READ,
+                                       display_args=(
+                                           [('Game ID', 0), ('Date', 1), ('Home Team', 2),
+                                            ('Away Team', 3), ('First Quarter Score', 4)],
+                                       ),
+                                       display_method=display.display,
+                                       prefix_message='Games in which the points scored in the first quarter were greater than any other quarter')
+            return response
+        except:
+            return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
