@@ -116,6 +116,9 @@ class NFLapp:
         athlete_parser.add_argument('-S', '--statistics',
                                     action='store_true',
                                     help='Get receiving statistics, either for an athlete or for all athletes during a given week')
+        athlete_parser.add_argument('-pr', '--passer_rating',
+                                    action='store_true',
+                                    help='Get a quarterbacks lifetime passer rating')
         athlete_parser.add_argument('-y', '--year',
                                     default=None,
                                     type=int,

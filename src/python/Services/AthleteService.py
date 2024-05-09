@@ -13,6 +13,8 @@ class AthleteService(Service):
     def get_data(self, args: [str], **kwargs) -> ServiceResponse:
         if args.statistics and args.week and args.year and args.season_type:
             return self.__get_weekly_receiving_stats(args)
+        elif args.passer_rating:
+            return self.__get_passer_rating(args)
         elif args.statistics:
             return self.__get_receiving_stats_for_athlete(args)
         elif args.athlete:
@@ -110,3 +112,28 @@ class AthleteService(Service):
             else:
                 response = ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
                 return response
+
+    def __get_passer_rating(self, args: [str]) -> ServiceResponse:
+        year = args.year
+        query = self.file_manager.read_file('passing.sql')
+        if args.athlete:
+            query = query.format(where_filter='WHERE a.athlete_id = %s')
+            data = (year, args.athlete)
+        else:
+            query = query.format(where_filter='')
+            data = (year, )
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(query, data)
+            response = ServiceResponse(cursor=cursor,
+                                       status=ResponseStatus.SUCCESSFUL_READ,
+                                       display_args=(
+                                           [('Athlete ID', 0), ('Name', 1), ('Passing Yards', 2), ('Pass Attempts', 3),
+                                            ('Pass Completions', 4), ('Touchdown Passes', 5), ('Passes Intercepted', 6),
+                                            ('Passer Rating', 7)],
+                                       ),
+                                       display_method=display.display,
+                                       prefix_message=f'Passing statistics for the year {year}')
+            return response
+        except:
+            return ServiceResponse(status=ResponseStatus.UNSUCCESSFUL)
