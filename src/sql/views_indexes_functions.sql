@@ -92,6 +92,11 @@ LEFT JOIN ThirdQuarterTeamScores z
 	ON x.game_id = z.game_id 
 	AND x.away_team_name = z.team_name ;
 
+CREATE INDEX idx_play_athlete_game ON player_plays(game_id, player_id, play_id);
+CREATE INDEX idx_date ON games(date);
+CREATE INDEX idx_home_team ON games(home_team_name);
+CREATE INDEX idx_away_team ON games(away_team_name);
+
 
 
 
