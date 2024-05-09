@@ -99,61 +99,10 @@ CREATE INDEX idx_away_team ON games(away_team_name);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+CREATE INDEX idx_pp_play_id ON player_plays(play_id);
+CREATE INDEX idx_pp_game_id ON player_plays(game_id);
+CREATE INDEX idx_plays_play_id ON plays(play_id);
+CREATE INDEX idx_athletes_first_name ON athletes(first_name);
+CREATE INDEX idx_rosters_athlete_id ON rosters(athlete_id);
+CREATE INDEX idx_linescores_game_id ON linescores(game_id);
 
