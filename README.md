@@ -11,7 +11,7 @@ Vishnu Bondalakunta, PhD Candidate <br>
 A prototype for a **lightweight, command-line NFL database application** designed to deliver detailed NFL statistics and play-by-play data for statisticians and NFL enthusiasts. It enables users to retrieve information on individual players, teams, venues, and games, with features such as win probability calculations and exporting results in multiple formats.
 
 ## Key Features
-- **PostgreSQL Relational Database**:
+- **PostgreSQL Relational Database**:<br>
   Designed with **database normalization** to ensure **data consistency** and **preserve functional dependencies**.
   
 - **High-Performance Queries**:  
