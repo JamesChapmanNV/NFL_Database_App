@@ -8,12 +8,14 @@ Current tables are as follows:
 | venue_name | VARCHAR(55) | FOREGIN KEY(Venues.name) |
 | primary_color | CHAR(6) | |
 | secondary_color | CHAR(6) | |
+
 **Positions**
 | column | data_type | constraints |
 | ------ | --------- | ----------- |
 | position_name | VARCHAR(20) | PRIMARY KEY |
 | abbreviation | VARCHAR(2) | UNIQUE |
 | platoon | VARCHAR(13) | |
+
 **Athletes**
 | column | data_type | constraints |
 | ------ | --------- | ----------- |
@@ -25,6 +27,7 @@ Current tables are as follows:
 | weight | NUMERIC | |
 | birth_city | VARCHAR(20) | |
 | birth_state | VARCHAR(20) | |
+
 **Rosters**
 | column | data_type | constraints |
 | ------ | --------- | ----------- |
@@ -34,6 +37,7 @@ Current tables are as follows:
 | position_name | VARCHAR(20) | FOREIGN KEY(Positions.position_name) |
 | played | BOOLEAN | |
 | game_id, team_name, athlete_id | | PRIMARY KEY |
+
 **Venues**
 | column | data_type | constraints |
 | ------ | --------- | ----------- |
@@ -43,6 +47,7 @@ Current tables are as follows:
 | state | CHAR(2) | |
 | grass | BOOLEAN | |
 | indoor | BOOLEAN | |
+
 **Games**
 | column | data_type | constraints |
 | ------ | --------- | ----------- |
@@ -53,6 +58,7 @@ Current tables are as follows:
 | away_team | VARCHAR(45) | FOREIGN KEY(Teams.team_name) |
 | venue_name | VARCHAR(45) | FOREIGN KEY(Venues.venue_name) |
 | utc_time | TIME | |
+
 **Season_Dates**
 | column | data_type | constraints |
 | ------ | --------- | ----------- |
@@ -60,6 +66,7 @@ Current tables are as follows:
 | season_year | NOT NULL | NOT NULL |
 | season_type | VARCHAR(20) | NOT NULL |
 | week | INT | NOT NULL |
+
 **Plays**
 | column | data_type | constraints |
 | ------ | --------- | ----------- |
@@ -72,6 +79,7 @@ Current tables are as follows:
 | seconds_remaining | INT | |
 | start_down | INT | NOT NULL |
 | end_down | INT | NOT NULL |
+
 **Player_Plays**
 | column | data_type | constraints |
 | ------ | --------- | ----------- |
@@ -80,6 +88,7 @@ Current tables are as follows:
 | game_id | BIGINT | NOT NULL |
 | type | VARCHAR(20) | NOT NULL |
 | play_id, player_id, type | | PRIMARY KEY |
+
 **Linescores**
 | column | data_type | constraints |
 | ------ | --------- | ----------- |
