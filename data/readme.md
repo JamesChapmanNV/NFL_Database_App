@@ -1,4 +1,5 @@
 Current tables are as follows:
+
 **Teams**
 | column | data_type | constraints |
 | ------- | --------- | ----------- |
