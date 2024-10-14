@@ -1,10 +1,10 @@
-# NFL Database Application 
-CIS 761 Database Management Systems – Term Project
-Kansas State University
-
-James Chapman
-Chuck Zumbaugh, PhD
-Vishnu Bondalakunta, PhD Candidate
+# NFL Database Application <br>
+CIS 761 Database Management Systems – Term Project <br>
+Kansas State University <br>
+<br>
+James Chapman <br>
+Chuck Zumbaugh, PhD <br>
+Vishnu Bondalakunta, PhD Candidate <br>
 
 ---
 
